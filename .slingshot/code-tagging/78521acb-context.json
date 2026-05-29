@@ -1,0 +1,15 @@
+{
+  "filename": "TransportService.java",
+  "path": "backend\\src\\main\\java\\com\\transport\\tracker\\service\\TransportService.java",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "4cbf90e8": {
+      "value": "arivals and crowding levels are not displaying\nMicrosoft Windows [Version 10.0.22631.6936]\n(c) Microsoft Corporation. All rights reserved.\n\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service>cd backend\n\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service\\backend>gradle clean bootRun\nStarting a Gradle Daemon, 3 busy and 1 incompatible Daemons could not be reused, use --status for details\n\n> Task :bootRun\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ _"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

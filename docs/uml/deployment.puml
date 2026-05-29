@@ -1,0 +1,29 @@
+@startuml
+title Deployment Topology
+
+node "Load Balancer / CDN" as LB
+node "Kubernetes Cluster" as K8S {
+  node "Frontend Pod" as FE
+  node "Backend Pod(s)" as BE
+  node "Worker Pod(s)" as WK
+  node "Message Broker\n(Kafka)" as KAFKA
+  node "Redis" as REDIS
+  node "Postgres" as PG
+}
+
+node "CI/CD (Jenkins)" as JENKINS
+node "Logging / Monitoring\n(ELK + Prometheus/Grafana)" as MON
+
+LB --> FE
+FE --> LB : static assets
+FE --> BE : API calls
+LB --> BE : route traffic
+BE --> PG : SQL
+BE --> REDIS : cache
+BE --> KAFKA : publish
+WK --> KAFKA : consume
+JENKINS --> K8S : deploy
+BE ..> MON : metrics/traces
+WK ..> MON
+
+@enduml

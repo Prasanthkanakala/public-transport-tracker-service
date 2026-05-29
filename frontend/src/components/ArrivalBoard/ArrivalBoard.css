@@ -1,0 +1,112 @@
+.arrival-board {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.88rem;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.arrival-row {
+  display: grid;
+  grid-template-columns: 50px 1fr auto auto 40px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.arrival-header {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+}
+
+.arrival-item {
+  background: var(--surface-3);
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.arrival-item:hover { border-color: var(--border); }
+
+.arrival-item.significant-delay {
+  background: rgba(239,68,68,0.05);
+  border-color: rgba(239,68,68,0.2);
+}
+
+.route-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.headsign {
+  color: var(--text-primary);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.time-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.predicted-time {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.scheduled-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.mins-cell {
+  text-align: right;
+  color: var(--text-secondary);
+}
+
+.mins-cell strong {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* Badges */
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.badge.on-time   { background: rgba(34,197,94,0.15); color: #22c55e; }
+.badge.early     { background: rgba(59,130,246,0.15); color: #3b82f6; }
+.badge.late      { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.badge.very-late { background: rgba(239,68,68,0.15); color: #ef4444; }
+.badge.cancelled { background: rgba(107,114,128,0.15); color: #9ca3af; text-decoration: line-through; }
+
+.arrival-board-loading,
+.arrival-board-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,51 @@
+@startuml
+title Transport Request Flow with Resilience and Cache Fallback
+actor User
+participant WebApp
+participant TransportController
+participant TransportService
+participant CacheService
+participant TransitApiClient
+participant MockDataService
+participant External as "External Transit APIs"
+
+User -> WebApp : open arrival board / request transport data
+WebApp -> TransportController : GET /api/v1/transport?city=nyc&routeId=A
+TransportController -> TransportService : getTransportData(city, routeId, offline)
+
+alt offline mode
+  TransportService -> MockDataService : getMockData(city, routeId)
+  MockDataService --> TransportService : TransportData (MOCK)
+  TransportService --> TransportController : TransportResponse<TransportData>
+else cache hit
+  TransportService -> CacheService : get(cacheKey)
+  CacheService --> TransportService : TransportData (CACHE)
+  TransportService --> TransportController : TransportResponse<TransportData>
+else cache miss
+  TransportService -> CacheService : withKeyLock(cacheKey, ...)
+  activate CacheService
+  CacheService -> CacheService : get(cacheKey)
+  CacheService --> TransportService : Optional.empty
+  TransportService -> TransitApiClient : fetchVehicleLocations / fetchArrivalPredictions
+  TransitApiClient -> External : live API calls
+  External --> TransitApiClient : provider response
+  TransitApiClient --> TransportService : Live transport data
+  TransportService -> CacheService : put(cacheKey, liveData)
+  CacheService --> TransportService : ack
+  deactivate CacheService
+  TransportService --> TransportController : TransportResponse<TransportData>
+end
+
+alt live API failure
+  TransportService -> CacheService : getStale(cacheKey)
+  CacheService --> TransportService : TransportData (STALE_CACHE) / empty
+  alt stale cache available
+    TransportService --> TransportController : TransportResponse<TransportData>
+  else fallback to mock
+    TransportService -> MockDataService : getMockData(city, routeId)
+    MockDataService --> TransportService : TransportData (MOCK)
+    TransportService --> TransportController : TransportResponse<TransportData>
+  end
+end
+
+@enduml

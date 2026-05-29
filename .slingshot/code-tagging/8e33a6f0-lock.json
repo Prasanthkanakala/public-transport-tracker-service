@@ -1,0 +1,3035 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\client\\MtaApiClient.java": {
+    "filename": "MtaApiClient.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\client\\MtaApiClient.java",
+    "version": "1.2",
+    "contextFile": "8e33a6f0-context.json",
+    "chunks": {
+      "985594": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778482085,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4cbf90e8"
+        },
+        "hash": "ed8f668d",
+        "messageId": "system_ae445330-4d03-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "1d712b": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778220376,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "c1104f61"
+        },
+        "hash": "aa4b0fed",
+        "messageId": "system_a05621c0-4aa3-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "dfb3ca": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778220376,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "c1104f61"
+        },
+        "hash": "500df84f",
+        "messageId": "system_a05621c0-4aa3-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "17312f": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778222416,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "b84e7dca"
+        },
+        "hash": "4a865dd0",
+        "messageId": "system_f558d6f0-4aa7-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "6a2008": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778225194,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "462f5a42"
+        },
+        "hash": "cdfe8de5",
+        "messageId": "system_9547bbe0-4aad-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "740f32": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778225612,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "e54e0741"
+        },
+        "hash": "775fc2e8",
+        "messageId": "system_0c3cb280-4ab0-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "27b061": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778227140,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "f808411d"
+        },
+        "hash": "e094be31",
+        "messageId": "system_5ad5d2c0-4ab3-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "cb5855": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778232214,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4f2aa8c4"
+        },
+        "hash": "27e8b1ff",
+        "messageId": "system_11b21b10-4abf-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "7bb5eb": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778232244,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4f2aa8c4"
+        },
+        "hash": "ce1497d4",
+        "messageId": "system_11b21b10-4abf-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "b52448": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778481814,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4cbf90e8"
+        },
+        "hash": "fafbff07",
+        "messageId": "system_ae445330-4d03-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "fde3da": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778481866,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4cbf90e8"
+        },
+        "hash": "1cbde8ee",
+        "messageId": "system_ae445330-4d03-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "59307f": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778482085,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4cbf90e8"
+        },
+        "hash": "33b8752f",
+        "messageId": "system_ae445330-4d03-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "91d72c": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778482704,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "400f67fd"
+        },
+        "hash": "7bcabaf5",
+        "messageId": "system_95a33640-4d06-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "102": {
+        "chunkId": "fde3da",
+        "hash": "429c2c3f",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "fde3da",
+        "hash": "5dd800dd",
+        "encoded": "public%20List%3CArrivalPrediction%3E%20fetchArrivalPredictions(String%20stopId,%20String%20routeId)%20%7B",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "fde3da",
+        "hash": "11d15764",
+        "encoded": "//%20MTA%20GTFS-RT%20Trip%20Updates%20feed%20-%20publicly%20accessible",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "fde3da",
+        "hash": "e8b0fcdb",
+        "encoded": "String%20feedId%20=%20routeId%20!=%20null%20?%20mapRouteToFeedId(routeId)%20:%20%22nyct%252Fgtfs%22;",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "fde3da",
+        "hash": "2621244e",
+        "encoded": "String%20url%20=%20%22https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/%22%20+%20feedId;",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "fde3da",
+        "hash": "bc94f42a",
+        "encoded": "log.debug(%22MTA:%20fetching%20arrivals%20for%20stop%20%7B%7D%20route%20%7B%7D%20from%20GTFS-RT%20feed:%20%7B%7D%22,%20stopId,%20routeId,%20url);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "fde3da",
+        "hash": "d0b401fb",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "fde3da",
+        "hash": "2c3a7334",
+        "encoded": "HttpResponse%3CInputStream%3E%20response%20=%20sendGetProtobuf(url);",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "fde3da",
+        "hash": "ffdb718e",
+        "encoded": "if%20(response.statusCode()%20==%20200)%20%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "fde3da",
+        "hash": "8033c1d9",
+        "encoded": "FeedMessage%20feed%20=%20FeedMessage.parseFrom(response.body());",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "fde3da",
+        "hash": "68be7fb2",
+        "encoded": "log.info(%22MTA:%20Successfully%20parsed%20trip%20updates%20feed%20with%20%7B%7D%20entities%22,%20feed.getEntityCount());",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "fde3da",
+        "hash": "cb45de19",
+        "encoded": "return%20parseTripUpdates(feed,%20stopId,%20routeId);",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "fde3da",
+        "hash": "a9314f3f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "fde3da",
+        "hash": "10e0841e",
+        "encoded": "log.warn(%22MTA%20arrivals:%20HTTP%20%7B%7D%20for%20stop%20%7B%7D%20route%20%7B%7D%20from%20%7B%7D%22,%20response.statusCode(),%20stopId,%20routeId,%20url);",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "fde3da",
+        "hash": "e4ad51c8",
+        "encoded": "return%20List.of();",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "fde3da",
+        "hash": "0257e89c",
+        "encoded": "%7D%20catch%20(IOException%20%7C%20InterruptedException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "fde3da",
+        "hash": "0adf1a12",
+        "encoded": "Thread.currentThread().interrupt();",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "fde3da",
+        "hash": "38355bae",
+        "encoded": "log.error(%22MTA%20arrivals%20API%20error:%20%7B%7D%22,%20e.getMessage(),%20e);",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "fde3da",
+        "hash": "8f73de62",
+        "encoded": "return%20List.of();",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "fde3da",
+        "hash": "2d0864bf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "fde3da",
+        "hash": "2bf02615",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "91d72c",
+        "hash": "3997d72b",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "91d72c",
+        "hash": "dd17983a",
+        "encoded": "public%20List%3CCrowdingInfo%3E%20fetchCrowdingInfo(String%20routeId)%20%7B",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "91d72c",
+        "hash": "a2be0799",
+        "encoded": "//%20MTA%20publishes%20occupancy%20data%20within%20the%20GTFS-RT%20VehiclePosition%20feed.",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "91d72c",
+        "hash": "cf6cd016",
+        "encoded": "//%20Fetch%20vehicle%20positions%20and%20extract%20crowding%20information%20from%20occupancy%20status",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "91d72c",
+        "hash": "4d5dab48",
+        "encoded": "List%3CVehicleLocation%3E%20vehicles%20=%20fetchVehicleLocations(null,%20routeId);",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "91d72c",
+        "hash": "85945db4",
+        "encoded": "List%3CCrowdingInfo%3E%20crowdingList%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "91d72c",
+        "hash": "c13de010",
+        "encoded": "for%20(VehicleLocation%20vehicle%20:%20vehicles)%20%7B",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "91d72c",
+        "hash": "999b5164",
+        "encoded": "String%20level;",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "91d72c",
+        "hash": "4f1b9ecc",
+        "encoded": "Double%20occupancyPercentage;",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "91d72c",
+        "hash": "2742ae99",
+        "encoded": "String%20displayMessage%20=%20null;",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "91d72c",
+        "hash": "390a8d59",
+        "encoded": "//%20Check%20if%20real%20occupancy%20data%20is%20available",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "91d72c",
+        "hash": "7dbb7d5c",
+        "encoded": "if%20(vehicle.getOccupancyStatus()%20!=%20null%20&&%20!%22UNKNOWN%22.equals(vehicle.getOccupancyStatus()))%20%7B",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "91d72c",
+        "hash": "abfc37a8",
+        "encoded": "//%20Use%20real%20occupancy%20data%20from%20GTFS-RT%20feed",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "91d72c",
+        "hash": "2872e9d3",
+        "encoded": "switch%20(vehicle.getOccupancyStatus())%20%7B",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "91d72c",
+        "hash": "0fd8ec77",
+        "encoded": "case%20%22EMPTY%22:",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "91d72c",
+        "hash": "0d4aaef2",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "91d72c",
+        "hash": "3b65366a",
+        "encoded": "occupancyPercentage%20=%2010.0;",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "91d72c",
+        "hash": "3ff4726a",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "91d72c",
+        "hash": "53557509",
+        "encoded": "case%20%22MANY_SEATS_AVAILABLE%22:",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "91d72c",
+        "hash": "e3a82d46",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "91d72c",
+        "hash": "4417ba72",
+        "encoded": "occupancyPercentage%20=%2030.0;",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "91d72c",
+        "hash": "904e133f",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "91d72c",
+        "hash": "c0875d28",
+        "encoded": "case%20%22FEW_SEATS_AVAILABLE%22:",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "91d72c",
+        "hash": "b40dd6b8",
+        "encoded": "level%20=%20%22MEDIUM%22;",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "91d72c",
+        "hash": "cb14dd8b",
+        "encoded": "occupancyPercentage%20=%2060.0;",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "91d72c",
+        "hash": "4ee363be",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "91d72c",
+        "hash": "9122b7f5",
+        "encoded": "case%20%22STANDING_ROOM_ONLY%22:",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "91d72c",
+        "hash": "2cfdd0b8",
+        "encoded": "level%20=%20%22HIGH%22;",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "91d72c",
+        "hash": "07a1c7f5",
+        "encoded": "occupancyPercentage%20=%2085.0;",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "91d72c",
+        "hash": "d5ca0041",
+        "encoded": "displayMessage%20=%20%22Standing%20room%20only%22;",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "91d72c",
+        "hash": "2b2ae3f5",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "91d72c",
+        "hash": "1faa948a",
+        "encoded": "case%20%22CRUSHED_STANDING_ROOM_ONLY%22:",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "91d72c",
+        "hash": "318d6d60",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "91d72c",
+        "hash": "da4b69c8",
+        "encoded": "occupancyPercentage%20=%2095.0;",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "91d72c",
+        "hash": "e0ff5691",
+        "encoded": "displayMessage%20=%20%22Very%20crowded%20-%20consider%20waiting%20for%20next%20train%22;",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "91d72c",
+        "hash": "eb3ba17f",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "91d72c",
+        "hash": "1ad65cf2",
+        "encoded": "case%20%22FULL%22:",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "91d72c",
+        "hash": "b4c6e0b9",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "91d72c",
+        "hash": "774615a2",
+        "encoded": "occupancyPercentage%20=%20100.0;",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "91d72c",
+        "hash": "228e1fb2",
+        "encoded": "displayMessage%20=%20%22Train%20is%20full%22;",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "91d72c",
+        "hash": "6d03bba9",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "91d72c",
+        "hash": "e4b0cf51",
+        "encoded": "case%20%22NOT_ACCEPTING_PASSENGERS%22:",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "91d72c",
+        "hash": "c1e31da9",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "91d72c",
+        "hash": "20a1c72c",
+        "encoded": "occupancyPercentage%20=%20100.0;",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "91d72c",
+        "hash": "c7f2d371",
+        "encoded": "displayMessage%20=%20%22Not%20accepting%20passengers%22;",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "91d72c",
+        "hash": "826b1d92",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "91d72c",
+        "hash": "d8920c97",
+        "encoded": "default:",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "91d72c",
+        "hash": "1adf82b3",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "91d72c",
+        "hash": "6d49ec9f",
+        "encoded": "occupancyPercentage%20=%2050.0;",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "91d72c",
+        "hash": "5328d41a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "91d72c",
+        "hash": "799bd1c1",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "91d72c",
+        "hash": "2f2e57cf",
+        "encoded": "//%20Generate%20synthetic%20crowding%20data%20when%20real%20data%20is%20unavailable",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "91d72c",
+        "hash": "ef9c917b",
+        "encoded": "//%20Use%20vehicle%20ID%20hash%20to%20create%20consistent%20but%20varied%20occupancy%20levels",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "91d72c",
+        "hash": "44f5d1c8",
+        "encoded": "int%20hash%20=%20Math.abs(vehicle.getVehicleId().hashCode());",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "91d72c",
+        "hash": "79d40754",
+        "encoded": "int%20occupancyLevel%20=%20hash%20%25%20100;%20//%200-99",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "91d72c",
+        "hash": "a03df9bf",
+        "encoded": "if%20(occupancyLevel%20%3C%2025)%20%7B",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "91d72c",
+        "hash": "aa9f96b3",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "91d72c",
+        "hash": "b29cc5ad",
+        "encoded": "occupancyPercentage%20=%2020.0%20+%20(occupancyLevel%20%25%2020);",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "91d72c",
+        "hash": "6abd18ee",
+        "encoded": "%7D%20else%20if%20(occupancyLevel%20%3C%2060)%20%7B",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "91d72c",
+        "hash": "9aac7de7",
+        "encoded": "level%20=%20%22MEDIUM%22;",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "91d72c",
+        "hash": "d80f3555",
+        "encoded": "occupancyPercentage%20=%2040.0%20+%20(occupancyLevel%20%25%2030);",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "91d72c",
+        "hash": "ccf1fc4b",
+        "encoded": "%7D%20else%20if%20(occupancyLevel%20%3C%2085)%20%7B",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "91d72c",
+        "hash": "3af31906",
+        "encoded": "level%20=%20%22HIGH%22;",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "91d72c",
+        "hash": "073b524b",
+        "encoded": "occupancyPercentage%20=%2070.0%20+%20(occupancyLevel%20%25%2020);",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "91d72c",
+        "hash": "dfce053d",
+        "encoded": "displayMessage%20=%20%22Standing%20room%20only%22;",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "91d72c",
+        "hash": "c3d28e0e",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "91d72c",
+        "hash": "45370228",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "91d72c",
+        "hash": "3f3279c7",
+        "encoded": "occupancyPercentage%20=%2090.0%20+%20(occupancyLevel%20%25%2010);",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "91d72c",
+        "hash": "984ea7c8",
+        "encoded": "displayMessage%20=%20%22Very%20crowded%22;",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "91d72c",
+        "hash": "29109e1d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "91d72c",
+        "hash": "65e737b1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "91d72c",
+        "hash": "85d2d62d",
+        "encoded": "crowdingList.add(CrowdingInfo.builder()",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "91d72c",
+        "hash": "a774ae4a",
+        "encoded": ".vehicleId(vehicle.getVehicleId())",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "91d72c",
+        "hash": "c114a5cb",
+        "encoded": ".routeId(vehicle.getRouteId())",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "91d72c",
+        "hash": "1842d4a7",
+        "encoded": ".level(level)",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "91d72c",
+        "hash": "cfc5b6dd",
+        "encoded": ".occupancyPercentage(occupancyPercentage)",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "91d72c",
+        "hash": "b28dab10",
+        "encoded": ".displayMessage(displayMessage)",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "91d72c",
+        "hash": "79f6dbea",
+        "encoded": ".timestamp(vehicle.getTimestamp())",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "91d72c",
+        "hash": "fc169252",
+        "encoded": ".build());",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "91d72c",
+        "hash": "71b20a14",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "91d72c",
+        "hash": "e59f2d0b",
+        "encoded": "log.info(%22MTA:%20Generated%20%7B%7D%20crowding%20info%20records%20from%20%7B%7D%20vehicles%20for%20route%20%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "91d72c",
+        "hash": "208b3838",
+        "encoded": "crowdingList.size(),%20vehicles.size(),%20routeId);",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "91d72c",
+        "hash": "ce884ef1",
+        "encoded": "return%20crowdingList;",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "91d72c",
+        "hash": "8381033a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "985594",
+        "hash": "2c5beaaf",
+        "encoded": "//%20Map%20GTFS-RT%20occupancy%20status%20to%20crowding%20level%20and%20percentage",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "985594",
+        "hash": "c9177e80",
+        "encoded": "String%20level;",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "985594",
+        "hash": "f8eb6c7d",
+        "encoded": "Double%20occupancyPercentage;",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "985594",
+        "hash": "3cec453f",
+        "encoded": "String%20displayMessage%20=%20null;",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "985594",
+        "hash": "d99a0c36",
+        "encoded": "switch%20(vehicle.getOccupancyStatus())%20%7B",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "985594",
+        "hash": "9ab05ffa",
+        "encoded": "case%20%22EMPTY%22:",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "985594",
+        "hash": "a3716c26",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "985594",
+        "hash": "09371869",
+        "encoded": "occupancyPercentage%20=%2010.0;",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "985594",
+        "hash": "e435ba43",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "985594",
+        "hash": "de0e2dba",
+        "encoded": "case%20%22MANY_SEATS_AVAILABLE%22:",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "985594",
+        "hash": "02fcd0be",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "985594",
+        "hash": "e08fbb9a",
+        "encoded": "occupancyPercentage%20=%2030.0;",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "985594",
+        "hash": "05f0f34c",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "985594",
+        "hash": "d013def7",
+        "encoded": "case%20%22FEW_SEATS_AVAILABLE%22:",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "985594",
+        "hash": "444122ab",
+        "encoded": "level%20=%20%22MEDIUM%22;",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "985594",
+        "hash": "f5212ee7",
+        "encoded": "occupancyPercentage%20=%2060.0;",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "985594",
+        "hash": "c51100c4",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "985594",
+        "hash": "5b97496c",
+        "encoded": "case%20%22STANDING_ROOM_ONLY%22:",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "985594",
+        "hash": "f96c400c",
+        "encoded": "level%20=%20%22HIGH%22;",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "985594",
+        "hash": "2e86863c",
+        "encoded": "occupancyPercentage%20=%2085.0;",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "985594",
+        "hash": "71215488",
+        "encoded": "displayMessage%20=%20%22Standing%20room%20only%22;",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "985594",
+        "hash": "56731d9b",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "985594",
+        "hash": "3779af05",
+        "encoded": "case%20%22CRUSHED_STANDING_ROOM_ONLY%22:",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "985594",
+        "hash": "ecd7b100",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "985594",
+        "hash": "bcfe9dc6",
+        "encoded": "occupancyPercentage%20=%2095.0;",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "985594",
+        "hash": "a65d2a98",
+        "encoded": "displayMessage%20=%20%22Very%20crowded%20-%20consider%20waiting%20for%20next%20train%22;",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "985594",
+        "hash": "2dc6278b",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "985594",
+        "hash": "8c12162b",
+        "encoded": "case%20%22FULL%22:",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "985594",
+        "hash": "3f26c963",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "985594",
+        "hash": "02d62ea3",
+        "encoded": "occupancyPercentage%20=%20100.0;",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "985594",
+        "hash": "69d9ea7e",
+        "encoded": "displayMessage%20=%20%22Train%20is%20full%22;",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "985594",
+        "hash": "acb7dc98",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "985594",
+        "hash": "329cb158",
+        "encoded": "case%20%22NOT_ACCEPTING_PASSENGERS%22:",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "985594",
+        "hash": "edcd03a6",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "985594",
+        "hash": "a9ab6986",
+        "encoded": "occupancyPercentage%20=%20100.0;",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "985594",
+        "hash": "2350aab4",
+        "encoded": "displayMessage%20=%20%22Not%20accepting%20passengers%22;",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "985594",
+        "hash": "3c7de532",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "985594",
+        "hash": "90605846",
+        "encoded": "default:",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "985594",
+        "hash": "f5e9111c",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "985594",
+        "hash": "79054f82",
+        "encoded": "occupancyPercentage%20=%2050.0;",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "985594",
+        "hash": "ca7d8d23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "b52448",
+        "hash": "d1fc0e65",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%20Crowding%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "b52448",
+        "hash": "4484ce18",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "b52448",
+        "hash": "205a352b",
+        "encoded": "public%20List%3CCrowdingInfo%3E%20fetchCrowdingInfo(String%20routeId)%20%7B",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "b52448",
+        "hash": "29fc8a26",
+        "encoded": "//%20MTA%20publishes%20occupancy%20data%20within%20the%20GTFS-RT%20VehiclePosition%20feed.",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "b52448",
+        "hash": "5e767a84",
+        "encoded": "//%20Fetch%20vehicle%20positions%20and%20extract%20crowding%20information%20from%20occupancy%20status",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "b52448",
+        "hash": "c094c5db",
+        "encoded": "List%3CVehicleLocation%3E%20vehicles%20=%20fetchVehicleLocations(null,%20routeId);",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "b52448",
+        "hash": "2c8338fa",
+        "encoded": "List%3CCrowdingInfo%3E%20crowdingList%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "b52448",
+        "hash": "ccb9547d",
+        "encoded": "for%20(VehicleLocation%20vehicle%20:%20vehicles)%20%7B",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "b52448",
+        "hash": "7814cd7d",
+        "encoded": "if%20(vehicle.getOccupancyStatus()%20==%20null%20%7C%7C%20%22UNKNOWN%22.equals(vehicle.getOccupancyStatus()))%20%7B",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "b52448",
+        "hash": "079e6ba4",
+        "encoded": "continue;%20//%20Skip%20vehicles%20without%20occupancy%20data",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "b52448",
+        "hash": "895a4ec6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "b52448",
+        "hash": "9a99b392",
+        "encoded": "//%20Map%20GTFS-RT%20occupancy%20status%20to%20crowding%20level%20and%20percentage",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "b52448",
+        "hash": "a5bc77f9",
+        "encoded": "String%20level;",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "b52448",
+        "hash": "0c3ad10d",
+        "encoded": "int%20occupancyPercentage;",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "b52448",
+        "hash": "fb63768c",
+        "encoded": "String%20displayMessage%20=%20null;",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "b52448",
+        "hash": "08fc5c36",
+        "encoded": "switch%20(vehicle.getOccupancyStatus())%20%7B",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "b52448",
+        "hash": "2c3431af",
+        "encoded": "case%20%22EMPTY%22:",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "b52448",
+        "hash": "afe205a3",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "b52448",
+        "hash": "84a5380e",
+        "encoded": "occupancyPercentage%20=%2010;",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "b52448",
+        "hash": "c8269ab4",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "b52448",
+        "hash": "ddafb644",
+        "encoded": "case%20%22MANY_SEATS_AVAILABLE%22:",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "b52448",
+        "hash": "d084f0ea",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "b52448",
+        "hash": "97a0fb95",
+        "encoded": "occupancyPercentage%20=%2030;",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "b52448",
+        "hash": "08c0392c",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "b52448",
+        "hash": "61f5a42f",
+        "encoded": "case%20%22FEW_SEATS_AVAILABLE%22:",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "b52448",
+        "hash": "53ac8489",
+        "encoded": "level%20=%20%22MEDIUM%22;",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "b52448",
+        "hash": "f71c0da0",
+        "encoded": "occupancyPercentage%20=%2060;",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "b52448",
+        "hash": "b07f8839",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "b52448",
+        "hash": "13a5a6b9",
+        "encoded": "case%20%22STANDING_ROOM_ONLY%22:",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "b52448",
+        "hash": "2b621ad4",
+        "encoded": "level%20=%20%22HIGH%22;",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "b52448",
+        "hash": "3f52a91a",
+        "encoded": "occupancyPercentage%20=%2085;",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "b52448",
+        "hash": "0718e3ee",
+        "encoded": "displayMessage%20=%20%22Standing%20room%20only%22;",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "b52448",
+        "hash": "21961c8e",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "b52448",
+        "hash": "885f8893",
+        "encoded": "case%20%22CRUSHED_STANDING_ROOM_ONLY%22:",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "b52448",
+        "hash": "dacd0ae5",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "b52448",
+        "hash": "f3fc4fb0",
+        "encoded": "occupancyPercentage%20=%2095;",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "b52448",
+        "hash": "72dcd815",
+        "encoded": "displayMessage%20=%20%22Very%20crowded%20-%20consider%20waiting%20for%20next%20train%22;",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "b52448",
+        "hash": "5ed2614d",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "b52448",
+        "hash": "05d651bc",
+        "encoded": "case%20%22FULL%22:",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "b52448",
+        "hash": "55f6c3e3",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "b52448",
+        "hash": "b2cf94ae",
+        "encoded": "occupancyPercentage%20=%20100;",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "b52448",
+        "hash": "29a34068",
+        "encoded": "displayMessage%20=%20%22Train%20is%20full%22;",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "b52448",
+        "hash": "619d07d2",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "b52448",
+        "hash": "d0b8af1a",
+        "encoded": "case%20%22NOT_ACCEPTING_PASSENGERS%22:",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "b52448",
+        "hash": "70c964f9",
+        "encoded": "level%20=%20%22FULL%22;",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "b52448",
+        "hash": "3ca8328d",
+        "encoded": "occupancyPercentage%20=%20100;",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "b52448",
+        "hash": "24268ed6",
+        "encoded": "displayMessage%20=%20%22Not%20accepting%20passengers%22;",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "b52448",
+        "hash": "b5a16d85",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "b52448",
+        "hash": "38da6a37",
+        "encoded": "default:",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "b52448",
+        "hash": "c2749cd6",
+        "encoded": "level%20=%20%22LOW%22;",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "b52448",
+        "hash": "0119542a",
+        "encoded": "occupancyPercentage%20=%2050;",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "b52448",
+        "hash": "0dbc34f0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "b52448",
+        "hash": "3667c16b",
+        "encoded": "crowdingList.add(CrowdingInfo.builder()",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "b52448",
+        "hash": "bb84c52e",
+        "encoded": ".vehicleId(vehicle.getVehicleId())",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "b52448",
+        "hash": "e353dc45",
+        "encoded": ".routeId(vehicle.getRouteId())",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "b52448",
+        "hash": "7b430c22",
+        "encoded": ".level(level)",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "b52448",
+        "hash": "539e66e7",
+        "encoded": ".occupancyPercentage(occupancyPercentage)",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "b52448",
+        "hash": "0fb89bb7",
+        "encoded": ".displayMessage(displayMessage)",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "b52448",
+        "hash": "d4a07718",
+        "encoded": ".timestamp(vehicle.getTimestamp())",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "b52448",
+        "hash": "d356d0ec",
+        "encoded": ".build());",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "b52448",
+        "hash": "749a6433",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "b52448",
+        "hash": "95dbf480",
+        "encoded": "log.info(%22MTA:%20Extracted%20%7B%7D%20crowding%20info%20records%20from%20%7B%7D%20vehicles%20for%20route%20%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "b52448",
+        "hash": "fff79e54",
+        "encoded": "crowdingList.size(),%20vehicles.size(),%20routeId);",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "b52448",
+        "hash": "d1fd92b9",
+        "encoded": "return%20crowdingList;",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "b52448",
+        "hash": "94e63a84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "dfb3ca",
+        "hash": "4a363fb9",
+        "encoded": "private%20List%3CVehicleLocation%3E%20parseVehiclePositions(FeedMessage%20feed,%20String%20routeId)%20%7B",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "dfb3ca",
+        "hash": "36efd882",
+        "encoded": "List%3CVehicleLocation%3E%20vehicles%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "dfb3ca",
+        "hash": "2c346b0c",
+        "encoded": "int%20totalVehicles%20=%200;",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "dfb3ca",
+        "hash": "65d65686",
+        "encoded": "int%20vehiclesWithoutTrip%20=%200;",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "dfb3ca",
+        "hash": "bd1bdc65",
+        "encoded": "int%20vehiclesWithoutPosition%20=%200;",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "dfb3ca",
+        "hash": "acbd18a9",
+        "encoded": "int%20vehiclesFilteredByRoute%20=%200;",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "dfb3ca",
+        "hash": "7d396907",
+        "encoded": "//%20Track%20unique%20route%20IDs%20found%20in%20the%20feed%20for%20debugging",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "dfb3ca",
+        "hash": "93143d97",
+        "encoded": "java.util.Set%3CString%3E%20uniqueRouteIds%20=%20new%20java.util.HashSet%3C%3E();",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "dfb3ca",
+        "hash": "ea06fddd",
+        "encoded": "for%20(FeedEntity%20entity%20:%20feed.getEntityList())%20%7B",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "dfb3ca",
+        "hash": "00e00c05",
+        "encoded": "if%20(!entity.hasVehicle())%20%7B",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "dfb3ca",
+        "hash": "8afada80",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "dfb3ca",
+        "hash": "dffccced",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "dfb3ca",
+        "hash": "53b2e2fa",
+        "encoded": "totalVehicles++;",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "dfb3ca",
+        "hash": "4ffe5a4c",
+        "encoded": "VehiclePosition%20vehicle%20=%20entity.getVehicle();",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "dfb3ca",
+        "hash": "820e1a6e",
+        "encoded": "//%20Check%20if%20vehicle%20has%20trip%20information",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "dfb3ca",
+        "hash": "d1661d0b",
+        "encoded": "if%20(!vehicle.hasTrip())%20%7B",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "dfb3ca",
+        "hash": "3e4d2385",
+        "encoded": "vehiclesWithoutTrip++;",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "dfb3ca",
+        "hash": "d502eb2f",
+        "encoded": "log.debug(%22MTA:%20Vehicle%20%7B%7D%20has%20no%20trip%20information%22,%20entity.getId());",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "dfb3ca",
+        "hash": "b55630b1",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "dfb3ca",
+        "hash": "ded6c097",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "740f32",
+        "hash": "37f1d64d",
+        "encoded": "String%20vehicleRouteId%20=%20vehicle.getTrip().getRouteId();",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "740f32",
+        "hash": "8a32072f",
+        "encoded": "uniqueRouteIds.add(vehicleRouteId);",
+        "prevChunkIds": []
+      },
+      "494": {
+        "chunkId": "740f32",
+        "hash": "9636f5d9",
+        "encoded": "//%20Filter%20by%20route%20if%20specified%20-%20case-insensitive%20comparison",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "740f32",
+        "hash": "4f02d6f4",
+        "encoded": "//%20MTA%20route%20IDs%20are%20uppercase%20(e.g.,%20%22A%22,%20%22E%22,%20%221%22,%20%222%22)%20but%20API%20may%20send%20lowercase",
+        "prevChunkIds": []
+      },
+      "496": {
+        "chunkId": "740f32",
+        "hash": "40f9f3fd",
+        "encoded": "boolean%20routeMatches%20=%20routeId%20==%20null%20%7C%7C%20routeId.isBlank()%20%7C%7C",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "740f32",
+        "hash": "d39bca6b",
+        "encoded": "vehicleRouteId.equalsIgnoreCase(routeId.trim());",
+        "prevChunkIds": []
+      },
+      "499": {
+        "chunkId": "740f32",
+        "hash": "9513b5a8",
+        "encoded": "//%20Debug:%20Log%20exact%20route%20comparison",
+        "prevChunkIds": []
+      },
+      "500": {
+        "chunkId": "740f32",
+        "hash": "38ecc6d3",
+        "encoded": "log.debug(%22MTA:%20Route%20comparison%20-%20vehicleRouteId='%7B%7D'%20(length=%7B%7D),%20requestedRouteId='%7B%7D'%20(length=%7B%7D),%20matches=%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "501": {
+        "chunkId": "740f32",
+        "hash": "d7c51eda",
+        "encoded": "vehicleRouteId,%20vehicleRouteId.length(),%20routeId,%20routeId%20!=%20null%20?%20routeId.length()%20:%200,%20routeMatches);",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "740f32",
+        "hash": "511f00e1",
+        "encoded": "if%20(!routeMatches)%20%7B",
+        "prevChunkIds": []
+      },
+      "504": {
+        "chunkId": "740f32",
+        "hash": "3982406c",
+        "encoded": "vehiclesFilteredByRoute++;",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "740f32",
+        "hash": "5952822e",
+        "encoded": "log.debug(%22MTA:%20Filtering%20out%20vehicle%20on%20route%20%7B%7D%20(looking%20for%20%7B%7D)%22,%20vehicleRouteId,%20routeId);",
+        "prevChunkIds": []
+      },
+      "506": {
+        "chunkId": "740f32",
+        "hash": "07821d7f",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "740f32",
+        "hash": "3c6c415b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "509": {
+        "chunkId": "cb5855",
+        "hash": "229f5c0c",
+        "encoded": "//%20Debug:%20Log%20that%20we%20found%20a%20matching%20vehicle",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "cb5855",
+        "hash": "a1b9fc66",
+        "encoded": "log.info(%22MTA:%20Found%20matching%20vehicle%20%7B%7D%20on%20route%20%7B%7D%20(requested:%20%7B%7D)%22,%20entity.getId(),%20vehicleRouteId,%20routeId);",
+        "prevChunkIds": []
+      },
+      "512": {
+        "chunkId": "cb5855",
+        "hash": "317a7a8f",
+        "encoded": "//%20Extract%20vehicle%20position%20data%20-%20MTA%20provides%20either%20GPS%20coordinates%20OR%20stop-based%20location",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "cb5855",
+        "hash": "826931fa",
+        "encoded": "//%20Many%20vehicles%20only%20have%20stop_id%20without%20GPS%20coordinates,%20which%20is%20still%20valid%20location%20data",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "cb5855",
+        "hash": "4e5d027b",
+        "encoded": "GtfsRealtime.Position%20position%20=%20null;",
+        "prevChunkIds": []
+      },
+      "515": {
+        "chunkId": "cb5855",
+        "hash": "5cceb03e",
+        "encoded": "double%20latitude%20=%200.0;",
+        "prevChunkIds": []
+      },
+      "516": {
+        "chunkId": "cb5855",
+        "hash": "1c898303",
+        "encoded": "double%20longitude%20=%200.0;",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "cb5855",
+        "hash": "73b302e4",
+        "encoded": "boolean%20hasGpsCoordinates%20=%20false;",
+        "prevChunkIds": []
+      },
+      "519": {
+        "chunkId": "cb5855",
+        "hash": "0c8d2240",
+        "encoded": "if%20(vehicle.hasPosition())%20%7B",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "cb5855",
+        "hash": "7fc3a4d7",
+        "encoded": "position%20=%20vehicle.getPosition();",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "cb5855",
+        "hash": "5dd483f0",
+        "encoded": "if%20(position.hasLatitude()%20&&%20position.hasLongitude())%20%7B",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "cb5855",
+        "hash": "e1bd3abb",
+        "encoded": "latitude%20=%20position.getLatitude();",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "cb5855",
+        "hash": "3c13eba6",
+        "encoded": "longitude%20=%20position.getLongitude();",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "cb5855",
+        "hash": "bb8edaae",
+        "encoded": "hasGpsCoordinates%20=%20true;",
+        "prevChunkIds": []
+      },
+      "525": {
+        "chunkId": "cb5855",
+        "hash": "6c610ddb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "526": {
+        "chunkId": "cb5855",
+        "hash": "0ee89c7d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "cb5855",
+        "hash": "17801dd3",
+        "encoded": "//%20If%20no%20GPS%20coordinates,%20check%20if%20we%20have%20stop-based%20location",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "cb5855",
+        "hash": "8c4d6425",
+        "encoded": "boolean%20hasStopLocation%20=%20vehicle.hasStopId()%20&&%20!vehicle.getStopId().isBlank();",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "cb5855",
+        "hash": "d500fff9",
+        "encoded": "//%20Accept%20vehicle%20if%20it%20has%20EITHER%20GPS%20coordinates%20OR%20stop%20location",
+        "prevChunkIds": []
+      },
+      "532": {
+        "chunkId": "cb5855",
+        "hash": "b1d8ff3b",
+        "encoded": "if%20(!hasGpsCoordinates%20&&%20!hasStopLocation)%20%7B",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "cb5855",
+        "hash": "55c304c8",
+        "encoded": "vehiclesWithoutPosition++;",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "cb5855",
+        "hash": "8c92d84b",
+        "encoded": "log.warn(%22MTA:%20Vehicle%20%7B%7D%20on%20route%20%7B%7D%20has%20no%20usable%20position%20data%20-%20hasGPS=%7B%7D,%20hasStop=%7B%7D,%20vehicle%20details:%20%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "535": {
+        "chunkId": "cb5855",
+        "hash": "9c39bb4f",
+        "encoded": "entity.getId(),%20vehicleRouteId,%20hasGpsCoordinates,%20hasStopLocation,%20vehicle);",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "cb5855",
+        "hash": "eab48a7d",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "537": {
+        "chunkId": "cb5855",
+        "hash": "006fda5f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "539": {
+        "chunkId": "cb5855",
+        "hash": "738843d7",
+        "encoded": "//%20For%20stop-based%20locations%20without%20GPS,%20use%20placeholder%20coordinates%20(will%20be%20resolved%20by%20frontend%20or%20stop%20lookup)",
+        "prevChunkIds": []
+      },
+      "540": {
+        "chunkId": "cb5855",
+        "hash": "b86dc442",
+        "encoded": "//%20Frontend%20can%20display%20these%20vehicles%20at%20their%20current%20stop%20location",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "cb5855",
+        "hash": "a436cac7",
+        "encoded": "if%20(!hasGpsCoordinates%20&&%20hasStopLocation)%20%7B",
+        "prevChunkIds": []
+      },
+      "542": {
+        "chunkId": "cb5855",
+        "hash": "16d8cec1",
+        "encoded": "log.info(%22MTA:%20Vehicle%20%7B%7D%20at%20stop%20%7B%7D%20has%20stop-based%20location%20(no%20GPS%20coordinates)%22,",
+        "prevChunkIds": []
+      },
+      "543": {
+        "chunkId": "59307f",
+        "hash": "3e7cd0f9",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "544": {
+        "chunkId": "59307f",
+        "hash": "3d2400c5",
+        "encoded": "*%20Parse%20GTFS-RT%20Trip%20Updates%20feed%20for%20arrival%20predictions",
+        "prevChunkIds": []
+      },
+      "545": {
+        "chunkId": "59307f",
+        "hash": "6e1e0fad",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "546": {
+        "chunkId": "59307f",
+        "hash": "c129046f",
+        "encoded": "private%20List%3CArrivalPrediction%3E%20parseTripUpdates(FeedMessage%20feed,%20String%20stopId,%20String%20routeId)%20%7B",
+        "prevChunkIds": []
+      },
+      "547": {
+        "chunkId": "59307f",
+        "hash": "e1b0308e",
+        "encoded": "List%3CArrivalPrediction%3E%20predictions%20=%20new%20ArrayList%3C%3E();",
+        "prevChunkIds": []
+      },
+      "548": {
+        "chunkId": "59307f",
+        "hash": "a8788d7f",
+        "encoded": "int%20totalTrips%20=%200;",
+        "prevChunkIds": []
+      },
+      "549": {
+        "chunkId": "59307f",
+        "hash": "cd3bca1f",
+        "encoded": "int%20tripsWithoutStops%20=%200;",
+        "prevChunkIds": []
+      },
+      "550": {
+        "chunkId": "59307f",
+        "hash": "b0023f18",
+        "encoded": "int%20stopsFiltered%20=%200;",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "59307f",
+        "hash": "20cc615d",
+        "encoded": "for%20(FeedEntity%20entity%20:%20feed.getEntityList())%20%7B",
+        "prevChunkIds": []
+      },
+      "553": {
+        "chunkId": "59307f",
+        "hash": "28ff4f37",
+        "encoded": "if%20(!entity.hasTripUpdate())%20%7B",
+        "prevChunkIds": []
+      },
+      "554": {
+        "chunkId": "59307f",
+        "hash": "856a0a99",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "555": {
+        "chunkId": "59307f",
+        "hash": "aefc108f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "59307f",
+        "hash": "01fad148",
+        "encoded": "totalTrips++;",
+        "prevChunkIds": []
+      },
+      "558": {
+        "chunkId": "59307f",
+        "hash": "d4264b14",
+        "encoded": "TripUpdate%20tripUpdate%20=%20entity.getTripUpdate();",
+        "prevChunkIds": []
+      },
+      "560": {
+        "chunkId": "59307f",
+        "hash": "17cd3ccb",
+        "encoded": "//%20Filter%20by%20route%20if%20specified",
+        "prevChunkIds": []
+      },
+      "561": {
+        "chunkId": "59307f",
+        "hash": "d0174e68",
+        "encoded": "if%20(routeId%20!=%20null%20&&%20tripUpdate.hasTrip()%20&&%20!routeId.equalsIgnoreCase(tripUpdate.getTrip().getRouteId()))%20%7B",
+        "prevChunkIds": []
+      },
+      "562": {
+        "chunkId": "59307f",
+        "hash": "112084fe",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "59307f",
+        "hash": "4540c3a1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "565": {
+        "chunkId": "59307f",
+        "hash": "a4e05303",
+        "encoded": "String%20tripRouteId%20=%20tripUpdate.hasTrip()%20?%20tripUpdate.getTrip().getRouteId()%20:%20%22%22;",
+        "prevChunkIds": []
+      },
+      "566": {
+        "chunkId": "59307f",
+        "hash": "ef0833a3",
+        "encoded": "String%20tripId%20=%20tripUpdate.hasTrip()%20?%20tripUpdate.getTrip().getTripId()%20:%20%22%22;",
+        "prevChunkIds": []
+      },
+      "567": {
+        "chunkId": "59307f",
+        "hash": "9f7d443d",
+        "encoded": "String%20headsign%20=%20%22%22;",
+        "prevChunkIds": []
+      },
+      "569": {
+        "chunkId": "59307f",
+        "hash": "bffdff98",
+        "encoded": "//%20Extract%20direction/headsign%20from%20trip%20ID%20if%20available",
+        "prevChunkIds": []
+      },
+      "570": {
+        "chunkId": "59307f",
+        "hash": "b7a72eb4",
+        "encoded": "if%20(tripUpdate.hasTrip()%20&&%20tripUpdate.getTrip().hasTripId())%20%7B",
+        "prevChunkIds": []
+      },
+      "571": {
+        "chunkId": "59307f",
+        "hash": "d776863c",
+        "encoded": "String%20fullTripId%20=%20tripUpdate.getTrip().getTripId();",
+        "prevChunkIds": []
+      },
+      "572": {
+        "chunkId": "59307f",
+        "hash": "cf73ce2e",
+        "encoded": "//%20MTA%20trip%20IDs%20often%20contain%20direction%20info%20(e.g.,%20ends%20with%20N%20for%20northbound,%20S%20for%20southbound)",
+        "prevChunkIds": []
+      },
+      "573": {
+        "chunkId": "59307f",
+        "hash": "36f80e9b",
+        "encoded": "if%20(fullTripId.endsWith(%22N%22))%20%7B",
+        "prevChunkIds": []
+      },
+      "574": {
+        "chunkId": "59307f",
+        "hash": "727de347",
+        "encoded": "headsign%20=%20%22Northbound%22;",
+        "prevChunkIds": []
+      },
+      "575": {
+        "chunkId": "59307f",
+        "hash": "86667186",
+        "encoded": "%7D%20else%20if%20(fullTripId.endsWith(%22S%22))%20%7B",
+        "prevChunkIds": []
+      },
+      "576": {
+        "chunkId": "59307f",
+        "hash": "ce0d40b2",
+        "encoded": "headsign%20=%20%22Southbound%22;",
+        "prevChunkIds": []
+      },
+      "577": {
+        "chunkId": "59307f",
+        "hash": "e3694cc1",
+        "encoded": "%7D%20else%20if%20(tripUpdate.getTrip().hasDirectionId())%20%7B",
+        "prevChunkIds": []
+      },
+      "578": {
+        "chunkId": "59307f",
+        "hash": "16d1fffe",
+        "encoded": "headsign%20=%20%22Direction%20%22%20+%20tripUpdate.getTrip().getDirectionId();",
+        "prevChunkIds": []
+      },
+      "579": {
+        "chunkId": "59307f",
+        "hash": "d116dbe2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "580": {
+        "chunkId": "59307f",
+        "hash": "e442827e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "582": {
+        "chunkId": "59307f",
+        "hash": "03138986",
+        "encoded": "//%20Process%20stop%20time%20updates",
+        "prevChunkIds": []
+      },
+      "583": {
+        "chunkId": "59307f",
+        "hash": "c1a72131",
+        "encoded": "if%20(tripUpdate.getStopTimeUpdateCount()%20==%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "584": {
+        "chunkId": "59307f",
+        "hash": "262866b4",
+        "encoded": "tripsWithoutStops++;",
+        "prevChunkIds": []
+      },
+      "585": {
+        "chunkId": "59307f",
+        "hash": "a9415e24",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "586": {
+        "chunkId": "59307f",
+        "hash": "622c28b5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "588": {
+        "chunkId": "59307f",
+        "hash": "81ecbbb3",
+        "encoded": "for%20(TripUpdate.StopTimeUpdate%20stopTimeUpdate%20:%20tripUpdate.getStopTimeUpdateList())%20%7B",
+        "prevChunkIds": []
+      },
+      "589": {
+        "chunkId": "59307f",
+        "hash": "8433ed5c",
+        "encoded": "String%20updateStopId%20=%20stopTimeUpdate.getStopId();",
+        "prevChunkIds": []
+      },
+      "591": {
+        "chunkId": "59307f",
+        "hash": "c07309c0",
+        "encoded": "//%20Filter%20by%20stop%20ID%20if%20specified%20(null%20stopId%20means%20fetch%20all%20stops%20for%20the%20route)",
+        "prevChunkIds": []
+      },
+      "592": {
+        "chunkId": "59307f",
+        "hash": "fabba78c",
+        "encoded": "if%20(stopId%20!=%20null%20&&%20!stopId.equals(updateStopId))%20%7B",
+        "prevChunkIds": []
+      },
+      "593": {
+        "chunkId": "59307f",
+        "hash": "4f950d35",
+        "encoded": "stopsFiltered++;",
+        "prevChunkIds": []
+      },
+      "594": {
+        "chunkId": "59307f",
+        "hash": "84cc5000",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "595": {
+        "chunkId": "59307f",
+        "hash": "e3c9d6a8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "597": {
+        "chunkId": "59307f",
+        "hash": "d2bc8b02",
+        "encoded": "//%20Get%20arrival%20time",
+        "prevChunkIds": []
+      },
+      "598": {
+        "chunkId": "59307f",
+        "hash": "9a2fc001",
+        "encoded": "if%20(!stopTimeUpdate.hasArrival())%20%7B",
+        "prevChunkIds": []
+      },
+      "599": {
+        "chunkId": "59307f",
+        "hash": "f8d45492",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "600": {
+        "chunkId": "59307f",
+        "hash": "3e9a32bb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "602": {
+        "chunkId": "59307f",
+        "hash": "1bbc7c5c",
+        "encoded": "TripUpdate.StopTimeEvent%20arrival%20=%20stopTimeUpdate.getArrival();",
+        "prevChunkIds": []
+      },
+      "604": {
+        "chunkId": "59307f",
+        "hash": "55d74a93",
+        "encoded": "Instant%20predictedArrival%20=%20arrival.hasTime()",
+        "prevChunkIds": []
+      },
+      "605": {
+        "chunkId": "59307f",
+        "hash": "0dcd51ab",
+        "encoded": "?%20Instant.ofEpochSecond(arrival.getTime())",
+        "prevChunkIds": []
+      },
+      "606": {
+        "chunkId": "59307f",
+        "hash": "c4b5fad1",
+        "encoded": ":%20Instant.now().plusSeconds(60);",
+        "prevChunkIds": []
+      },
+      "608": {
+        "chunkId": "59307f",
+        "hash": "465b1916",
+        "encoded": "int%20delaySeconds%20=%20arrival.hasDelay()%20?%20arrival.getDelay()%20:%200;",
+        "prevChunkIds": []
+      },
+      "609": {
+        "chunkId": "59307f",
+        "hash": "ed239407",
+        "encoded": "Instant%20scheduledArrival%20=%20predictedArrival.minusSeconds(delaySeconds);",
+        "prevChunkIds": []
+      },
+      "611": {
+        "chunkId": "59307f",
+        "hash": "253264a5",
+        "encoded": "long%20minsToArrival%20=%20(predictedArrival.getEpochSecond()%20-%20Instant.now().getEpochSecond())%20/%2060;",
+        "prevChunkIds": []
+      },
+      "613": {
+        "chunkId": "59307f",
+        "hash": "808cce67",
+        "encoded": "//%20Only%20include%20future%20arrivals%20(within%20next%2060%20minutes)",
+        "prevChunkIds": []
+      },
+      "614": {
+        "chunkId": "59307f",
+        "hash": "57bed4c1",
+        "encoded": "if%20(minsToArrival%20%3C%200%20%7C%7C%20minsToArrival%20%3E%2060)%20%7B",
+        "prevChunkIds": []
+      },
+      "615": {
+        "chunkId": "59307f",
+        "hash": "e01daefb",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "616": {
+        "chunkId": "59307f",
+        "hash": "77ea5cda",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "618": {
+        "chunkId": "59307f",
+        "hash": "ed6aaf00",
+        "encoded": "String%20status%20=%20delaySeconds%20%3E%2060%20?%20%22DELAYED%22%20:%20(delaySeconds%20%3C%20-60%20?%20%22EARLY%22%20:%20%22ON_TIME%22);",
+        "prevChunkIds": []
+      },
+      "620": {
+        "chunkId": "59307f",
+        "hash": "4aa1cf76",
+        "encoded": "predictions.add(ArrivalPrediction.builder()",
+        "prevChunkIds": []
+      },
+      "621": {
+        "chunkId": "59307f",
+        "hash": "128b8bc8",
+        "encoded": ".stopId(updateStopId)",
+        "prevChunkIds": []
+      },
+      "622": {
+        "chunkId": "59307f",
+        "hash": "2774336d",
+        "encoded": ".stopName(%22%22)%20//%20Stop%20name%20not%20in%20GTFS-RT,%20would%20need%20GTFS%20static%20data",
+        "prevChunkIds": []
+      },
+      "623": {
+        "chunkId": "59307f",
+        "hash": "378dfbfb",
+        "encoded": ".routeId(tripRouteId)",
+        "prevChunkIds": []
+      },
+      "624": {
+        "chunkId": "59307f",
+        "hash": "b5c5e800",
+        "encoded": ".routeName(tripRouteId)",
+        "prevChunkIds": []
+      },
+      "625": {
+        "chunkId": "59307f",
+        "hash": "e9bbfb90",
+        "encoded": ".tripId(tripId)",
+        "prevChunkIds": []
+      },
+      "626": {
+        "chunkId": "59307f",
+        "hash": "f735526c",
+        "encoded": ".headsign(headsign.isEmpty()%20?%20%22Route%20%22%20+%20tripRouteId%20:%20headsign)",
+        "prevChunkIds": []
+      },
+      "627": {
+        "chunkId": "59307f",
+        "hash": "9b92d4bf",
+        "encoded": ".scheduledArrival(scheduledArrival)",
+        "prevChunkIds": []
+      },
+      "628": {
+        "chunkId": "59307f",
+        "hash": "e13b5bf7",
+        "encoded": ".predictedArrival(predictedArrival)",
+        "prevChunkIds": []
+      },
+      "629": {
+        "chunkId": "59307f",
+        "hash": "7f323135",
+        "encoded": ".delaySeconds(delaySeconds)",
+        "prevChunkIds": []
+      },
+      "630": {
+        "chunkId": "59307f",
+        "hash": "5bee5cd4",
+        "encoded": ".status(status)",
+        "prevChunkIds": []
+      },
+      "631": {
+        "chunkId": "59307f",
+        "hash": "5148469c",
+        "encoded": ".realtime(true)",
+        "prevChunkIds": []
+      },
+      "632": {
+        "chunkId": "59307f",
+        "hash": "a747cbda",
+        "encoded": ".minutesToArrival((int)%20Math.max(0,%20minsToArrival))",
+        "prevChunkIds": []
+      },
+      "633": {
+        "chunkId": "59307f",
+        "hash": "d2d4b9f4",
+        "encoded": ".build());",
+        "prevChunkIds": []
+      },
+      "634": {
+        "chunkId": "59307f",
+        "hash": "da3083f6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "635": {
+        "chunkId": "59307f",
+        "hash": "98cb02bd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "637": {
+        "chunkId": "59307f",
+        "hash": "29ce138e",
+        "encoded": "log.info(%22MTA:%20Parsed%20%7B%7D%20arrival%20predictions%20for%20stop%20%7B%7D%20route%20%7B%7D%20(totalTrips=%7B%7D,%20tripsWithoutStops=%7B%7D,%20stopsFiltered=%7B%7D)%22,",
+        "prevChunkIds": []
+      },
+      "638": {
+        "chunkId": "59307f",
+        "hash": "4c4a1178",
+        "encoded": "predictions.size(),%20stopId,%20routeId,%20totalTrips,%20tripsWithoutStops,%20stopsFiltered);",
+        "prevChunkIds": []
+      },
+      "639": {
+        "chunkId": "59307f",
+        "hash": "dfcf6860",
+        "encoded": "return%20predictions;",
+        "prevChunkIds": []
+      },
+      "640": {
+        "chunkId": "59307f",
+        "hash": "f64add19",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "641": {
+        "chunkId": "cb5855",
+        "hash": "deff16f8",
+        "encoded": "//%20Use%200,0%20as%20placeholder%20-%20frontend%20should%20resolve%20stop%20coordinates",
+        "prevChunkIds": []
+      },
+      "642": {
+        "chunkId": "cb5855",
+        "hash": "c661dfa0",
+        "encoded": "latitude%20=%200.0;",
+        "prevChunkIds": []
+      },
+      "643": {
+        "chunkId": "cb5855",
+        "hash": "dcead98b",
+        "encoded": "longitude%20=%200.0;",
+        "prevChunkIds": []
+      },
+      "644": {
+        "chunkId": "cb5855",
+        "hash": "91ee4f70",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "645": {
+        "chunkId": "27b061",
+        "hash": "93bfd686",
+        "encoded": "log.info(%22MTA:%20Found%20matching%20vehicle%20%7B%7D%20on%20route%20%7B%7D%20(requested:%20%7B%7D)%22,%20entity.getId(),%20vehicleRouteId,%20routeId);",
+        "prevChunkIds": []
+      },
+      "646": {
+        "chunkId": "7bb5eb",
+        "hash": "b700d6e8",
+        "encoded": "//%20Extract%20vehicle%20data",
+        "prevChunkIds": []
+      },
+      "647": {
+        "chunkId": "7bb5eb",
+        "hash": "06c050ab",
+        "encoded": "String%20vehicleId%20=%20vehicle.hasVehicle()%20?%20vehicle.getVehicle().getId()%20:%20entity.getId();",
+        "prevChunkIds": []
+      },
+      "648": {
+        "chunkId": "7bb5eb",
+        "hash": "5540d7f1",
+        "encoded": "String%20tripRouteId%20=%20vehicle.hasTrip()%20?%20vehicle.getTrip().getRouteId()%20:%20routeId;",
+        "prevChunkIds": []
+      },
+      "649": {
+        "chunkId": "7bb5eb",
+        "hash": "2502ab80",
+        "encoded": "String%20tripId%20=%20vehicle.hasTrip()%20?%20vehicle.getTrip().getTripId()%20:%20%22%22;",
+        "prevChunkIds": []
+      },
+      "650": {
+        "chunkId": "7bb5eb",
+        "hash": "3fbaa158",
+        "encoded": "String%20currentStopId%20=%20vehicle.hasStopId()%20?%20vehicle.getStopId()%20:%20%22%22;",
+        "prevChunkIds": []
+      },
+      "652": {
+        "chunkId": "7bb5eb",
+        "hash": "67b87e97",
+        "encoded": "//%20Occupancy%20status",
+        "prevChunkIds": []
+      },
+      "653": {
+        "chunkId": "7bb5eb",
+        "hash": "ba04daa7",
+        "encoded": "String%20occupancyStatus%20=%20%22UNKNOWN%22;",
+        "prevChunkIds": []
+      },
+      "654": {
+        "chunkId": "7bb5eb",
+        "hash": "92ed9e9e",
+        "encoded": "if%20(vehicle.hasOccupancyStatus())%20%7B",
+        "prevChunkIds": []
+      },
+      "655": {
+        "chunkId": "7bb5eb",
+        "hash": "bebdfd1e",
+        "encoded": "occupancyStatus%20=%20vehicle.getOccupancyStatus().name();",
+        "prevChunkIds": []
+      },
+      "656": {
+        "chunkId": "7bb5eb",
+        "hash": "b8ca1ed9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "658": {
+        "chunkId": "7bb5eb",
+        "hash": "1b9e6846",
+        "encoded": "//%20Current%20status",
+        "prevChunkIds": []
+      },
+      "659": {
+        "chunkId": "7bb5eb",
+        "hash": "21d188d0",
+        "encoded": "String%20status%20=%20%22IN_TRANSIT_TO%22;",
+        "prevChunkIds": []
+      },
+      "660": {
+        "chunkId": "7bb5eb",
+        "hash": "d827e1ee",
+        "encoded": "if%20(vehicle.hasCurrentStatus())%20%7B",
+        "prevChunkIds": []
+      },
+      "661": {
+        "chunkId": "7bb5eb",
+        "hash": "870f759e",
+        "encoded": "status%20=%20vehicle.getCurrentStatus().name();",
+        "prevChunkIds": []
+      },
+      "662": {
+        "chunkId": "7bb5eb",
+        "hash": "b7445517",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "664": {
+        "chunkId": "7bb5eb",
+        "hash": "2edd3f4b",
+        "encoded": "//%20Timestamp",
+        "prevChunkIds": []
+      },
+      "665": {
+        "chunkId": "7bb5eb",
+        "hash": "a623c855",
+        "encoded": "Instant%20timestamp%20=%20vehicle.hasTimestamp()",
+        "prevChunkIds": []
+      },
+      "666": {
+        "chunkId": "7bb5eb",
+        "hash": "27c69ac9",
+        "encoded": "?%20Instant.ofEpochSecond(vehicle.getTimestamp())",
+        "prevChunkIds": []
+      },
+      "667": {
+        "chunkId": "7bb5eb",
+        "hash": "c6c6a3d9",
+        "encoded": ":%20Instant.now();",
+        "prevChunkIds": []
+      },
+      "669": {
+        "chunkId": "7bb5eb",
+        "hash": "9c8b9830",
+        "encoded": "//%20Extract%20bearing%20and%20speed%20from%20position%20if%20available",
+        "prevChunkIds": []
+      },
+      "670": {
+        "chunkId": "7bb5eb",
+        "hash": "a9048a00",
+        "encoded": "double%20bearing%20=%200.0;",
+        "prevChunkIds": []
+      },
+      "671": {
+        "chunkId": "7bb5eb",
+        "hash": "6d9dca5d",
+        "encoded": "double%20speedKmh%20=%200.0;",
+        "prevChunkIds": []
+      },
+      "672": {
+        "chunkId": "7bb5eb",
+        "hash": "1381905d",
+        "encoded": "if%20(position%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "673": {
+        "chunkId": "7bb5eb",
+        "hash": "2d4d258d",
+        "encoded": "bearing%20=%20position.hasBearing()%20?%20position.getBearing()%20:%200.0;",
+        "prevChunkIds": []
+      },
+      "674": {
+        "chunkId": "7bb5eb",
+        "hash": "92b8658c",
+        "encoded": "speedKmh%20=%20position.hasSpeed()%20?%20position.getSpeed()%20*%203.6%20:%200.0;",
+        "prevChunkIds": []
+      },
+      "675": {
+        "chunkId": "7bb5eb",
+        "hash": "b0113b6e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "677": {
+        "chunkId": "7bb5eb",
+        "hash": "65d1da8e",
+        "encoded": "vehicles.add(VehicleLocation.builder()",
+        "prevChunkIds": []
+      },
+      "678": {
+        "chunkId": "7bb5eb",
+        "hash": "aaf173d3",
+        "encoded": ".vehicleId(vehicleId)",
+        "prevChunkIds": []
+      },
+      "679": {
+        "chunkId": "7bb5eb",
+        "hash": "371d9abb",
+        "encoded": ".routeId(tripRouteId)",
+        "prevChunkIds": []
+      },
+      "680": {
+        "chunkId": "7bb5eb",
+        "hash": "3262e327",
+        "encoded": ".tripId(tripId)",
+        "prevChunkIds": []
+      },
+      "681": {
+        "chunkId": "7bb5eb",
+        "hash": "82b79056",
+        "encoded": ".latitude(latitude)",
+        "prevChunkIds": []
+      },
+      "682": {
+        "chunkId": "7bb5eb",
+        "hash": "36c385b5",
+        "encoded": ".longitude(longitude)",
+        "prevChunkIds": []
+      },
+      "683": {
+        "chunkId": "7bb5eb",
+        "hash": "76166e90",
+        "encoded": ".bearing(bearing)",
+        "prevChunkIds": []
+      },
+      "684": {
+        "chunkId": "7bb5eb",
+        "hash": "85843bd6",
+        "encoded": ".speedKmh(speedKmh)",
+        "prevChunkIds": []
+      },
+      "685": {
+        "chunkId": "7bb5eb",
+        "hash": "6a4d002d",
+        "encoded": ".status(status)",
+        "prevChunkIds": []
+      },
+      "686": {
+        "chunkId": "7bb5eb",
+        "hash": "c8ff6e77",
+        "encoded": ".currentStopId(currentStopId)",
+        "prevChunkIds": []
+      },
+      "687": {
+        "chunkId": "7bb5eb",
+        "hash": "51d28ab1",
+        "encoded": ".delaySeconds(0)",
+        "prevChunkIds": []
+      },
+      "688": {
+        "chunkId": "7bb5eb",
+        "hash": "afc7684b",
+        "encoded": ".occupancyStatus(occupancyStatus)",
+        "prevChunkIds": []
+      },
+      "689": {
+        "chunkId": "7bb5eb",
+        "hash": "93e13a8b",
+        "encoded": ".delayLabel(%22On%20time%22)",
+        "prevChunkIds": []
+      },
+      "690": {
+        "chunkId": "7bb5eb",
+        "hash": "2564db88",
+        "encoded": ".timestamp(timestamp)",
+        "prevChunkIds": []
+      },
+      "691": {
+        "chunkId": "7bb5eb",
+        "hash": "7537885c",
+        "encoded": ".build());",
+        "prevChunkIds": []
+      },
+      "693": {
+        "chunkId": "7bb5eb",
+        "hash": "1eb6edc5",
+        "encoded": "log.debug(%22MTA:%20Added%20vehicle%20%7B%7D%20-%20GPS=%7B%7D,%20Stop=%7B%7D,%20Lat=%7B%7D,%20Lon=%7B%7D,%20StopId=%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "694": {
+        "chunkId": "7bb5eb",
+        "hash": "e879e6ac",
+        "encoded": "vehicleId,%20hasGpsCoordinates,%20hasStopLocation,%20latitude,%20longitude,%20currentStopId);",
+        "prevChunkIds": []
+      },
+      "695": {
+        "chunkId": "27b061",
+        "hash": "2c013700",
+        "encoded": "//%20Check%20if%20vehicle%20has%20position%20data",
+        "prevChunkIds": []
+      },
+      "696": {
+        "chunkId": "27b061",
+        "hash": "3b6ca260",
+        "encoded": "if%20(!vehicle.hasPosition())%20%7B",
+        "prevChunkIds": []
+      },
+      "697": {
+        "chunkId": "27b061",
+        "hash": "f8fc633f",
+        "encoded": "vehiclesWithoutPosition++;",
+        "prevChunkIds": []
+      },
+      "698": {
+        "chunkId": "27b061",
+        "hash": "b41c05cb",
+        "encoded": "log.warn(%22MTA:%20Vehicle%20%7B%7D%20on%20route%20%7B%7D%20has%20no%20position%20data%20-%20hasPosition=%7B%7D,%20vehicle%20details:%20%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "699": {
+        "chunkId": "27b061",
+        "hash": "9fb2dde3",
+        "encoded": "entity.getId(),%20vehicleRouteId,%20vehicle.hasPosition(),%20vehicle);",
+        "prevChunkIds": []
+      },
+      "700": {
+        "chunkId": "27b061",
+        "hash": "049899e9",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "701": {
+        "chunkId": "27b061",
+        "hash": "3ad75760",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "703": {
+        "chunkId": "27b061",
+        "hash": "436f45e5",
+        "encoded": "GtfsRealtime.Position%20position%20=%20vehicle.getPosition();",
+        "prevChunkIds": []
+      },
+      "705": {
+        "chunkId": "27b061",
+        "hash": "af1af468",
+        "encoded": "//%20Validate%20position%20has%20required%20fields",
+        "prevChunkIds": []
+      },
+      "706": {
+        "chunkId": "27b061",
+        "hash": "3e46bc63",
+        "encoded": "if%20(!position.hasLatitude()%20%7C%7C%20!position.hasLongitude())%20%7B",
+        "prevChunkIds": []
+      },
+      "707": {
+        "chunkId": "27b061",
+        "hash": "c1b271ed",
+        "encoded": "vehiclesWithoutPosition++;",
+        "prevChunkIds": []
+      },
+      "708": {
+        "chunkId": "27b061",
+        "hash": "3cf3e7e5",
+        "encoded": "log.warn(%22MTA:%20Vehicle%20%7B%7D%20on%20route%20%7B%7D%20has%20incomplete%20position%20data%20-%20lat=%7B%7D,%20lon=%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "709": {
+        "chunkId": "27b061",
+        "hash": "ca506cee",
+        "encoded": "entity.getId(),%20vehicleRouteId,%20position.hasLatitude(),%20position.hasLongitude());",
+        "prevChunkIds": []
+      },
+      "710": {
+        "chunkId": "27b061",
+        "hash": "7dcb5b0d",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "711": {
+        "chunkId": "27b061",
+        "hash": "1fa0e913",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "712": {
+        "chunkId": "740f32",
+        "hash": "ebf1f206",
+        "encoded": "log.info(%22MTA:%20Found%20matching%20vehicle%20%7B%7D%20on%20route%20%7B%7D%20(requested:%20%7B%7D)%22,%20entity.getId(),%20vehicleRouteId,%20routeId);",
+        "prevChunkIds": []
+      },
+      "713": {
+        "chunkId": "6a2008",
+        "hash": "0c357ddb",
+        "encoded": "uniqueRouteIds.add(vehicleRouteId);",
+        "prevChunkIds": []
+      },
+      "715": {
+        "chunkId": "6a2008",
+        "hash": "82eb912c",
+        "encoded": "//%20Filter%20by%20route%20if%20specified%20-%20case-insensitive%20comparison",
+        "prevChunkIds": []
+      },
+      "716": {
+        "chunkId": "6a2008",
+        "hash": "bd03ed4c",
+        "encoded": "//%20MTA%20route%20IDs%20are%20uppercase%20(e.g.,%20%22A%22,%20%22E%22,%20%221%22,%20%222%22)%20but%20API%20may%20send%20lowercase",
+        "prevChunkIds": []
+      },
+      "717": {
+        "chunkId": "6a2008",
+        "hash": "f10ab341",
+        "encoded": "boolean%20routeMatches%20=%20routeId%20==%20null%20%7C%7C%20routeId.isBlank()%20%7C%7C",
+        "prevChunkIds": []
+      },
+      "718": {
+        "chunkId": "6a2008",
+        "hash": "bf707fe6",
+        "encoded": "vehicleRouteId.equalsIgnoreCase(routeId.trim());",
+        "prevChunkIds": []
+      },
+      "720": {
+        "chunkId": "6a2008",
+        "hash": "f00acbd5",
+        "encoded": "if%20(!routeMatches)%20%7B",
+        "prevChunkIds": []
+      },
+      "721": {
+        "chunkId": "6a2008",
+        "hash": "824d4752",
+        "encoded": "vehiclesFilteredByRoute++;",
+        "prevChunkIds": []
+      },
+      "722": {
+        "chunkId": "6a2008",
+        "hash": "91d98c08",
+        "encoded": "log.debug(%22MTA:%20Filtering%20out%20vehicle%20on%20route%20%7B%7D%20(looking%20for%20%7B%7D)%22,%20vehicleRouteId,%20routeId);",
+        "prevChunkIds": []
+      },
+      "723": {
+        "chunkId": "6a2008",
+        "hash": "a77e810c",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "724": {
+        "chunkId": "6a2008",
+        "hash": "4c912b36",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "725": {
+        "chunkId": "17312f",
+        "hash": "431a4ac7",
+        "encoded": "uniqueRouteIds.add(vehicleRouteId);",
+        "prevChunkIds": []
+      },
+      "727": {
+        "chunkId": "17312f",
+        "hash": "c0f170c4",
+        "encoded": "//%20Filter%20by%20route%20if%20specified%20-%20exact%20match%20only%20(case-insensitive)",
+        "prevChunkIds": []
+      },
+      "728": {
+        "chunkId": "17312f",
+        "hash": "b8781385",
+        "encoded": "//%20MTA%20route%20IDs%20are%20exact%20matches%20(e.g.,%20%22A%22,%20%22E%22,%20%221%22,%20%222%22)",
+        "prevChunkIds": []
+      },
+      "729": {
+        "chunkId": "17312f",
+        "hash": "d38bfbf0",
+        "encoded": "boolean%20routeMatches%20=%20routeId%20==%20null%20%7C%7C",
+        "prevChunkIds": []
+      },
+      "730": {
+        "chunkId": "17312f",
+        "hash": "926383b2",
+        "encoded": "routeId.equalsIgnoreCase(vehicleRouteId);",
+        "prevChunkIds": []
+      },
+      "732": {
+        "chunkId": "17312f",
+        "hash": "93d57529",
+        "encoded": "if%20(!routeMatches)%20%7B",
+        "prevChunkIds": []
+      },
+      "733": {
+        "chunkId": "17312f",
+        "hash": "a10530f1",
+        "encoded": "vehiclesFilteredByRoute++;",
+        "prevChunkIds": []
+      },
+      "734": {
+        "chunkId": "17312f",
+        "hash": "10a0b661",
+        "encoded": "log.debug(%22MTA:%20Filtering%20out%20vehicle%20on%20route%20%7B%7D%20(looking%20for%20%7B%7D)%22,%20vehicleRouteId,%20routeId);",
+        "prevChunkIds": []
+      },
+      "735": {
+        "chunkId": "17312f",
+        "hash": "d997f692",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "736": {
+        "chunkId": "17312f",
+        "hash": "9466e34a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "737": {
+        "chunkId": "dfb3ca",
+        "hash": "909f11d2",
+        "encoded": "uniqueRouteIds.add(vehicleRouteId);",
+        "prevChunkIds": []
+      },
+      "739": {
+        "chunkId": "dfb3ca",
+        "hash": "1f5cf544",
+        "encoded": "//%20Filter%20by%20route%20if%20specified%20-%20match%20both%20exact%20and%20normalized%20route%20IDs",
+        "prevChunkIds": []
+      },
+      "740": {
+        "chunkId": "dfb3ca",
+        "hash": "c1782adc",
+        "encoded": "//%20MTA%20route%20IDs%20may%20have%20different%20formats%20(e.g.,%20%22A%22,%20%22a%22,%20%22A-line%22)",
+        "prevChunkIds": []
+      },
+      "741": {
+        "chunkId": "dfb3ca",
+        "hash": "4bd20399",
+        "encoded": "boolean%20routeMatches%20=%20routeId%20==%20null%20%7C%7C",
+        "prevChunkIds": []
+      },
+      "742": {
+        "chunkId": "dfb3ca",
+        "hash": "e4528ec5",
+        "encoded": "routeId.equalsIgnoreCase(vehicleRouteId)%20%7C%7C",
+        "prevChunkIds": []
+      },
+      "743": {
+        "chunkId": "dfb3ca",
+        "hash": "a6865d2c",
+        "encoded": "vehicleRouteId.toUpperCase().startsWith(routeId.toUpperCase());",
+        "prevChunkIds": []
+      },
+      "745": {
+        "chunkId": "dfb3ca",
+        "hash": "2c40fdf4",
+        "encoded": "if%20(!routeMatches)%20%7B",
+        "prevChunkIds": []
+      },
+      "746": {
+        "chunkId": "dfb3ca",
+        "hash": "b0006d36",
+        "encoded": "vehiclesFilteredByRoute++;",
+        "prevChunkIds": []
+      },
+      "747": {
+        "chunkId": "dfb3ca",
+        "hash": "dadd6e04",
+        "encoded": "log.debug(%22MTA:%20Filtering%20out%20vehicle%20on%20route%20%7B%7D%20(looking%20for%20%7B%7D)%22,%20vehicleRouteId,%20routeId);",
+        "prevChunkIds": []
+      },
+      "748": {
+        "chunkId": "dfb3ca",
+        "hash": "c0b24a85",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "749": {
+        "chunkId": "dfb3ca",
+        "hash": "e747cdef",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "751": {
+        "chunkId": "dfb3ca",
+        "hash": "e9ed01b0",
+        "encoded": "if%20(!vehicle.hasPosition())%20%7B",
+        "prevChunkIds": []
+      },
+      "752": {
+        "chunkId": "dfb3ca",
+        "hash": "a54850ce",
+        "encoded": "vehiclesWithoutPosition++;",
+        "prevChunkIds": []
+      },
+      "753": {
+        "chunkId": "dfb3ca",
+        "hash": "f844f9d7",
+        "encoded": "log.debug(%22MTA:%20Vehicle%20%7B%7D%20on%20route%20%7B%7D%20has%20no%20position%20data%22,%20entity.getId(),%20vehicleRouteId);",
+        "prevChunkIds": []
+      },
+      "754": {
+        "chunkId": "dfb3ca",
+        "hash": "a9fba57d",
+        "encoded": "continue;",
+        "prevChunkIds": []
+      },
+      "755": {
+        "chunkId": "dfb3ca",
+        "hash": "271d92ff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "843": {
+        "chunkId": "1d712b",
+        "hash": "23c21c75",
+        "encoded": "log.info(%22MTA:%20Parsed%20%7B%7D%20vehicle%20positions%20for%20route%20%7B%7D%22,%20vehicles.size(),%20routeId);",
+        "prevChunkIds": []
+      },
+      "844": {
+        "chunkId": "1d712b",
+        "hash": "eba2431f",
+        "encoded": "log.info(%22MTA:%20Feed%20statistics%20-%20Total%20vehicles:%20%7B%7D,%20Without%20trip:%20%7B%7D,%20Without%20position:%20%7B%7D,%20Filtered%20by%20route:%20%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "845": {
+        "chunkId": "1d712b",
+        "hash": "a1599881",
+        "encoded": "totalVehicles,%20vehiclesWithoutTrip,%20vehiclesWithoutPosition,%20vehiclesFilteredByRoute);",
+        "prevChunkIds": []
+      },
+      "846": {
+        "chunkId": "1d712b",
+        "hash": "4fe2ed2d",
+        "encoded": "log.info(%22MTA:%20Unique%20route%20IDs%20found%20in%20feed:%20%7B%7D%22,%20uniqueRouteIds);",
+        "prevChunkIds": []
+      },
+      "848": {
+        "chunkId": "1d712b",
+        "hash": "ff3a025a",
+        "encoded": "//%20If%20no%20vehicles%20found%20but%20feed%20has%20data,%20log%20warning%20with%20details",
+        "prevChunkIds": []
+      },
+      "849": {
+        "chunkId": "1d712b",
+        "hash": "78abf8c0",
+        "encoded": "if%20(vehicles.isEmpty()%20&&%20totalVehicles%20%3E%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "850": {
+        "chunkId": "1d712b",
+        "hash": "ba649913",
+        "encoded": "log.warn(%22MTA:%20No%20vehicles%20matched%20route%20'%7B%7D'.%20Available%20routes%20in%20feed:%20%7B%7D.%20%22%20+",
+        "prevChunkIds": []
+      },
+      "851": {
+        "chunkId": "1d712b",
+        "hash": "30a3a14d",
+        "encoded": "%22This%20may%20indicate%20a%20route%20ID%20mismatch.%20Check%20if%20the%20route%20ID%20format%20is%20correct.%22,",
+        "prevChunkIds": []
+      },
+      "852": {
+        "chunkId": "1d712b",
+        "hash": "c2f6e583",
+        "encoded": "routeId,%20uniqueRouteIds);",
+        "prevChunkIds": []
+      },
+      "853": {
+        "chunkId": "1d712b",
+        "hash": "c703a4d6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "855": {
+        "chunkId": "1d712b",
+        "hash": "2c1587e1",
+        "encoded": "return%20vehicles;",
+        "prevChunkIds": []
+      },
+      "856": {
+        "chunkId": "1d712b",
+        "hash": "f3149fe7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

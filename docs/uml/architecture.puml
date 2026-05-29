@@ -1,0 +1,59 @@
+@startuml
+title Public Transport Tracker - Backend Architecture
+
+package "Frontend" {
+  [React Web App] as WebApp
+}
+
+package "API Layer" {
+  [TransportController] as TransportController
+  [CacheController] as CacheController
+}
+
+package "Service Layer" {
+  [TransportService] as TransportService
+  [RoutePlannerService] as RoutePlannerService
+  [AlertService] as AlertService
+  [MockDataService] as MockDataService
+  [CacheService] as CacheService
+}
+
+package "Client Layer" {
+  interface TransitApiClient
+  [MtaApiClient] as MtaApiClient
+  [TransitLandApiClient] as TransitLandApiClient
+  [SeptaApiClient] as SeptaApiClient
+  [TflApiClient] as TflApiClient
+}
+
+database "In-Memory Cache\n(InMemoryCache)" as DB
+cloud "External Transit Providers\n(MTA, TransitLand, TfL, SEPTA)" as External
+
+WebApp --> TransportController : HTTP /api/v1/transport
+WebApp --> CacheController : HTTP /api/v1/cache
+
+TransportController --> TransportService : delegate
+CacheController --> CacheService : diagnostics / invalidation
+
+TransportService --> CacheService : get / put / getStale / withKeyLock
+TransportService --> RoutePlannerService : plan()
+TransportService --> AlertService : getServiceAlerts()
+TransportService --> MockDataService : getMockData()
+TransportService --> TransitApiClient : fetch...
+TransitApiClient <|.. MtaApiClient
+TransitApiClient <|.. TransitLandApiClient
+TransitApiClient <|.. SeptaApiClient
+TransitApiClient <|.. TflApiClient
+
+CacheService --> DB : stores TransportData
+MtaApiClient --> External : live API calls
+TransitLandApiClient --> External : live API calls
+SeptaApiClient --> External : live API calls
+TflApiClient --> External : live API calls
+
+note right of TransportService
+  Resilience chain:
+  OFFLINE → CACHE → LIVE → STALE_CACHE → MOCK
+end note
+
+@enduml

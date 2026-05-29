@@ -1,0 +1,316 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\service\\TransportService.java": {
+    "filename": "TransportService.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\service\\TransportService.java",
+    "version": "1.2",
+    "contextFile": "78521acb-context.json",
+    "chunks": {
+      "4e26fe": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778481866,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4cbf90e8"
+        },
+        "hash": "5c339b6c",
+        "messageId": "system_ae445330-4d03-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "4801b0": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778481907,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4cbf90e8"
+        },
+        "hash": "b079c2fe",
+        "messageId": "system_ae445330-4d03-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "279": {
+        "chunkId": "4e26fe",
+        "hash": "16a69e0f",
+        "encoded": "private%20TransportData%20fetchFromApis(String%20city,%20String%20routeId,%20TransitApiClient%20client)%20%7B",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "4e26fe",
+        "hash": "3b6de669",
+        "encoded": "log.debug(%22Using%20API%20provider:%20%7B%7D%22,%20client.getProviderName());",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "4e26fe",
+        "hash": "dcffcd34",
+        "encoded": "List%3CVehicleLocation%3E%20vehicles%20=%20safeCall(()%20-%3E%20client.fetchVehicleLocations(city,%20routeId),%20%22vehicles%22);",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "4e26fe",
+        "hash": "e89f7bbd",
+        "encoded": "List%3CArrivalPrediction%3E%20arrivals%20=%20List.of();",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "4e26fe",
+        "hash": "8d5db9b4",
+        "encoded": "List%3CServiceAlert%3E%20alerts%20=%20safeCall(()%20-%3E%20client.fetchServiceAlerts(city),%20%22alerts%22);",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "4e26fe",
+        "hash": "4f6e80e7",
+        "encoded": "List%3CCrowdingInfo%3E%20crowding%20=%20safeCall(()%20-%3E%20client.fetchCrowdingInfo(routeId),%20%22crowding%22);",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "4801b0",
+        "hash": "ed836250",
+        "encoded": "//%20For%20MTA,%20fetch%20arrivals%20using%20the%20route-based%20method",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "4801b0",
+        "hash": "dd39a58c",
+        "encoded": "if%20(%22NYC-MTA%22.equals(client.getProviderName()))%20%7B",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "4801b0",
+        "hash": "b2481759",
+        "encoded": "//%20Use%20null%20stopId%20to%20fetch%20all%20arrivals%20for%20the%20route",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "4801b0",
+        "hash": "967a994f",
+        "encoded": "arrivals%20=%20safeCall(()%20-%3E%20client.fetchArrivalPredictions(null,%20routeId),%20%22arrivals%22);",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "4801b0",
+        "hash": "3ecc5ee5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "4801b0",
+        "hash": "5dce25f0",
+        "encoded": "//%20For%20TfL%20(London),%20fetch%20arrivals%20for%20a%20default%20station%20to%20populate%20the%20dashboard",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "4801b0",
+        "hash": "b272f19b",
+        "encoded": "else%20if%20(%22TfL%22.equals(client.getProviderName()))%20%7B",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "4801b0",
+        "hash": "e36543e6",
+        "encoded": "//%20Use%20a%20major%20station%20as%20default%20for%20London%20routes",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "4801b0",
+        "hash": "379206e6",
+        "encoded": "String%20defaultStop%20=%20getDefaultStopForRoute(routeId,%20city);",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "4801b0",
+        "hash": "c077bd4f",
+        "encoded": "if%20(defaultStop%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "4801b0",
+        "hash": "3222d059",
+        "encoded": "arrivals%20=%20safeCall(()%20-%3E%20client.fetchArrivalPredictions(defaultStop,%20routeId),%20%22arrivals%22);",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "4801b0",
+        "hash": "f8a5d8a2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "4801b0",
+        "hash": "567d4637",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "4801b0",
+        "hash": "0eb779ee",
+        "encoded": "//%20For%20SEPTA,%20fetch%20arrivals%20for%20a%20default%20station%20to%20populate%20the%20dashboard",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "4801b0",
+        "hash": "4024fb36",
+        "encoded": "else%20if%20(%22SEPTA%22.equals(client.getProviderName()))%20%7B",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "4801b0",
+        "hash": "3801ca89",
+        "encoded": "arrivals%20=%20safeCall(()%20-%3E%20client.fetchArrivalPredictions(%2230th%20Street%20Station%22,%20routeId),%20%22arrivals%22);",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "4801b0",
+        "hash": "ca7d8d23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "4e26fe",
+        "hash": "bc81dbc7",
+        "encoded": "if%20(%22NYC-MTA%22.equals(client.getProviderName()))%20%7B",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "4e26fe",
+        "hash": "c84b62ed",
+        "encoded": "//%20Use%20null%20stopId%20to%20fetch%20all%20arrivals%20for%20the%20route",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "4e26fe",
+        "hash": "043d0693",
+        "encoded": "arrivals%20=%20safeCall(()%20-%3E%20client.fetchArrivalPredictions(null,%20routeId),%20%22arrivals%22);",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "4e26fe",
+        "hash": "a5e1e4c3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "4e26fe",
+        "hash": "1cb4c03d",
+        "encoded": "//%20For%20SEPTA,%20fetch%20arrivals%20for%20a%20default%20station%20to%20populate%20the%20dashboard",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "4e26fe",
+        "hash": "c2fee6fc",
+        "encoded": "else%20if%20(%22SEPTA%22.equals(client.getProviderName()))%20%7B",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "4e26fe",
+        "hash": "6774612c",
+        "encoded": "arrivals%20=%20safeCall(()%20-%3E%20client.fetchArrivalPredictions(%2230th%20Street%20Station%22,%20routeId),%20%22arrivals%22);",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "4e26fe",
+        "hash": "972a0b71",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "4e26fe",
+        "hash": "95576dcb",
+        "encoded": "//%20If%20all%20data%20is%20empty,%20the%20API%20provider%20is%20likely%20unavailable",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "4e26fe",
+        "hash": "2d30555a",
+        "encoded": "if%20(vehicles.isEmpty()%20&&%20arrivals.isEmpty()%20&&%20alerts.isEmpty()%20&&%20crowding.isEmpty())%20%7B",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "4e26fe",
+        "hash": "e9b77b22",
+        "encoded": "throw%20new%20TransitApiException(%22All%20data%20from%20%22%20+%20client.getProviderName()%20+%20%22%20is%20empty;%20API%20may%20be%20unavailable%22);",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "4e26fe",
+        "hash": "a8bd9b49",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "4e26fe",
+        "hash": "d37ed543",
+        "encoded": "return%20TransportData.builder()",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "4e26fe",
+        "hash": "71bc7b53",
+        "encoded": ".city(city)",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "4e26fe",
+        "hash": "8a0733e2",
+        "encoded": ".routeId(routeId)",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "4e26fe",
+        "hash": "1fb23e0f",
+        "encoded": ".vehicles(vehicles)",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "4e26fe",
+        "hash": "0778bde9",
+        "encoded": ".arrivals(arrivals)",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "4e26fe",
+        "hash": "951ff01d",
+        "encoded": ".alerts(alerts)",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "4e26fe",
+        "hash": "9e86efa4",
+        "encoded": ".crowding(crowding)",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "4e26fe",
+        "hash": "63c1b5c5",
+        "encoded": ".routePlans(List.of())",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "4e26fe",
+        "hash": "97cec4af",
+        "encoded": ".build();",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "4e26fe",
+        "hash": "c35ae2aa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

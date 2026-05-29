@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Response Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        pre { background: #f4f4f4; padding: 15px; overflow: auto; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Transport API Response Test</h1>
+    <button onclick="testAPI()">Test NYC Route A API</button>
+    <div id="result"></div>
+
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p>Loading...</p>';
+            
+            try {
+                const response = await fetch('http://localhost:8080/api/v1/transport?city=nyc&routeId=A');
+                const data = await response.json();
+                
+                let html = '<h2 class="success">✓ API Response Received</h2>';
+                
+                // Check arrivals
+                const arrivalsCount = data.data?.arrivals?.length || 0;
+                html += `<h3>Arrivals: ${arrivalsCount} records</h3>`;
+                if (arrivalsCount > 0) {
+                    html += '<pre>' + JSON.stringify(data.data.arrivals.slice(0, 3), null, 2) + '</pre>';
+                } else {
+                    html += '<p class="error">❌ No arrivals data found!</p>';
+                }
+                
+                // Check crowding
+                const crowdingCount = data.data?.crowding?.length || 0;
+                html += `<h3>Crowding: ${crowdingCount} records</h3>`;
+                if (crowdingCount > 0) {
+                    html += '<pre>' + JSON.stringify(data.data.crowding.slice(0, 3), null, 2) + '</pre>';
+                } else {
+                    html += '<p class="error">❌ No crowding data found!</p>';
+                }
+                
+                // Check vehicles
+                const vehiclesCount = data.data?.vehicles?.length || 0;
+                html += `<h3>Vehicles: ${vehiclesCount} records</h3>`;
+                
+                // Full response
+                html += '<h3>Full Response Structure:</h3>';
+                html += '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                
+                resultDiv.innerHTML = html;
+            } catch (error) {
+                resultDiv.innerHTML = `<h2 class="error">✗ Error</h2><pre>${error.message}</pre>`;
+            }
+        }
+    </script>
+</body>
+</html>

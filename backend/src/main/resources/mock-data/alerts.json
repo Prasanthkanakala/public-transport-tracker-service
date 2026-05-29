@@ -1,0 +1,36 @@
+[
+  {
+    "alertId": "ALT-MTA-2024-001",
+    "type": "DISRUPTION",
+    "severity": "HIGH",
+    "headerText": "A/C trains suspended between Jay St-MetroTech and Atlantic Av-Barclays Ctr",
+    "descriptionText": "Due to track work, A and C trains are suspended between Jay St-MetroTech and Atlantic Av-Barclays Ctr in both directions. Use the F train as an alternative. Allow extra travel time.",
+    "displayMessage": "Service alert - Check alternative routes",
+    "affectedRoutes": ["A", "C"],
+    "affectedStops": ["A38N", "A38S", "A40N", "A40S", "A41N", "A41S"],
+    "cause": "MAINTENANCE",
+    "effect": "SUSPENSION",
+    "url": "https://new.mta.info/alerts"
+  },
+  {
+    "alertId": "ALT-MTA-2024-002",
+    "type": "WEATHER",
+    "severity": "MEDIUM",
+    "headerText": "Heavy rain causing surface route delays",
+    "descriptionText": "Heavy rain is causing delays on all surface routes. Allow 10–20 additional minutes of travel time. Subway service is not affected.",
+    "displayMessage": "Weather impact on schedule",
+    "affectedRoutes": ["B57", "B63", "B67", "B69"],
+    "cause": "WEATHER",
+    "effect": "SIGNIFICANT_DELAYS"
+  },
+  {
+    "alertId": "ALT-MTA-2024-003",
+    "type": "PLANNED_WORK",
+    "severity": "LOW",
+    "headerText": "Planned work: 1 train running express on weekends",
+    "descriptionText": "The 1 train will skip stops at 18th St, 28th St and 50th St in both directions during weekend service. Service changes are in effect from Saturday 12:01 AM to Sunday 11:59 PM.",
+    "affectedRoutes": ["1"],
+    "cause": "CONSTRUCTION",
+    "effect": "DETOUR"
+  }
+]

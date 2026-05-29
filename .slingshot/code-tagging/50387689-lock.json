@@ -1,0 +1,347 @@
+{
+  "test-api-response.html": {
+    "filename": "test-api-response.html",
+    "path": "test-api-response.html",
+    "version": "1.2",
+    "contextFile": "50387689-context.json",
+    "chunks": {
+      "fbea6a": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778483193,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "6910b34c"
+        },
+        "hash": "f610250f",
+        "messageId": "system_7417e970-4d07-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "fbea6a",
+        "hash": "e7340e15",
+        "encoded": "%3C!DOCTYPE%20html%3E",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "fbea6a",
+        "hash": "8d4fe55a",
+        "encoded": "%3Chtml%3E",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "fbea6a",
+        "hash": "8bf19007",
+        "encoded": "%3Chead%3E",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "fbea6a",
+        "hash": "b0a8cbc0",
+        "encoded": "%3Ctitle%3EAPI%20Response%20Test%3C/title%3E",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "fbea6a",
+        "hash": "b7820bc2",
+        "encoded": "%3Cstyle%3E",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "fbea6a",
+        "hash": "3a59638b",
+        "encoded": "body%20%7B%20font-family:%20monospace;%20padding:%2020px;%20%7D",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "fbea6a",
+        "hash": "eebba34d",
+        "encoded": "pre%20%7B%20background:%20#f4f4f4;%20padding:%2015px;%20overflow:%20auto;%20%7D",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "fbea6a",
+        "hash": "e4bbb83d",
+        "encoded": ".success%20%7B%20color:%20green;%20%7D",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "fbea6a",
+        "hash": "8e2dcc52",
+        "encoded": ".error%20%7B%20color:%20red;%20%7D",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "fbea6a",
+        "hash": "ac59cc15",
+        "encoded": "%3C/style%3E",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "fbea6a",
+        "hash": "cf5b42b3",
+        "encoded": "%3C/head%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "fbea6a",
+        "hash": "c1a52182",
+        "encoded": "%3Cbody%3E",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "fbea6a",
+        "hash": "a75a31c9",
+        "encoded": "%3Ch1%3ETransport%20API%20Response%20Test%3C/h1%3E",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "fbea6a",
+        "hash": "511eef1d",
+        "encoded": "%3Cbutton%20onclick=%22testAPI()%22%3ETest%20NYC%20Route%20A%20API%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "fbea6a",
+        "hash": "a651c675",
+        "encoded": "%3Cdiv%20id=%22result%22%3E%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "fbea6a",
+        "hash": "e9ccc153",
+        "encoded": "%3Cscript%3E",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "fbea6a",
+        "hash": "11e9a525",
+        "encoded": "async%20function%20testAPI()%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "fbea6a",
+        "hash": "1321e32b",
+        "encoded": "const%20resultDiv%20=%20document.getElementById('result');",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "fbea6a",
+        "hash": "8ecf2e5c",
+        "encoded": "resultDiv.innerHTML%20=%20'%3Cp%3ELoading...%3C/p%3E';",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "fbea6a",
+        "hash": "e791df68",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "fbea6a",
+        "hash": "8ed92465",
+        "encoded": "const%20response%20=%20await%20fetch('http://localhost:8080/api/v1/transport?city=nyc&routeId=A');",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "fbea6a",
+        "hash": "49c5ad85",
+        "encoded": "const%20data%20=%20await%20response.json();",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "fbea6a",
+        "hash": "f9472888",
+        "encoded": "let%20html%20=%20'%3Ch2%20class=%22success%22%3E%E2%9C%93%20API%20Response%20Received%3C/h2%3E';",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "fbea6a",
+        "hash": "04293b96",
+        "encoded": "//%20Check%20arrivals",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "fbea6a",
+        "hash": "73598e41",
+        "encoded": "const%20arrivalsCount%20=%20data.data?.arrivals?.length%20%7C%7C%200;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "fbea6a",
+        "hash": "335caa7b",
+        "encoded": "html%20+=%20%60%3Ch3%3EArrivals:%20$%7BarrivalsCount%7D%20records%3C/h3%3E%60;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "fbea6a",
+        "hash": "67669b3a",
+        "encoded": "if%20(arrivalsCount%20%3E%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "fbea6a",
+        "hash": "5513a8b2",
+        "encoded": "html%20+=%20'%3Cpre%3E'%20+%20JSON.stringify(data.data.arrivals.slice(0,%203),%20null,%202)%20+%20'%3C/pre%3E';",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "fbea6a",
+        "hash": "a2a299fd",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "fbea6a",
+        "hash": "1bf2dba8",
+        "encoded": "html%20+=%20'%3Cp%20class=%22error%22%3E%E2%9D%8C%20No%20arrivals%20data%20found!%3C/p%3E';",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "fbea6a",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "fbea6a",
+        "hash": "4b3bd879",
+        "encoded": "//%20Check%20crowding",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "fbea6a",
+        "hash": "2e12c77b",
+        "encoded": "const%20crowdingCount%20=%20data.data?.crowding?.length%20%7C%7C%200;",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "fbea6a",
+        "hash": "1ac16246",
+        "encoded": "html%20+=%20%60%3Ch3%3ECrowding:%20$%7BcrowdingCount%7D%20records%3C/h3%3E%60;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "fbea6a",
+        "hash": "bff43edd",
+        "encoded": "if%20(crowdingCount%20%3E%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "fbea6a",
+        "hash": "2696e678",
+        "encoded": "html%20+=%20'%3Cpre%3E'%20+%20JSON.stringify(data.data.crowding.slice(0,%203),%20null,%202)%20+%20'%3C/pre%3E';",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "fbea6a",
+        "hash": "2ff9c98d",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "fbea6a",
+        "hash": "fcdfae9f",
+        "encoded": "html%20+=%20'%3Cp%20class=%22error%22%3E%E2%9D%8C%20No%20crowding%20data%20found!%3C/p%3E';",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "fbea6a",
+        "hash": "d6071ac7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "fbea6a",
+        "hash": "9acb204f",
+        "encoded": "//%20Check%20vehicles",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "fbea6a",
+        "hash": "ea6f12d8",
+        "encoded": "const%20vehiclesCount%20=%20data.data?.vehicles?.length%20%7C%7C%200;",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "fbea6a",
+        "hash": "3ff0d932",
+        "encoded": "html%20+=%20%60%3Ch3%3EVehicles:%20$%7BvehiclesCount%7D%20records%3C/h3%3E%60;",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "fbea6a",
+        "hash": "ad12dd02",
+        "encoded": "//%20Full%20response",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "fbea6a",
+        "hash": "09a6ce17",
+        "encoded": "html%20+=%20'%3Ch3%3EFull%20Response%20Structure:%3C/h3%3E';",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "fbea6a",
+        "hash": "1990b256",
+        "encoded": "html%20+=%20'%3Cpre%3E'%20+%20JSON.stringify(data,%20null,%202)%20+%20'%3C/pre%3E';",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "fbea6a",
+        "hash": "4d2179ac",
+        "encoded": "resultDiv.innerHTML%20=%20html;",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "fbea6a",
+        "hash": "7dfa1741",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "fbea6a",
+        "hash": "de1c1194",
+        "encoded": "resultDiv.innerHTML%20=%20%60%3Ch2%20class=%22error%22%3E%E2%9C%97%20Error%3C/h2%3E%3Cpre%3E$%7Berror.message%7D%3C/pre%3E%60;",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "fbea6a",
+        "hash": "cdb7b2a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "fbea6a",
+        "hash": "17837346",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "fbea6a",
+        "hash": "b6295416",
+        "encoded": "%3C/script%3E",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "fbea6a",
+        "hash": "4ded5f34",
+        "encoded": "%3C/body%3E",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "fbea6a",
+        "hash": "4ec13030",
+        "encoded": "%3C/html%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

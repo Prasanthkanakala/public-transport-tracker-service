@@ -1,0 +1,59 @@
+{
+  "frontend\\src\\App.jsx": {
+    "filename": "App.jsx",
+    "path": "frontend\\src\\App.jsx",
+    "version": "1.2",
+    "contextFile": "14f0272e-context.json",
+    "chunks": {
+      "fb7b92": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778222417,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "b84e7dca"
+        },
+        "hash": "4d2bb476",
+        "messageId": "system_f558d6f0-4aa7-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "11": {
+        "chunkId": "fb7b92",
+        "hash": "208ba36f",
+        "encoded": "export%20default%20function%20App()%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "fb7b92",
+        "hash": "52053b0f",
+        "encoded": "const%20%5Bcity,%20setCity%5D%20=%20useState('london');",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "fb7b92",
+        "hash": "21cd84a1",
+        "encoded": "const%20%5BrouteId,%20setRouteId%5D%20=%20useState('central');",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "fb7b92",
+        "hash": "e2c82c63",
+        "encoded": "const%20%5Boffline,%20setOffline%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "fb7b92",
+        "hash": "3d4341bc",
+        "encoded": "const%20%5BactiveTab,%20setActiveTab%5D%20=%20useState('live');%20//%20live%20%7C%20plan%20%7C%20status",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

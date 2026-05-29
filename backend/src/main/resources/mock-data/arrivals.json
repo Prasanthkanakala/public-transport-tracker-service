@@ -1,0 +1,72 @@
+[
+  {
+    "stopId": "A27N",
+    "stopName": "Times Square-42 St",
+    "routeId": "A",
+    "routeName": "A Train",
+    "headsign": "Far Rockaway-Mott Av",
+    "scheduledArrival": "2024-01-15T08:35:00Z",
+    "predictedArrival": "2024-01-15T08:51:00Z",
+    "delaySeconds": 960,
+    "status": "DELAYED",
+    "platform": "1",
+    "realtime": true,
+    "minutesToArrival": 19
+  },
+  {
+    "stopId": "A27N",
+    "stopName": "Times Square-42 St",
+    "routeId": "A",
+    "routeName": "A Train",
+    "headsign": "Far Rockaway-Mott Av",
+    "scheduledArrival": "2024-01-15T08:45:00Z",
+    "predictedArrival": "2024-01-15T08:45:00Z",
+    "delaySeconds": 0,
+    "status": "ON_TIME",
+    "platform": "1",
+    "realtime": true,
+    "minutesToArrival": 13
+  },
+  {
+    "stopId": "A27N",
+    "stopName": "Times Square-42 St",
+    "routeId": "C",
+    "routeName": "C Train",
+    "headsign": "Euclid Av",
+    "scheduledArrival": "2024-01-15T08:40:00Z",
+    "predictedArrival": "2024-01-15T08:40:00Z",
+    "delaySeconds": 0,
+    "status": "ON_TIME",
+    "platform": "2",
+    "realtime": true,
+    "minutesToArrival": 8
+  },
+  {
+    "stopId": "A28N",
+    "stopName": "34 St-Penn Station",
+    "routeId": "A",
+    "routeName": "A Train",
+    "headsign": "Far Rockaway-Mott Av",
+    "scheduledArrival": "2024-01-15T08:38:00Z",
+    "predictedArrival": "2024-01-15T08:39:00Z",
+    "delaySeconds": 60,
+    "status": "DELAYED",
+    "platform": "1",
+    "realtime": true,
+    "minutesToArrival": 7
+  },
+  {
+    "stopId": "A32N",
+    "stopName": "14 St",
+    "routeId": "A",
+    "routeName": "A Train",
+    "headsign": "Far Rockaway-Mott Av",
+    "scheduledArrival": "2024-01-15T08:42:00Z",
+    "predictedArrival": "2024-01-15T08:44:00Z",
+    "delaySeconds": 120,
+    "status": "DELAYED",
+    "platform": "1",
+    "realtime": false,
+    "minutesToArrival": 12
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "backend\\src\\test\\java\\com\\transport\\tracker\\service\\TransportServiceTest.java": {
+    "filename": "TransportServiceTest.java",
+    "path": "backend\\src\\test\\java\\com\\transport\\tracker\\service\\TransportServiceTest.java",
+    "version": "1.2",
+    "contextFile": "8a4ea295-context.json",
+    "chunks": {
+      "c74630": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778220979,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "c135f608"
+        },
+        "hash": "d6e5b544",
+        "messageId": "system_0c2fe240-4aa5-11f1-ab94-6d9358b1a412",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "111": {
+        "chunkId": "c74630",
+        "hash": "f34067be",
+        "encoded": "@Nested",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "c74630",
+        "hash": "e5278c01",
+        "encoded": "@DisplayName(%22Stage%203:%20Live%20API%20success%22)",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "c74630",
+        "hash": "6de66c22",
+        "encoded": "class%20LiveApiTests%20%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "c74630",
+        "hash": "e811a322",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "c74630",
+        "hash": "766545e6",
+        "encoded": "@DisplayName(%22Should%20return%20LIVE%20data%20and%20cache%20it%20on%20successful%20API%20call%22)",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "c74630",
+        "hash": "48699bd3",
+        "encoded": "void%20shouldReturnAndCacheLiveData()%20%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "c74630",
+        "hash": "07af4896",
+        "encoded": "when(cacheService.get(%22nyc:A%22)).thenReturn(Optional.empty());",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "c74630",
+        "hash": "733ebfc8",
+        "encoded": "when(mtaClient.isAvailable()).thenReturn(true);",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "c74630",
+        "hash": "ff170046",
+        "encoded": "when(mtaClient.fetchVehicleLocations(%22nyc%22,%20%22A%22))",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "c74630",
+        "hash": "6462302c",
+        "encoded": ".thenReturn(List.of(VehicleLocation.builder().vehicleId(%22VEH-001%22).build()));",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "c74630",
+        "hash": "bd152735",
+        "encoded": "when(mtaClient.fetchServiceAlerts(%22nyc%22)).thenReturn(List.of());",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "c74630",
+        "hash": "993ac0fa",
+        "encoded": "when(mtaClient.fetchCrowdingInfo(%22A%22)).thenReturn(List.of());",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "c74630",
+        "hash": "759f149b",
+        "encoded": "when(alertService.evaluate(any())).thenReturn(List.of());",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "c74630",
+        "hash": "addd81bd",
+        "encoded": "var%20response%20=%20transportService.getTransportData(%22nyc%22,%20%22A%22,%20false);",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "c74630",
+        "hash": "7366eff9",
+        "encoded": "assertThat(response.getMetadata().getDataSource()).isEqualTo(%22LIVE%22);",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "c74630",
+        "hash": "b5c848d3",
+        "encoded": "assertThat(response.getMetadata().isCached()).isFalse();",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "c74630",
+        "hash": "1d2cf698",
+        "encoded": "verify(cacheService).put(eq(%22nyc:A%22),%20any(TransportData.class));",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "c74630",
+        "hash": "c1055582",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "c74630",
+        "hash": "59e86bfa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

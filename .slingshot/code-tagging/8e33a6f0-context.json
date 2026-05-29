@@ -1,0 +1,36 @@
+{
+  "filename": "MtaApiClient.java",
+  "path": "backend\\src\\main\\java\\com\\transport\\tracker\\client\\MtaApiClient.java",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "c1104f61": {
+      "value": "> Task :bootRun\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::                (v3.2.3)\n\n2026-05-08 11:26:37 [main] INFO  c.t.t.TransportTrackerApplication - Starting TransportTrackerApplication using Java 21.0.7 with PID 23468 (C:\\Users\\kanprasa1\\IdeaProjects\\public transport t"
+    },
+    "b84e7dca": {
+      "value": "So can you fix this and also make london and central in dashboard for default now we have nyc and a route is default"
+    },
+    "462f5a42": {
+      "value": "Can you fix it now"
+    },
+    "e54e0741": {
+      "value": "C:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service\\backend>gradle bootRun\n\n> Task :bootRun\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::                (v3.2.3)\n\n2026-05-08 13:01:18 [main] INFO  c.t.t.TransportTrackerApplication - Starting TransportTrackerApplica"
+    },
+    "f808411d": {
+      "value": "C:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service\\backend>gradle clean bootRun\n\n> Task :bootRun\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::                (v3.2.3)\n\n2026-05-08 13:24:18 [main] INFO  c.t.t.TransportTrackerApplication - Starting TransportTrackerA"
+    },
+    "4f2aa8c4": {
+      "value": "start_date: \"20260508\"\n  route_id: \"E\"\n  1001: {\n    1: \"1E 0522+ P-A/WTC\"\n    3: 3\n  }\n}\ntimestamp: 1778232150\nstop_id: \"G05S\"\n\n2026-05-08 14:47:59 [http-nio-8080-exec-2] INFO  c.t.tracker.client.MtaApiClient - MTA: Found matching vehicle 000020E on route E (requested: E)\n2026-05-08 14:47:59 [http-nio-8080-exec-2] WARN  c.t.tracker.client.MtaApiClient - MTA: Vehicle 000020E on route E has no position data - hasPosition=false, vehicle details: trip {\n  trip_id: \"033000_E..N05R\"\n  start_time: \"05"
+    },
+    "4cbf90e8": {
+      "value": "arivals and crowding levels are not displaying\nMicrosoft Windows [Version 10.0.22631.6936]\n(c) Microsoft Corporation. All rights reserved.\n\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service>cd backend\n\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service\\backend>gradle clean bootRun\nStarting a Gradle Daemon, 3 busy and 1 incompatible Daemons could not be reused, use --status for details\n\n> Task :bootRun\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ _"
+    },
+    "400f67fd": {
+      "value": "Still same\n\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service\\backend>gradle clean bootRun\n\n> Task :bootRun\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::                (v3.2.3)\n\n2026-05-11 12:25:22 [main] INFO  c.t.t.TransportTrackerApplication - Starting Trans"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

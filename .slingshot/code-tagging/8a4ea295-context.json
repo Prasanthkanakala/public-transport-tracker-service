@@ -1,0 +1,15 @@
+{
+  "filename": "TransportServiceTest.java",
+  "path": "backend\\src\\test\\java\\com\\transport\\tracker\\service\\TransportServiceTest.java",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "c135f608": {
+      "value": "Microsoft Windows [Version 10.0.22631.6936]\n(c) Microsoft Corporation. All rights reserved.\n\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker servicecd backend\n\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service\\backend>gradle clean build\n\n> Task :test\n\nInMemoryCache > Should return value immediately after put PASSED\n\nInMemoryCache > Should return empty after TTL expiry PASSED\n\nInMemoryCache > Should not exceed max size PASSED\n\nInMemoryCache > Should track cache stats accur"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

@@ -1,0 +1,64 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────
+#  Public Transport Tracker – Docker Compose
+#  Services: backend (Spring Boot :8080) + frontend (React/nginx :80)
+#
+#  Usage:
+#    docker-compose up -d                   # start all
+#    docker-compose up -d --build           # rebuild and start
+#    docker-compose logs -f backend         # tail backend logs
+#    docker-compose down                    # stop all
+# ─────────────────────────────────────────────────────────────
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: transport-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      # Spring Boot profile
+      SPRING_PROFILE: ${SPRING_PROFILE:-prod}
+      # Transit API credentials (override from .env file)
+      MTA_API_KEY: ${MTA_API_KEY:-}              # Optional — MTA endpoints work without a key
+      TRANSITLAND_API_KEY: ${TRANSITLAND_API_KEY:-demo-key}
+      TFL_API_KEY: ${TFL_API_KEY:-}              # Optional — TfL endpoints work without a key
+      # Cache configuration
+      CACHE_TTL_SECONDS: ${CACHE_TTL_SECONDS:-300}
+      CACHE_STALE_TTL_SECONDS: ${CACHE_STALE_TTL_SECONDS:-3600}
+      CACHE_MAX_SIZE: ${CACHE_MAX_SIZE:-1000}
+      # Offline mode (set to true to serve mock data only)
+      OFFLINE_MODE: ${OFFLINE_MODE:-false}
+      # CORS
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/actuator/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    networks:
+      - transit-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: transport-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - transit-net
+
+networks:
+  transit-net:
+    driver: bridge

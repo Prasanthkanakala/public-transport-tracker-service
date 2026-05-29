@@ -1,0 +1,289 @@
+package com.transport.tracker.client;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.transport.tracker.exception.TransitApiException;
+import com.transport.tracker.model.*;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URLEncoder;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+* HTTP client for the Transit.land REST API v2.
+*
+* API Docs: https://www.transit.land/documentation/
+* Base URL:  https://transit.land/api/v2/rest
+*
+* Endpoints used:
+*  - GET /routes?operator_onestop_id=...
+*  - GET /stops?served_by_onestop_ids=...
+*  - GET /vehicles?route_id=...
+*  - GET /alerts?agency=...
+*
+* Uses Java 11+ HttpClient — no third-party HTTP library.
+* API key sent as query param ?apikey=...
+*/
+@Slf4j
+@Component
+public class TransitLandApiClient implements TransitApiClient {
+
+    private final HttpClient httpClient;
+    private final ObjectMapper objectMapper;
+
+    @Value("${transit.api.transitland.base-url:https://transit.land/api/v2/rest}")
+    private String baseUrl;
+
+    @Value("${transit.api.transitland.api-key:demo-key}")
+    private String apiKey;
+
+    @Value("${transit.api.transitland.timeout-ms:5000}")
+    private int timeoutMs;
+
+    public TransitLandApiClient(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+        this.httpClient = HttpClient.newBuilder()
+                .connectTimeout(Duration.ofMillis(5000))
+                .followRedirects(HttpClient.Redirect.NORMAL)
+                .build();
+    }
+
+    // ─── Vehicle Locations ─────────────────────────────────────────────────────
+
+    @Override
+    public List<VehicleLocation> fetchVehicleLocations(String city, String routeId) {
+        String url = baseUrl + "/vehicles?route_id="
+                + encode(routeId)
+                + "&apikey=" + encode(apiKey);
+        log.debug("TransitLand: fetching vehicles for route {}", routeId);
+
+        try {
+            HttpResponse<String> response = sendGet(url);
+            if (response.statusCode() == 200) {
+                return parseVehicles(response.body(), routeId);
+            }
+            log.warn("TransitLand vehicles: HTTP {} for route {}", response.statusCode(), routeId);
+            return List.of();
+        } catch (IOException | InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new TransitApiException("TransitLand vehicle API unavailable: " + e.getMessage(), e);
+        }
+    }
+
+    // ─── Arrival Predictions ───────────────────────────────────────────────────
+
+    @Override
+    public List<ArrivalPrediction> fetchArrivalPredictions(String stopId, String routeId) {
+        String url = baseUrl + "/stop_times?stop_id=" + encode(stopId)
+                + (routeId != null ? "&route_id=" + encode(routeId) : "")
+                + "&apikey=" + encode(apiKey);
+        log.debug("TransitLand: fetching arrivals for stop {}", stopId);
+
+        try {
+            HttpResponse<String> response = sendGet(url);
+            if (response.statusCode() == 200) {
+                return parseArrivals(response.body(), stopId);
+            }
+            log.warn("TransitLand arrivals: HTTP {} for stop {}", response.statusCode(), stopId);
+            return List.of();
+        } catch (IOException | InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new TransitApiException("TransitLand arrivals API unavailable: " + e.getMessage(), e);
+        }
+    }
+
+    // ─── Service Alerts ────────────────────────────────────────────────────────
+
+    @Override
+    public List<ServiceAlert> fetchServiceAlerts(String city) {
+        // Transit.land aggregates from GTFS-RT; filter by city/agency
+        String url = baseUrl + "/alerts?apikey=" + encode(apiKey);
+        if (city != null && !city.isBlank()) {
+            url += "&city_name=" + encode(city);
+        }
+        log.debug("TransitLand: fetching alerts for city {}", city);
+
+        try {
+            HttpResponse<String> response = sendGet(url);
+            if (response.statusCode() == 200) {
+                return parseAlerts(response.body());
+            }
+            log.warn("TransitLand alerts: HTTP {}", response.statusCode());
+            return List.of();
+        } catch (IOException | InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new TransitApiException("TransitLand alerts API unavailable: " + e.getMessage(), e);
+        }
+    }
+
+    // ─── Route Plans ───────────────────────────────────────────────────────────
+
+    @Override
+    public List<RoutePlan> fetchRoutePlans(String from, String to, String city) {
+        // Transit.land does not provide a trip-planning endpoint in REST API v2.
+        // This is computed internally by RoutePlannerService.
+        return List.of();
+    }
+
+    // ─── Crowding ──────────────────────────────────────────────────────────────
+
+    @Override
+    public List<CrowdingInfo> fetchCrowdingInfo(String routeId) {
+        // Crowding data comes from the vehicles endpoint occupancy fields
+        return List.of();
+    }
+
+    // ─── Health check ──────────────────────────────────────────────────────────
+
+    @Override
+    public boolean isAvailable() {
+        try {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(baseUrl + "/agencies?per_page=1&apikey=" + encode(apiKey)))
+                    .header("Accept", "application/json")
+                    .timeout(Duration.ofMillis(2000))
+                    .GET()
+                    .build();
+            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+            return response.statusCode() < 500;
+        } catch (Exception e) {
+            log.warn("TransitLand availability check failed: {}", e.getMessage());
+            return false;
+        }
+    }
+
+    @Override
+    public String getProviderName() {
+        return "TransitLand";
+    }
+
+    // ─── HTTP helper ───────────────────────────────────────────────────────────
+
+    private HttpResponse<String> sendGet(String url) throws IOException, InterruptedException {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(url))
+                .header("Accept", "application/json")
+                .timeout(Duration.ofMillis(timeoutMs))
+                .GET()
+                .build();
+        return httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+    }
+
+    private String encode(String value) {
+        if (value == null) return "";
+        return URLEncoder.encode(value, StandardCharsets.UTF_8);
+    }
+
+    // ─── Parsers ───────────────────────────────────────────────────────────────
+
+    private List<VehicleLocation> parseVehicles(String json, String routeId) {
+        List<VehicleLocation> vehicles = new ArrayList<>();
+        try {
+            JsonNode root = objectMapper.readTree(json);
+            JsonNode arr = root.path("vehicles");
+            if (arr.isArray()) {
+                for (JsonNode v : arr) {
+                    JsonNode pos = v.path("position");
+                    vehicles.add(VehicleLocation.builder()
+                            .vehicleId(v.path("vehicle_id").asText("UNKNOWN"))
+                            .routeId(routeId)
+                            .tripId(v.path("trip_id").asText())
+                            .latitude(pos.path("lat").asDouble(0))
+                            .longitude(pos.path("lon").asDouble(0))
+                            .bearing(pos.path("bearing").asDouble(0))
+                            .speedKmh(pos.path("speed").asDouble(0) * 3.6) // m/s to km/h
+                            .status(v.path("current_status").asText("IN_TRANSIT_TO"))
+                            .currentStopId(v.path("stop_id").asText())
+                            .delaySeconds(v.path("schedule_relationship").asInt(0))
+                            .occupancyStatus(v.path("occupancy_status").asText())
+                            .timestamp(Instant.now())
+                            .build());
+                }
+            }
+        } catch (Exception e) {
+            log.error("Error parsing TransitLand vehicle data: {}", e.getMessage());
+        }
+        return vehicles;
+    }
+
+    private List<ArrivalPrediction> parseArrivals(String json, String stopId) {
+        List<ArrivalPrediction> predictions = new ArrayList<>();
+        try {
+            JsonNode root = objectMapper.readTree(json);
+            JsonNode arr = root.path("stop_times");
+            if (arr.isArray()) {
+                for (JsonNode st : arr) {
+                    String arrivalStr = st.path("arrival").path("estimated").asText("");
+                    String scheduledStr = st.path("arrival").path("scheduled").asText("");
+
+                    Instant scheduled = scheduledStr.isBlank()
+                            ? Instant.now().plusSeconds(300)
+                            : Instant.parse(scheduledStr);
+                    Instant predicted = arrivalStr.isBlank() ? scheduled : Instant.parse(arrivalStr);
+
+                    long delayS = predicted.getEpochSecond() - scheduled.getEpochSecond();
+                    long minsToArrival = (predicted.getEpochSecond() - Instant.now().getEpochSecond()) / 60;
+
+                    predictions.add(ArrivalPrediction.builder()
+                            .stopId(stopId)
+                            .stopName(st.path("stop").path("stop_name").asText())
+                            .routeId(st.path("trip").path("route").path("route_id").asText())
+                            .headsign(st.path("trip").path("trip_headsign").asText())
+                            .scheduledArrival(scheduled)
+                            .predictedArrival(predicted)
+                            .delaySeconds((int) delayS)
+                            .status(delayS > 60 ? "DELAYED" : delayS < -60 ? "EARLY" : "ON_TIME")
+                            .realtime(!arrivalStr.isBlank())
+                            .minutesToArrival((int) Math.max(0, minsToArrival))
+                            .build());
+                }
+            }
+        } catch (Exception e) {
+            log.error("Error parsing TransitLand arrival data: {}", e.getMessage());
+        }
+        return predictions;
+    }
+
+    private List<ServiceAlert> parseAlerts(String json) {
+        List<ServiceAlert> alerts = new ArrayList<>();
+        try {
+            JsonNode root = objectMapper.readTree(json);
+            JsonNode arr = root.path("alerts");
+            if (arr.isArray()) {
+                for (JsonNode a : arr) {
+                    List<String> affectedRoutes = new ArrayList<>();
+                    a.path("informed_entity").forEach(e -> {
+                        String r = e.path("route_id").asText();
+                        if (!r.isBlank()) affectedRoutes.add(r);
+                    });
+
+                    alerts.add(ServiceAlert.builder()
+                            .alertId(a.path("alert_id").asText())
+                            .type("DISRUPTION")
+                            .severity("MEDIUM")
+                            .headerText(a.path("header_text").asText())
+                            .descriptionText(a.path("description_text").asText())
+                            .affectedRoutes(affectedRoutes)
+                            .cause(a.path("cause").asText("UNKNOWN"))
+                            .effect(a.path("effect").asText("UNKNOWN"))
+                            .activeFrom(Instant.now())
+                            .build());
+                }
+            }
+        } catch (Exception e) {
+            log.error("Error parsing TransitLand alerts: {}", e.getMessage());
+        }
+        return alerts;
+    }
+}

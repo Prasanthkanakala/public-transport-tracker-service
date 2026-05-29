@@ -1,0 +1,118 @@
+@startuml
+title Code-Based Backend Class Diagram
+
+package "Controllers" {
+  class TransportController {
+    +getTransportData(...)
+    +getVehicles(...)
+    +getArrivals(...)
+    +getAlerts(...)
+    +planRoute(...)
+    +getCrowding(...)
+  }
+  class CacheController {
+    +getStats()
+    +clearCache()
+    +invalidateEntry(...)
+  }
+}
+
+package "Services" {
+  class TransportService {
+    -CacheService cacheService
+    -AlertService alertService
+    -MockDataService mockDataService
+    -RoutePlannerService routePlannerService
+    -TransitApiClient mtaClient
+    -TransitApiClient transitLandClient
+    -TransitApiClient septaClient
+    -TransitApiClient tflClient
+    +getTransportData(...)
+    +getVehicleLocations(...)
+    +getArrivals(...)
+    +getServiceAlerts(...)
+    +getRoutePlans(...)
+  }
+  class CacheService {
+    -InMemoryCache<String, TransportData> dataCache
+    +put(...)
+    +get(...)
+    +getStale(...)
+    +invalidate(...)
+    +clear()
+    +withKeyLock(...)
+    +buildKey(...)
+  }
+  class RoutePlannerService {
+    +plan(...)
+  }
+  class AlertService
+  class MockDataService
+}
+
+package "Clients" {
+  interface TransitApiClient {
+    +fetchVehicleLocations(...)
+    +fetchArrivalPredictions(...)
+    +fetchServiceAlerts(...)
+    +fetchRoutePlans(...)
+    +fetchCrowdingInfo(...)
+    +isAvailable()
+    +getProviderName()
+  }
+  class MtaApiClient
+  class TransitLandApiClient
+  class SeptaApiClient
+  class TflApiClient
+}
+
+package "Model" {
+  class TransportResponse<T> {
+    -T data
+    -ResponseMetadata metadata
+    -Map<String, HalLink> _links
+  }
+  class TransportData {
+    -List<VehicleLocation> vehicles
+    -List<ArrivalPrediction> arrivals
+    -List<ServiceAlert> alerts
+    -List<RoutePlan> routePlans
+    -List<CrowdingInfo> crowding
+    -List<AlertMessage> conditionalAlerts
+    -String city
+    -String routeId
+  }
+  class VehicleLocation
+  class ArrivalPrediction
+  class ServiceAlert
+  class RoutePlan {
+    -List<Leg> legs
+  }
+  class CrowdingInfo
+  class AlertMessage
+  class InMemoryCache<K,V>
+  class CacheEntry<V>
+}
+
+TransportController --> TransportService
+CacheController --> CacheService
+TransportService --> CacheService
+TransportService --> RoutePlannerService
+TransportService --> AlertService
+TransportService --> MockDataService
+TransportService --> TransitApiClient
+TransitApiClient <|.. MtaApiClient
+TransitApiClient <|.. TransitLandApiClient
+TransitApiClient <|.. SeptaApiClient
+TransitApiClient <|.. TflApiClient
+CacheService --> InMemoryCache
+TransportData --> VehicleLocation
+TransportData --> ArrivalPrediction
+TransportData --> ServiceAlert
+TransportData --> RoutePlan
+TransportData --> CrowdingInfo
+TransportData --> AlertMessage
+RoutePlannerService --> RoutePlan
+RoutePlan --> "1..*" Leg
+
+@enduml

@@ -1,0 +1,59 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\model\\CrowdingInfo.java": {
+    "filename": "CrowdingInfo.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\model\\CrowdingInfo.java",
+    "version": "1.2",
+    "contextFile": "5e3d4c47-context.json",
+    "chunks": {
+      "3c0022": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1778482086,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.4.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4cbf90e8"
+        },
+        "hash": "52b0eb4f",
+        "messageId": "system_ae445330-4d03-11f1-8801-a9e1b1898ef5",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "44": {
+        "chunkId": "3c0022",
+        "hash": "e9332ee6",
+        "encoded": "/**%20User-facing%20message%20when%20crowding%20is%20high%20*/",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "3c0022",
+        "hash": "6caf77d9",
+        "encoded": "private%20String%20displayMessage;",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "3c0022",
+        "hash": "24d95479",
+        "encoded": "/**%20Timestamp%20of%20the%20crowding%20data%20*/",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "3c0022",
+        "hash": "46aa268a",
+        "encoded": "private%20java.time.Instant%20timestamp;",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "3c0022",
+        "hash": "0b4804f7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
