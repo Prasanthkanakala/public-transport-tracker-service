@@ -1,0 +1,282 @@
+{
+  "frontend\\src\\App.css": {
+    "filename": "App.css",
+    "path": "frontend\\src\\App.css",
+    "version": "1.2",
+    "contextFile": "ec298c0b-context.json",
+    "chunks": {
+      "d9647d": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780213112,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "fa713169",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:08:32 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "279": {
+        "chunkId": "d9647d",
+        "hash": "f7d6bb1b",
+        "encoded": "/*%20%E2%94%80%E2%94%80%20Empty%20state%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%20*/",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "d9647d",
+        "hash": "4d813abb",
+        "encoded": ".empty-state%20%7B",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "d9647d",
+        "hash": "07cc5b3f",
+        "encoded": "color:%20var(--text-muted);",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "d9647d",
+        "hash": "f7bb227f",
+        "encoded": "font-size:%200.9rem;",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "d9647d",
+        "hash": "ecebea3a",
+        "encoded": "text-align:%20center;",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "d9647d",
+        "hash": "02edcb98",
+        "encoded": "padding:%202rem%200;",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "d9647d",
+        "hash": "43651e39",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "d9647d",
+        "hash": "ac106e1e",
+        "encoded": "/*%20%E2%94%80%E2%94%80%20User%20info%20&%20Auth%20controls%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%20*/",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "d9647d",
+        "hash": "3722b9c2",
+        "encoded": ".user-info%20%7B",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "d9647d",
+        "hash": "cf4c3af3",
+        "encoded": "display:%20flex;",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "d9647d",
+        "hash": "8f42f654",
+        "encoded": "align-items:%20center;",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "d9647d",
+        "hash": "6e78c9a5",
+        "encoded": "gap:%200.5rem;",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "d9647d",
+        "hash": "8a2145e7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "d9647d",
+        "hash": "24fbc563",
+        "encoded": ".user-name%20%7B",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "d9647d",
+        "hash": "f803f807",
+        "encoded": "color:%20var(--text-secondary);",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "d9647d",
+        "hash": "86169377",
+        "encoded": "font-size:%200.85rem;",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "d9647d",
+        "hash": "f61b1cdc",
+        "encoded": "font-weight:%20500;",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "d9647d",
+        "hash": "f8a5d8a2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "d9647d",
+        "hash": "bae697ad",
+        "encoded": ".user-role-badge%20%7B",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "d9647d",
+        "hash": "d65d8f86",
+        "encoded": "background:%20rgba(59,%20130,%20246,%200.2);",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "d9647d",
+        "hash": "25915428",
+        "encoded": "color:%20#3b82f6;",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "d9647d",
+        "hash": "42958dc9",
+        "encoded": "font-size:%200.65rem;",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "d9647d",
+        "hash": "d5ff9e20",
+        "encoded": "font-weight:%20700;",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "d9647d",
+        "hash": "cea93107",
+        "encoded": "padding:%200.15rem%200.5rem;",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "d9647d",
+        "hash": "1c1044c1",
+        "encoded": "border-radius:%2099px;",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "d9647d",
+        "hash": "ab65ffe4",
+        "encoded": "text-transform:%20uppercase;",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "d9647d",
+        "hash": "8b4ed833",
+        "encoded": "letter-spacing:%200.05em;",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "d9647d",
+        "hash": "8fdd8849",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "d9647d",
+        "hash": "a7e94ea4",
+        "encoded": ".logout-btn%20%7B",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "d9647d",
+        "hash": "28e5717b",
+        "encoded": "background:%20rgba(239,%2068,%2068,%200.15);",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "d9647d",
+        "hash": "b02c8071",
+        "encoded": "border:%201px%20solid%20rgba(239,%2068,%2068,%200.3);",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "d9647d",
+        "hash": "2a240e9a",
+        "encoded": "color:%20#ef4444;",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "d9647d",
+        "hash": "eb1c7520",
+        "encoded": "padding:%200.4rem%200.85rem;",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "d9647d",
+        "hash": "b8d927e5",
+        "encoded": "border-radius:%20var(--radius-sm);",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "d9647d",
+        "hash": "a93d34d8",
+        "encoded": "cursor:%20pointer;",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "d9647d",
+        "hash": "d71e899c",
+        "encoded": "font-size:%200.8rem;",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "d9647d",
+        "hash": "d3f42b03",
+        "encoded": "font-weight:%20600;",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "d9647d",
+        "hash": "9561a409",
+        "encoded": "transition:%20background%200.2s;",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "d9647d",
+        "hash": "e509ad84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "d9647d",
+        "hash": "ed619939",
+        "encoded": ".logout-btn:hover%20%7B",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "d9647d",
+        "hash": "75a73a88",
+        "encoded": "background:%20rgba(239,%2068,%2068,%200.25);",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "d9647d",
+        "hash": "895a4ec6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

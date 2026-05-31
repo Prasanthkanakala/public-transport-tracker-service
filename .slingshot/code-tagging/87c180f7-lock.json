@@ -1,0 +1,1669 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\cache\\InMemoryCache.java": {
+    "filename": "InMemoryCache.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\cache\\InMemoryCache.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "a8a5ec": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146539,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "aa9bcae1",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:38:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "a3ed97": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146539,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "9fa7a856",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:38:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "e9202f": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146539,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "6a64280d",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:38:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "2827bd": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146539,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "aa6e194c",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:38:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "ffc078": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146539,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "c279f162",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:38:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "f6ff09": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146539,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "4ba5d757",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:38:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "91d270": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146539,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "bc4a9624",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:38:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "dc5a89": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146539,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "67d3a119",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:38:59 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "c9c876": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780147704,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4baf7543",
+          "files": "4a672046"
+        },
+        "hash": "92b9bc07",
+        "messageId": "system_2efab480-5c2a-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:58:24 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "29f9a3": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780147704,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4baf7543",
+          "files": "4a672046"
+        },
+        "hash": "5735c224",
+        "messageId": "system_2efab480-5c2a-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:58:24 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "dc5a89",
+        "hash": "2061c00d",
+        "encoded": "package%20com.transport.tracker.cache;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "dc5a89",
+        "hash": "260c3867",
+        "encoded": "import%20jakarta.annotation.PostConstruct;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "dc5a89",
+        "hash": "5258ba43",
+        "encoded": "import%20jakarta.annotation.PreDestroy;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "dc5a89",
+        "hash": "bfad10b3",
+        "encoded": "import%20lombok.extern.slf4j.Slf4j;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "dc5a89",
+        "hash": "7f83b458",
+        "encoded": "import%20org.springframework.stereotype.Component;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "29f9a3",
+        "hash": "d91c4b92",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "29f9a3",
+        "hash": "68fc001e",
+        "encoded": "import%20java.util.Map;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "29f9a3",
+        "hash": "ca7bc6f1",
+        "encoded": "import%20java.util.Optional;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "29f9a3",
+        "hash": "58ea29b2",
+        "encoded": "import%20java.util.concurrent.ConcurrentHashMap;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "29f9a3",
+        "hash": "d5eb4dc3",
+        "encoded": "import%20java.util.concurrent.ConcurrentSkipListMap;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "29f9a3",
+        "hash": "c25c6def",
+        "encoded": "import%20java.util.concurrent.DelayQueue;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "29f9a3",
+        "hash": "cc83f482",
+        "encoded": "import%20java.util.concurrent.TimeUnit;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "29f9a3",
+        "hash": "03efeabe",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicBoolean;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "29f9a3",
+        "hash": "3097afa3",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicInteger;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "dc5a89",
+        "hash": "ea556c2f",
+        "encoded": "import%20java.util.Map;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "dc5a89",
+        "hash": "1f4a4c72",
+        "encoded": "import%20java.util.Optional;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "dc5a89",
+        "hash": "326d9177",
+        "encoded": "import%20java.util.concurrent.ConcurrentHashMap;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "dc5a89",
+        "hash": "14eb2349",
+        "encoded": "import%20java.util.concurrent.DelayQueue;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "dc5a89",
+        "hash": "d0b969a3",
+        "encoded": "import%20java.util.concurrent.TimeUnit;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "dc5a89",
+        "hash": "08cfdb6f",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicBoolean;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "dc5a89",
+        "hash": "cbcbcfb3",
+        "encoded": "import%20java.util.concurrent.atomic.AtomicInteger;",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "c9c876",
+        "hash": "5bdba3da",
+        "encoded": "*%20EVICTION%20STRATEGY%20(Dual-Index%20Design):",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "c9c876",
+        "hash": "2d5c3cb4",
+        "encoded": "*%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "c9c876",
+        "hash": "538a5a8f",
+        "encoded": "*%20This%20implementation%20uses%20TWO%20concurrent%20data%20structures%20for%20efficient%20eviction:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "c9c876",
+        "hash": "81caf9bb",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "c9c876",
+        "hash": "a7501d8b",
+        "encoded": "*%201.%20DelayQueue%3CExpiryNode%3E%20for%20TTL-based%20eviction:",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "c9c876",
+        "hash": "68e994f5",
+        "encoded": "*%20%20%20%20-%20Automatically%20orders%20entries%20by%20expiry%20time",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "c9c876",
+        "hash": "24a30bce",
+        "encoded": "*%20%20%20%20-%20Eviction%20thread%20blocks%20on%20delayQueue.take()%20-%20zero%20CPU%20when%20idle",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "c9c876",
+        "hash": "8a8281f0",
+        "encoded": "*%20%20%20%20-%20O(log%20n)%20insertion,%20O(1)%20removal%20of%20expired%20entries",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "c9c876",
+        "hash": "58e0f881",
+        "encoded": "*%20%20%20%20-%20Handles%20stale%20TTL%20cleanup%20(entries%20older%20than%20staleTtlSeconds)",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "c9c876",
+        "hash": "f04ceb9f",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "c9c876",
+        "hash": "0552dfaa",
+        "encoded": "*%202.%20ConcurrentSkipListMap%3CAccessKey,%20K%3E%20for%20LRU%20eviction:",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "c9c876",
+        "hash": "f2b4e876",
+        "encoded": "*%20%20%20%20-%20Maintains%20entries%20sorted%20by%20lastAccessedAt%20timestamp",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "c9c876",
+        "hash": "67e69340",
+        "encoded": "*%20%20%20%20-%20O(log%20n)%20insertion/removal%20vs%20O(n)%20full-cache%20scan",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "c9c876",
+        "hash": "3cfc1b1b",
+        "encoded": "*%20%20%20%20-%20firstEntry()%20gives%20least%20recently%20accessed%20entry%20in%20O(log%20n)",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "c9c876",
+        "hash": "1ceb008c",
+        "encoded": "*%20%20%20%20-%20Handles%20max-size%20enforcement%20when%20cache%20is%20full",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "c9c876",
+        "hash": "18ed61c8",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "c9c876",
+        "hash": "6cd5ea1a",
+        "encoded": "*%20Benefits:",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "c9c876",
+        "hash": "895963cd",
+        "encoded": "*%20%20%20-%20TTL%20eviction:%20Event-driven,%20zero%20CPU%20when%20idle,%20predictable%20cleanup",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "c9c876",
+        "hash": "47523fad",
+        "encoded": "*%20%20%20-%20LRU%20eviction:%20O(log%20n)%20vs%20O(n)%20scan,%20scales%20to%20large%20caches%20(10K+%20entries)",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "c9c876",
+        "hash": "d605d8ca",
+        "encoded": "*%20%20%20-%20Combined:%20Efficient%20handling%20of%20both%20time-based%20and%20size-based%20eviction",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "c9c876",
+        "hash": "b4277bf5",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "c9c876",
+        "hash": "b17ebd1a",
+        "encoded": "*%20Tradeoffs:",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "c9c876",
+        "hash": "263238a9",
+        "encoded": "*%20%20%20-%20Memory%20overhead:%20~48%20bytes/entry%20(ExpiryNode)%20+%20~64%20bytes/entry%20(AccessKey)",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "c9c876",
+        "hash": "2aeef48e",
+        "encoded": "*%20%20%20-%20put()%20cost:%20O(log%20n)%20for%20both%20DelayQueue%20and%20SkipListMap%20insertion",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "c9c876",
+        "hash": "7e461030",
+        "encoded": "*%20%20%20-%20get()%20cost:%20O(log%20n)%20for%20AccessKey%20update%20(remove%20old%20+%20insert%20new)",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "c9c876",
+        "hash": "37056d19",
+        "encoded": "*%20%20%20-%20Overall:%20Better%20scalability%20for%20high-throughput%20caches%20with%20strict%20size%20limits",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "91d270",
+        "hash": "cb112b56",
+        "encoded": "*%20Thread-safe%20in-memory%20cache%20with%20TTL-based%20expiration%20using%20DelayQueue.",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "91d270",
+        "hash": "9c782a19",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "91d270",
+        "hash": "0589a4eb",
+        "encoded": "*%20DESIGN%20RATIONALE%20(Option%20A%20%E2%80%93%20Resilience):",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "91d270",
+        "hash": "93b7d73d",
+        "encoded": "*%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "91d270",
+        "hash": "ace51c40",
+        "encoded": "*%20This%20class%20is%20the%20backbone%20of%20our%20degradation%20strategy:",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "91d270",
+        "hash": "2c4d159e",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "91d270",
+        "hash": "b40c82b5",
+        "encoded": "*%20%20%201.%20get(key)%20%20%20%20%20%20%20%E2%86%92%20Returns%20fresh%20data%20if%20within%20TTL",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "91d270",
+        "hash": "5c1117c4",
+        "encoded": "*%20%20%202.%20getStale(key)%20%20%E2%86%92%20Returns%20expired%20(but%20not%20too%20old)%20data%20when%20live%20API%20fails.",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "91d270",
+        "hash": "2d11514f",
+        "encoded": "*%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20This%20is%20the%20%22serve%20stale%20on%20upstream%20failure%22%20mechanism.",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "91d270",
+        "hash": "0274d908",
+        "encoded": "*%20%20%203.%20Background%20eviction%20removes%20entries%20that%20exceed%20the%20stale%20TTL%20window,",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "91d270",
+        "hash": "ab2f010f",
+        "encoded": "*%20%20%20%20%20%20preventing%20unbounded%20memory%20growth.",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "91d270",
+        "hash": "bc2704a8",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "91d270",
+        "hash": "66582f52",
+        "encoded": "*%20EVICTION%20STRATEGY%20(DelayQueue-based):",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "91d270",
+        "hash": "d3c10aa1",
+        "encoded": "*%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "91d270",
+        "hash": "ff299cd2",
+        "encoded": "*%20Instead%20of%20periodic%20full-cache%20scans%20(O(n)%20every%20interval),%20this%20implementation",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "91d270",
+        "hash": "ae5c356e",
+        "encoded": "*%20uses%20a%20DelayQueue%3CExpiryNode%3E%20that%20automatically%20orders%20entries%20by%20expiry%20time.",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "91d270",
+        "hash": "fb2c96ac",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "91d270",
+        "hash": "87377964",
+        "encoded": "*%20Benefits:",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "91d270",
+        "hash": "a2b1627f",
+        "encoded": "*%20%20%20-%20O(log%20n)%20insertion%20per%20put()%20vs%20O(1),%20but%20eliminates%20O(n)%20periodic%20scans",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "91d270",
+        "hash": "10d842a5",
+        "encoded": "*%20%20%20-%20CPU%20usage%20is%20event-driven%20(only%20when%20entries%20expire)%20vs%20constant%20polling",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "91d270",
+        "hash": "9f34b767",
+        "encoded": "*%20%20%20-%20Eviction%20thread%20blocks%20on%20delayQueue.take()%20-%20zero%20CPU%20when%20idle",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "91d270",
+        "hash": "d6e2fbf5",
+        "encoded": "*%20%20%20-%20More%20predictable%20memory%20cleanup%20(entries%20removed%20exactly%20at%20stale%20TTL)",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "91d270",
+        "hash": "d28c0db3",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "91d270",
+        "hash": "19a61f8e",
+        "encoded": "*%20Tradeoffs:",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "91d270",
+        "hash": "ed136948",
+        "encoded": "*%20%20%20-%20Additional%20memory:%20~48%20bytes%20per%20ExpiryNode%20(key%20reference%20+%202%20Instants)",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "91d270",
+        "hash": "b6a0a72b",
+        "encoded": "*%20%20%20-%20Slightly%20higher%20put()%20cost%20due%20to%20DelayQueue%20insertion",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "91d270",
+        "hash": "8ee5dd16",
+        "encoded": "*%20%20%20-%20Overall:%20Better%20scalability%20for%20caches%20with%20many%20entries%20and%20long%20TTLs",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "91d270",
+        "hash": "ff35f32a",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "91d270",
+        "hash": "e09560d0",
+        "encoded": "*%20CONCURRENCY%20SAFETY:",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "91d270",
+        "hash": "30fc3605",
+        "encoded": "*%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "91d270",
+        "hash": "8fed4f75",
+        "encoded": "*%20Version%20checking%20prevents%20race%20conditions:",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "91d270",
+        "hash": "6b527cdd",
+        "encoded": "*%20%20%20-%20Each%20CacheEntry%20has%20a%20createdAt%20timestamp%20(version)",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "91d270",
+        "hash": "bc2691f4",
+        "encoded": "*%20%20%20-%20Each%20ExpiryNode%20stores%20the%20version%20of%20the%20entry%20it%20represents",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "91d270",
+        "hash": "6bc366ed",
+        "encoded": "*%20%20%20-%20Eviction%20thread%20only%20removes%20entry%20if%20versions%20match",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "91d270",
+        "hash": "4a24ad11",
+        "encoded": "*%20%20%20-%20This%20prevents%20old%20ExpiryNodes%20from%20removing%20newly%20updated%20entries",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "91d270",
+        "hash": "87814680",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "91d270",
+        "hash": "be540141",
+        "encoded": "*%20No%20third-party%20cache%20library%20(Ehcache,%20Caffeine,%20Redis)%20is%20used.",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "91d270",
+        "hash": "c63d0ed6",
+        "encoded": "*%20Pure%20Java:%20ConcurrentHashMap%20+%20DelayQueue%20+%20daemon%20thread.",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "91d270",
+        "hash": "d4d92bd6",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "91d270",
+        "hash": "032598f2",
+        "encoded": "*%20@param%20%3CK%3E%20Cache%20key%20type",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "91d270",
+        "hash": "9975206f",
+        "encoded": "*%20@param%20%3CV%3E%20Cache%20value%20type",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "91d270",
+        "hash": "71e6f43e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "91d270",
+        "hash": "0b514997",
+        "encoded": "@Slf4j",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "91d270",
+        "hash": "f6765beb",
+        "encoded": "@Component",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "91d270",
+        "hash": "81fedeb7",
+        "encoded": "public%20class%20InMemoryCache%3CK,%20V%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "a3ed97",
+        "hash": "b6122fa4",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "a8a5ec",
+        "hash": "38dcab30",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "a3ed97",
+        "hash": "5b58d7c5",
+        "encoded": "*%20CONCURRENCY%20SAFETY:",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "e9202f",
+        "hash": "62b25d2d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "f6ff09",
+        "hash": "e3185d6f",
+        "encoded": "private%20final%20ConcurrentHashMap%3CK,%20CacheEntry%3CV%3E%3E%20store%20=%20new%20ConcurrentHashMap%3C%3E();",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "f6ff09",
+        "hash": "a0448a63",
+        "encoded": "private%20final%20DelayQueue%3CExpiryNode%3CK%3E%3E%20expiryQueue%20=%20new%20DelayQueue%3C%3E();",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "f6ff09",
+        "hash": "51a78f28",
+        "encoded": "private%20final%20long%20ttlSeconds;",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "f6ff09",
+        "hash": "cae5ef5e",
+        "encoded": "private%20final%20long%20staleTtlSeconds;",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "f6ff09",
+        "hash": "dbb11cba",
+        "encoded": "private%20final%20int%20maxSize;",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "f6ff09",
+        "hash": "5e837fa3",
+        "encoded": "private%20final%20Object%20evictionLock%20=%20new%20Object();",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "f6ff09",
+        "hash": "868fa44e",
+        "encoded": "private%20final%20AtomicBoolean%20evictionThreadRunning%20=%20new%20AtomicBoolean(false);",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "f6ff09",
+        "hash": "26489500",
+        "encoded": "private%20volatile%20Thread%20evictionThread;",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "ffc078",
+        "hash": "4c9de9a2",
+        "encoded": "public%20InMemoryCache(long%20ttlSeconds,%20long%20staleTtlSeconds,%20int%20maxSize)%20%7B",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "ffc078",
+        "hash": "50c5dbff",
+        "encoded": "this.ttlSeconds%20=%20ttlSeconds;",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "ffc078",
+        "hash": "82110026",
+        "encoded": "this.staleTtlSeconds%20=%20staleTtlSeconds;",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "ffc078",
+        "hash": "fc247828",
+        "encoded": "this.maxSize%20=%20maxSize;",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "ffc078",
+        "hash": "67e0f58a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "ffc078",
+        "hash": "317d9166",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "ffc078",
+        "hash": "b5d7a76b",
+        "encoded": "*%20Starts%20the%20DelayQueue-based%20eviction%20daemon%20thread.",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "ffc078",
+        "hash": "426e499c",
+        "encoded": "*%20Called%20automatically%20by%20Spring%20after%20bean%20construction.",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "ffc078",
+        "hash": "6a25b801",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "ffc078",
+        "hash": "44172c0f",
+        "encoded": "*%20The%20thread%20blocks%20on%20delayQueue.take()%20and%20only%20wakes%20when%20an%20entry%20expires.",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "ffc078",
+        "hash": "7aca8c37",
+        "encoded": "*%20This%20is%20more%20efficient%20than%20periodic%20full-cache%20scans.",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "ffc078",
+        "hash": "fdc3e0e4",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "ffc078",
+        "hash": "9830060e",
+        "encoded": "@PostConstruct",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "ffc078",
+        "hash": "75d6c8ac",
+        "encoded": "public%20void%20startEvictionThread()%20%7B",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "ffc078",
+        "hash": "b120639b",
+        "encoded": "if%20(evictionThreadRunning.compareAndSet(false,%20true))%20%7B",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "ffc078",
+        "hash": "8f2c87b7",
+        "encoded": "evictionThread%20=%20new%20Thread(this::runEvictionLoop,%20%22cache-delayqueue-eviction%22);",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "ffc078",
+        "hash": "d36dc109",
+        "encoded": "evictionThread.setDaemon(true);",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "ffc078",
+        "hash": "fc0fbf05",
+        "encoded": "evictionThread.start();",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "ffc078",
+        "hash": "b4eb42dc",
+        "encoded": "log.info(%22DelayQueue%20eviction%20thread%20started%20for%20cache%20with%20TTL=%7B%7Ds,%20staleTTL=%7B%7Ds%22,",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "ffc078",
+        "hash": "e9fa3667",
+        "encoded": "ttlSeconds,%20staleTtlSeconds);",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "ffc078",
+        "hash": "7b57fe24",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "ffc078",
+        "hash": "290931bd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "e9202f",
+        "hash": "4bec1b99",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "a8a5ec",
+        "hash": "cb5ebe5f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "a3ed97",
+        "hash": "1fd08830",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "e9202f",
+        "hash": "d5bc439e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "e9202f",
+        "hash": "606d46a9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "2827bd",
+        "hash": "9beb1094",
+        "encoded": "/**",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "245": {
+        "chunkId": "2827bd",
+        "hash": "d10eaae1",
+        "encoded": "*%20Stores%20a%20value%20in%20the%20cache.%20If%20cache%20is%20at%20max%20capacity,%20the",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "246": {
+        "chunkId": "2827bd",
+        "hash": "ce6dd83b",
+        "encoded": "*%20least-recently-accessed%20entry%20is%20evicted%20first%20(approximate%20LRU).",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "247": {
+        "chunkId": "2827bd",
+        "hash": "be7cd36a",
+        "encoded": "*",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "248": {
+        "chunkId": "2827bd",
+        "hash": "9984e7f6",
+        "encoded": "*%20Also%20registers%20an%20ExpiryNode%20in%20the%20DelayQueue%20for%20automatic%20eviction",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "249": {
+        "chunkId": "2827bd",
+        "hash": "e2623ad7",
+        "encoded": "*%20when%20the%20stale%20TTL%20expires.",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "250": {
+        "chunkId": "2827bd",
+        "hash": "29c91ca1",
+        "encoded": "*/",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "251": {
+        "chunkId": "2827bd",
+        "hash": "f9e7c394",
+        "encoded": "public%20void%20put(K%20key,%20V%20value)%20%7B",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "252": {
+        "chunkId": "2827bd",
+        "hash": "931b1ef5",
+        "encoded": "synchronized%20(evictionLock)%20%7B",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "253": {
+        "chunkId": "2827bd",
+        "hash": "93ec51e2",
+        "encoded": "if%20(store.size()%20%3E=%20maxSize%20&&%20!store.containsKey(key))%20%7B",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "254": {
+        "chunkId": "2827bd",
+        "hash": "05cf76af",
+        "encoded": "evictLeastRecentlyAccessed();",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "255": {
+        "chunkId": "2827bd",
+        "hash": "108356aa",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "257": {
+        "chunkId": "2827bd",
+        "hash": "7e9bc8fb",
+        "encoded": "CacheEntry%3CV%3E%20entry%20=%20new%20CacheEntry%3C%3E(value,%20ttlSeconds);",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "258": {
+        "chunkId": "2827bd",
+        "hash": "8e11a726",
+        "encoded": "store.put(key,%20entry);",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "260": {
+        "chunkId": "2827bd",
+        "hash": "5f75a146",
+        "encoded": "//%20Register%20expiry%20node%20in%20DelayQueue%20for%20automatic%20eviction%20at%20stale%20TTL",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "261": {
+        "chunkId": "2827bd",
+        "hash": "2fd1c924",
+        "encoded": "Instant%20expiryTime%20=%20entry.getCreatedAt().plusSeconds(staleTtlSeconds);",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "262": {
+        "chunkId": "2827bd",
+        "hash": "1387f083",
+        "encoded": "ExpiryNode%3CK%3E%20expiryNode%20=%20new%20ExpiryNode%3C%3E(key,%20expiryTime,%20entry.getVersion());",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "263": {
+        "chunkId": "2827bd",
+        "hash": "c3c0ffcc",
+        "encoded": "expiryQueue.offer(expiryNode);",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "265": {
+        "chunkId": "2827bd",
+        "hash": "ffcb401a",
+        "encoded": "log.debug(%22Cache%20put:%20key=%7B%7D,%20expiryTime=%7B%7D,%20version=%7B%7D%22,%20key,%20expiryTime,%20entry.getVersion());",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "266": {
+        "chunkId": "2827bd",
+        "hash": "f9e5f5b0",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "267": {
+        "chunkId": "2827bd",
+        "hash": "8df6af8a",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "2827bd"
+        ]
+      },
+      "271": {
+        "chunkId": "a8a5ec",
+        "hash": "6afddfa4",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "a3ed97",
+        "hash": "c663f07c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "a3ed97",
+        "hash": "64187a91",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "a3ed97",
+        "hash": "43651e39",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "a8a5ec",
+        "hash": "7eacb58d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "a3ed97",
+        "hash": "deaa7bbc",
+        "encoded": "store.remove(key);",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "a8a5ec",
+        "hash": "f18c52a4",
+        "encoded": "store.remove(key);",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "e9202f",
+        "hash": "72c1cc0a",
+        "encoded": "*%20Gracefully%20shuts%20down%20the%20eviction%20thread.",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "e9202f",
+        "hash": "cd1ebef8",
+        "encoded": "*%20Called%20automatically%20by%20Spring%20before%20bean%20destruction.",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "e9202f",
+        "hash": "b5b76e16",
+        "encoded": "@PreDestroy",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "e9202f",
+        "hash": "21e8ed68",
+        "encoded": "public%20void%20shutdown()%20%7B",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "e9202f",
+        "hash": "2d060344",
+        "encoded": "log.info(%22Shutting%20down%20cache%20eviction%20thread...%22);",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "e9202f",
+        "hash": "525464e3",
+        "encoded": "evictionThreadRunning.set(false);",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "e9202f",
+        "hash": "663e73ee",
+        "encoded": "if%20(evictionThread%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "e9202f",
+        "hash": "5b7ea640",
+        "encoded": "evictionThread.interrupt();",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "e9202f",
+        "hash": "f2865309",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "e9202f",
+        "hash": "64df2b84",
+        "encoded": "evictionThread.join(5000);%20//%20Wait%20up%20to%205%20seconds",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "e9202f",
+        "hash": "a5a76863",
+        "encoded": "log.info(%22Cache%20eviction%20thread%20stopped%20successfully%22);",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "e9202f",
+        "hash": "05cfff47",
+        "encoded": "%7D%20catch%20(InterruptedException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "e9202f",
+        "hash": "724c8b87",
+        "encoded": "log.warn(%22Interrupted%20while%20waiting%20for%20eviction%20thread%20to%20stop%22);",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "e9202f",
+        "hash": "624a81a5",
+        "encoded": "Thread.currentThread().interrupt();",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "a3ed97",
+        "hash": "63af39f9",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%20Private%20helpers%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "e9202f",
+        "hash": "10357ca6",
+        "encoded": "/**",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "368": {
+        "chunkId": "a3ed97",
+        "hash": "0bb7263f",
+        "encoded": "*%20Eviction%20loop%20that%20runs%20in%20a%20dedicated%20daemon%20thread.",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "369": {
+        "chunkId": "a3ed97",
+        "hash": "49a9cfde",
+        "encoded": "*%20Blocks%20on%20delayQueue.take()%20until%20an%20entry%20expires,%20then%20removes%20it.",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "372": {
+        "chunkId": "a3ed97",
+        "hash": "56f55bac",
+        "encoded": "*%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "373": {
+        "chunkId": "a3ed97",
+        "hash": "e5be011c",
+        "encoded": "*%20Before%20removing%20an%20entry,%20verifies%20that%20the%20ExpiryNode's%20version%20matches",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "374": {
+        "chunkId": "a3ed97",
+        "hash": "dbecdb40",
+        "encoded": "*%20the%20current%20CacheEntry's%20version.%20This%20prevents%20the%20race%20condition:",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "375": {
+        "chunkId": "a3ed97",
+        "hash": "7f6e3d56",
+        "encoded": "*%20%20%201.%20put(key)%20at%20T0%20%E2%86%92%20ExpiryNode%20v1%20created",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "a3ed97",
+        "hash": "f84e1944",
+        "encoded": "*%20%20%202.%20put(key)%20at%20T1%20%E2%86%92%20ExpiryNode%20v2%20created%20(new%20value)",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "377": {
+        "chunkId": "a3ed97",
+        "hash": "f08e643e",
+        "encoded": "*%20%20%203.%20ExpiryNode%20v1%20fires%20at%20T2%20%E2%86%92%20must%20NOT%20remove%20the%20new%20value",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "379": {
+        "chunkId": "a3ed97",
+        "hash": "e92adfc3",
+        "encoded": "private%20void%20runEvictionLoop()%20%7B",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "380": {
+        "chunkId": "a3ed97",
+        "hash": "43bd5f10",
+        "encoded": "log.info(%22Eviction%20loop%20started%22);",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "382": {
+        "chunkId": "a3ed97",
+        "hash": "77bc04c2",
+        "encoded": "while%20(evictionThreadRunning.get())%20%7B",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "383": {
+        "chunkId": "a3ed97",
+        "hash": "8950181e",
+        "encoded": "try%20%7B",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "384": {
+        "chunkId": "a3ed97",
+        "hash": "7980d241",
+        "encoded": "//%20Block%20until%20an%20entry%20expires%20(zero%20CPU%20usage%20while%20waiting)",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "385": {
+        "chunkId": "a3ed97",
+        "hash": "1c2b557b",
+        "encoded": "ExpiryNode%3CK%3E%20expiredNode%20=%20expiryQueue.take();",
+        "prevChunkIds": [
+          "e9202f"
+        ]
+      },
+      "387": {
+        "chunkId": "a3ed97",
+        "hash": "e2a1705c",
+        "encoded": "K%20key%20=%20expiredNode.getKey();",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "a3ed97",
+        "hash": "82303e49",
+        "encoded": "CacheEntry%3CV%3E%20currentEntry%20=%20store.get(key);",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "a3ed97",
+        "hash": "f920fc6a",
+        "encoded": "//%20Version%20check:%20only%20remove%20if%20the%20entry%20hasn't%20been%20replaced",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "a3ed97",
+        "hash": "111c91f5",
+        "encoded": "if%20(currentEntry%20!=%20null%20&&%20currentEntry.getVersion().equals(expiredNode.getVersion()))%20%7B",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "a3ed97",
+        "hash": "7ad2a661",
+        "encoded": "evictionCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "a3ed97",
+        "hash": "1c2eae68",
+        "encoded": "log.debug(%22Evicted%20stale%20entry:%20key=%7B%7D,%20version=%7B%7D,%20age=%7B%7Ds%22,",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "a3ed97",
+        "hash": "c5bed2c4",
+        "encoded": "key,%20expiredNode.getVersion(),%20currentEntry.getAgeSeconds());",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "a3ed97",
+        "hash": "15cf1073",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "a3ed97",
+        "hash": "80454e76",
+        "encoded": "log.debug(%22Skipped%20eviction%20(entry%20updated):%20key=%7B%7D,%20nodeVersion=%7B%7D,%20currentVersion=%7B%7D%22,",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "a3ed97",
+        "hash": "36751e29",
+        "encoded": "key,%20expiredNode.getVersion(),",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "a3ed97",
+        "hash": "e4702815",
+        "encoded": "currentEntry%20!=%20null%20?%20currentEntry.getVersion()%20:%20%22null%22);",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "a3ed97",
+        "hash": "04fb39b8",
+        "encoded": "%7D%20catch%20(InterruptedException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "a3ed97",
+        "hash": "ee02d3e1",
+        "encoded": "log.info(%22Eviction%20thread%20interrupted,%20shutting%20down...%22);",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "a3ed97",
+        "hash": "a7d9ee3d",
+        "encoded": "Thread.currentThread().interrupt();",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "a3ed97",
+        "hash": "780bdb7a",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "a3ed97",
+        "hash": "293460eb",
+        "encoded": "%7D%20catch%20(Exception%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "a3ed97",
+        "hash": "36841e4c",
+        "encoded": "log.error(%22Unexpected%20error%20in%20eviction%20loop%22,%20e);",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "411": {
+        "chunkId": "a3ed97",
+        "hash": "9a51bc6a",
+        "encoded": "log.info(%22Eviction%20loop%20terminated%22);",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "415": {
+        "chunkId": "a8a5ec",
+        "hash": "62f979e1",
+        "encoded": "*%20LRU%20eviction:%20scans%20entire%20cache%20to%20find%20least%20recently%20accessed%20entry.",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "417": {
+        "chunkId": "a8a5ec",
+        "hash": "3d0131c6",
+        "encoded": "*%20PERFORMANCE%20NOTE:",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "418": {
+        "chunkId": "a8a5ec",
+        "hash": "bb708131",
+        "encoded": "*%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "419": {
+        "chunkId": "a8a5ec",
+        "hash": "7cf3cc2f",
+        "encoded": "*%20This%20is%20O(n)%20and%20only%20called%20when%20cache%20reaches%20max%20size.",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "420": {
+        "chunkId": "a8a5ec",
+        "hash": "f0898897",
+        "encoded": "*%20For%20high-throughput%20scenarios,%20consider%20replacing%20with%20ConcurrentSkipListMap",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "421": {
+        "chunkId": "a8a5ec",
+        "hash": "42814a6c",
+        "encoded": "*%20indexed%20by%20lastAccessedAt%20for%20O(log%20n)%20LRU%20eviction.",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "422": {
+        "chunkId": "a8a5ec",
+        "hash": "3af79d7d",
+        "encoded": "*%20See%20optional%20enhancement%20section%20in%20documentation.",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "424": {
+        "chunkId": "a8a5ec",
+        "hash": "5573e964",
+        "encoded": "private%20void%20evictLeastRecentlyAccessed()%20%7B",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "425": {
+        "chunkId": "a8a5ec",
+        "hash": "651f07f4",
+        "encoded": "store.entrySet().stream()",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "426": {
+        "chunkId": "a8a5ec",
+        "hash": "01d12493",
+        "encoded": ".min(Map.Entry.comparingByValue(",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "427": {
+        "chunkId": "a8a5ec",
+        "hash": "23ffd709",
+        "encoded": "(a,%20b)%20-%3E%20a.getLastAccessedAt().compareTo(b.getLastAccessedAt())",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "428": {
+        "chunkId": "a8a5ec",
+        "hash": "ecb56c5d",
+        "encoded": "))",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "a8a5ec",
+        "hash": "7127c06c",
+        "encoded": ".ifPresent(e%20-%3E%20%7B",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "430": {
+        "chunkId": "a8a5ec",
+        "hash": "3d244353",
+        "encoded": "K%20key%20=%20e.getKey();",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "432": {
+        "chunkId": "a8a5ec",
+        "hash": "cf006787",
+        "encoded": "evictionCount.incrementAndGet();",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "433": {
+        "chunkId": "a8a5ec",
+        "hash": "6c8b5ca0",
+        "encoded": "log.debug(%22LRU%20eviction:%20key=%7B%7D,%20lastAccessed=%7B%7D%22,",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "434": {
+        "chunkId": "a8a5ec",
+        "hash": "5425c738",
+        "encoded": "key,%20e.getValue().getLastAccessedAt());",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "435": {
+        "chunkId": "a8a5ec",
+        "hash": "2c87a6b6",
+        "encoded": "%7D);",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      },
+      "454": {
+        "chunkId": "a3ed97",
+        "hash": "8e7a08bb",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "a3ed97"
+        ]
+      }
+    },
+    "_prevLineCount": 345
+  }
+}

@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.NotBlank;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +28,7 @@ import java.util.List;
 @RequestMapping("/api/v1/transport")
 @RequiredArgsConstructor
 @Validated
+@PreAuthorize("hasAnyRole('VIEWER','OPERATOR','ADMIN')")
 @Tag(name = "Transport", description = "Real-time public transport data endpoints")
 public class TransportController {
 

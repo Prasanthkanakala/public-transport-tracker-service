@@ -1,0 +1,31 @@
+{
+  "filename": "IMPLEMENTATION_SUMMARY.md",
+  "path": "backend\\docs\\IMPLEMENTATION_SUMMARY.md",
+  "version": "1.1",
+  "files": {
+    "112f1d1b": {
+      "value": [
+        {
+          "programming_language": "Java",
+          "fileName": "InMemoryCache.java",
+          "relativeFilePath": "backend/src/main/java/com/transport/tracker/cache/InMemoryCache.java",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            196
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "1c242e69": {
+      "value": "You are a Senior Java Performance Engineer reviewing an existing Spring Boot in-memory cache implementation.\n\nCurrent implementation:\n\n* Uses ConcurrentHashMap<K, CacheEntry<V>> as the primary cache store.\n* Supports:\n\n  * Fresh TTL = 300 seconds\n  * Stale TTL = 3600 seconds\n  * Stale cache fallback\n  * LRU eviction when max size is reached\n* Background ScheduledExecutorService runs every TTL interval and scans the entire cache using removeIf() to remove entries older than stale TTL.\n* LRU evict"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

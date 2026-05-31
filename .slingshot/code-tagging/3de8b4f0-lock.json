@@ -1,0 +1,390 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\controller\\CacheController.java": {
+    "filename": "CacheController.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\controller\\CacheController.java",
+    "version": "1.2",
+    "contextFile": "3de8b4f0-context.json",
+    "chunks": {
+      "496d95": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212845,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "9b5a7c50",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:04:05 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "496d95",
+        "hash": "50d6b9c5",
+        "encoded": "package%20com.transport.tracker.controller;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "496d95",
+        "hash": "4f2f660d",
+        "encoded": "import%20com.transport.tracker.cache.CacheService;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "496d95",
+        "hash": "c6b2195a",
+        "encoded": "import%20io.swagger.v3.oas.annotations.Operation;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "496d95",
+        "hash": "3afc6f8e",
+        "encoded": "import%20io.swagger.v3.oas.annotations.tags.Tag;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "496d95",
+        "hash": "4538703d",
+        "encoded": "import%20lombok.RequiredArgsConstructor;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "496d95",
+        "hash": "5b9c16e2",
+        "encoded": "import%20org.springframework.http.ResponseEntity;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "496d95",
+        "hash": "be2136d9",
+        "encoded": "import%20org.springframework.security.access.prepost.PreAuthorize;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "496d95",
+        "hash": "f6ba300e",
+        "encoded": "import%20org.springframework.web.bind.annotation.*;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "496d95",
+        "hash": "be116945",
+        "encoded": "import%20java.util.Map;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "496d95",
+        "hash": "06067327",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "496d95",
+        "hash": "32534def",
+        "encoded": "*%20Cache%20management%20and%20diagnostics%20endpoints.",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "496d95",
+        "hash": "986d62bf",
+        "encoded": "*%20Exposes%20cache%20stats%20and%20allows%20selective%20or%20full%20cache%20invalidation.",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "496d95",
+        "hash": "95259197",
+        "encoded": "*%20Access%20is%20restricted%20based%20on%20user%20roles:",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "496d95",
+        "hash": "cca72cd8",
+        "encoded": "*%20-%20Stats:%20OPERATOR%20and%20ADMIN",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "496d95",
+        "hash": "d49350e0",
+        "encoded": "*%20-%20Clear/Invalidate:%20ADMIN%20only",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "496d95",
+        "hash": "f12acb0c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "496d95",
+        "hash": "3d7de136",
+        "encoded": "@RestController",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "496d95",
+        "hash": "2ad54823",
+        "encoded": "@RequestMapping(%22/api/v1/cache%22)",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "496d95",
+        "hash": "a10ff68f",
+        "encoded": "@RequiredArgsConstructor",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "496d95",
+        "hash": "58932c10",
+        "encoded": "@Tag(name%20=%20%22Cache%22,%20description%20=%20%22In-memory%20cache%20management%20and%20diagnostics%22)",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "496d95",
+        "hash": "03079b87",
+        "encoded": "public%20class%20CacheController%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "496d95",
+        "hash": "3f115afd",
+        "encoded": "private%20final%20CacheService%20cacheService;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "496d95",
+        "hash": "71f78dcf",
+        "encoded": "@Operation(summary%20=%20%22Get%20cache%20statistics%22,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "496d95",
+        "hash": "212d924c",
+        "encoded": "description%20=%20%22Returns%20hit%20rate,%20miss%20count,%20stale%20hit%20count,%20size%20and%20TTL%20settings.%20Requires%20OPERATOR%20or%20ADMIN%20role.%22)",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "496d95",
+        "hash": "a6bef03b",
+        "encoded": "@GetMapping(%22/stats%22)",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "496d95",
+        "hash": "5adcc0b9",
+        "encoded": "@PreAuthorize(%22hasAnyRole('OPERATOR','ADMIN')%22)",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "496d95",
+        "hash": "d9fb30a9",
+        "encoded": "public%20ResponseEntity%3CMap%3CString,%20Object%3E%3E%20getStats()%20%7B",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "496d95",
+        "hash": "e5e53f7d",
+        "encoded": "return%20ResponseEntity.ok(cacheService.getStats());",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "496d95",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "496d95",
+        "hash": "e3dcd5ff",
+        "encoded": "@Operation(summary%20=%20%22Clear%20all%20cache%20entries%20(POST)%22,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "496d95",
+        "hash": "3403c086",
+        "encoded": "description%20=%20%22Removes%20all%20cached%20transport%20data%20via%20POST.%20Requires%20ADMIN%20role.%22)",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "496d95",
+        "hash": "5ddb6b2f",
+        "encoded": "@PostMapping(%22/clear%22)",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "496d95",
+        "hash": "c110e253",
+        "encoded": "@PreAuthorize(%22hasRole('ADMIN')%22)",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "496d95",
+        "hash": "115cabc4",
+        "encoded": "public%20ResponseEntity%3CMap%3CString,%20String%3E%3E%20clearCachePost()%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "496d95",
+        "hash": "3bc5a380",
+        "encoded": "cacheService.clear();",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "496d95",
+        "hash": "1e49d51d",
+        "encoded": "return%20ResponseEntity.ok(Map.of(%22message%22,%20%22Cache%20cleared%20successfully%22));",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "496d95",
+        "hash": "5663967b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "496d95",
+        "hash": "61ca5e3e",
+        "encoded": "@Operation(summary%20=%20%22Clear%20all%20cache%20entries%20(DELETE)%22,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "496d95",
+        "hash": "f7aaa5d0",
+        "encoded": "description%20=%20%22Removes%20all%20cached%20transport%20data.%20Requires%20ADMIN%20role.%22)",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "496d95",
+        "hash": "258d3a77",
+        "encoded": "@DeleteMapping",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "496d95",
+        "hash": "062f34b5",
+        "encoded": "@PreAuthorize(%22hasRole('ADMIN')%22)",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "496d95",
+        "hash": "a64f26c6",
+        "encoded": "public%20ResponseEntity%3CMap%3CString,%20String%3E%3E%20clearCache()%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "496d95",
+        "hash": "00702ad9",
+        "encoded": "cacheService.clear();",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "496d95",
+        "hash": "e1d4fd60",
+        "encoded": "return%20ResponseEntity.ok(Map.of(%22message%22,%20%22Cache%20cleared%20successfully%22));",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "496d95",
+        "hash": "38b604dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "496d95",
+        "hash": "a03942f5",
+        "encoded": "@Operation(summary%20=%20%22Invalidate%20cache%20for%20a%20specific%20city/route%22,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "496d95",
+        "hash": "9e241508",
+        "encoded": "description%20=%20%22Removes%20cached%20data%20for%20the%20given%20city+routeId%20combination.%20Requires%20ADMIN%20role.%22)",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "496d95",
+        "hash": "5d6eae4c",
+        "encoded": "@DeleteMapping(%22/entry%22)",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "496d95",
+        "hash": "7d89c95d",
+        "encoded": "@PreAuthorize(%22hasRole('ADMIN')%22)",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "496d95",
+        "hash": "b7fbd7dc",
+        "encoded": "public%20ResponseEntity%3CMap%3CString,%20String%3E%3E%20invalidateEntry(",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "496d95",
+        "hash": "8d879ec9",
+        "encoded": "@RequestParam(required%20=%20false)%20String%20city,",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "496d95",
+        "hash": "7a63b2dc",
+        "encoded": "@RequestParam(required%20=%20false)%20String%20routeId)%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "496d95",
+        "hash": "7759fb4d",
+        "encoded": "String%20key%20=%20cacheService.buildKey(city,%20routeId);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "496d95",
+        "hash": "72d5212c",
+        "encoded": "cacheService.invalidate(key);",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "496d95",
+        "hash": "527ebc62",
+        "encoded": "return%20ResponseEntity.ok(Map.of(",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "496d95",
+        "hash": "035f0364",
+        "encoded": "%22message%22,%20%22Cache%20entry%20invalidated%22,",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "496d95",
+        "hash": "4239885a",
+        "encoded": "%22key%22,%20key",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "496d95",
+        "hash": "a9e63349",
+        "encoded": "));",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "496d95",
+        "hash": "bf862585",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "496d95",
+        "hash": "e4d82fa4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

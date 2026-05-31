@@ -1,0 +1,414 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\controller\\AuthController.java": {
+    "filename": "AuthController.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\controller\\AuthController.java",
+    "version": "1.2",
+    "contextFile": "5575cebd-context.json",
+    "chunks": {
+      "12837b": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212777,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "91629a04",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:02:57 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "12837b",
+        "hash": "50d6b9c5",
+        "encoded": "package%20com.transport.tracker.controller;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "12837b",
+        "hash": "6a39da49",
+        "encoded": "import%20com.transport.tracker.dto.LoginRequest;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "12837b",
+        "hash": "02d4a242",
+        "encoded": "import%20com.transport.tracker.dto.LoginResponse;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "12837b",
+        "hash": "acedbbc6",
+        "encoded": "import%20com.transport.tracker.security.JwtService;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "12837b",
+        "hash": "aac1c073",
+        "encoded": "import%20io.swagger.v3.oas.annotations.Operation;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "12837b",
+        "hash": "f40a3830",
+        "encoded": "import%20io.swagger.v3.oas.annotations.tags.Tag;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "12837b",
+        "hash": "2ef6bea9",
+        "encoded": "import%20jakarta.validation.Valid;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "12837b",
+        "hash": "66ecf1d0",
+        "encoded": "import%20lombok.RequiredArgsConstructor;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "12837b",
+        "hash": "8217f699",
+        "encoded": "import%20lombok.extern.slf4j.Slf4j;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "12837b",
+        "hash": "6c13df4a",
+        "encoded": "import%20org.springframework.http.ResponseEntity;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "12837b",
+        "hash": "f10eea6e",
+        "encoded": "import%20org.springframework.security.authentication.AuthenticationManager;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "12837b",
+        "hash": "ac0af0be",
+        "encoded": "import%20org.springframework.security.authentication.BadCredentialsException;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "12837b",
+        "hash": "b32c5464",
+        "encoded": "import%20org.springframework.security.authentication.UsernamePasswordAuthenticationToken;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "12837b",
+        "hash": "b8760091",
+        "encoded": "import%20org.springframework.security.core.Authentication;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "12837b",
+        "hash": "ac59c1e0",
+        "encoded": "import%20org.springframework.security.core.GrantedAuthority;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "12837b",
+        "hash": "d14d4ed9",
+        "encoded": "import%20org.springframework.web.bind.annotation.PostMapping;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "12837b",
+        "hash": "31766888",
+        "encoded": "import%20org.springframework.web.bind.annotation.RequestBody;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "12837b",
+        "hash": "07e8e990",
+        "encoded": "import%20org.springframework.web.bind.annotation.RequestMapping;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "12837b",
+        "hash": "7424ef16",
+        "encoded": "import%20org.springframework.web.bind.annotation.RestController;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "12837b",
+        "hash": "a713c17b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "12837b",
+        "hash": "088b3262",
+        "encoded": "*%20Authentication%20controller%20providing%20JWT-based%20login.",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "12837b",
+        "hash": "5c7a3328",
+        "encoded": "*%20%3Cp%3E",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "12837b",
+        "hash": "4ce734f0",
+        "encoded": "*%20Exposes%20a%20single%20POST%20endpoint%20for%20user%20authentication.",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "12837b",
+        "hash": "3c1a8a43",
+        "encoded": "*%20On%20successful%20authentication,%20returns%20a%20signed%20JWT%20token",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "12837b",
+        "hash": "b4d9489d",
+        "encoded": "*%20along%20with%20the%20user's%20role.",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "12837b",
+        "hash": "4ba143ad",
+        "encoded": "*%20%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "12837b",
+        "hash": "6a472b85",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "12837b",
+        "hash": "a63cc29a",
+        "encoded": "@Slf4j",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "12837b",
+        "hash": "2a0ee16b",
+        "encoded": "@RestController",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "12837b",
+        "hash": "6e5a008a",
+        "encoded": "@RequestMapping(%22/api/v1/auth%22)",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "12837b",
+        "hash": "b5ac90fd",
+        "encoded": "@RequiredArgsConstructor",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "12837b",
+        "hash": "5672c1e4",
+        "encoded": "@Tag(name%20=%20%22Authentication%22,%20description%20=%20%22JWT%20authentication%20endpoints%22)",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "12837b",
+        "hash": "df291142",
+        "encoded": "public%20class%20AuthController%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "12837b",
+        "hash": "e0d48246",
+        "encoded": "private%20final%20AuthenticationManager%20authenticationManager;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "12837b",
+        "hash": "f06ba854",
+        "encoded": "private%20final%20JwtService%20jwtService;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "12837b",
+        "hash": "5da7ca32",
+        "encoded": "@Operation(",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "12837b",
+        "hash": "ccb50ed6",
+        "encoded": "summary%20=%20%22Authenticate%20user%20and%20obtain%20JWT%20token%22,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "12837b",
+        "hash": "f6033587",
+        "encoded": "description%20=%20%22Validates%20credentials%20and%20returns%20a%20signed%20JWT%20token%20with%20the%20user's%20role.%22",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "12837b",
+        "hash": "a1df8512",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "12837b",
+        "hash": "ea608742",
+        "encoded": "@PostMapping(%22/login%22)",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "12837b",
+        "hash": "fe182a5d",
+        "encoded": "public%20ResponseEntity%3CLoginResponse%3E%20login(@Valid%20@RequestBody%20LoginRequest%20request)%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "12837b",
+        "hash": "9e1fecb0",
+        "encoded": "log.info(%22Login%20attempt%20for%20user:%20%7B%7D%22,%20request.username());",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "12837b",
+        "hash": "b9561a72",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "12837b",
+        "hash": "2e20c32f",
+        "encoded": "Authentication%20authentication%20=%20authenticationManager.authenticate(",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "12837b",
+        "hash": "0f72cfb4",
+        "encoded": "new%20UsernamePasswordAuthenticationToken(",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "12837b",
+        "hash": "c511136e",
+        "encoded": "request.username(),",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "12837b",
+        "hash": "ea002c3c",
+        "encoded": "request.password()",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "12837b",
+        "hash": "fb14fcc6",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "12837b",
+        "hash": "fcbe4ad9",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "12837b",
+        "hash": "cffc744c",
+        "encoded": "String%20role%20=%20authentication.getAuthorities().stream()",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "12837b",
+        "hash": "eaa110d0",
+        "encoded": ".map(GrantedAuthority::getAuthority)",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "12837b",
+        "hash": "177aa7b6",
+        "encoded": ".filter(a%20-%3E%20a.startsWith(%22ROLE_%22))",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "12837b",
+        "hash": "b7b52207",
+        "encoded": ".map(a%20-%3E%20a.substring(5))%20//%20Remove%20ROLE_%20prefix",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "12837b",
+        "hash": "3ece8a0b",
+        "encoded": ".findFirst()",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "12837b",
+        "hash": "c7b45f71",
+        "encoded": ".orElse(%22VIEWER%22);",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "12837b",
+        "hash": "1d9c7bd3",
+        "encoded": "String%20token%20=%20jwtService.generateToken(request.username(),%20role);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "12837b",
+        "hash": "80fb4f0c",
+        "encoded": "log.info(%22Login%20successful%20for%20user:%20%7B%7D%20with%20role:%20%7B%7D%22,%20request.username(),%20role);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "12837b",
+        "hash": "56571791",
+        "encoded": "return%20ResponseEntity.ok(new%20LoginResponse(token,%20request.username(),%20role));",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "12837b",
+        "hash": "3c74a820",
+        "encoded": "%7D%20catch%20(BadCredentialsException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "12837b",
+        "hash": "a127fe2b",
+        "encoded": "log.warn(%22Login%20failed%20for%20user:%20%7B%7D%22,%20request.username());",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "12837b",
+        "hash": "951cb2c2",
+        "encoded": "return%20ResponseEntity.status(401).build();",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "12837b",
+        "hash": "352e9b23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "12837b",
+        "hash": "f064f9d6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "12837b",
+        "hash": "ae47b750",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

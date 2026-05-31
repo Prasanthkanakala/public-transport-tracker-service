@@ -1,0 +1,456 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\security\\JwtAuthenticationFilter.java": {
+    "filename": "JwtAuthenticationFilter.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\security\\JwtAuthenticationFilter.java",
+    "version": "1.2",
+    "contextFile": "5aeb6b5d-context.json",
+    "chunks": {
+      "d80ff0": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212777,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "c757c3d6",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:02:57 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "d80ff0",
+        "hash": "2878fb3a",
+        "encoded": "package%20com.transport.tracker.security;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "d80ff0",
+        "hash": "927c67e2",
+        "encoded": "import%20jakarta.servlet.FilterChain;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "d80ff0",
+        "hash": "814e811f",
+        "encoded": "import%20jakarta.servlet.ServletException;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "d80ff0",
+        "hash": "20710414",
+        "encoded": "import%20jakarta.servlet.http.HttpServletRequest;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "d80ff0",
+        "hash": "1a61a231",
+        "encoded": "import%20jakarta.servlet.http.HttpServletResponse;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "d80ff0",
+        "hash": "0faa68a4",
+        "encoded": "import%20lombok.RequiredArgsConstructor;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "d80ff0",
+        "hash": "6e64232c",
+        "encoded": "import%20lombok.extern.slf4j.Slf4j;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "d80ff0",
+        "hash": "3284077f",
+        "encoded": "import%20org.springframework.lang.NonNull;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "d80ff0",
+        "hash": "913dd910",
+        "encoded": "import%20org.springframework.security.authentication.UsernamePasswordAuthenticationToken;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "d80ff0",
+        "hash": "80def5c3",
+        "encoded": "import%20org.springframework.security.core.authority.SimpleGrantedAuthority;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "d80ff0",
+        "hash": "0847a859",
+        "encoded": "import%20org.springframework.security.core.context.SecurityContextHolder;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "d80ff0",
+        "hash": "528c2d77",
+        "encoded": "import%20org.springframework.security.web.authentication.WebAuthenticationDetailsSource;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "d80ff0",
+        "hash": "e49ae6ef",
+        "encoded": "import%20org.springframework.stereotype.Component;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "d80ff0",
+        "hash": "fafb50c3",
+        "encoded": "import%20org.springframework.web.filter.OncePerRequestFilter;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "d80ff0",
+        "hash": "c7eecf0e",
+        "encoded": "import%20java.io.IOException;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "d80ff0",
+        "hash": "cd1a6459",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "d80ff0",
+        "hash": "1fbc648f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "d80ff0",
+        "hash": "64ab22d7",
+        "encoded": "*%20JWT%20authentication%20filter%20that%20intercepts%20every%20HTTP%20request.",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "d80ff0",
+        "hash": "78c25e5e",
+        "encoded": "*%20%3Cp%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "d80ff0",
+        "hash": "1a33a425",
+        "encoded": "*%20Extracts%20the%20Bearer%20token%20from%20the%20Authorization%20header,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "d80ff0",
+        "hash": "19540f3c",
+        "encoded": "*%20validates%20it%20via%20%7B@link%20JwtService%7D,%20and%20sets%20the%20Spring%20Security",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "d80ff0",
+        "hash": "1b20b957",
+        "encoded": "*%20authentication%20context%20if%20valid.",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "d80ff0",
+        "hash": "d93db31e",
+        "encoded": "*%20%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "d80ff0",
+        "hash": "ecb1f791",
+        "encoded": "*%20%3Cp%3E",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "d80ff0",
+        "hash": "cd00af0c",
+        "encoded": "*%20This%20filter%20runs%20once%20per%20request%20and%20is%20registered%20before",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "d80ff0",
+        "hash": "993ecea8",
+        "encoded": "*%20Spring%20Security's%20UsernamePasswordAuthenticationFilter.",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "d80ff0",
+        "hash": "d419c8cd",
+        "encoded": "*%20%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "d80ff0",
+        "hash": "53ca030e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "d80ff0",
+        "hash": "4d5948b4",
+        "encoded": "@Slf4j",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "d80ff0",
+        "hash": "29165be6",
+        "encoded": "@Component",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "d80ff0",
+        "hash": "7c9e44fb",
+        "encoded": "@RequiredArgsConstructor",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "d80ff0",
+        "hash": "d20dd37e",
+        "encoded": "public%20class%20JwtAuthenticationFilter%20extends%20OncePerRequestFilter%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "d80ff0",
+        "hash": "f18f7319",
+        "encoded": "private%20static%20final%20String%20AUTHORIZATION_HEADER%20=%20%22Authorization%22;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "d80ff0",
+        "hash": "7009f470",
+        "encoded": "private%20static%20final%20String%20BEARER_PREFIX%20=%20%22Bearer%20%22;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "d80ff0",
+        "hash": "ea212608",
+        "encoded": "private%20final%20JwtService%20jwtService;",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "d80ff0",
+        "hash": "a0d9464c",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "d80ff0",
+        "hash": "714a8545",
+        "encoded": "protected%20void%20doFilterInternal(",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "d80ff0",
+        "hash": "3872bbc6",
+        "encoded": "@NonNull%20HttpServletRequest%20request,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "d80ff0",
+        "hash": "cd91c568",
+        "encoded": "@NonNull%20HttpServletResponse%20response,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "d80ff0",
+        "hash": "81a1c281",
+        "encoded": "@NonNull%20FilterChain%20filterChain)%20throws%20ServletException,%20IOException%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "d80ff0",
+        "hash": "7971fe62",
+        "encoded": "final%20String%20authHeader%20=%20request.getHeader(AUTHORIZATION_HEADER);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "d80ff0",
+        "hash": "46cdb35f",
+        "encoded": "//%20Skip%20if%20no%20Authorization%20header%20or%20not%20a%20Bearer%20token",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "d80ff0",
+        "hash": "0e48ba76",
+        "encoded": "if%20(authHeader%20==%20null%20%7C%7C%20!authHeader.startsWith(BEARER_PREFIX))%20%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "d80ff0",
+        "hash": "1e4d7cd1",
+        "encoded": "filterChain.doFilter(request,%20response);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "d80ff0",
+        "hash": "cdcf746c",
+        "encoded": "return;",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "d80ff0",
+        "hash": "e392f376",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "d80ff0",
+        "hash": "e14bfc8d",
+        "encoded": "final%20String%20jwt%20=%20authHeader.substring(BEARER_PREFIX.length());",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "d80ff0",
+        "hash": "bb284215",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "d80ff0",
+        "hash": "a3261362",
+        "encoded": "final%20String%20username%20=%20jwtService.extractUsername(jwt);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "d80ff0",
+        "hash": "e0e41e5a",
+        "encoded": "//%20Only%20authenticate%20if%20not%20already%20authenticated",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "d80ff0",
+        "hash": "39408fa6",
+        "encoded": "if%20(username%20!=%20null%20&&%20SecurityContextHolder.getContext().getAuthentication()%20==%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "d80ff0",
+        "hash": "319590d5",
+        "encoded": "if%20(jwtService.isTokenValid(jwt,%20username))%20%7B",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "d80ff0",
+        "hash": "dffc40f5",
+        "encoded": "String%20role%20=%20jwtService.extractRole(jwt);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "d80ff0",
+        "hash": "ee2d216f",
+        "encoded": "//%20Spring%20Security%20expects%20ROLE_%20prefix%20for%20hasRole()%20checks",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "d80ff0",
+        "hash": "1a4eadeb",
+        "encoded": "List%3CSimpleGrantedAuthority%3E%20authorities%20=%20List.of(",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "d80ff0",
+        "hash": "4066e4de",
+        "encoded": "new%20SimpleGrantedAuthority(%22ROLE_%22%20+%20role)",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "d80ff0",
+        "hash": "5883bb7d",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "d80ff0",
+        "hash": "807b1fe7",
+        "encoded": "UsernamePasswordAuthenticationToken%20authToken%20=",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "d80ff0",
+        "hash": "1375b2b4",
+        "encoded": "new%20UsernamePasswordAuthenticationToken(username,%20null,%20authorities);",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "d80ff0",
+        "hash": "f270778d",
+        "encoded": "authToken.setDetails(new%20WebAuthenticationDetailsSource().buildDetails(request));",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "d80ff0",
+        "hash": "a6b89250",
+        "encoded": "SecurityContextHolder.getContext().setAuthentication(authToken);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "d80ff0",
+        "hash": "79758503",
+        "encoded": "log.debug(%22Authenticated%20user:%20%7B%7D%20with%20role:%20%7B%7D%22,%20username,%20role);",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "d80ff0",
+        "hash": "88f18366",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "d80ff0",
+        "hash": "20d59727",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "d80ff0",
+        "hash": "b32a0ad3",
+        "encoded": "%7D%20catch%20(Exception%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "d80ff0",
+        "hash": "fb3a21de",
+        "encoded": "log.warn(%22JWT%20authentication%20failed:%20%7B%7D%22,%20e.getMessage());",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "d80ff0",
+        "hash": "d6a34d52",
+        "encoded": "//%20Do%20not%20set%20authentication%20%E2%80%94%20request%20will%20be%20treated%20as%20unauthenticated",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "d80ff0",
+        "hash": "d6938858",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "d80ff0",
+        "hash": "cda33f9b",
+        "encoded": "filterChain.doFilter(request,%20response);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "d80ff0",
+        "hash": "d7cd7257",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "d80ff0",
+        "hash": "7bb00016",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

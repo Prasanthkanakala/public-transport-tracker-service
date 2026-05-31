@@ -1,0 +1,516 @@
+{
+  "frontend\\src\\context\\AuthContext.js": {
+    "filename": "AuthContext.js",
+    "path": "frontend\\src\\context\\AuthContext.js",
+    "version": "1.2",
+    "contextFile": "707ceb12-context.json",
+    "chunks": {
+      "ec0944": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212963,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "19511bad",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:06:03 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ec0944",
+        "hash": "2815859f",
+        "encoded": "import%20React,%20%7B%20createContext,%20useState,%20useCallback,%20useMemo,%20useEffect%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ec0944",
+        "hash": "de3a3b47",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ec0944",
+        "hash": "c8a71b48",
+        "encoded": "*%20Authentication%20Context%20for%20managing%20JWT-based%20auth%20state.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ec0944",
+        "hash": "7ad050fa",
+        "encoded": "*%20Provides%20login,%20logout,%20and%20role-checking%20capabilities.",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ec0944",
+        "hash": "5552c888",
+        "encoded": "*%20Token,%20username,%20and%20role%20are%20persisted%20in%20localStorage.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ec0944",
+        "hash": "f2ad3d4c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ec0944",
+        "hash": "8a9a8f73",
+        "encoded": "export%20const%20AuthContext%20=%20createContext(null);",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ec0944",
+        "hash": "3007bbe6",
+        "encoded": "const%20STORAGE_KEYS%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ec0944",
+        "hash": "4a37eb42",
+        "encoded": "TOKEN:%20'auth_token',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ec0944",
+        "hash": "d4f66856",
+        "encoded": "USERNAME:%20'auth_username',",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ec0944",
+        "hash": "16a37e11",
+        "encoded": "ROLE:%20'auth_role',",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "ec0944",
+        "hash": "67a86cab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ec0944",
+        "hash": "396f934e",
+        "encoded": "export%20function%20AuthProvider(%7B%20children%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "ec0944",
+        "hash": "76dcb448",
+        "encoded": "const%20%5Btoken,%20setToken%5D%20=%20useState(()%20=%3E%20localStorage.getItem(STORAGE_KEYS.TOKEN));",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ec0944",
+        "hash": "b9a35a2f",
+        "encoded": "const%20%5Busername,%20setUsername%5D%20=%20useState(()%20=%3E%20localStorage.getItem(STORAGE_KEYS.USERNAME));",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "ec0944",
+        "hash": "d514890e",
+        "encoded": "const%20%5Brole,%20setRole%5D%20=%20useState(()%20=%3E%20localStorage.getItem(STORAGE_KEYS.ROLE));",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "ec0944",
+        "hash": "4f20b11d",
+        "encoded": "const%20isAuthenticated%20=%20Boolean(token);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "ec0944",
+        "hash": "f0871c8a",
+        "encoded": "const%20login%20=%20useCallback((authData)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "ec0944",
+        "hash": "93a60f36",
+        "encoded": "const%20%7B%20token:%20newToken,%20username:%20newUsername,%20role:%20newRole%20%7D%20=%20authData;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "ec0944",
+        "hash": "7c9bbd51",
+        "encoded": "localStorage.setItem(STORAGE_KEYS.TOKEN,%20newToken);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "ec0944",
+        "hash": "a96d4537",
+        "encoded": "localStorage.setItem(STORAGE_KEYS.USERNAME,%20newUsername);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "ec0944",
+        "hash": "ff835e0b",
+        "encoded": "localStorage.setItem(STORAGE_KEYS.ROLE,%20newRole);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "ec0944",
+        "hash": "83582bba",
+        "encoded": "setToken(newToken);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "ec0944",
+        "hash": "eb3c9db4",
+        "encoded": "setUsername(newUsername);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "ec0944",
+        "hash": "fe0bf26e",
+        "encoded": "setRole(newRole);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "ec0944",
+        "hash": "ab0ec45e",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "ec0944",
+        "hash": "e895e682",
+        "encoded": "const%20logout%20=%20useCallback(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "ec0944",
+        "hash": "73b980da",
+        "encoded": "localStorage.removeItem(STORAGE_KEYS.TOKEN);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "ec0944",
+        "hash": "d80a1649",
+        "encoded": "localStorage.removeItem(STORAGE_KEYS.USERNAME);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "ec0944",
+        "hash": "4d3f8d86",
+        "encoded": "localStorage.removeItem(STORAGE_KEYS.ROLE);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "ec0944",
+        "hash": "22c6f35f",
+        "encoded": "setToken(null);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "ec0944",
+        "hash": "389396f4",
+        "encoded": "setUsername(null);",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "ec0944",
+        "hash": "a40d8be1",
+        "encoded": "setRole(null);",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "ec0944",
+        "hash": "c1427e24",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "ec0944",
+        "hash": "7ef7f6ed",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ec0944",
+        "hash": "1fe83654",
+        "encoded": "*%20Check%20if%20the%20current%20user%20has%20the%20required%20role.",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "ec0944",
+        "hash": "394290c1",
+        "encoded": "*%20Role%20hierarchy:%20ADMIN%20%3E%20OPERATOR%20%3E%20VIEWER",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "ec0944",
+        "hash": "2a068bde",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "ec0944",
+        "hash": "7b35b5aa",
+        "encoded": "const%20hasRole%20=%20useCallback((requiredRole)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "ec0944",
+        "hash": "eb354ab2",
+        "encoded": "if%20(!role)%20return%20false;",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "ec0944",
+        "hash": "e555c1db",
+        "encoded": "const%20hierarchy%20=%20%7B%20VIEWER:%201,%20OPERATOR:%202,%20ADMIN:%203%20%7D;",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "ec0944",
+        "hash": "d5bb11b9",
+        "encoded": "return%20(hierarchy%5Brole%5D%20%7C%7C%200)%20%3E=%20(hierarchy%5BrequiredRole%5D%20%7C%7C%200);",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "ec0944",
+        "hash": "05c21fb1",
+        "encoded": "%7D,%20%5Brole%5D);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "ec0944",
+        "hash": "09dfcb49",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "ec0944",
+        "hash": "30c1cd42",
+        "encoded": "*%20Check%20if%20the%20current%20user%20has%20any%20of%20the%20required%20roles.",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "ec0944",
+        "hash": "b6b41ee9",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "ec0944",
+        "hash": "9a498cfb",
+        "encoded": "const%20hasAnyRole%20=%20useCallback((...roles)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "ec0944",
+        "hash": "05aa11c3",
+        "encoded": "return%20roles.some((r)%20=%3E%20r%20===%20role);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "ec0944",
+        "hash": "3f27844b",
+        "encoded": "%7D,%20%5Brole%5D);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "ec0944",
+        "hash": "4db293cf",
+        "encoded": "//%20Listen%20for%20storage%20events%20(multi-tab%20sync)",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "ec0944",
+        "hash": "f49dd6eb",
+        "encoded": "useEffect(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "ec0944",
+        "hash": "5c74fba3",
+        "encoded": "const%20handleStorageChange%20=%20(e)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "ec0944",
+        "hash": "4b04d498",
+        "encoded": "if%20(e.key%20===%20STORAGE_KEYS.TOKEN)%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "ec0944",
+        "hash": "4f9e506e",
+        "encoded": "if%20(!e.newValue)%20%7B",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "ec0944",
+        "hash": "e8456281",
+        "encoded": "logout();",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "ec0944",
+        "hash": "a79ec2c6",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "ec0944",
+        "hash": "bd82826e",
+        "encoded": "setToken(e.newValue);",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "ec0944",
+        "hash": "bc24f8b2",
+        "encoded": "setUsername(localStorage.getItem(STORAGE_KEYS.USERNAME));",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "ec0944",
+        "hash": "5c00011b",
+        "encoded": "setRole(localStorage.getItem(STORAGE_KEYS.ROLE));",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "ec0944",
+        "hash": "e4d82fa4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "ec0944",
+        "hash": "9b4a30da",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "ec0944",
+        "hash": "97ddb42a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "ec0944",
+        "hash": "26802e9a",
+        "encoded": "window.addEventListener('storage',%20handleStorageChange);",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "ec0944",
+        "hash": "a0f42eac",
+        "encoded": "return%20()%20=%3E%20window.removeEventListener('storage',%20handleStorageChange);",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "ec0944",
+        "hash": "cfff52c0",
+        "encoded": "%7D,%20%5Blogout%5D);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "ec0944",
+        "hash": "ba8c28c2",
+        "encoded": "const%20value%20=%20useMemo(()%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "ec0944",
+        "hash": "1d3ef1a2",
+        "encoded": "token,",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "ec0944",
+        "hash": "05fad7b2",
+        "encoded": "username,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "ec0944",
+        "hash": "724f4a93",
+        "encoded": "role,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "ec0944",
+        "hash": "f011ca26",
+        "encoded": "isAuthenticated,",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "ec0944",
+        "hash": "51e3a45c",
+        "encoded": "login,",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "ec0944",
+        "hash": "ef83961c",
+        "encoded": "logout,",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "ec0944",
+        "hash": "dd01ba3f",
+        "encoded": "hasRole,",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "ec0944",
+        "hash": "c343da6f",
+        "encoded": "hasAnyRole,",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "ec0944",
+        "hash": "c9a52dcf",
+        "encoded": "%7D),%20%5Btoken,%20username,%20role,%20isAuthenticated,%20login,%20logout,%20hasRole,%20hasAnyRole%5D);",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "ec0944",
+        "hash": "e7fd795d",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "ec0944",
+        "hash": "db1290c0",
+        "encoded": "%3CAuthContext.Provider%20value=%7Bvalue%7D%3E",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "ec0944",
+        "hash": "94380001",
+        "encoded": "%7Bchildren%7D",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "ec0944",
+        "hash": "4afc2615",
+        "encoded": "%3C/AuthContext.Provider%3E",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "ec0944",
+        "hash": "22a4d54e",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "ec0944",
+        "hash": "70416dc1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

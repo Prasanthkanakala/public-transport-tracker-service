@@ -1,0 +1,493 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\cache\\ExpiryNode.java": {
+    "filename": "ExpiryNode.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\cache\\ExpiryNode.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "db3035": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146430,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "ea7564bf",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:37:10 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "db3035",
+        "hash": "2061c00d",
+        "encoded": "package%20com.transport.tracker.cache;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "db3035",
+        "hash": "e4c4cb74",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "db3035",
+        "hash": "000fbf56",
+        "encoded": "import%20java.util.concurrent.Delayed;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "db3035",
+        "hash": "9e2a5c87",
+        "encoded": "import%20java.util.concurrent.TimeUnit;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "db3035",
+        "hash": "692dab65",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "db3035",
+        "hash": "7f25da9e",
+        "encoded": "*%20Represents%20a%20cache%20entry%20scheduled%20for%20expiration%20in%20the%20DelayQueue.",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "db3035",
+        "hash": "fb16a0a5",
+        "encoded": "*%20Implements%20Delayed%20interface%20to%20support%20priority-based%20expiration.",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "db3035",
+        "hash": "7aeb6bd6",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "db3035",
+        "hash": "4c1e6383",
+        "encoded": "*%20CONCURRENCY%20SAFETY:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "db3035",
+        "hash": "23ac8af7",
+        "encoded": "*%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "db3035",
+        "hash": "ba170a1f",
+        "encoded": "*%20Each%20ExpiryNode%20carries%20a%20version%20timestamp%20that%20matches%20the%20CacheEntry%20it%20represents.",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "db3035",
+        "hash": "214796c6",
+        "encoded": "*%20This%20prevents%20the%20race%20condition%20where:",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "db3035",
+        "hash": "9bd30336",
+        "encoded": "*%20%20%201.%20put(key)%20at%20T0%20%E2%86%92%20creates%20ExpiryNode%20v1",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "db3035",
+        "hash": "f021901d",
+        "encoded": "*%20%20%202.%20put(key)%20at%20T1%20%E2%86%92%20creates%20ExpiryNode%20v2%20(new%20value)",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "db3035",
+        "hash": "7c636955",
+        "encoded": "*%20%20%203.%20ExpiryNode%20v1%20expires%20at%20T2%20%E2%86%92%20must%20NOT%20remove%20the%20new%20value",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "db3035",
+        "hash": "622956ed",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "db3035",
+        "hash": "7b87fdba",
+        "encoded": "*%20The%20eviction%20thread%20compares%20versions%20before%20removing%20entries.",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "db3035",
+        "hash": "6d59a6d6",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "db3035",
+        "hash": "1dd22ec0",
+        "encoded": "*%20@param%20%3CK%3E%20Cache%20key%20type",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "db3035",
+        "hash": "cc674971",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "db3035",
+        "hash": "0fbd54c0",
+        "encoded": "public%20class%20ExpiryNode%3CK%3E%20implements%20Delayed%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "db3035",
+        "hash": "d6a16ef7",
+        "encoded": "private%20final%20K%20key;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "db3035",
+        "hash": "44204812",
+        "encoded": "private%20final%20Instant%20expiryTime;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "db3035",
+        "hash": "79241650",
+        "encoded": "private%20final%20Instant%20version;%20//%20Creation%20timestamp%20used%20for%20version%20checking",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "db3035",
+        "hash": "86e1a908",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "db3035",
+        "hash": "82a0d1ef",
+        "encoded": "*%20Creates%20an%20expiry%20node%20for%20a%20cache%20entry.",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "db3035",
+        "hash": "e5d2e24d",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "db3035",
+        "hash": "5c96e691",
+        "encoded": "*%20@param%20key%20The%20cache%20key",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "db3035",
+        "hash": "52558d93",
+        "encoded": "*%20@param%20expiryTime%20When%20this%20entry%20should%20expire",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "db3035",
+        "hash": "a3e2513c",
+        "encoded": "*%20@param%20version%20The%20creation%20timestamp%20of%20the%20associated%20CacheEntry%20(for%20version%20matching)",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "db3035",
+        "hash": "9358b5e7",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "db3035",
+        "hash": "45708fd0",
+        "encoded": "public%20ExpiryNode(K%20key,%20Instant%20expiryTime,%20Instant%20version)%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "db3035",
+        "hash": "18863966",
+        "encoded": "this.key%20=%20key;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "db3035",
+        "hash": "6f026f18",
+        "encoded": "this.expiryTime%20=%20expiryTime;",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "db3035",
+        "hash": "61bd72b8",
+        "encoded": "this.version%20=%20version;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "db3035",
+        "hash": "4771cdac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "db3035",
+        "hash": "7048c82b",
+        "encoded": "public%20K%20getKey()%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "db3035",
+        "hash": "086c588f",
+        "encoded": "return%20key;",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "db3035",
+        "hash": "d6071ac7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "db3035",
+        "hash": "5f760f09",
+        "encoded": "public%20Instant%20getVersion()%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "db3035",
+        "hash": "d48a7ada",
+        "encoded": "return%20version;",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "db3035",
+        "hash": "57c5213d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "db3035",
+        "hash": "9c0519d4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "db3035",
+        "hash": "a05d633f",
+        "encoded": "*%20Returns%20the%20remaining%20delay%20before%20this%20node%20should%20be%20processed.",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "db3035",
+        "hash": "258b8fcd",
+        "encoded": "*%20Negative%20values%20indicate%20the%20delay%20has%20already%20elapsed.",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "db3035",
+        "hash": "d89601c8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "db3035",
+        "hash": "cd7fe76a",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "db3035",
+        "hash": "691a3531",
+        "encoded": "public%20long%20getDelay(TimeUnit%20unit)%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "db3035",
+        "hash": "db2df90f",
+        "encoded": "long%20delayMillis%20=%20expiryTime.toEpochMilli()%20-%20Instant.now().toEpochMilli();",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "db3035",
+        "hash": "1cc73456",
+        "encoded": "return%20unit.convert(delayMillis,%20TimeUnit.MILLISECONDS);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "db3035",
+        "hash": "17837346",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "db3035",
+        "hash": "50ad655d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "db3035",
+        "hash": "2b91a532",
+        "encoded": "*%20Compares%20this%20node%20with%20another%20for%20ordering%20in%20the%20DelayQueue.",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "db3035",
+        "hash": "cb9365a2",
+        "encoded": "*%20Earlier%20expiry%20times%20have%20higher%20priority.",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "db3035",
+        "hash": "006039ec",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "db3035",
+        "hash": "0a6b8924",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "db3035",
+        "hash": "9f8fb20e",
+        "encoded": "public%20int%20compareTo(Delayed%20other)%20%7B",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "db3035",
+        "hash": "a820c0c7",
+        "encoded": "if%20(this%20==%20other)%20%7B",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "db3035",
+        "hash": "18c0c330",
+        "encoded": "return%200;",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "db3035",
+        "hash": "bf862585",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "db3035",
+        "hash": "c197d323",
+        "encoded": "long%20diff%20=%20this.getDelay(TimeUnit.MILLISECONDS)%20-%20other.getDelay(TimeUnit.MILLISECONDS);",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "db3035",
+        "hash": "5cdf8e54",
+        "encoded": "if%20(diff%20%3C%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "db3035",
+        "hash": "1b7d8579",
+        "encoded": "return%20-1;",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "db3035",
+        "hash": "ffc6d554",
+        "encoded": "%7D%20else%20if%20(diff%20%3E%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "db3035",
+        "hash": "11e6165a",
+        "encoded": "return%201;",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "db3035",
+        "hash": "5250e31e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "db3035",
+        "hash": "4fc69f9f",
+        "encoded": "return%200;",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "db3035",
+        "hash": "20d59727",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "db3035",
+        "hash": "a1d8479d",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "db3035",
+        "hash": "4ac9bff5",
+        "encoded": "public%20String%20toString()%20%7B",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "db3035",
+        "hash": "c3341585",
+        "encoded": "return%20%22ExpiryNode%7B%22%20+",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "db3035",
+        "hash": "5a616565",
+        "encoded": "%22key=%22%20+%20key%20+",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "db3035",
+        "hash": "aa747427",
+        "encoded": "%22,%20expiryTime=%22%20+%20expiryTime%20+",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "db3035",
+        "hash": "a302d4d0",
+        "encoded": "%22,%20version=%22%20+%20version%20+",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "db3035",
+        "hash": "c5d30164",
+        "encoded": "'%7D';",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "db3035",
+        "hash": "9c0e6ebc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "db3035",
+        "hash": "f4ff50cd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

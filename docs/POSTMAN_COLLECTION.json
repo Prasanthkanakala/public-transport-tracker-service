@@ -1,0 +1,329 @@
+{
+  "info": {
+    "name": "Transit Tracker - JWT Auth & RBAC",
+    "description": "Complete Postman collection for testing JWT Authentication and Role-Based Access Control in the Transit Tracker application.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "jwt_token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Authentication",
+      "item": [
+        {
+          "name": "1.1 Login as VIEWER",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"viewer\",\n  \"password\": \"viewer123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "auth", "login"]
+            },
+            "description": "Login as VIEWER role. Copy the token from the response for subsequent requests."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login successful', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.token).to.be.a('string');",
+                  "    pm.expect(jsonData.username).to.eql('viewer');",
+                  "    pm.expect(jsonData.role).to.eql('VIEWER');",
+                  "    pm.collectionVariables.set('jwt_token', jsonData.token);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.2 Login as OPERATOR",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"operator\",\n  \"password\": \"operator123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "auth", "login"]
+            },
+            "description": "Login as OPERATOR role."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login successful', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.role).to.eql('OPERATOR');",
+                  "    pm.collectionVariables.set('jwt_token', jsonData.token);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.3 Login as ADMIN",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "auth", "login"]
+            },
+            "description": "Login as ADMIN role."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login successful', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.role).to.eql('ADMIN');",
+                  "    pm.collectionVariables.set('jwt_token', jsonData.token);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.4 Login with Invalid Credentials",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"wrongpassword\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "auth", "login"]
+            },
+            "description": "Attempt login with wrong password. Should return 401."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login rejected', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2. Transport API (Authenticated)",
+      "item": [
+        {
+          "name": "2.1 Get Transport Data",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/transport?city=london&routeId=central",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "transport"],
+              "query": [
+                { "key": "city", "value": "london" },
+                { "key": "routeId", "value": "central" }
+              ]
+            },
+            "description": "Fetch transport data. Accessible by VIEWER, OPERATOR, ADMIN."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Transport data returned', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "2.2 Get Transport Data (No Token - 401)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/transport?city=london&routeId=central",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "transport"],
+              "query": [
+                { "key": "city", "value": "london" },
+                { "key": "routeId", "value": "central" }
+              ]
+            },
+            "description": "Attempt to access transport data without a token. Should return 401."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Unauthorized without token', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3. RBAC Verification Flow",
+      "description": "Complete RBAC verification: VIEWER cannot access cache stats, OPERATOR can access stats but not clear, ADMIN can do everything.",
+      "item": [
+        {
+          "name": "3.1 Login as VIEWER",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"username\": \"viewer\",\n  \"password\": \"viewer123\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/v1/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "v1", "auth", "login"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["var jsonData = pm.response.json();", "pm.collectionVariables.set('jwt_token', jsonData.token);"] } }]
+        },
+        {
+          "name": "3.2 VIEWER: Get Transport Data (200)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwt_token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/transport?city=london", "host": ["{{baseUrl}}"], "path": ["api", "v1", "transport"], "query": [{ "key": "city", "value": "london" }] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('VIEWER can access transport', function () { pm.response.to.have.status(200); });"] } }]
+        },
+        {
+          "name": "3.3 VIEWER: Get Cache Stats (403)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwt_token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/cache/stats", "host": ["{{baseUrl}}"], "path": ["api", "v1", "cache", "stats"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('VIEWER cannot access cache stats', function () { pm.response.to.have.status(403); });"] } }]
+        },
+        {
+          "name": "3.4 Login as OPERATOR",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"username\": \"operator\",\n  \"password\": \"operator123\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/v1/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "v1", "auth", "login"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["var jsonData = pm.response.json();", "pm.collectionVariables.set('jwt_token', jsonData.token);"] } }]
+        },
+        {
+          "name": "3.5 OPERATOR: Get Cache Stats (200)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwt_token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/cache/stats", "host": ["{{baseUrl}}"], "path": ["api", "v1", "cache", "stats"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('OPERATOR can access cache stats', function () { pm.response.to.have.status(200); });"] } }]
+        },
+        {
+          "name": "3.6 OPERATOR: Clear Cache (403)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwt_token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/cache/clear", "host": ["{{baseUrl}}"], "path": ["api", "v1", "cache", "clear"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('OPERATOR cannot clear cache', function () { pm.response.to.have.status(403); });"] } }]
+        },
+        {
+          "name": "3.7 Login as ADMIN",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/v1/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "v1", "auth", "login"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["var jsonData = pm.response.json();", "pm.collectionVariables.set('jwt_token', jsonData.token);"] } }]
+        },
+        {
+          "name": "3.8 ADMIN: Clear Cache (200)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwt_token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/cache/clear", "host": ["{{baseUrl}}"], "path": ["api", "v1", "cache", "clear"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('ADMIN can clear cache', function () { pm.response.to.have.status(200); });"] } }]
+        },
+        {
+          "name": "3.9 ADMIN: Get Cache Stats (200)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwt_token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/cache/stats", "host": ["{{baseUrl}}"], "path": ["api", "v1", "cache", "stats"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('ADMIN can access cache stats', function () { pm.response.to.have.status(200); });"] } }]
+        }
+      ]
+    }
+  ]
+}

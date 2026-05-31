@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Login from './components/Login/Login';
 import RouteSearch from './components/RouteSearch/RouteSearch';
 import AlertBanner from './components/AlertBanner/AlertBanner';
 import ArrivalBoard from './components/ArrivalBoard/ArrivalBoard';
@@ -7,13 +8,16 @@ import VehicleMap from './components/VehicleMap/VehicleMap';
 import OfflineToggle from './components/OfflineToggle/OfflineToggle';
 import CrowdingIndicator from './components/CrowdingIndicator/CrowdingIndicator';
 import RoutePlanner from './components/RoutePlanner/RoutePlanner';
+import AdminPanel from './components/AdminPanel/AdminPanel';
 import { useTransport } from './hooks/useTransport';
+import { useAuth } from './hooks/useAuth';
 
 export default function App() {
+  const { isAuthenticated, username, role, logout, hasRole } = useAuth();
   const [city, setCity] = useState('london');
   const [routeId, setRouteId] = useState('central');
   const [offline, setOffline] = useState(false);
-  const [activeTab, setActiveTab] = useState('live'); // live | plan | status
+  const [activeTab, setActiveTab] = useState('live'); // live | plan | status | admin
 
   const { transportData, metadata, loading, error, refresh } = useTransport({
     city,
@@ -21,6 +25,11 @@ export default function App() {
     offline,
     autoRefreshMs: 30000,
   });
+
+  // Show login page if not authenticated
+  if (!isAuthenticated) {
+    return <Login />;
+  }
 
   const handleSearch = ({ city: c, routeId: r }) => {
     setCity(c);
@@ -44,9 +53,16 @@ export default function App() {
           )}
         </div>
         <div className="header-controls">
+          <div className="user-info">
+            <span className="user-name">{username}</span>
+            <span className="user-role-badge">{role}</span>
+          </div>
           <OfflineToggle offline={offline} onToggle={setOffline} />
           <button className="refresh-btn" onClick={refresh} disabled={loading} aria-label="Refresh data">
             <span className={loading ? 'spin' : ''}>↺</span>
+          </button>
+          <button className="logout-btn" onClick={logout} aria-label="Sign out">
+            Sign Out
           </button>
         </div>
       </header>
@@ -106,6 +122,17 @@ export default function App() {
         >
           Service Status
         </button>
+        {/* Admin tab - only visible to OPERATOR and ADMIN */}
+        {hasRole('OPERATOR') && (
+          <button
+            role="tab"
+            aria-selected={activeTab === 'admin'}
+            className={`tab ${activeTab === 'admin' ? 'active' : ''}`}
+            onClick={() => setActiveTab('admin')}
+          >
+            Admin Panel
+          </button>
+        )}
       </nav>
 
       {/* ── Tab panels ── */}
@@ -175,6 +202,11 @@ export default function App() {
               </p>
             )}
           </section>
+        )}
+
+        {/* Admin Panel - only visible to OPERATOR and ADMIN */}
+        {activeTab === 'admin' && hasRole('OPERATOR') && (
+          <AdminPanel />
         )}
       </main>
 

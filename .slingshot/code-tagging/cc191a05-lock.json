@@ -1,0 +1,894 @@
+{
+  "frontend\\src\\components\\AdminPanel\\AdminPanel.jsx": {
+    "filename": "AdminPanel.jsx",
+    "path": "frontend\\src\\components\\AdminPanel\\AdminPanel.jsx",
+    "version": "1.2",
+    "contextFile": "cc191a05-context.json",
+    "chunks": {
+      "50495f": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212965,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "8e161b80",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:06:05 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "50495f",
+        "hash": "e4141144",
+        "encoded": "import%20React,%20%7B%20useState,%20useCallback%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "50495f",
+        "hash": "eb182392",
+        "encoded": "import%20%7B%20useAuth%20%7D%20from%20'../../hooks/useAuth';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "50495f",
+        "hash": "84c6e239",
+        "encoded": "import%20%7B%20getCacheStats,%20clearCache%20%7D%20from%20'../../services/apiService';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "50495f",
+        "hash": "01c11f0f",
+        "encoded": "import%20'./AdminPanel.css';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "50495f",
+        "hash": "b9fc3b5c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "50495f",
+        "hash": "84a018cb",
+        "encoded": "*%20Admin%20Panel%20component%20for%20cache%20management.",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "50495f",
+        "hash": "3ac33b25",
+        "encoded": "*%20Shows%20cache%20statistics%20(OPERATOR%20and%20ADMIN)%20and",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "50495f",
+        "hash": "81d571a3",
+        "encoded": "*%20cache%20clear%20functionality%20(ADMIN%20only).",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "50495f",
+        "hash": "7aeb6bd6",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "50495f",
+        "hash": "cc75573d",
+        "encoded": "*%20Handles%20401%20(session%20expired)%20and%20403%20(access%20denied)%20errors.",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "50495f",
+        "hash": "c27421dc",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "50495f",
+        "hash": "21921347",
+        "encoded": "export%20default%20function%20AdminPanel()%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "50495f",
+        "hash": "d2debe7d",
+        "encoded": "const%20%7B%20role,%20hasRole%20%7D%20=%20useAuth();",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "50495f",
+        "hash": "10b99be1",
+        "encoded": "const%20%5Bstats,%20setStats%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "50495f",
+        "hash": "7b4cc1d0",
+        "encoded": "const%20%5BstatsLoading,%20setStatsLoading%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "50495f",
+        "hash": "3743b9ef",
+        "encoded": "const%20%5BstatsError,%20setStatsError%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "50495f",
+        "hash": "9706f92d",
+        "encoded": "const%20%5BclearLoading,%20setClearLoading%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "50495f",
+        "hash": "8b1d90e3",
+        "encoded": "const%20%5BclearMessage,%20setClearMessage%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "50495f",
+        "hash": "3d9d8279",
+        "encoded": "const%20%5BclearError,%20setClearError%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "50495f",
+        "hash": "e313f813",
+        "encoded": "const%20handleViewStats%20=%20useCallback(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "50495f",
+        "hash": "705ad527",
+        "encoded": "setStatsLoading(true);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "50495f",
+        "hash": "9fe127f3",
+        "encoded": "setStatsError(null);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "50495f",
+        "hash": "b5182986",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "50495f",
+        "hash": "9d09487b",
+        "encoded": "const%20data%20=%20await%20getCacheStats();",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "50495f",
+        "hash": "96915b7a",
+        "encoded": "setStats(data);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "50495f",
+        "hash": "3adf49b5",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "50495f",
+        "hash": "af6c5a04",
+        "encoded": "if%20(err.status%20===%20401)%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "50495f",
+        "hash": "02cc602e",
+        "encoded": "setStatsError('Session%20expired.%20Please%20log%20in%20again.');",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "50495f",
+        "hash": "4a0ffb0b",
+        "encoded": "%7D%20else%20if%20(err.status%20===%20403)%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "50495f",
+        "hash": "012ddd4e",
+        "encoded": "setStatsError('Access%20denied.%20Insufficient%20permissions.');",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "50495f",
+        "hash": "a2a299fd",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "50495f",
+        "hash": "7ebefa06",
+        "encoded": "setStatsError(err.message%20%7C%7C%20'Failed%20to%20load%20cache%20statistics.');",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "50495f",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "50495f",
+        "hash": "5ff7a25b",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "50495f",
+        "hash": "b067ee22",
+        "encoded": "setStatsLoading(false);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "50495f",
+        "hash": "880eeeff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "50495f",
+        "hash": "4e4f75ea",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "50495f",
+        "hash": "9e5a15c5",
+        "encoded": "const%20handleClearCache%20=%20useCallback(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "50495f",
+        "hash": "327b4022",
+        "encoded": "setClearLoading(true);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "50495f",
+        "hash": "5429b559",
+        "encoded": "setClearError(null);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "50495f",
+        "hash": "efa42d5d",
+        "encoded": "setClearMessage(null);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "50495f",
+        "hash": "c577a3ea",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "50495f",
+        "hash": "3482e300",
+        "encoded": "const%20data%20=%20await%20clearCache();",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "50495f",
+        "hash": "87b17561",
+        "encoded": "setClearMessage(data.message%20%7C%7C%20'Cache%20cleared%20successfully.');",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "50495f",
+        "hash": "58d59b09",
+        "encoded": "//%20Refresh%20stats%20after%20clearing",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "50495f",
+        "hash": "bf6f36ab",
+        "encoded": "if%20(stats)%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "50495f",
+        "hash": "c16e3457",
+        "encoded": "handleViewStats();",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "50495f",
+        "hash": "6a5bdc1a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "50495f",
+        "hash": "55fb34cf",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "50495f",
+        "hash": "14ccd570",
+        "encoded": "if%20(err.status%20===%20401)%20%7B",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "50495f",
+        "hash": "3039db82",
+        "encoded": "setClearError('Session%20expired.%20Please%20log%20in%20again.');",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "50495f",
+        "hash": "fc7052c8",
+        "encoded": "%7D%20else%20if%20(err.status%20===%20403)%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "50495f",
+        "hash": "0405fd79",
+        "encoded": "setClearError('Access%20denied.%20Only%20ADMIN%20can%20clear%20cache.');",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "50495f",
+        "hash": "9c3cb5d3",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "50495f",
+        "hash": "20297493",
+        "encoded": "setClearError(err.message%20%7C%7C%20'Failed%20to%20clear%20cache.');",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "50495f",
+        "hash": "f4e179c9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "50495f",
+        "hash": "b5087ad2",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "50495f",
+        "hash": "69409b95",
+        "encoded": "setClearLoading(false);",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "50495f",
+        "hash": "92368879",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "50495f",
+        "hash": "433c335d",
+        "encoded": "%7D,%20%5Bstats,%20handleViewStats%5D);",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "50495f",
+        "hash": "f7baec7d",
+        "encoded": "//%20Don't%20render%20if%20user%20doesn't%20have%20at%20least%20OPERATOR%20role",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "50495f",
+        "hash": "34a7e5c6",
+        "encoded": "if%20(!hasRole('OPERATOR'))%20%7B",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "50495f",
+        "hash": "0f9b5cc5",
+        "encoded": "return%20null;",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "50495f",
+        "hash": "bf862585",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "50495f",
+        "hash": "d140fab0",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "50495f",
+        "hash": "7fefae06",
+        "encoded": "%3Csection%20className=%22admin-panel%22%20aria-label=%22Administration%20Panel%22%3E",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "50495f",
+        "hash": "5993cab8",
+        "encoded": "%3Ch2%20className=%22admin-panel-title%22%3E",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "50495f",
+        "hash": "4eafc2d9",
+        "encoded": "%3Cspan%20role=%22img%22%20aria-label=%22Admin%22%3E%E2%9A%99%EF%B8%8F%3C/span%3E%20Admin%20Panel",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "50495f",
+        "hash": "ab9ce1a3",
+        "encoded": "%3Cspan%20className=%22role-badge%22%3E%7Brole%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "50495f",
+        "hash": "c5d55cd2",
+        "encoded": "%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "50495f",
+        "hash": "055e6652",
+        "encoded": "%7B/*%20Cache%20Statistics%20Section%20*/%7D",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "50495f",
+        "hash": "428ae444",
+        "encoded": "%3Cdiv%20className=%22admin-section%22%3E",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "50495f",
+        "hash": "897c2678",
+        "encoded": "%3Cdiv%20className=%22admin-section-header%22%3E",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "50495f",
+        "hash": "2e602279",
+        "encoded": "%3Ch3%3ECache%20Statistics%3C/h3%3E",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "50495f",
+        "hash": "c05ae6be",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "50495f",
+        "hash": "c1566a14",
+        "encoded": "className=%22admin-btn%20stats-btn%22",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "50495f",
+        "hash": "9217a026",
+        "encoded": "onClick=%7BhandleViewStats%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "50495f",
+        "hash": "5c82d3b1",
+        "encoded": "disabled=%7BstatsLoading%7D",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "50495f",
+        "hash": "a15980df",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "50495f",
+        "hash": "909d94a9",
+        "encoded": "%7BstatsLoading%20?%20'Loading...'%20:%20'View%20Cache%20Stats'%7D",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "50495f",
+        "hash": "97820440",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "50495f",
+        "hash": "290e4883",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "50495f",
+        "hash": "53a3c13c",
+        "encoded": "%7BstatsError%20&&%20(",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "50495f",
+        "hash": "e6293104",
+        "encoded": "%3Cdiv%20className=%22admin-error%22%20role=%22alert%22%3E",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "50495f",
+        "hash": "f329f2b8",
+        "encoded": "%3Cspan%3E%E2%9C%95%3C/span%3E%20%7BstatsError%7D",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "50495f",
+        "hash": "94f93d35",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "50495f",
+        "hash": "19056f7b",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "50495f",
+        "hash": "b1d7a1b8",
+        "encoded": "%7Bstats%20&&%20(",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "50495f",
+        "hash": "304a35f6",
+        "encoded": "%3Cdiv%20className=%22stats-grid%22%3E",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "50495f",
+        "hash": "669d1673",
+        "encoded": "%3Cdiv%20className=%22stat-card%22%3E",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "50495f",
+        "hash": "8d29929f",
+        "encoded": "%3Cspan%20className=%22stat-label%22%3ESize%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "50495f",
+        "hash": "7641d4f9",
+        "encoded": "%3Cspan%20className=%22stat-value%22%3E%7Bstats.size%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "50495f",
+        "hash": "24a5baa4",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "50495f",
+        "hash": "5d0bb36d",
+        "encoded": "%3Cdiv%20className=%22stat-card%22%3E",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "50495f",
+        "hash": "a647375c",
+        "encoded": "%3Cspan%20className=%22stat-label%22%3EHits%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "50495f",
+        "hash": "52774bcd",
+        "encoded": "%3Cspan%20className=%22stat-value%20hit%22%3E%7Bstats.hits%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "50495f",
+        "hash": "625df6e6",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "50495f",
+        "hash": "c8ec8dde",
+        "encoded": "%3Cdiv%20className=%22stat-card%22%3E",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "50495f",
+        "hash": "710d8c66",
+        "encoded": "%3Cspan%20className=%22stat-label%22%3EMisses%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "50495f",
+        "hash": "118f0105",
+        "encoded": "%3Cspan%20className=%22stat-value%20miss%22%3E%7Bstats.misses%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "50495f",
+        "hash": "8052e42b",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "50495f",
+        "hash": "62a9aaef",
+        "encoded": "%3Cdiv%20className=%22stat-card%22%3E",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "50495f",
+        "hash": "d81789ca",
+        "encoded": "%3Cspan%20className=%22stat-label%22%3EStale%20Hits%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "50495f",
+        "hash": "7177bc5a",
+        "encoded": "%3Cspan%20className=%22stat-value%20stale%22%3E%7Bstats.staleHits%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "50495f",
+        "hash": "1aa9171b",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "50495f",
+        "hash": "5750e1b1",
+        "encoded": "%3Cdiv%20className=%22stat-card%22%3E",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "50495f",
+        "hash": "ae66983f",
+        "encoded": "%3Cspan%20className=%22stat-label%22%3EEvictions%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "50495f",
+        "hash": "bc2703b3",
+        "encoded": "%3Cspan%20className=%22stat-value%22%3E%7Bstats.evictions%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "50495f",
+        "hash": "74f54113",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "50495f",
+        "hash": "064fdfa0",
+        "encoded": "%3Cdiv%20className=%22stat-card%22%3E",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "50495f",
+        "hash": "10009d13",
+        "encoded": "%3Cspan%20className=%22stat-label%22%3EHit%20Rate%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "50495f",
+        "hash": "368a3475",
+        "encoded": "%3Cspan%20className=%22stat-value%20rate%22%3E%7Bstats.hitRate%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "50495f",
+        "hash": "4726a2d5",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "50495f",
+        "hash": "f9f57b5d",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "50495f",
+        "hash": "588b59b3",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "50495f",
+        "hash": "ec40da3e",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "50495f",
+        "hash": "acd1515e",
+        "encoded": "%7B/*%20Cache%20Clear%20Section%20-%20ADMIN%20only%20*/%7D",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "50495f",
+        "hash": "8de584c5",
+        "encoded": "%7BhasRole('ADMIN')%20&&%20(",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "50495f",
+        "hash": "88ba3c35",
+        "encoded": "%3Cdiv%20className=%22admin-section%22%3E",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "50495f",
+        "hash": "0f0343e3",
+        "encoded": "%3Cdiv%20className=%22admin-section-header%22%3E",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "50495f",
+        "hash": "5abbfb6f",
+        "encoded": "%3Ch3%3ECache%20Management%3C/h3%3E",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "50495f",
+        "hash": "20f2ad85",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "50495f",
+        "hash": "6d01b1a0",
+        "encoded": "className=%22admin-btn%20clear-btn%22",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "50495f",
+        "hash": "25c8160f",
+        "encoded": "onClick=%7BhandleClearCache%7D",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "50495f",
+        "hash": "0edc6578",
+        "encoded": "disabled=%7BclearLoading%7D",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "50495f",
+        "hash": "921dcfde",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "50495f",
+        "hash": "98b26e40",
+        "encoded": "%7BclearLoading%20?%20'Clearing...'%20:%20'Clear%20Cache'%7D",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "50495f",
+        "hash": "c7fb7a62",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "50495f",
+        "hash": "ad4b5bba",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "50495f",
+        "hash": "4271d227",
+        "encoded": "%7BclearError%20&&%20(",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "50495f",
+        "hash": "0fec00d2",
+        "encoded": "%3Cdiv%20className=%22admin-error%22%20role=%22alert%22%3E",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "50495f",
+        "hash": "a8ffd8e5",
+        "encoded": "%3Cspan%3E%E2%9C%95%3C/span%3E%20%7BclearError%7D",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "50495f",
+        "hash": "ba1fb8b4",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "50495f",
+        "hash": "305c345d",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "50495f",
+        "hash": "370ded34",
+        "encoded": "%7BclearMessage%20&&%20(",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "50495f",
+        "hash": "d6071029",
+        "encoded": "%3Cdiv%20className=%22admin-success%22%20role=%22status%22%3E",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "50495f",
+        "hash": "d0507696",
+        "encoded": "%3Cspan%3E%E2%9C%93%3C/span%3E%20%7BclearMessage%7D",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "50495f",
+        "hash": "1259ad79",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "50495f",
+        "hash": "b1258721",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "50495f",
+        "hash": "0aa60449",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "50495f",
+        "hash": "ef3850a8",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "50495f",
+        "hash": "eafdd95e",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "50495f",
+        "hash": "91097df8",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "50495f",
+        "hash": "dbb55d46",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

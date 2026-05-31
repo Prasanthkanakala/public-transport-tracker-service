@@ -1,0 +1,2737 @@
+{
+  "backend\\docs\\DELAYQUEUE_IMPLEMENTATION_GUIDE.md": {
+    "filename": "DELAYQUEUE_IMPLEMENTATION_GUIDE.md",
+    "path": "backend\\docs\\DELAYQUEUE_IMPLEMENTATION_GUIDE.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "6b0cf3": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146647,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "d2ae907b",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:40:47 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "6b0cf3",
+        "hash": "ed8c937b",
+        "encoded": "#%20DelayQueue-Based%20Cache%20Eviction%20Implementation%20Guide",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "6b0cf3",
+        "hash": "5ac33061",
+        "encoded": "##%20Overview",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "6b0cf3",
+        "hash": "7a1b538b",
+        "encoded": "This%20document%20explains%20the%20refactoring%20of%20the%20Spring%20Boot%20in-memory%20cache%20from%20periodic%20full-cache%20scans%20to%20DelayQueue-based%20TTL%20eviction.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "6b0cf3",
+        "hash": "b130fb01",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "6b0cf3",
+        "hash": "599a7029",
+        "encoded": "##%20Architecture%20Changes",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "6b0cf3",
+        "hash": "e14008ae",
+        "encoded": "###%20Before:%20ScheduledExecutorService%20Approach",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "6b0cf3",
+        "hash": "15ec653e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "6b0cf3",
+        "hash": "674f4db0",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "6b0cf3",
+        "hash": "cb07f661",
+        "encoded": "%E2%94%82%20%20ScheduledExecutorService%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "6b0cf3",
+        "hash": "fe3764b3",
+        "encoded": "%E2%94%82%20%20(runs%20every%20TTL%20interval)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "6b0cf3",
+        "hash": "3051b9b4",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%AC%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "6b0cf3",
+        "hash": "25bed535",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "6b0cf3",
+        "hash": "93cf3180",
+        "encoded": "%E2%96%BC",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "6b0cf3",
+        "hash": "7e07bca6",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "6b0cf3",
+        "hash": "7f353528",
+        "encoded": "%E2%94%82%20%20evictStaleEntries()%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "6b0cf3",
+        "hash": "a559d2ea",
+        "encoded": "%E2%94%82%20%20%E2%80%A2%20Scans%20ENTIRE%20cache%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "6b0cf3",
+        "hash": "24e6315c",
+        "encoded": "%E2%94%82%20%20%E2%80%A2%20removeIf(entry.isStale())%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "6b0cf3",
+        "hash": "fdcb0903",
+        "encoded": "%E2%94%82%20%20%E2%80%A2%20O(n)%20time%20complexity%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "6b0cf3",
+        "hash": "7dfc30fb",
+        "encoded": "%E2%94%82%20%20%E2%80%A2%20Runs%20even%20when%20no%20entries%20expire%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "6b0cf3",
+        "hash": "adc019e4",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "6b0cf3",
+        "hash": "d7b9acaf",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "6b0cf3",
+        "hash": "3f0d068d",
+        "encoded": "**Problems:**",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "6b0cf3",
+        "hash": "a5309634",
+        "encoded": "-%20**O(n)%20scan%20every%20interval**%20-%20CPU%20waste%20when%20cache%20is%20large",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "6b0cf3",
+        "hash": "fe8be4d4",
+        "encoded": "-%20**Fixed%20interval%20overhead**%20-%20Runs%20even%20when%20nothing%20expires",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "6b0cf3",
+        "hash": "c5d19f48",
+        "encoded": "-%20**Delayed%20eviction**%20-%20Stale%20entries%20remain%20until%20next%20scan",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "6b0cf3",
+        "hash": "772ef001",
+        "encoded": "-%20**CPU%20usage%20constant**%20-%20No%20idle%20state",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "6b0cf3",
+        "hash": "fa7ae154",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "6b0cf3",
+        "hash": "631daff7",
+        "encoded": "###%20After:%20DelayQueue%20Approach",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "6b0cf3",
+        "hash": "89af75d2",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "6b0cf3",
+        "hash": "16032e9a",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "6b0cf3",
+        "hash": "886616d9",
+        "encoded": "%E2%94%82%20%20put(key,%20value)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "6b0cf3",
+        "hash": "a9e68915",
+        "encoded": "%E2%94%82%20%201.%20Create%20CacheEntry%20(with%20version)%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "6b0cf3",
+        "hash": "d2f77e13",
+        "encoded": "%E2%94%82%20%202.%20store.put(key,%20entry)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "6b0cf3",
+        "hash": "fac35c1d",
+        "encoded": "%E2%94%82%20%203.%20Create%20ExpiryNode%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "6b0cf3",
+        "hash": "1b2298c8",
+        "encoded": "%E2%94%82%20%204.%20expiryQueue.offer(node)%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "6b0cf3",
+        "hash": "30e1cd32",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%AC%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "6b0cf3",
+        "hash": "c0eb4c5d",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "6b0cf3",
+        "hash": "2a9337b5",
+        "encoded": "%E2%96%BC",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "6b0cf3",
+        "hash": "daa70212",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "6b0cf3",
+        "hash": "b344651e",
+        "encoded": "%E2%94%82%20%20DelayQueue%3CExpiryNode%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "6b0cf3",
+        "hash": "a33cbd93",
+        "encoded": "%E2%94%82%20%20%E2%80%A2%20Internally%20uses%20PriorityQueue%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "6b0cf3",
+        "hash": "bc3b67f0",
+        "encoded": "%E2%94%82%20%20%E2%80%A2%20Ordered%20by%20expiry%20time%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "6b0cf3",
+        "hash": "3feb1188",
+        "encoded": "%E2%94%82%20%20%E2%80%A2%20O(log%20n)%20insertion%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "6b0cf3",
+        "hash": "bc655721",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%AC%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "6b0cf3",
+        "hash": "b859fcf8",
+        "encoded": "%E2%94%82",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "6b0cf3",
+        "hash": "4bd6c149",
+        "encoded": "%E2%96%BC",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "6b0cf3",
+        "hash": "ae66191f",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "6b0cf3",
+        "hash": "976f3acd",
+        "encoded": "%E2%94%82%20%20Eviction%20Daemon%20Thread%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "6b0cf3",
+        "hash": "8758b46c",
+        "encoded": "%E2%94%82%20%20while%20(running)%20%7B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "6b0cf3",
+        "hash": "d1fed6e2",
+        "encoded": "%E2%94%82%20%20%20%20node%20=%20expiryQueue.take()%20%20//%20BLOCKS%E2%94%82",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "6b0cf3",
+        "hash": "42ed307f",
+        "encoded": "%E2%94%82%20%20%20%20if%20(versionMatches(node))%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "6b0cf3",
+        "hash": "58e76bd1",
+        "encoded": "%E2%94%82%20%20%20%20%20%20store.remove(node.key)%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "6b0cf3",
+        "hash": "b9d4e18f",
+        "encoded": "%E2%94%82%20%20%7D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "6b0cf3",
+        "hash": "92b2e343",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "6b0cf3",
+        "hash": "23226bcb",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "6b0cf3",
+        "hash": "fd0d6a9c",
+        "encoded": "**Benefits:**",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "6b0cf3",
+        "hash": "d4ca2611",
+        "encoded": "-%20**Event-driven%20eviction**%20-%20Only%20wakes%20when%20entry%20expires",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "6b0cf3",
+        "hash": "40db75f4",
+        "encoded": "-%20**Zero%20CPU%20when%20idle**%20-%20Thread%20blocks%20on%20%60take()%60",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "6b0cf3",
+        "hash": "a47753b2",
+        "encoded": "-%20**Immediate%20eviction**%20-%20Entries%20removed%20exactly%20at%20stale%20TTL",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "6b0cf3",
+        "hash": "18681db4",
+        "encoded": "-%20**O(log%20n)%20per%20put**%20-%20Eliminates%20O(n)%20periodic%20scans",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "6b0cf3",
+        "hash": "db67072b",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "6b0cf3",
+        "hash": "9ee2d42e",
+        "encoded": "##%20Time%20Complexity%20Analysis",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "6b0cf3",
+        "hash": "389180b6",
+        "encoded": "%7C%20Operation%20%7C%20Before%20(ScheduledExecutor)%20%7C%20After%20(DelayQueue)%20%7C",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "6b0cf3",
+        "hash": "7448aa56",
+        "encoded": "%7C-----------%7C---------------------------%7C--------------------%7C",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "6b0cf3",
+        "hash": "780dace7",
+        "encoded": "%7C%20**put()**%20%7C%20O(1)%20%7C%20O(log%20n)%20%7C",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "6b0cf3",
+        "hash": "61ee4dd2",
+        "encoded": "%7C%20**get()**%20%7C%20O(1)%20%7C%20O(1)%20%7C",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "6b0cf3",
+        "hash": "e7df4c66",
+        "encoded": "%7C%20**Eviction%20(per%20interval)**%20%7C%20O(n)%20full%20scan%20%7C%20O(1)%20per%20expired%20entry%20%7C",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "6b0cf3",
+        "hash": "dd9d388a",
+        "encoded": "%7C%20**Total%20eviction%20cost%20(k%20entries)**%20%7C%20O(n)%20every%20interval%20%7C%20O(k)%20only%20when%20entries%20expire%20%7C",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "6b0cf3",
+        "hash": "8a603120",
+        "encoded": "%7C%20**CPU%20when%20idle**%20%7C%20Constant%20(periodic%20wakeup)%20%7C%20Zero%20(blocked%20on%20take())%20%7C",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "6b0cf3",
+        "hash": "6d356582",
+        "encoded": "**Example%20Scenario:**",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "6b0cf3",
+        "hash": "156623ca",
+        "encoded": "-%20Cache%20size:%2010,000%20entries",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "6b0cf3",
+        "hash": "0238b89d",
+        "encoded": "-%20TTL%20interval:%20300%20seconds",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "6b0cf3",
+        "hash": "b41fd1aa",
+        "encoded": "-%20Entries%20expiring%20per%20interval:%20~50",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "6b0cf3",
+        "hash": "b8c427bf",
+        "encoded": "**Before:**",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "6b0cf3",
+        "hash": "59eb4c12",
+        "encoded": "-%20Every%20300s:%20Scan%20all%2010,000%20entries%20%E2%86%92%20O(10,000)",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "6b0cf3",
+        "hash": "4a6182a0",
+        "encoded": "-%20CPU%20usage:%20Constant%20every%205%20minutes",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "6b0cf3",
+        "hash": "7fb6d266",
+        "encoded": "**After:**",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "6b0cf3",
+        "hash": "bfa034f8",
+        "encoded": "-%20Per%20put:%20O(log%2010,000)%20%E2%89%88%2013%20comparisons",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "6b0cf3",
+        "hash": "5d209cff",
+        "encoded": "-%20Eviction:%2050%20%C3%97%20O(1)%20removals%20when%20they%20expire",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "6b0cf3",
+        "hash": "94347b36",
+        "encoded": "-%20CPU%20usage:%20Zero%20between%20expirations",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "6b0cf3",
+        "hash": "547f7a0b",
+        "encoded": "**Verdict:**%20DelayQueue%20is%20more%20efficient%20for%20caches%20with:",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "6b0cf3",
+        "hash": "4d81cdaa",
+        "encoded": "-%20Large%20number%20of%20entries%20(%3E1000)",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "6b0cf3",
+        "hash": "b2cbeac9",
+        "encoded": "-%20Long%20TTL%20intervals%20(%3E60s)",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "6b0cf3",
+        "hash": "33b5436b",
+        "encoded": "-%20Low%20expiration%20rate%20relative%20to%20cache%20size",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "6b0cf3",
+        "hash": "8a477498",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "6b0cf3",
+        "hash": "32c9cbfd",
+        "encoded": "##%20Concurrency%20Safety:%20Version%20Checking",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "6b0cf3",
+        "hash": "fb7fa210",
+        "encoded": "###%20The%20Race%20Condition%20Problem",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "6b0cf3",
+        "hash": "7ee5fd0c",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "6b0cf3",
+        "hash": "f5e458ce",
+        "encoded": "Timeline:",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "6b0cf3",
+        "hash": "a3247008",
+        "encoded": "T0:%20put(%22user:123%22,%20valueA)",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "6b0cf3",
+        "hash": "c404f0cf",
+        "encoded": "%E2%94%9C%E2%94%80%3E%20CacheEntry%20created%20(version%20=%20T0)",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "6b0cf3",
+        "hash": "ecfacb99",
+        "encoded": "%E2%94%94%E2%94%80%3E%20ExpiryNode%20created%20(version%20=%20T0,%20expires%20at%20T0%20+%203600s)",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "6b0cf3",
+        "hash": "c6668464",
+        "encoded": "T1:%20put(%22user:123%22,%20valueB)%20%20//%20Same%20key%20updated!",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "6b0cf3",
+        "hash": "4c17f4cd",
+        "encoded": "%E2%94%9C%E2%94%80%3E%20CacheEntry%20created%20(version%20=%20T1)",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "6b0cf3",
+        "hash": "3279e580",
+        "encoded": "%E2%94%94%E2%94%80%3E%20ExpiryNode%20created%20(version%20=%20T1,%20expires%20at%20T1%20+%203600s)",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "6b0cf3",
+        "hash": "1263c702",
+        "encoded": "T2:%20ExpiryNode(version=T0)%20fires",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "6b0cf3",
+        "hash": "7e770ba7",
+        "encoded": "%E2%94%9C%E2%94%80%3E%20Without%20version%20check:%20Removes%20valueB%20%E2%9D%8C%20BUG!",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "6b0cf3",
+        "hash": "7dbd1dbe",
+        "encoded": "%E2%94%94%E2%94%80%3E%20With%20version%20check:%20Skips%20removal%20%E2%9C%85%20SAFE!",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "6b0cf3",
+        "hash": "2a394f84",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "6b0cf3",
+        "hash": "d60fb989",
+        "encoded": "###%20Solution:%20Version%20Matching",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "6b0cf3",
+        "hash": "35c802fa",
+        "encoded": "**CacheEntry.java:**",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "6b0cf3",
+        "hash": "02cea48f",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "6b0cf3",
+        "hash": "e8561a04",
+        "encoded": "public%20class%20CacheEntry%3CV%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "6b0cf3",
+        "hash": "99acd488",
+        "encoded": "private%20final%20Instant%20createdAt;%20//%20Serves%20as%20version%20identifier",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "6b0cf3",
+        "hash": "93a6efe2",
+        "encoded": "public%20Instant%20getVersion()%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "6b0cf3",
+        "hash": "4fddbb7a",
+        "encoded": "return%20createdAt;",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "6b0cf3",
+        "hash": "59c23335",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "6b0cf3",
+        "hash": "a1243e02",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "6b0cf3",
+        "hash": "c676fc09",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "6b0cf3",
+        "hash": "e5311fd2",
+        "encoded": "**ExpiryNode.java:**",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "6b0cf3",
+        "hash": "3c687d4e",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "6b0cf3",
+        "hash": "9f6e1ed2",
+        "encoded": "public%20class%20ExpiryNode%3CK%3E%20implements%20Delayed%20%7B",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "6b0cf3",
+        "hash": "197a9e5c",
+        "encoded": "private%20final%20K%20key;",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "6b0cf3",
+        "hash": "d5c4e6f6",
+        "encoded": "private%20final%20Instant%20expiryTime;",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "6b0cf3",
+        "hash": "397663c3",
+        "encoded": "private%20final%20Instant%20version;%20//%20Matches%20CacheEntry.createdAt",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "6b0cf3",
+        "hash": "57a4fcb1",
+        "encoded": "public%20ExpiryNode(K%20key,%20Instant%20expiryTime,%20Instant%20version)%20%7B",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "6b0cf3",
+        "hash": "87b41038",
+        "encoded": "this.key%20=%20key;",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "6b0cf3",
+        "hash": "0d2cc2d0",
+        "encoded": "this.expiryTime%20=%20expiryTime;",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "6b0cf3",
+        "hash": "935b6288",
+        "encoded": "this.version%20=%20version;",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "6b0cf3",
+        "hash": "44e12b83",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "6b0cf3",
+        "hash": "e584d451",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "6b0cf3",
+        "hash": "1c6d9c41",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "6b0cf3",
+        "hash": "c3048948",
+        "encoded": "**Eviction%20Thread:**",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "6b0cf3",
+        "hash": "5b11b4ff",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "6b0cf3",
+        "hash": "728aa713",
+        "encoded": "private%20void%20runEvictionLoop()%20%7B",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "6b0cf3",
+        "hash": "c7fbca29",
+        "encoded": "while%20(evictionThreadRunning.get())%20%7B",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "6b0cf3",
+        "hash": "05d4e4c5",
+        "encoded": "ExpiryNode%3CK%3E%20expiredNode%20=%20expiryQueue.take();",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "6b0cf3",
+        "hash": "65b329c3",
+        "encoded": "CacheEntry%3CV%3E%20currentEntry%20=%20store.get(expiredNode.getKey());",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "6b0cf3",
+        "hash": "2eec8c60",
+        "encoded": "//%20CRITICAL:%20Only%20remove%20if%20versions%20match",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "6b0cf3",
+        "hash": "af29419f",
+        "encoded": "if%20(currentEntry%20!=%20null%20&&",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "6b0cf3",
+        "hash": "52d96a2f",
+        "encoded": "currentEntry.getVersion().equals(expiredNode.getVersion()))%20%7B",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "6b0cf3",
+        "hash": "47ac02c6",
+        "encoded": "store.remove(expiredNode.getKey());",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "6b0cf3",
+        "hash": "95fcb06a",
+        "encoded": "evictionCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "6b0cf3",
+        "hash": "4e2ad55e",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "6b0cf3",
+        "hash": "40f834be",
+        "encoded": "//%20Entry%20was%20updated%20-%20skip%20eviction",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "6b0cf3",
+        "hash": "fe6cd62e",
+        "encoded": "log.debug(%22Skipped%20eviction%20(entry%20updated):%20key=%7B%7D%22,%20key);",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "6b0cf3",
+        "hash": "d5691714",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "6b0cf3",
+        "hash": "4a829956",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "6b0cf3",
+        "hash": "2ec69243",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "6b0cf3",
+        "hash": "cea911cf",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "6b0cf3",
+        "hash": "b2dbc8c0",
+        "encoded": "**Why%20This%20Works:**",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "6b0cf3",
+        "hash": "cad661fd",
+        "encoded": "-%20Each%20%60put()%60%20creates%20a%20new%20%60CacheEntry%60%20with%20a%20new%20%60createdAt%60%20timestamp",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "6b0cf3",
+        "hash": "94231b03",
+        "encoded": "-%20The%20%60ExpiryNode%60%20captures%20the%20version%20at%20creation%20time",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "6b0cf3",
+        "hash": "52fddae3",
+        "encoded": "-%20When%20the%20old%20%60ExpiryNode%60%20fires,%20its%20version%20won't%20match%20the%20new%20entry's%20version",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "6b0cf3",
+        "hash": "51dccc35",
+        "encoded": "-%20The%20eviction%20is%20safely%20skipped",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "6b0cf3",
+        "hash": "b239a715",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "6b0cf3",
+        "hash": "fe83718b",
+        "encoded": "##%20Memory%20Tradeoffs",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "6b0cf3",
+        "hash": "1e269295",
+        "encoded": "###%20Additional%20Memory%20per%20Cache%20Entry",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "6b0cf3",
+        "hash": "11404315",
+        "encoded": "**ExpiryNode%20overhead:**",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "6b0cf3",
+        "hash": "20018b99",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "6b0cf3",
+        "hash": "7e111bd7",
+        "encoded": "Object%20header:%20%20%20%20%2016%20bytes",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "6b0cf3",
+        "hash": "05387f28",
+        "encoded": "K%20key%20reference:%20%20%20%208%20bytes",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "6b0cf3",
+        "hash": "ae758f00",
+        "encoded": "Instant%20expiryTime:%2016%20bytes%20(2%20longs)",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "6b0cf3",
+        "hash": "393ed193",
+        "encoded": "Instant%20version:%20%20%20%2016%20bytes%20(2%20longs)",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "6b0cf3",
+        "hash": "ad6a57a7",
+        "encoded": "%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "6b0cf3",
+        "hash": "4144faa6",
+        "encoded": "Total%20per%20node:%20%20%20%20~56%20bytes",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "6b0cf3",
+        "hash": "174c1906",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "6b0cf3",
+        "hash": "dcde8bfb",
+        "encoded": "**For%2010,000%20entries:**",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "6b0cf3",
+        "hash": "c7f70e80",
+        "encoded": "-%20ExpiryNode%20overhead:%2056%20%C3%97%2010,000%20=%20560%20KB",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "6b0cf3",
+        "hash": "47555ead",
+        "encoded": "-%20CacheEntry%20data:%20Depends%20on%20V%20size",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "6b0cf3",
+        "hash": "54fc306d",
+        "encoded": "-%20Total%20overhead:%20~0.5%20MB%20for%2010K%20entries",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "6b0cf3",
+        "hash": "c6e38c7c",
+        "encoded": "**Verdict:**%20Negligible%20for%20most%20applications.%20The%20CPU%20savings%20far%20outweigh%20the%20memory%20cost.",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "6b0cf3",
+        "hash": "073e2fde",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "6b0cf3",
+        "hash": "d2289095",
+        "encoded": "##%20Thread%20Lifecycle%20Management",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "6b0cf3",
+        "hash": "9ecfe643",
+        "encoded": "###%20Startup:%20@PostConstruct",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "6b0cf3",
+        "hash": "d4de5b5f",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "6b0cf3",
+        "hash": "584cc887",
+        "encoded": "@PostConstruct",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "6b0cf3",
+        "hash": "e265c1a3",
+        "encoded": "public%20void%20startEvictionThread()%20%7B",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "6b0cf3",
+        "hash": "0055feb7",
+        "encoded": "if%20(evictionThreadRunning.compareAndSet(false,%20true))%20%7B",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "6b0cf3",
+        "hash": "bf0e735c",
+        "encoded": "evictionThread%20=%20new%20Thread(this::runEvictionLoop,%20%22cache-delayqueue-eviction%22);",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "6b0cf3",
+        "hash": "2974d418",
+        "encoded": "evictionThread.setDaemon(true);%20//%20Won't%20prevent%20JVM%20shutdown",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "6b0cf3",
+        "hash": "2d482b83",
+        "encoded": "evictionThread.start();",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "6b0cf3",
+        "hash": "18bd5e86",
+        "encoded": "log.info(%22DelayQueue%20eviction%20thread%20started%22);",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "6b0cf3",
+        "hash": "84f00426",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "6b0cf3",
+        "hash": "ce884ff8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "6b0cf3",
+        "hash": "918a6196",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "6b0cf3",
+        "hash": "99061f73",
+        "encoded": "**Why%20@PostConstruct:**",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "6b0cf3",
+        "hash": "a306cb35",
+        "encoded": "-%20Ensures%20thread%20starts%20after%20Spring%20bean%20is%20fully%20initialized",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "6b0cf3",
+        "hash": "9a25cb63",
+        "encoded": "-%20Runs%20automatically%20during%20application%20startup",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "6b0cf3",
+        "hash": "9f97044d",
+        "encoded": "-%20Follows%20Spring%20lifecycle%20best%20practices",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "6b0cf3",
+        "hash": "782dd5ec",
+        "encoded": "###%20Shutdown:%20@PreDestroy",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "6b0cf3",
+        "hash": "fbdcf6f5",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "6b0cf3",
+        "hash": "f6a7375e",
+        "encoded": "@PreDestroy",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "6b0cf3",
+        "hash": "98414f36",
+        "encoded": "public%20void%20shutdown()%20%7B",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "6b0cf3",
+        "hash": "15398954",
+        "encoded": "log.info(%22Shutting%20down%20cache%20eviction%20thread...%22);",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "6b0cf3",
+        "hash": "f253fdcf",
+        "encoded": "evictionThreadRunning.set(false);",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "6b0cf3",
+        "hash": "da5e0475",
+        "encoded": "if%20(evictionThread%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "6b0cf3",
+        "hash": "474e427c",
+        "encoded": "evictionThread.interrupt();%20//%20Wake%20from%20take()%20block",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "6b0cf3",
+        "hash": "d46f5fb2",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "6b0cf3",
+        "hash": "99f3d6b1",
+        "encoded": "evictionThread.join(5000);%20//%20Wait%20up%20to%205%20seconds",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "6b0cf3",
+        "hash": "d58ffe36",
+        "encoded": "log.info(%22Cache%20eviction%20thread%20stopped%20successfully%22);",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "6b0cf3",
+        "hash": "de64919d",
+        "encoded": "%7D%20catch%20(InterruptedException%20e)%20%7B",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "6b0cf3",
+        "hash": "ea1de532",
+        "encoded": "log.warn(%22Interrupted%20while%20waiting%20for%20eviction%20thread%20to%20stop%22);",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "6b0cf3",
+        "hash": "9a1b1ee3",
+        "encoded": "Thread.currentThread().interrupt();",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "6b0cf3",
+        "hash": "d5bc439e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "6b0cf3",
+        "hash": "606d46a9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "6b0cf3",
+        "hash": "45f75c55",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "6b0cf3",
+        "hash": "a07905f8",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "6b0cf3",
+        "hash": "3e5759e1",
+        "encoded": "**Why%20@PreDestroy:**",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "6b0cf3",
+        "hash": "4b1e13e8",
+        "encoded": "-%20Ensures%20graceful%20shutdown%20before%20Spring%20destroys%20the%20bean",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "6b0cf3",
+        "hash": "e40ff39f",
+        "encoded": "-%20Prevents%20thread%20leaks%20during%20application%20shutdown",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "6b0cf3",
+        "hash": "c7632047",
+        "encoded": "-%20Allows%20in-flight%20evictions%20to%20complete",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "6b0cf3",
+        "hash": "95f0292f",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "6b0cf3",
+        "hash": "4331b529",
+        "encoded": "##%20Preserved%20Functionality",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "6b0cf3",
+        "hash": "ce3f399d",
+        "encoded": "###%20%E2%9C%85%20Fresh%20TTL%20Behavior",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "6b0cf3",
+        "hash": "58fd2557",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "6b0cf3",
+        "hash": "1e1d9e9a",
+        "encoded": "public%20Optional%3CV%3E%20get(K%20key)%20%7B",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "6b0cf3",
+        "hash": "1462a6de",
+        "encoded": "CacheEntry%3CV%3E%20entry%20=%20store.get(key);",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "6b0cf3",
+        "hash": "2217f23c",
+        "encoded": "if%20(entry%20==%20null%20%7C%7C%20entry.isExpired())%20%7B",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "6b0cf3",
+        "hash": "b12e1bc6",
+        "encoded": "missCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "6b0cf3",
+        "hash": "bba2220a",
+        "encoded": "return%20Optional.empty();",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "6b0cf3",
+        "hash": "ed68a824",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "6b0cf3",
+        "hash": "32d13a03",
+        "encoded": "entry.updateLastAccess();",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "6b0cf3",
+        "hash": "b0927c8f",
+        "encoded": "hitCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "6b0cf3",
+        "hash": "0b7c59fe",
+        "encoded": "return%20Optional.of(entry.getValue());",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "6b0cf3",
+        "hash": "8df6af8a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "6b0cf3",
+        "hash": "86fe91be",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "6b0cf3",
+        "hash": "94fdf809",
+        "encoded": "**Unchanged:**%20Still%20returns%20empty%20if%20entry%20exceeds%20%60ttlSeconds%60.",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "6b0cf3",
+        "hash": "5f1a4195",
+        "encoded": "###%20%E2%9C%85%20Stale%20Cache%20Fallback",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "6b0cf3",
+        "hash": "17e057da",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "6b0cf3",
+        "hash": "6169837a",
+        "encoded": "public%20Optional%3CV%3E%20getStale(K%20key)%20%7B",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "6b0cf3",
+        "hash": "59f0f2f8",
+        "encoded": "CacheEntry%3CV%3E%20entry%20=%20store.get(key);",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "6b0cf3",
+        "hash": "5aa640b5",
+        "encoded": "if%20(entry%20==%20null%20%7C%7C%20entry.isStaleFor(staleTtlSeconds))%20%7B",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "6b0cf3",
+        "hash": "9865c034",
+        "encoded": "return%20Optional.empty();",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "6b0cf3",
+        "hash": "957e3bcc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "6b0cf3",
+        "hash": "14ad8daa",
+        "encoded": "staleHitCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "6b0cf3",
+        "hash": "0632868a",
+        "encoded": "return%20Optional.of(entry.getValue());",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "6b0cf3",
+        "hash": "4f3fb1c8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "6b0cf3",
+        "hash": "c14c7b41",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "6b0cf3",
+        "hash": "3ff914d7",
+        "encoded": "**Unchanged:**%20Still%20serves%20expired%20data%20within%20%60staleTtlSeconds%60%20window.",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "6b0cf3",
+        "hash": "c7a000d1",
+        "encoded": "###%20%E2%9C%85%20Cache%20Metrics",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "6b0cf3",
+        "hash": "0b2f11cc",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "6b0cf3",
+        "hash": "a26428dc",
+        "encoded": "public%20CacheStats%20getStats()%20%7B",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "6b0cf3",
+        "hash": "cd774748",
+        "encoded": "return%20new%20CacheStats(",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "6b0cf3",
+        "hash": "6fb849dc",
+        "encoded": "store.size(),",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "6b0cf3",
+        "hash": "461ef7d5",
+        "encoded": "hitCount.get(),",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "6b0cf3",
+        "hash": "803ce224",
+        "encoded": "missCount.get(),",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "6b0cf3",
+        "hash": "6ea1d02d",
+        "encoded": "staleHitCount.get(),",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "6b0cf3",
+        "hash": "bbf8c19a",
+        "encoded": "evictionCount.get(),%20//%20Now%20includes%20DelayQueue%20evictions",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "6b0cf3",
+        "hash": "9a1c60a9",
+        "encoded": "ttlSeconds,",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "6b0cf3",
+        "hash": "01e3458d",
+        "encoded": "staleTtlSeconds",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "6b0cf3",
+        "hash": "94d1064b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "6b0cf3",
+        "hash": "75239ee8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "6b0cf3",
+        "hash": "71510c29",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "6b0cf3",
+        "hash": "412b7782",
+        "encoded": "**Unchanged:**%20All%20metrics%20preserved,%20%60evictionCount%60%20now%20tracks%20DelayQueue%20evictions.",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "6b0cf3",
+        "hash": "6293da5e",
+        "encoded": "###%20%E2%9C%85%20LRU%20Eviction",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "6b0cf3",
+        "hash": "9565771d",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "6b0cf3",
+        "hash": "2c73843b",
+        "encoded": "private%20void%20evictLeastRecentlyAccessed()%20%7B",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "6b0cf3",
+        "hash": "69149765",
+        "encoded": "store.entrySet().stream()",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "6b0cf3",
+        "hash": "a636824d",
+        "encoded": ".min(Map.Entry.comparingByValue(",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "6b0cf3",
+        "hash": "ac366986",
+        "encoded": "(a,%20b)%20-%3E%20a.getLastAccessedAt().compareTo(b.getLastAccessedAt())",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "6b0cf3",
+        "hash": "67a91676",
+        "encoded": "))",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "6b0cf3",
+        "hash": "42360649",
+        "encoded": ".ifPresent(e%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "6b0cf3",
+        "hash": "e78aeef8",
+        "encoded": "store.remove(e.getKey());",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "6b0cf3",
+        "hash": "f584cdc7",
+        "encoded": "evictionCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "6b0cf3",
+        "hash": "e4ffc3d6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "6b0cf3",
+        "hash": "7daf7dab",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "6b0cf3",
+        "hash": "b71bac29",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "6b0cf3",
+        "hash": "d5eba868",
+        "encoded": "**Unchanged:**%20Still%20O(n)%20scan%20-%20see%20optional%20enhancement%20below.",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "6b0cf3",
+        "hash": "ca6821cb",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "6b0cf3",
+        "hash": "9da2067a",
+        "encoded": "##%20Testing%20Recommendations",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "6b0cf3",
+        "hash": "7d56d4cc",
+        "encoded": "###%20Unit%20Tests%20to%20Preserve",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "6b0cf3",
+        "hash": "2cbf26c9",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "6b0cf3",
+        "hash": "24908ebc",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "6b0cf3",
+        "hash": "2ec30453",
+        "encoded": "void%20shouldReturnFreshValue()%20%7B",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "6b0cf3",
+        "hash": "76d8b0b2",
+        "encoded": "cache.put(%22key%22,%20%22value%22);",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "6b0cf3",
+        "hash": "e19a3625",
+        "encoded": "assertThat(cache.get(%22key%22)).isPresent();",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "6b0cf3",
+        "hash": "d9b48a24",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "6b0cf3",
+        "hash": "10b83a52",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "6b0cf3",
+        "hash": "d1135ffb",
+        "encoded": "void%20shouldReturnEmptyAfterTTL()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "6b0cf3",
+        "hash": "488fd6b3",
+        "encoded": "cache.put(%22key%22,%20%22value%22);",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "6b0cf3",
+        "hash": "57798d73",
+        "encoded": "Thread.sleep((ttlSeconds%20+%201)%20*%201000);",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "6b0cf3",
+        "hash": "4aba511b",
+        "encoded": "assertThat(cache.get(%22key%22)).isEmpty();",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "6b0cf3",
+        "hash": "5d666166",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "6b0cf3",
+        "hash": "c0882508",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "6b0cf3",
+        "hash": "fa7f7955",
+        "encoded": "void%20shouldReturnStaleValueWhenExpired()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "6b0cf3",
+        "hash": "75eddaa8",
+        "encoded": "cache.put(%22key%22,%20%22value%22);",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "6b0cf3",
+        "hash": "5c881959",
+        "encoded": "Thread.sleep((ttlSeconds%20+%201)%20*%201000);",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "6b0cf3",
+        "hash": "80aeee83",
+        "encoded": "assertThat(cache.getStale(%22key%22)).isPresent();",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "6b0cf3",
+        "hash": "15bfe668",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "6b0cf3",
+        "hash": "f68cdf40",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "6b0cf3",
+        "hash": "9f3fa2cd",
+        "encoded": "void%20shouldEvictStaleEntries()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "6b0cf3",
+        "hash": "47d2d1cd",
+        "encoded": "cache.put(%22key%22,%20%22value%22);",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "6b0cf3",
+        "hash": "5c27f792",
+        "encoded": "Thread.sleep((staleTtlSeconds%20+%201)%20*%201000);",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "6b0cf3",
+        "hash": "8218dd01",
+        "encoded": "assertThat(cache.size()).isZero();",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "6b0cf3",
+        "hash": "bb5dc0a7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "6b0cf3",
+        "hash": "9dddf243",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "6b0cf3",
+        "hash": "a3c01168",
+        "encoded": "###%20New%20Tests%20for%20Version%20Checking",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "6b0cf3",
+        "hash": "a0ac573a",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "6b0cf3",
+        "hash": "ac070405",
+        "encoded": "@Test",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "6b0cf3",
+        "hash": "4104fcdb",
+        "encoded": "void%20shouldNotEvictUpdatedEntry()%20throws%20InterruptedException%20%7B",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "6b0cf3",
+        "hash": "75aa858d",
+        "encoded": "//%20Put%20initial%20value",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "6b0cf3",
+        "hash": "db2701a1",
+        "encoded": "cache.put(%22key%22,%20%22valueA%22);",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "6b0cf3",
+        "hash": "65afd92d",
+        "encoded": "//%20Wait%201%20second",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "6b0cf3",
+        "hash": "95b60754",
+        "encoded": "Thread.sleep(1000);",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "6b0cf3",
+        "hash": "2e9575fb",
+        "encoded": "//%20Update%20with%20new%20value%20(creates%20new%20version)",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "6b0cf3",
+        "hash": "3698d145",
+        "encoded": "cache.put(%22key%22,%20%22valueB%22);",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "6b0cf3",
+        "hash": "db0096c9",
+        "encoded": "//%20Wait%20for%20old%20ExpiryNode%20to%20fire",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "6b0cf3",
+        "hash": "37806e2d",
+        "encoded": "Thread.sleep((staleTtlSeconds%20+%201)%20*%201000);",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "6b0cf3",
+        "hash": "881c5467",
+        "encoded": "//%20New%20value%20should%20still%20be%20present",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "6b0cf3",
+        "hash": "4c8a1a18",
+        "encoded": "assertThat(cache.getStale(%22key%22)).contains(%22valueB%22);",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "6b0cf3",
+        "hash": "b3bd566b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "6b0cf3",
+        "hash": "a718bb8f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "6b0cf3",
+        "hash": "dcc9c7dc",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "6b0cf3",
+        "hash": "bb5a4879",
+        "encoded": "##%20Optional%20Enhancement:%20O(log%20n)%20LRU%20Eviction",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "6b0cf3",
+        "hash": "26ff9919",
+        "encoded": "###%20Problem%20with%20Current%20LRU",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "6b0cf3",
+        "hash": "d7c391d8",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "6b0cf3",
+        "hash": "a8cd7e06",
+        "encoded": "private%20void%20evictLeastRecentlyAccessed()%20%7B",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "6b0cf3",
+        "hash": "40201a01",
+        "encoded": "store.entrySet().stream()",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "6b0cf3",
+        "hash": "5abe0fd2",
+        "encoded": ".min(...)%20//%20O(n)%20scan%20to%20find%20minimum",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "6b0cf3",
+        "hash": "18d4d105",
+        "encoded": ".ifPresent(e%20-%3E%20store.remove(e.getKey()));",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "6b0cf3",
+        "hash": "cc14b77b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "6b0cf3",
+        "hash": "7c66ed8a",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "6b0cf3",
+        "hash": "aa993dac",
+        "encoded": "**Cost:**%20O(n)%20every%20time%20cache%20reaches%20max%20size.",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "6b0cf3",
+        "hash": "1d13e015",
+        "encoded": "###%20Solution:%20ConcurrentSkipListMap%20Index",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "6b0cf3",
+        "hash": "17c555de",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "6b0cf3",
+        "hash": "024e2872",
+        "encoded": "public%20class%20InMemoryCache%3CK,%20V%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "6b0cf3",
+        "hash": "5a0fc95a",
+        "encoded": "private%20final%20ConcurrentHashMap%3CK,%20CacheEntry%3CV%3E%3E%20store;",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "6b0cf3",
+        "hash": "9929d070",
+        "encoded": "private%20final%20DelayQueue%3CExpiryNode%3CK%3E%3E%20expiryQueue;",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "6b0cf3",
+        "hash": "ce7144eb",
+        "encoded": "//%20NEW:%20LRU%20index%20sorted%20by%20lastAccessedAt",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "6b0cf3",
+        "hash": "bb943d3c",
+        "encoded": "private%20final%20ConcurrentSkipListMap%3CLong,%20K%3E%20lruIndex%20=%20new%20ConcurrentSkipListMap%3C%3E();",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "6b0cf3",
+        "hash": "e5c72c04",
+        "encoded": "public%20void%20put(K%20key,%20V%20value)%20%7B",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "6b0cf3",
+        "hash": "1da1307d",
+        "encoded": "synchronized%20(evictionLock)%20%7B",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "6b0cf3",
+        "hash": "79d4baaf",
+        "encoded": "//%20Remove%20old%20LRU%20entry%20if%20updating",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "6b0cf3",
+        "hash": "c2430a53",
+        "encoded": "CacheEntry%3CV%3E%20oldEntry%20=%20store.get(key);",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "6b0cf3",
+        "hash": "6d728dfa",
+        "encoded": "if%20(oldEntry%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "6b0cf3",
+        "hash": "eef299d2",
+        "encoded": "lruIndex.remove(oldEntry.getLastAccessedAt().toEpochMilli());",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "6b0cf3",
+        "hash": "c239ce6e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "6b0cf3",
+        "hash": "2f5bc498",
+        "encoded": "if%20(store.size()%20%3E=%20maxSize%20&&%20!store.containsKey(key))%20%7B",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "6b0cf3",
+        "hash": "2ee2fc13",
+        "encoded": "evictLeastRecentlyAccessedFast();",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "6b0cf3",
+        "hash": "3be5281f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "6b0cf3",
+        "hash": "5ab44607",
+        "encoded": "CacheEntry%3CV%3E%20entry%20=%20new%20CacheEntry%3C%3E(value,%20ttlSeconds);",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "6b0cf3",
+        "hash": "17a67f3d",
+        "encoded": "store.put(key,%20entry);",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "6b0cf3",
+        "hash": "54ed4929",
+        "encoded": "//%20Add%20to%20LRU%20index",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "6b0cf3",
+        "hash": "e08568e5",
+        "encoded": "lruIndex.put(entry.getLastAccessedAt().toEpochMilli(),%20key);",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "6b0cf3",
+        "hash": "be3bf8a8",
+        "encoded": "//%20Register%20in%20DelayQueue",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "6b0cf3",
+        "hash": "f0f4d5a9",
+        "encoded": "Instant%20expiryTime%20=%20entry.getCreatedAt().plusSeconds(staleTtlSeconds);",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "6b0cf3",
+        "hash": "811c405f",
+        "encoded": "expiryQueue.offer(new%20ExpiryNode%3C%3E(key,%20expiryTime,%20entry.getVersion()));",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "6b0cf3",
+        "hash": "e26e27a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "6b0cf3",
+        "hash": "9dc83412",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "6b0cf3",
+        "hash": "8dfc4275",
+        "encoded": "public%20Optional%3CV%3E%20get(K%20key)%20%7B",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "6b0cf3",
+        "hash": "a625c6cd",
+        "encoded": "CacheEntry%3CV%3E%20entry%20=%20store.get(key);",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "6b0cf3",
+        "hash": "c665d6b8",
+        "encoded": "if%20(entry%20==%20null%20%7C%7C%20entry.isExpired())%20%7B",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "6b0cf3",
+        "hash": "8cdf9f21",
+        "encoded": "missCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "6b0cf3",
+        "hash": "690151f0",
+        "encoded": "return%20Optional.empty();",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "6b0cf3",
+        "hash": "c700001e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "6b0cf3",
+        "hash": "31e09c04",
+        "encoded": "synchronized%20(evictionLock)%20%7B",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "6b0cf3",
+        "hash": "9ec22f80",
+        "encoded": "//%20Update%20LRU%20index",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "6b0cf3",
+        "hash": "f7eb2e35",
+        "encoded": "lruIndex.remove(entry.getLastAccessedAt().toEpochMilli());",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "6b0cf3",
+        "hash": "9a0e2d1f",
+        "encoded": "entry.updateLastAccess();",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "6b0cf3",
+        "hash": "a15cb269",
+        "encoded": "lruIndex.put(entry.getLastAccessedAt().toEpochMilli(),%20key);",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "6b0cf3",
+        "hash": "945fa564",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "6b0cf3",
+        "hash": "0be1a212",
+        "encoded": "hitCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "6b0cf3",
+        "hash": "5f896fcf",
+        "encoded": "return%20Optional.of(entry.getValue());",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "6b0cf3",
+        "hash": "7341866d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "6b0cf3",
+        "hash": "02be04e0",
+        "encoded": "private%20void%20evictLeastRecentlyAccessedFast()%20%7B",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "6b0cf3",
+        "hash": "0dd14d27",
+        "encoded": "//%20O(log%20n)%20-%20get%20first%20entry%20from%20sorted%20map",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "6b0cf3",
+        "hash": "0a631067",
+        "encoded": "Map.Entry%3CLong,%20K%3E%20oldest%20=%20lruIndex.firstEntry();",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "6b0cf3",
+        "hash": "812f329e",
+        "encoded": "if%20(oldest%20!=%20null)%20%7B",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "6b0cf3",
+        "hash": "ddd165e5",
+        "encoded": "K%20key%20=%20oldest.getValue();",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "6b0cf3",
+        "hash": "4b446a78",
+        "encoded": "store.remove(key);",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "6b0cf3",
+        "hash": "0abb95ce",
+        "encoded": "lruIndex.remove(oldest.getKey());",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "6b0cf3",
+        "hash": "2ef8c737",
+        "encoded": "evictionCount.incrementAndGet();",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "6b0cf3",
+        "hash": "f4cd2ebb",
+        "encoded": "log.debug(%22LRU%20eviction%20(fast):%20key=%7B%7D%22,%20key);",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "6b0cf3",
+        "hash": "e4b1b6a7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "6b0cf3",
+        "hash": "8fd9d18c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "6b0cf3",
+        "hash": "4b64d3ef",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "6b0cf3",
+        "hash": "21130ac1",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "461": {
+        "chunkId": "6b0cf3",
+        "hash": "bcb7743c",
+        "encoded": "**Benefits:**",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "6b0cf3",
+        "hash": "e6de49f4",
+        "encoded": "-%20**O(log%20n)%20LRU%20eviction**%20vs%20O(n)%20scan",
+        "prevChunkIds": []
+      },
+      "463": {
+        "chunkId": "6b0cf3",
+        "hash": "1d0a5e4b",
+        "encoded": "-%20**O(log%20n)%20per%20get()**%20for%20index%20update",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "6b0cf3",
+        "hash": "92523507",
+        "encoded": "-%20**Better%20scalability**%20for%20high-throughput%20caches",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "6b0cf3",
+        "hash": "515cf294",
+        "encoded": "**Tradeoffs:**",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "6b0cf3",
+        "hash": "4fc0b326",
+        "encoded": "-%20Additional%20memory:%20~32%20bytes%20per%20entry%20for%20index",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "6b0cf3",
+        "hash": "8102054e",
+        "encoded": "-%20Slightly%20higher%20get()%20cost%20due%20to%20index%20maintenance",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "6b0cf3",
+        "hash": "84c29f3a",
+        "encoded": "-%20More%20complex%20synchronization",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "6b0cf3",
+        "hash": "4b32f22e",
+        "encoded": "**When%20to%20Use:**",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "6b0cf3",
+        "hash": "24c60b4a",
+        "encoded": "-%20Cache%20size%20%3E%2010,000%20entries",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "6b0cf3",
+        "hash": "d53c69d1",
+        "encoded": "-%20High%20put/get%20throughput%20(%3E1000%20ops/sec)",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "6b0cf3",
+        "hash": "114ca2fb",
+        "encoded": "-%20Frequent%20max-size%20evictions",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "6b0cf3",
+        "hash": "f6e8fb0a",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "6b0cf3",
+        "hash": "be6e2778",
+        "encoded": "##%20Migration%20Checklist",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "6b0cf3",
+        "hash": "8b2c7fd9",
+        "encoded": "-%20%5Bx%5D%20Create%20%60ExpiryNode%60%20class%20implementing%20%60Delayed%60",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "6b0cf3",
+        "hash": "c3111c7c",
+        "encoded": "-%20%5Bx%5D%20Add%20%60getVersion()%60%20method%20to%20%60CacheEntry%60",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "6b0cf3",
+        "hash": "83562b99",
+        "encoded": "-%20%5Bx%5D%20Replace%20%60ScheduledExecutorService%60%20with%20%60DelayQueue%60",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "6b0cf3",
+        "hash": "20083276",
+        "encoded": "-%20%5Bx%5D%20Implement%20%60runEvictionLoop()%60%20with%20version%20checking",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "6b0cf3",
+        "hash": "80c77eee",
+        "encoded": "-%20%5Bx%5D%20Add%20%60@PostConstruct%60%20for%20thread%20startup",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "6b0cf3",
+        "hash": "11568a65",
+        "encoded": "-%20%5Bx%5D%20Add%20%60@PreDestroy%60%20for%20graceful%20shutdown",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "6b0cf3",
+        "hash": "cfcd8ebf",
+        "encoded": "-%20%5Bx%5D%20Update%20%60put()%60%20to%20register%20%60ExpiryNode%60%20in%20%60DelayQueue%60",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "6b0cf3",
+        "hash": "036c0d64",
+        "encoded": "-%20%5Bx%5D%20Remove%20%60evictStaleEntries()%60%20periodic%20scan%20method",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "6b0cf3",
+        "hash": "b82c9fb7",
+        "encoded": "-%20%5Bx%5D%20Add%20logging%20for%20eviction%20events",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "6b0cf3",
+        "hash": "cdf15ffb",
+        "encoded": "-%20%5Bx%5D%20Preserve%20all%20existing%20API%20contracts",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "6b0cf3",
+        "hash": "f35249e2",
+        "encoded": "-%20%5Bx%5D%20Run%20existing%20unit%20tests",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "6b0cf3",
+        "hash": "a07b7f78",
+        "encoded": "-%20%5Bx%5D%20Add%20new%20tests%20for%20version%20checking",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "6b0cf3",
+        "hash": "b8379c67",
+        "encoded": "-%20%5B%20%5D%20Performance%20test%20with%20large%20cache%20(10K+%20entries)",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "6b0cf3",
+        "hash": "e13f9509",
+        "encoded": "-%20%5B%20%5D%20Monitor%20CPU%20usage%20before/after%20in%20production",
+        "prevChunkIds": []
+      },
+      "494": {
+        "chunkId": "6b0cf3",
+        "hash": "aded1d75",
+        "encoded": "-%20%5B%20%5D%20Consider%20O(log%20n)%20LRU%20enhancement%20if%20needed",
+        "prevChunkIds": []
+      },
+      "496": {
+        "chunkId": "6b0cf3",
+        "hash": "5631bc7e",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "498": {
+        "chunkId": "6b0cf3",
+        "hash": "23f609b1",
+        "encoded": "##%20Performance%20Monitoring",
+        "prevChunkIds": []
+      },
+      "500": {
+        "chunkId": "6b0cf3",
+        "hash": "a2b5986b",
+        "encoded": "###%20Metrics%20to%20Track",
+        "prevChunkIds": []
+      },
+      "502": {
+        "chunkId": "6b0cf3",
+        "hash": "3261c2ca",
+        "encoded": "%60%60%60java",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "6b0cf3",
+        "hash": "73bbda22",
+        "encoded": "@RestController",
+        "prevChunkIds": []
+      },
+      "504": {
+        "chunkId": "6b0cf3",
+        "hash": "121a5418",
+        "encoded": "@RequestMapping(%22/cache%22)",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "6b0cf3",
+        "hash": "6b3048ef",
+        "encoded": "public%20class%20CacheController%20%7B",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "6b0cf3",
+        "hash": "4c24d7a1",
+        "encoded": "@Autowired",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "6b0cf3",
+        "hash": "fa18c3c2",
+        "encoded": "private%20InMemoryCache%3CString,%20Object%3E%20cache;",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "6b0cf3",
+        "hash": "8e4f2aa7",
+        "encoded": "@GetMapping(%22/stats%22)",
+        "prevChunkIds": []
+      },
+      "511": {
+        "chunkId": "6b0cf3",
+        "hash": "39e6de64",
+        "encoded": "public%20CacheStats%20getStats()%20%7B",
+        "prevChunkIds": []
+      },
+      "512": {
+        "chunkId": "6b0cf3",
+        "hash": "41081988",
+        "encoded": "return%20cache.getStats();",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "6b0cf3",
+        "hash": "518a2cab",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "6b0cf3",
+        "hash": "3ff85678",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "515": {
+        "chunkId": "6b0cf3",
+        "hash": "bf8240c0",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "6b0cf3",
+        "hash": "cd1b39e6",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "6b0cf3",
+        "hash": "a4e8eb30",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "519": {
+        "chunkId": "6b0cf3",
+        "hash": "1ed6650f",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "6b0cf3",
+        "hash": "fc71cb97",
+        "encoded": "%22size%22:%208432,",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "6b0cf3",
+        "hash": "5a6f38d4",
+        "encoded": "%22hits%22:%20125634,",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "6b0cf3",
+        "hash": "680552f2",
+        "encoded": "%22misses%22:%203421,",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "6b0cf3",
+        "hash": "632c713d",
+        "encoded": "%22staleHits%22:%20234,",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "6b0cf3",
+        "hash": "4b1ad71e",
+        "encoded": "%22evictions%22:%201523,",
+        "prevChunkIds": []
+      },
+      "525": {
+        "chunkId": "6b0cf3",
+        "hash": "464f2833",
+        "encoded": "%22ttlSeconds%22:%20300,",
+        "prevChunkIds": []
+      },
+      "526": {
+        "chunkId": "6b0cf3",
+        "hash": "f70b2738",
+        "encoded": "%22staleTtlSeconds%22:%203600,",
+        "prevChunkIds": []
+      },
+      "527": {
+        "chunkId": "6b0cf3",
+        "hash": "15472c1d",
+        "encoded": "%22hitRate%22:%200.973",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "6b0cf3",
+        "hash": "b008932d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "6b0cf3",
+        "hash": "7125b539",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "6b0cf3",
+        "hash": "d1815ab4",
+        "encoded": "###%20JVM%20Monitoring",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "6b0cf3",
+        "hash": "b73981fa",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "6b0cf3",
+        "hash": "18927024",
+        "encoded": "#%20Monitor%20eviction%20thread%20CPU%20usage",
+        "prevChunkIds": []
+      },
+      "535": {
+        "chunkId": "6b0cf3",
+        "hash": "0b49c807",
+        "encoded": "jstack%20%3Cpid%3E%20%7C%20grep%20cache-delayqueue-eviction",
+        "prevChunkIds": []
+      },
+      "537": {
+        "chunkId": "6b0cf3",
+        "hash": "0750d7e1",
+        "encoded": "#%20Monitor%20DelayQueue%20size",
+        "prevChunkIds": []
+      },
+      "538": {
+        "chunkId": "6b0cf3",
+        "hash": "8a2e5d08",
+        "encoded": "jcmd%20%3Cpid%3E%20GC.heap_info%20%7C%20grep%20DelayQueue",
+        "prevChunkIds": []
+      },
+      "539": {
+        "chunkId": "6b0cf3",
+        "hash": "a8e9da84",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "6b0cf3",
+        "hash": "8db68875",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "543": {
+        "chunkId": "6b0cf3",
+        "hash": "64d0332d",
+        "encoded": "##%20Conclusion",
+        "prevChunkIds": []
+      },
+      "545": {
+        "chunkId": "6b0cf3",
+        "hash": "77502144",
+        "encoded": "The%20DelayQueue-based%20implementation%20provides:",
+        "prevChunkIds": []
+      },
+      "547": {
+        "chunkId": "6b0cf3",
+        "hash": "72cfc36b",
+        "encoded": "%E2%9C%85%20**Better%20CPU%20efficiency**%20-%20Event-driven%20vs%20periodic%20scans",
+        "prevChunkIds": []
+      },
+      "548": {
+        "chunkId": "6b0cf3",
+        "hash": "f9639279",
+        "encoded": "%E2%9C%85%20**Immediate%20eviction**%20-%20Entries%20removed%20exactly%20at%20stale%20TTL",
+        "prevChunkIds": []
+      },
+      "549": {
+        "chunkId": "6b0cf3",
+        "hash": "a30403e0",
+        "encoded": "%E2%9C%85%20**Concurrency%20safety**%20-%20Version%20checking%20prevents%20race%20conditions",
+        "prevChunkIds": []
+      },
+      "550": {
+        "chunkId": "6b0cf3",
+        "hash": "6b61f5b3",
+        "encoded": "%E2%9C%85%20**Spring%20integration**%20-%20Proper%20lifecycle%20management%20with%20@PostConstruct/@PreDestroy",
+        "prevChunkIds": []
+      },
+      "551": {
+        "chunkId": "6b0cf3",
+        "hash": "705de888",
+        "encoded": "%E2%9C%85%20**Production-ready**%20-%20Comprehensive%20logging%20and%20error%20handling",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "6b0cf3",
+        "hash": "6fe7ea26",
+        "encoded": "%E2%9C%85%20**Backward%20compatible**%20-%20All%20existing%20functionality%20preserved",
+        "prevChunkIds": []
+      },
+      "554": {
+        "chunkId": "6b0cf3",
+        "hash": "2036b913",
+        "encoded": "**Next%20Steps:**",
+        "prevChunkIds": []
+      },
+      "555": {
+        "chunkId": "6b0cf3",
+        "hash": "9b15288b",
+        "encoded": "1.%20Deploy%20to%20staging%20environment",
+        "prevChunkIds": []
+      },
+      "556": {
+        "chunkId": "6b0cf3",
+        "hash": "5ab30deb",
+        "encoded": "2.%20Monitor%20CPU%20and%20memory%20metrics",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "6b0cf3",
+        "hash": "48bdc6e7",
+        "encoded": "3.%20Run%20load%20tests%20(10K+%20entries,%20high%20throughput)",
+        "prevChunkIds": []
+      },
+      "558": {
+        "chunkId": "6b0cf3",
+        "hash": "dd2e0280",
+        "encoded": "4.%20Consider%20O(log%20n)%20LRU%20enhancement%20if%20needed",
+        "prevChunkIds": []
+      },
+      "559": {
+        "chunkId": "6b0cf3",
+        "hash": "6a08b489",
+        "encoded": "5.%20Gradually%20roll%20out%20to%20production",
+        "prevChunkIds": []
+      },
+      "561": {
+        "chunkId": "6b0cf3",
+        "hash": "56665b0a",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "6b0cf3",
+        "hash": "36bed2ff",
+        "encoded": "**Author:**%20Senior%20Java%20Performance%20Engineer",
+        "prevChunkIds": []
+      },
+      "564": {
+        "chunkId": "6b0cf3",
+        "hash": "25e4c482",
+        "encoded": "**Date:**%202026-05-30",
+        "prevChunkIds": []
+      },
+      "565": {
+        "chunkId": "6b0cf3",
+        "hash": "fc96a337",
+        "encoded": "**Version:**%201.0",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

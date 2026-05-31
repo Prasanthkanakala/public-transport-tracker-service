@@ -1,0 +1,1134 @@
+{
+  "frontend\\src\\services\\apiService.js": {
+    "filename": "apiService.js",
+    "path": "frontend\\src\\services\\apiService.js",
+    "version": "1.2",
+    "contextFile": "7abd1aca-context.json",
+    "chunks": {
+      "c26a76": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780213034,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "068fe3da",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:07:14 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c26a76",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "c26a76",
+        "hash": "59029681",
+        "encoded": "*%20Transit%20Tracker%20API%20Service",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "c26a76",
+        "hash": "e334c919",
+        "encoded": "*%20Uses%20native%20fetch%20(no%20third-party%20HTTP%20library).",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "c26a76",
+        "hash": "b9369575",
+        "encoded": "*%20All%20requests%20go%20through%20the%20Spring%20Boot%20backend%20on%20port%208080.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "c26a76",
+        "hash": "909af7e3",
+        "encoded": "*%20Proxy%20is%20configured%20in%20package.json%20for%20development.",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "c26a76",
+        "hash": "061f860b",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "c26a76",
+        "hash": "800d6efc",
+        "encoded": "*%20JWT%20Authentication:",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "c26a76",
+        "hash": "503ba8af",
+        "encoded": "*%20-%20Automatically%20attaches%20Bearer%20token%20from%20localStorage",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "c26a76",
+        "hash": "04904d78",
+        "encoded": "*%20-%20Handles%20401%20(session%20expired)%20by%20clearing%20auth%20state",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "c26a76",
+        "hash": "59e0c55f",
+        "encoded": "*%20-%20Handles%20403%20(access%20denied)%20with%20descriptive%20error%20messages",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "c26a76",
+        "hash": "f398d74c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "c26a76",
+        "hash": "52b92a8b",
+        "encoded": "const%20BASE_URL%20=%20process.env.REACT_APP_API_URL%20%7C%7C%20'/api/v1/transport';",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "c26a76",
+        "hash": "95cbb67e",
+        "encoded": "const%20CACHE_URL%20=%20'/api/v1/cache';",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "c26a76",
+        "hash": "23a312e9",
+        "encoded": "const%20AUTH_URL%20=%20'/api/v1/auth';",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "c26a76",
+        "hash": "ff66465d",
+        "encoded": "const%20DEFAULT_TIMEOUT_MS%20=%208000;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "c26a76",
+        "hash": "9a54798e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "c26a76",
+        "hash": "d2aa26ef",
+        "encoded": "*%20Retrieves%20the%20stored%20JWT%20token%20from%20localStorage.",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "c26a76",
+        "hash": "4fe9034e",
+        "encoded": "*%20@returns%20%7Bstring%7Cnull%7D%20The%20JWT%20token%20or%20null%20if%20not%20authenticated",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "c26a76",
+        "hash": "cc674971",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "c26a76",
+        "hash": "7b6c7c55",
+        "encoded": "function%20getAuthToken()%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "c26a76",
+        "hash": "d62ff714",
+        "encoded": "return%20localStorage.getItem('auth_token');",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "c26a76",
+        "hash": "71870443",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "c26a76",
+        "hash": "f1583e66",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "c26a76",
+        "hash": "805f033f",
+        "encoded": "*%20Builds%20authorization%20headers%20with%20the%20JWT%20Bearer%20token.",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "c26a76",
+        "hash": "f0f72b90",
+        "encoded": "*%20@returns%20%7Bobject%7D%20Headers%20object%20with%20Authorization%20if%20token%20exists",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "c26a76",
+        "hash": "fc05b72a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "c26a76",
+        "hash": "3cc79353",
+        "encoded": "function%20getAuthHeaders()%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "c26a76",
+        "hash": "ad297a59",
+        "encoded": "const%20token%20=%20getAuthToken();",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "c26a76",
+        "hash": "a53864cd",
+        "encoded": "return%20token%20?%20%7B%20Authorization:%20%60Bearer%20$%7Btoken%7D%60%20%7D%20:%20%7B%7D;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "c26a76",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "c26a76",
+        "hash": "bfb1acd4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "c26a76",
+        "hash": "6f6fc10b",
+        "encoded": "*%20Wraps%20fetch%20with%20a%20timeout,%20JWT%20auth%20headers,%20and%20consistent%20error%20handling.",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "c26a76",
+        "hash": "57fc9262",
+        "encoded": "*%20Automatically%20attaches%20the%20Bearer%20token%20to%20every%20authenticated%20request.",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "c26a76",
+        "hash": "7736df95",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "c26a76",
+        "hash": "4918dbac",
+        "encoded": "async%20function%20apiFetch(url,%20options%20=%20%7B%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "c26a76",
+        "hash": "f96f7a79",
+        "encoded": "const%20controller%20=%20new%20AbortController();",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "c26a76",
+        "hash": "fc397596",
+        "encoded": "const%20timer%20=%20setTimeout(()%20=%3E%20controller.abort(),%20DEFAULT_TIMEOUT_MS);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "c26a76",
+        "hash": "bca53730",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "c26a76",
+        "hash": "96ec4839",
+        "encoded": "const%20response%20=%20await%20fetch(url,%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "c26a76",
+        "hash": "093b8419",
+        "encoded": "...options,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "c26a76",
+        "hash": "9001fd3e",
+        "encoded": "signal:%20controller.signal,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "c26a76",
+        "hash": "55aad26c",
+        "encoded": "headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "c26a76",
+        "hash": "9dd31071",
+        "encoded": "'Accept':%20'application/json',",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "c26a76",
+        "hash": "0ce408a8",
+        "encoded": "'Content-Type':%20'application/json',",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "c26a76",
+        "hash": "951b2aa1",
+        "encoded": "...getAuthHeaders(),",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "c26a76",
+        "hash": "a9625579",
+        "encoded": "...options.headers,",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "c26a76",
+        "hash": "cfafa4e3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "c26a76",
+        "hash": "3287ea85",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "c26a76",
+        "hash": "3196da65",
+        "encoded": "clearTimeout(timer);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "c26a76",
+        "hash": "80290956",
+        "encoded": "if%20(!response.ok)%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "c26a76",
+        "hash": "6de3d1f8",
+        "encoded": "const%20errorBody%20=%20await%20response.json().catch(()%20=%3E%20(%7B%7D));",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "c26a76",
+        "hash": "bbe0702a",
+        "encoded": "//%20Handle%20authentication/authorization%20errors%20with%20descriptive%20messages",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "c26a76",
+        "hash": "fdb20d35",
+        "encoded": "let%20errorMessage;",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "c26a76",
+        "hash": "bc2def16",
+        "encoded": "if%20(response.status%20===%20401)%20%7B",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "c26a76",
+        "hash": "4ab4a580",
+        "encoded": "errorMessage%20=%20'Session%20expired.%20Please%20log%20in%20again.';",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "c26a76",
+        "hash": "faed77f4",
+        "encoded": "//%20Clear%20stored%20auth%20data%20on%20401",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "c26a76",
+        "hash": "0e69e723",
+        "encoded": "localStorage.removeItem('auth_token');",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "c26a76",
+        "hash": "1e215275",
+        "encoded": "localStorage.removeItem('auth_username');",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "c26a76",
+        "hash": "308191c3",
+        "encoded": "localStorage.removeItem('auth_role');",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "c26a76",
+        "hash": "e30da96d",
+        "encoded": "%7D%20else%20if%20(response.status%20===%20403)%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "c26a76",
+        "hash": "4be003fb",
+        "encoded": "errorMessage%20=%20'Access%20denied.%20You%20do%20not%20have%20permission%20for%20this%20action.';",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "c26a76",
+        "hash": "ff467e53",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "c26a76",
+        "hash": "00a2b8ab",
+        "encoded": "errorMessage%20=%20errorBody.message%20%7C%7C%20%60Request%20failed%20with%20status%20$%7Bresponse.status%7D%60;",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "c26a76",
+        "hash": "ae47b750",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "c26a76",
+        "hash": "3755ef4b",
+        "encoded": "throw%20new%20ApiError(response.status,%20errorMessage,%20errorBody);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "c26a76",
+        "hash": "5250e31e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "c26a76",
+        "hash": "38f3d769",
+        "encoded": "return%20response.json();",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "c26a76",
+        "hash": "1ee92b11",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "c26a76",
+        "hash": "48766f6f",
+        "encoded": "clearTimeout(timer);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "c26a76",
+        "hash": "385a327f",
+        "encoded": "if%20(err.name%20===%20'AbortError')%20%7B",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "c26a76",
+        "hash": "10ffa836",
+        "encoded": "throw%20new%20ApiError(408,%20'Request%20timed%20out.%20The%20server%20may%20be%20offline.');",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "c26a76",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "c26a76",
+        "hash": "c239bf6a",
+        "encoded": "throw%20err;",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "c26a76",
+        "hash": "d7cd7257",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "c26a76",
+        "hash": "7bb00016",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "c26a76",
+        "hash": "d8bf1ce0",
+        "encoded": "export%20class%20ApiError%20extends%20Error%20%7B",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "c26a76",
+        "hash": "57685c0e",
+        "encoded": "constructor(status,%20message,%20body%20=%20%7B%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "c26a76",
+        "hash": "c236f9c0",
+        "encoded": "super(message);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "c26a76",
+        "hash": "499d0e28",
+        "encoded": "this.status%20=%20status;",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "c26a76",
+        "hash": "554fe194",
+        "encoded": "this.body%20=%20body;",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "c26a76",
+        "hash": "00018218",
+        "encoded": "this.name%20=%20'ApiError';",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "c26a76",
+        "hash": "94b19f35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "c26a76",
+        "hash": "db89230b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "c26a76",
+        "hash": "f9c012b6",
+        "encoded": "function%20buildParams(params)%20%7B",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "c26a76",
+        "hash": "7af01744",
+        "encoded": "const%20filtered%20=%20Object.entries(params).filter((%5B,%20v%5D)%20=%3E%20v%20!==%20null%20&&%20v%20!==%20undefined%20&&%20v%20!==%20'');",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "c26a76",
+        "hash": "c98f166a",
+        "encoded": "if%20(filtered.length%20===%200)%20return%20'';",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "c26a76",
+        "hash": "a4c19939",
+        "encoded": "return%20'?'%20+%20new%20URLSearchParams(filtered).toString();",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "c26a76",
+        "hash": "020d2fe1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "c26a76",
+        "hash": "0ee5f904",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%20Authentication%20API%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "c26a76",
+        "hash": "0eb4d061",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "c26a76",
+        "hash": "675684b5",
+        "encoded": "*%20Authenticate%20user%20and%20obtain%20JWT%20token.",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "c26a76",
+        "hash": "623def12",
+        "encoded": "*%20This%20endpoint%20does%20NOT%20require%20a%20Bearer%20token.",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "c26a76",
+        "hash": "7b2cafd5",
+        "encoded": "*%20@param%20%7Bobject%7D%20credentials%20-%20%7B%20username,%20password%20%7D",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "c26a76",
+        "hash": "3a3263ee",
+        "encoded": "*%20@returns%20%7BPromise%3C%7Btoken:%20string,%20username:%20string,%20role:%20string%7D%3E%7D",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "c26a76",
+        "hash": "f555fe12",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "c26a76",
+        "hash": "0386628a",
+        "encoded": "export%20async%20function%20loginUser(%7B%20username,%20password%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "c26a76",
+        "hash": "6efe17ea",
+        "encoded": "const%20controller%20=%20new%20AbortController();",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "c26a76",
+        "hash": "e8e0ea92",
+        "encoded": "const%20timer%20=%20setTimeout(()%20=%3E%20controller.abort(),%20DEFAULT_TIMEOUT_MS);",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "c26a76",
+        "hash": "87cb9536",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "c26a76",
+        "hash": "eccb8b9f",
+        "encoded": "const%20response%20=%20await%20fetch(%60$%7BAUTH_URL%7D/login%60,%20%7B",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "c26a76",
+        "hash": "6a90e201",
+        "encoded": "method:%20'POST',",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "c26a76",
+        "hash": "8d9569e2",
+        "encoded": "signal:%20controller.signal,",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "c26a76",
+        "hash": "0e1b485e",
+        "encoded": "headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "c26a76",
+        "hash": "43b4e890",
+        "encoded": "'Accept':%20'application/json',",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "c26a76",
+        "hash": "8765f85b",
+        "encoded": "'Content-Type':%20'application/json',",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "c26a76",
+        "hash": "d5084bcd",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "c26a76",
+        "hash": "6d2d7deb",
+        "encoded": "body:%20JSON.stringify(%7B%20username,%20password%20%7D),",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "c26a76",
+        "hash": "ac2debc4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "c26a76",
+        "hash": "3fea5d81",
+        "encoded": "clearTimeout(timer);",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "c26a76",
+        "hash": "3a871f13",
+        "encoded": "if%20(!response.ok)%20%7B",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "c26a76",
+        "hash": "1170e08e",
+        "encoded": "const%20errorBody%20=%20await%20response.json().catch(()%20=%3E%20(%7B%7D));",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "c26a76",
+        "hash": "d7105168",
+        "encoded": "throw%20new%20ApiError(",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "c26a76",
+        "hash": "d073354c",
+        "encoded": "response.status,",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "c26a76",
+        "hash": "8b20519f",
+        "encoded": "response.status%20===%20401",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "c26a76",
+        "hash": "aa13445e",
+        "encoded": "?%20'Invalid%20username%20or%20password.'",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "c26a76",
+        "hash": "26e213d1",
+        "encoded": ":%20errorBody.message%20%7C%7C%20'Login%20failed.',",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "c26a76",
+        "hash": "9750b2b1",
+        "encoded": "errorBody",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "c26a76",
+        "hash": "49eddb80",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "c26a76",
+        "hash": "dc65d51e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "c26a76",
+        "hash": "ddcc81a0",
+        "encoded": "return%20response.json();",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "c26a76",
+        "hash": "80feaa72",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "c26a76",
+        "hash": "5813154d",
+        "encoded": "clearTimeout(timer);",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "c26a76",
+        "hash": "90c2b3d9",
+        "encoded": "if%20(err.name%20===%20'AbortError')%20%7B",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "c26a76",
+        "hash": "309d27d5",
+        "encoded": "throw%20new%20ApiError(408,%20'Login%20request%20timed%20out.');",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "c26a76",
+        "hash": "52c5d6be",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "c26a76",
+        "hash": "8fb13db6",
+        "encoded": "throw%20err;",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "c26a76",
+        "hash": "48cab207",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "c26a76",
+        "hash": "2d25e64b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "c26a76",
+        "hash": "16f94037",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%20Transport%20API%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "c26a76",
+        "hash": "2c7f2d75",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "c26a76",
+        "hash": "1472ac97",
+        "encoded": "*%20Fetch%20complete%20transport%20data%20(vehicles,%20arrivals,%20alerts,%20crowding).",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "c26a76",
+        "hash": "e1a39af5",
+        "encoded": "*%20@param%20%7Bobject%7D%20params%20-%20%7B%20city,%20routeId,%20offline%20%7D",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "c26a76",
+        "hash": "5330f242",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "c26a76",
+        "hash": "2521474a",
+        "encoded": "export%20async%20function%20getTransportData(%7B%20city,%20routeId,%20offline%20%7D%20=%20%7B%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "c26a76",
+        "hash": "9b945d23",
+        "encoded": "const%20query%20=%20buildParams(%7B%20city,%20routeId,%20offline%20%7D);",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "c26a76",
+        "hash": "d31d4bf8",
+        "encoded": "return%20apiFetch(%60$%7BBASE_URL%7D$%7Bquery%7D%60);",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "c26a76",
+        "hash": "d8893271",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "c26a76",
+        "hash": "6de5ca5f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "c26a76",
+        "hash": "e7098ab8",
+        "encoded": "*%20Fetch%20real-time%20vehicle%20locations%20for%20a%20route.",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "c26a76",
+        "hash": "ae78461c",
+        "encoded": "*%20@param%20%7Bobject%7D%20params%20-%20%7B%20city,%20routeId,%20offline%20%7D",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "c26a76",
+        "hash": "4c5253b9",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "c26a76",
+        "hash": "ea8c7216",
+        "encoded": "export%20async%20function%20getVehicleLocations(%7B%20city,%20routeId,%20offline%20%7D%20=%20%7B%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "c26a76",
+        "hash": "0dfa92a3",
+        "encoded": "const%20query%20=%20buildParams(%7B%20city,%20routeId,%20offline%20%7D);",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "c26a76",
+        "hash": "3fed196a",
+        "encoded": "return%20apiFetch(%60$%7BBASE_URL%7D/vehicles$%7Bquery%7D%60);",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "c26a76",
+        "hash": "9fb02724",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "c26a76",
+        "hash": "0e45e54e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "c26a76",
+        "hash": "7b859e06",
+        "encoded": "*%20Fetch%20arrival%20predictions%20for%20a%20stop.",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "c26a76",
+        "hash": "5befebea",
+        "encoded": "*%20@param%20%7Bobject%7D%20params%20-%20%7B%20stopId%20(required),%20routeId,%20offline%20%7D",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "c26a76",
+        "hash": "57024170",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "c26a76",
+        "hash": "5c564f30",
+        "encoded": "export%20async%20function%20getArrivals(%7B%20stopId,%20routeId,%20offline%20%7D%20=%20%7B%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "c26a76",
+        "hash": "d08414ba",
+        "encoded": "if%20(!stopId)%20throw%20new%20Error('stopId%20is%20required');",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "c26a76",
+        "hash": "34fe306e",
+        "encoded": "const%20query%20=%20buildParams(%7B%20stopId,%20routeId,%20offline%20%7D);",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "c26a76",
+        "hash": "975c3d01",
+        "encoded": "return%20apiFetch(%60$%7BBASE_URL%7D/arrivals$%7Bquery%7D%60);",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "c26a76",
+        "hash": "9a3fe29c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "c26a76",
+        "hash": "bab13cfb",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "c26a76",
+        "hash": "5a7582c5",
+        "encoded": "*%20Fetch%20active%20service%20alerts%20for%20a%20city.",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "c26a76",
+        "hash": "b178e157",
+        "encoded": "*%20@param%20%7Bobject%7D%20params%20-%20%7B%20city,%20offline%20%7D",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "c26a76",
+        "hash": "68078d53",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "c26a76",
+        "hash": "37eafd90",
+        "encoded": "export%20async%20function%20getServiceAlerts(%7B%20city,%20offline%20%7D%20=%20%7B%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "c26a76",
+        "hash": "d319e6cb",
+        "encoded": "const%20query%20=%20buildParams(%7B%20city,%20offline%20%7D);",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "c26a76",
+        "hash": "ccb9b788",
+        "encoded": "return%20apiFetch(%60$%7BBASE_URL%7D/alerts$%7Bquery%7D%60);",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "c26a76",
+        "hash": "536b52c1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "c26a76",
+        "hash": "433f3905",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "c26a76",
+        "hash": "7a0831fa",
+        "encoded": "*%20Plan%20a%20route%20from%20origin%20to%20destination.",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "c26a76",
+        "hash": "a75c4ff8",
+        "encoded": "*%20@param%20%7Bobject%7D%20params%20-%20%7B%20from%20(required),%20to%20(required),%20city,%20offline%20%7D",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "c26a76",
+        "hash": "12991a20",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "c26a76",
+        "hash": "7889cd02",
+        "encoded": "export%20async%20function%20planRoute(%7B%20from,%20to,%20city,%20offline%20%7D%20=%20%7B%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "c26a76",
+        "hash": "947ccd0d",
+        "encoded": "if%20(!from%20%7C%7C%20!to)%20throw%20new%20Error('from%20and%20to%20are%20required');",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "c26a76",
+        "hash": "416d0def",
+        "encoded": "const%20query%20=%20buildParams(%7B%20from,%20to,%20city,%20offline%20%7D);",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "c26a76",
+        "hash": "44274266",
+        "encoded": "return%20apiFetch(%60$%7BBASE_URL%7D/plan$%7Bquery%7D%60);",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "c26a76",
+        "hash": "ca78192d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "c26a76",
+        "hash": "7c736089",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%20Cache%20API%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "c26a76",
+        "hash": "16e442a1",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "c26a76",
+        "hash": "4f636c44",
+        "encoded": "*%20Fetch%20cache%20statistics.%20Requires%20OPERATOR%20or%20ADMIN%20role.",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "c26a76",
+        "hash": "25cdd720",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "c26a76",
+        "hash": "5166114e",
+        "encoded": "export%20async%20function%20getCacheStats()%20%7B",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "c26a76",
+        "hash": "24db06ac",
+        "encoded": "return%20apiFetch(%60$%7BCACHE_URL%7D/stats%60);",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "c26a76",
+        "hash": "bfce87e8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "c26a76",
+        "hash": "940053f5",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "c26a76",
+        "hash": "4e9ea000",
+        "encoded": "*%20Clear%20all%20cache%20entries.%20Requires%20ADMIN%20role.",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "c26a76",
+        "hash": "694dd66b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "c26a76",
+        "hash": "c1933495",
+        "encoded": "export%20async%20function%20clearCache()%20%7B",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "c26a76",
+        "hash": "c8768bd7",
+        "encoded": "return%20apiFetch(%60$%7BCACHE_URL%7D/clear%60,%20%7B%20method:%20'POST'%20%7D);",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "c26a76",
+        "hash": "ae0130b5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

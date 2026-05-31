@@ -1,0 +1,31 @@
+{
+  "filename": "AccessKey.java",
+  "path": "backend\\src\\main\\java\\com\\transport\\tracker\\cache\\AccessKey.java",
+  "version": "1.1",
+  "files": {
+    "4a672046": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "DELAYQUEUE_IMPLEMENTATION_GUIDE.md",
+          "relativeFilePath": "backend/docs/DELAYQUEUE_IMPLEMENTATION_GUIDE.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            567
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "4baf7543": {
+      "value": "You are a Senior Java Architect refactoring an existing Spring Boot in-memory cache implementation.\n\nCurrent cache architecture:\n\n* ConcurrentHashMap<K, CacheEntry<V>> as primary storage\n* DelayQueue-based TTL eviction already implemented\n* Fresh TTL and stale TTL support\n* Cache metrics (hits, misses, staleHits, evictions)\n* Max cache size enforcement\n* Current LRU eviction scans entire cache:\n\n```java\nstore.entrySet().stream()\n    .min(...)\n```\n\nThis is O(n) and becomes expensive as cache size"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

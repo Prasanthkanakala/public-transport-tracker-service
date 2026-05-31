@@ -1,0 +1,15 @@
+{
+  "filename": "CacheController.java",
+  "path": "backend\\src\\main\\java\\com\\transport\\tracker\\controller\\CacheController.java",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "3e00facf": {
+      "value": "You are a Senior Spring Boot + React Security Architect.\n\nI have an existing Real-Time Public Transport Tracking application with:\n\nBackend:\n\n* Java 21\n* Spring Boot\n* Existing REST APIs\n* Existing cache system\n* Existing transport APIs\n* No authentication currently\n\nFrontend:\n\n* React\n* JavaScript\n* Existing transport search screens\n* Existing custom hooks (useTransport)\n* Existing API service layer\n* No login screen currently\n\nGoal:\n\nImplement JWT Authentication + Role-Based Access Control (RB"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

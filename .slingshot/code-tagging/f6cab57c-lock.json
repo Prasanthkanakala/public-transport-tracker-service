@@ -1,0 +1,90 @@
+{
+  "backend\\build.gradle": {
+    "filename": "build.gradle",
+    "path": "backend\\build.gradle",
+    "version": "1.2",
+    "contextFile": "f6cab57c-context.json",
+    "chunks": {
+      "dfb2fa": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212847,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "56074526",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:04:07 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "20": {
+        "chunkId": "dfb2fa",
+        "hash": "906a4033",
+        "encoded": "dependencies%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "dfb2fa",
+        "hash": "7fdaf71e",
+        "encoded": "//%20Spring%20Boot%20Core",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "dfb2fa",
+        "hash": "4dc72a02",
+        "encoded": "implementation%20'org.springframework.boot:spring-boot-starter-web'",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "dfb2fa",
+        "hash": "5145ea76",
+        "encoded": "implementation%20'org.springframework.boot:spring-boot-starter-actuator'",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "dfb2fa",
+        "hash": "937728bd",
+        "encoded": "implementation%20'org.springframework.boot:spring-boot-starter-validation'",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "dfb2fa",
+        "hash": "54b02d39",
+        "encoded": "implementation%20'org.springframework.boot:spring-boot-starter-security'",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "dfb2fa",
+        "hash": "22ffaa7f",
+        "encoded": "//%20JWT%20(JSON%20Web%20Token)",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "dfb2fa",
+        "hash": "3deef8d2",
+        "encoded": "implementation%20'io.jsonwebtoken:jjwt-api:0.12.5'",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "dfb2fa",
+        "hash": "967c15b6",
+        "encoded": "runtimeOnly%20'io.jsonwebtoken:jjwt-impl:0.12.5'",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "dfb2fa",
+        "hash": "a2cd4e1e",
+        "encoded": "runtimeOnly%20'io.jsonwebtoken:jjwt-jackson:0.12.5'",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

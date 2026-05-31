@@ -1,0 +1,594 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\cache\\CacheEntry.java": {
+    "filename": "CacheEntry.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\cache\\CacheEntry.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ac2e3e": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780146435,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "1c242e69",
+          "files": "112f1d1b"
+        },
+        "hash": "2259763c",
+        "messageId": "system_f88df990-5c27-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:37:15 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "397cb9": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780147662,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4baf7543",
+          "files": "4a672046"
+        },
+        "hash": "a3ce5ed0",
+        "messageId": "system_2efab480-5c2a-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:57:42 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "9b6c4a": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780147662,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4baf7543",
+          "files": "4a672046"
+        },
+        "hash": "e541ef82",
+        "messageId": "system_2efab480-5c2a-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:57:42 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "7669bd": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780147662,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4baf7543",
+          "files": "4a672046"
+        },
+        "hash": "909e5a75",
+        "messageId": "system_2efab480-5c2a-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:57:42 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "b9d760": {
+        "user": "You",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780147662,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "4baf7543",
+          "files": "4a672046"
+        },
+        "hash": "afd00748",
+        "messageId": "system_2efab480-5c2a-11f1-bd45-61004c83edfa",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/30/2026, 6:57:42 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ac2e3e",
+        "hash": "2061c00d",
+        "encoded": "package%20com.transport.tracker.cache;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ac2e3e",
+        "hash": "00d237b2",
+        "encoded": "import%20lombok.Getter;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ac2e3e",
+        "hash": "92aa0b8c",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ac2e3e",
+        "hash": "692dab65",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ac2e3e",
+        "hash": "2e711124",
+        "encoded": "*%20Wrapper%20that%20stores%20a%20cached%20value%20along%20with%20its%20creation%20timestamp%20and%20TTL.",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ac2e3e",
+        "hash": "faf0d799",
+        "encoded": "*%20Supports%20both%20strict%20expiry%20(isExpired)%20and%20extended%20stale%20window%20(isStale).",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ac2e3e",
+        "hash": "7aeb6bd6",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ac2e3e",
+        "hash": "fc1b3fe5",
+        "encoded": "*%20VERSION%20TRACKING:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ac2e3e",
+        "hash": "65936ce0",
+        "encoded": "*%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ac2e3e",
+        "hash": "bb03802b",
+        "encoded": "*%20The%20createdAt%20timestamp%20serves%20as%20a%20version%20identifier%20to%20prevent%20race%20conditions",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "ac2e3e",
+        "hash": "2aa90751",
+        "encoded": "*%20during%20concurrent%20updates.%20When%20an%20ExpiryNode%20fires,%20it%20compares%20its%20version%20with",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "ac2e3e",
+        "hash": "378b097f",
+        "encoded": "*%20the%20current%20CacheEntry's%20createdAt%20to%20ensure%20it%20doesn't%20remove%20a%20newer%20entry.",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ac2e3e",
+        "hash": "2416a346",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "ac2e3e",
+        "hash": "3017f5d2",
+        "encoded": "*%20@param%20%3CV%3E%20The%20type%20of%20the%20cached%20value",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ac2e3e",
+        "hash": "fc142b2b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7669bd",
+        "hash": "63cd0825",
+        "encoded": "@Getter",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "7669bd",
+        "hash": "2aefa53e",
+        "encoded": "public%20class%20CacheEntry%3CV%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "7669bd",
+        "hash": "6214d214",
+        "encoded": "private%20final%20V%20value;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "7669bd",
+        "hash": "e18ca4cd",
+        "encoded": "private%20final%20Instant%20createdAt;%20//%20Also%20serves%20as%20version%20identifier",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "7669bd",
+        "hash": "e5e85e25",
+        "encoded": "private%20final%20long%20ttlSeconds;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "7669bd",
+        "hash": "e62e96f0",
+        "encoded": "private%20volatile%20Instant%20lastAccessedAt;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "7669bd",
+        "hash": "aadafba1",
+        "encoded": "//%20LRU%20index%20tracking:%20stores%20the%20current%20AccessKey%20for%20this%20entry%20in%20the%20skip%20list",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "7669bd",
+        "hash": "6a733093",
+        "encoded": "//%20Volatile%20ensures%20visibility%20across%20threads;%20updated%20on%20every%20access",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "7669bd",
+        "hash": "63d4f56e",
+        "encoded": "private%20volatile%20AccessKey%20currentAccessKey;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "7669bd",
+        "hash": "ab4fa03f",
+        "encoded": "public%20CacheEntry(V%20value,%20long%20ttlSeconds)%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "7669bd",
+        "hash": "9cd0108d",
+        "encoded": "this.value%20=%20value;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "7669bd",
+        "hash": "157ec2e7",
+        "encoded": "this.createdAt%20=%20Instant.now();",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "7669bd",
+        "hash": "4d6285b3",
+        "encoded": "this.ttlSeconds%20=%20ttlSeconds;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "7669bd",
+        "hash": "7a13e696",
+        "encoded": "this.lastAccessedAt%20=%20Instant.now();",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "7669bd",
+        "hash": "9df6e1d1",
+        "encoded": "this.currentAccessKey%20=%20null;%20//%20Set%20by%20cache%20after%20construction",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "7669bd",
+        "hash": "b14d68ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "ac2e3e",
+        "hash": "8434ddfd",
+        "encoded": "public%20class%20CacheEntry%3CV%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "ac2e3e",
+        "hash": "914a5e04",
+        "encoded": "private%20final%20V%20value;",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "ac2e3e",
+        "hash": "911f6c3a",
+        "encoded": "private%20final%20Instant%20createdAt;%20//%20Also%20serves%20as%20version%20identifier",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "ac2e3e",
+        "hash": "3d63a2f4",
+        "encoded": "private%20final%20long%20ttlSeconds;",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ac2e3e",
+        "hash": "047f54cc",
+        "encoded": "private%20volatile%20Instant%20lastAccessedAt;",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "b9d760",
+        "hash": "018c6552",
+        "encoded": "public%20void%20updateLastAccess()%20%7B",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "b9d760",
+        "hash": "fb949f70",
+        "encoded": "this.lastAccessedAt%20=%20Instant.now();",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "b9d760",
+        "hash": "42f7c135",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "b9d760",
+        "hash": "78315c35",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "b9d760",
+        "hash": "22221288",
+        "encoded": "*%20Returns%20the%20version%20identifier%20(creation%20timestamp)%20for%20this%20entry.",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "b9d760",
+        "hash": "8689bcf8",
+        "encoded": "*%20Used%20by%20DelayQueue%20eviction%20to%20verify%20entry%20hasn't%20been%20replaced.",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "b9d760",
+        "hash": "2cfd755d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "b9d760",
+        "hash": "5da1abd1",
+        "encoded": "public%20Instant%20getVersion()%20%7B",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "b9d760",
+        "hash": "a2120778",
+        "encoded": "return%20createdAt;",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "b9d760",
+        "hash": "e4d82fa4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "b9d760",
+        "hash": "9b4a30da",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "9b6c4a",
+        "hash": "b2e2c31b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "9b6c4a",
+        "hash": "9a8ad0a4",
+        "encoded": "*%20Updates%20the%20last%20access%20timestamp.",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "9b6c4a",
+        "hash": "89b580e6",
+        "encoded": "*%20Note:%20currentAccessKey%20must%20be%20updated%20separately%20by%20the%20cache%20implementation",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "9b6c4a",
+        "hash": "b703c419",
+        "encoded": "*%20to%20maintain%20LRU%20index%20consistency.",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "9b6c4a",
+        "hash": "3e120fb1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "9b6c4a",
+        "hash": "6b97131d",
+        "encoded": "public%20void%20updateLastAccess()%20%7B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "9b6c4a",
+        "hash": "cf408db4",
+        "encoded": "this.lastAccessedAt%20=%20Instant.now();",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "9b6c4a",
+        "hash": "22a07c3b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "9b6c4a",
+        "hash": "6ef0433e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "9b6c4a",
+        "hash": "c90b32e0",
+        "encoded": "*%20Sets%20the%20current%20AccessKey%20for%20this%20entry%20in%20the%20LRU%20index.",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "9b6c4a",
+        "hash": "9461ae63",
+        "encoded": "*%20Used%20by%20cache%20implementation%20to%20track%20the%20entry's%20position%20in%20ConcurrentSkipListMap.",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "9b6c4a",
+        "hash": "3e676839",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "9b6c4a",
+        "hash": "c14528af",
+        "encoded": "*%20@param%20accessKey%20the%20AccessKey%20currently%20representing%20this%20entry%20in%20the%20LRU%20index",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "9b6c4a",
+        "hash": "e22a6724",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "9b6c4a",
+        "hash": "5551b12d",
+        "encoded": "public%20void%20setCurrentAccessKey(AccessKey%20accessKey)%20%7B",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "9b6c4a",
+        "hash": "b3958f8d",
+        "encoded": "this.currentAccessKey%20=%20accessKey;",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "9b6c4a",
+        "hash": "7e03f6ac",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "397cb9",
+        "hash": "8816435a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "397cb9",
+        "hash": "58a750f4",
+        "encoded": "*%20Returns%20the%20version%20identifier%20(creation%20timestamp)%20for%20this%20entry.",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "397cb9",
+        "hash": "0e0342cc",
+        "encoded": "*%20Used%20by%20DelayQueue%20eviction%20to%20verify%20entry%20hasn't%20been%20replaced.",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "397cb9",
+        "hash": "87d7d6b1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "397cb9",
+        "hash": "93a6efe2",
+        "encoded": "public%20Instant%20getVersion()%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "397cb9",
+        "hash": "4fddbb7a",
+        "encoded": "return%20createdAt;",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "397cb9",
+        "hash": "59c23335",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "397cb9",
+        "hash": "d0afabef",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "397cb9",
+        "hash": "fdba0608",
+        "encoded": "*%20Returns%20the%20current%20AccessKey%20for%20this%20entry%20in%20the%20LRU%20index.",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "397cb9",
+        "hash": "eee7455b",
+        "encoded": "*%20May%20be%20null%20if%20entry%20hasn't%20been%20registered%20in%20the%20index%20yet.",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "397cb9",
+        "hash": "a82125a9",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "397cb9",
+        "hash": "e34566ad",
+        "encoded": "*%20@return%20the%20current%20AccessKey,%20or%20null%20if%20not%20yet%20indexed",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "397cb9",
+        "hash": "8cda4f69",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "397cb9",
+        "hash": "6788647b",
+        "encoded": "public%20AccessKey%20getCurrentAccessKey()%20%7B",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "397cb9",
+        "hash": "3cd39e52",
+        "encoded": "return%20currentAccessKey;",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "397cb9",
+        "hash": "546cf1de",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "397cb9",
+        "hash": "48cab207",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    },
+    "_prevLineCount": 101
+  }
+}

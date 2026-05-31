@@ -1,0 +1,49 @@
+{
+  "filename": "InMemoryCache.java",
+  "path": "backend\\src\\main\\java\\com\\transport\\tracker\\cache\\InMemoryCache.java",
+  "version": "1.1",
+  "files": {
+    "112f1d1b": {
+      "value": [
+        {
+          "programming_language": "Java",
+          "fileName": "InMemoryCache.java",
+          "relativeFilePath": "backend/src/main/java/com/transport/tracker/cache/InMemoryCache.java",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            196
+          ]
+        }
+      ]
+    },
+    "4a672046": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "DELAYQUEUE_IMPLEMENTATION_GUIDE.md",
+          "relativeFilePath": "backend/docs/DELAYQUEUE_IMPLEMENTATION_GUIDE.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            567
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "1c242e69": {
+      "value": "You are a Senior Java Performance Engineer reviewing an existing Spring Boot in-memory cache implementation.\n\nCurrent implementation:\n\n* Uses ConcurrentHashMap<K, CacheEntry<V>> as the primary cache store.\n* Supports:\n\n  * Fresh TTL = 300 seconds\n  * Stale TTL = 3600 seconds\n  * Stale cache fallback\n  * LRU eviction when max size is reached\n* Background ScheduledExecutorService runs every TTL interval and scans the entire cache using removeIf() to remove entries older than stale TTL.\n* LRU evict"
+    },
+    "4baf7543": {
+      "value": "You are a Senior Java Architect refactoring an existing Spring Boot in-memory cache implementation.\n\nCurrent cache architecture:\n\n* ConcurrentHashMap<K, CacheEntry<V>> as primary storage\n* DelayQueue-based TTL eviction already implemented\n* Fresh TTL and stale TTL support\n* Cache metrics (hits, misses, staleHits, evictions)\n* Max cache size enforcement\n* Current LRU eviction scans entire cache:\n\n```java\nstore.entrySet().stream()\n    .min(...)\n```\n\nThis is O(n) and becomes expensive as cache size"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

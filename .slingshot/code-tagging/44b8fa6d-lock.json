@@ -1,0 +1,126 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\dto\\LoginResponse.java": {
+    "filename": "LoginResponse.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\dto\\LoginResponse.java",
+    "version": "1.2",
+    "contextFile": "44b8fa6d-context.json",
+    "chunks": {
+      "998e0b": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212776,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "4a908951",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:02:56 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "998e0b",
+        "hash": "10ab1b44",
+        "encoded": "package%20com.transport.tracker.dto;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "998e0b",
+        "hash": "de3a3b47",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "998e0b",
+        "hash": "2c119204",
+        "encoded": "*%20DTO%20for%20authentication%20login%20responses.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "998e0b",
+        "hash": "90ed283c",
+        "encoded": "*%20Contains%20the%20JWT%20token,%20username,%20and%20assigned%20role.",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "998e0b",
+        "hash": "ed5940e5",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "998e0b",
+        "hash": "ff3a97b2",
+        "encoded": "public%20record%20LoginResponse(",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "998e0b",
+        "hash": "95611aa6",
+        "encoded": "String%20token,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "998e0b",
+        "hash": "5cca7bc7",
+        "encoded": "String%20username,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "998e0b",
+        "hash": "de19bcfc",
+        "encoded": "String%20role",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "998e0b",
+        "hash": "70d0e10d",
+        "encoded": ")%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "998e0b",
+        "hash": "ae3088da",
+        "encoded": "@Override",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "998e0b",
+        "hash": "dd6ffe08",
+        "encoded": "public%20String%20toString()%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "998e0b",
+        "hash": "2805073e",
+        "encoded": "//%20Never%20log%20JWT%20tokens",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "998e0b",
+        "hash": "86cab46d",
+        "encoded": "return%20%22LoginResponse%7Busername='%22%20+%20username%20+%20%22',%20role='%22%20+%20role%20+%20%22'%7D%22;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "998e0b",
+        "hash": "c8f9d1c3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "998e0b",
+        "hash": "0a373349",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

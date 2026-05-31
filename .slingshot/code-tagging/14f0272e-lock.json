@@ -21,36 +21,1296 @@
         "messageId": "system_f558d6f0-4aa7-11f1-ab94-6d9358b1a412",
         "codeBlockId": null,
         "isActive": true
+      },
+      "e17eab": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780213081,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "cc130558",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:08:01 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
       }
     },
     "lines": {
+      "0": {
+        "chunkId": "e17eab",
+        "hash": "0b9c5fc1",
+        "encoded": "import%20React,%20%7B%20useState%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "e17eab",
+        "hash": "82e85de1",
+        "encoded": "import%20'./App.css';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "e17eab",
+        "hash": "c374a364",
+        "encoded": "import%20Login%20from%20'./components/Login/Login';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "e17eab",
+        "hash": "c112bda5",
+        "encoded": "import%20RouteSearch%20from%20'./components/RouteSearch/RouteSearch';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "e17eab",
+        "hash": "afb2dc70",
+        "encoded": "import%20AlertBanner%20from%20'./components/AlertBanner/AlertBanner';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "e17eab",
+        "hash": "3e29aedb",
+        "encoded": "import%20ArrivalBoard%20from%20'./components/ArrivalBoard/ArrivalBoard';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "e17eab",
+        "hash": "e7506a46",
+        "encoded": "import%20VehicleMap%20from%20'./components/VehicleMap/VehicleMap';",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "e17eab",
+        "hash": "2f1c0958",
+        "encoded": "import%20OfflineToggle%20from%20'./components/OfflineToggle/OfflineToggle';",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "e17eab",
+        "hash": "4ffe9ec7",
+        "encoded": "import%20CrowdingIndicator%20from%20'./components/CrowdingIndicator/CrowdingIndicator';",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "e17eab",
+        "hash": "99f152cc",
+        "encoded": "import%20RoutePlanner%20from%20'./components/RoutePlanner/RoutePlanner';",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "e17eab",
+        "hash": "90df7f6a",
+        "encoded": "import%20AdminPanel%20from%20'./components/AdminPanel/AdminPanel';",
+        "prevChunkIds": []
+      },
       "11": {
-        "chunkId": "fb7b92",
-        "hash": "208ba36f",
-        "encoded": "export%20default%20function%20App()%20%7B",
+        "chunkId": "e17eab",
+        "hash": "df1dfddb",
+        "encoded": "import%20%7B%20useTransport%20%7D%20from%20'./hooks/useTransport';",
         "prevChunkIds": []
       },
       "12": {
-        "chunkId": "fb7b92",
-        "hash": "52053b0f",
-        "encoded": "const%20%5Bcity,%20setCity%5D%20=%20useState('london');",
-        "prevChunkIds": []
-      },
-      "13": {
-        "chunkId": "fb7b92",
-        "hash": "21cd84a1",
-        "encoded": "const%20%5BrouteId,%20setRouteId%5D%20=%20useState('central');",
+        "chunkId": "e17eab",
+        "hash": "c3ff1e6f",
+        "encoded": "import%20%7B%20useAuth%20%7D%20from%20'./hooks/useAuth';",
         "prevChunkIds": []
       },
       "14": {
-        "chunkId": "fb7b92",
-        "hash": "e2c82c63",
-        "encoded": "const%20%5Boffline,%20setOffline%5D%20=%20useState(false);",
+        "chunkId": "e17eab",
+        "hash": "848c363a",
+        "encoded": "export%20default%20function%20App()%20%7B",
         "prevChunkIds": []
       },
       "15": {
+        "chunkId": "e17eab",
+        "hash": "d437789a",
+        "encoded": "const%20%7B%20isAuthenticated,%20username,%20role,%20logout,%20hasRole%20%7D%20=%20useAuth();",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "e17eab",
+        "hash": "bb038eb5",
+        "encoded": "const%20%5Bcity,%20setCity%5D%20=%20useState('london');",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "e17eab",
+        "hash": "13f8565d",
+        "encoded": "const%20%5BrouteId,%20setRouteId%5D%20=%20useState('central');",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "e17eab",
+        "hash": "56330c64",
+        "encoded": "const%20%5Boffline,%20setOffline%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "e17eab",
+        "hash": "539056aa",
+        "encoded": "const%20%5BactiveTab,%20setActiveTab%5D%20=%20useState('live');%20//%20live%20%7C%20plan%20%7C%20status%20%7C%20admin",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "e17eab",
+        "hash": "683bd73d",
+        "encoded": "const%20%7B%20transportData,%20metadata,%20loading,%20error,%20refresh%20%7D%20=%20useTransport(%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "e17eab",
+        "hash": "1f20b2d5",
+        "encoded": "city,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "e17eab",
+        "hash": "5dc21443",
+        "encoded": "routeId,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "e17eab",
+        "hash": "b0a1d42c",
+        "encoded": "offline,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "e17eab",
+        "hash": "9fbf7ec0",
+        "encoded": "autoRefreshMs:%2030000,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "e17eab",
+        "hash": "1ca2ca1b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "e17eab",
+        "hash": "4361bae0",
+        "encoded": "//%20Show%20login%20page%20if%20not%20authenticated",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "e17eab",
+        "hash": "ed89c08e",
+        "encoded": "if%20(!isAuthenticated)%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "e17eab",
+        "hash": "86b78d6d",
+        "encoded": "return%20%3CLogin%20/%3E;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "e17eab",
+        "hash": "43353d17",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "e17eab",
+        "hash": "c2ef30d0",
+        "encoded": "const%20handleSearch%20=%20(%7B%20city:%20c,%20routeId:%20r%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "e17eab",
+        "hash": "6013a37b",
+        "encoded": "setCity(c);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "e17eab",
+        "hash": "ad4cc81e",
+        "encoded": "setRouteId(r);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "e17eab",
+        "hash": "a48ff7d1",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "e17eab",
+        "hash": "6c8b558d",
+        "encoded": "const%20dataSource%20=%20metadata?.dataSource;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "e17eab",
+        "hash": "b60692b4",
+        "encoded": "const%20isStale%20=%20dataSource%20===%20'STALE_CACHE'%20%7C%7C%20dataSource%20===%20'MOCK';",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "e17eab",
+        "hash": "b4f60d2a",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "e17eab",
+        "hash": "6da54b45",
+        "encoded": "%3Cdiv%20className=%22app%22%3E",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "e17eab",
+        "hash": "6a0a1ee8",
+        "encoded": "%7B/*%20%E2%94%80%E2%94%80%20Header%20%E2%94%80%E2%94%80%20*/%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "e17eab",
+        "hash": "ae6e014a",
+        "encoded": "%3Cheader%20className=%22app-header%22%3E",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "e17eab",
+        "hash": "5866ad08",
+        "encoded": "%3Cdiv%20className=%22header-brand%22%3E",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "e17eab",
+        "hash": "cd878f9d",
+        "encoded": "%3Cspan%20className=%22brand-icon%22%3E%F0%9F%9A%87%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "e17eab",
+        "hash": "ea395827",
+        "encoded": "%3Cspan%20className=%22brand-name%22%3ETransit%20Tracker%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "e17eab",
+        "hash": "7792a14e",
+        "encoded": "%7Bmetadata%20&&%20(",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "e17eab",
+        "hash": "0165881b",
+        "encoded": "%3Cspan%20className=%7B%60data-badge%20$%7BdataSource?.toLowerCase().replace('_',%20'-')%7D%60%7D%3E",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "e17eab",
+        "hash": "7d8359f8",
+        "encoded": "%7BdataSource%7D",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "e17eab",
+        "hash": "f419ffce",
+        "encoded": "%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "e17eab",
+        "hash": "d09ec163",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "e17eab",
+        "hash": "e88470f6",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "e17eab",
+        "hash": "504c6678",
+        "encoded": "%3Cdiv%20className=%22header-controls%22%3E",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "e17eab",
+        "hash": "33a65bdc",
+        "encoded": "%3Cdiv%20className=%22user-info%22%3E",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "e17eab",
+        "hash": "8c4abb66",
+        "encoded": "%3Cspan%20className=%22user-name%22%3E%7Busername%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "e17eab",
+        "hash": "d89159ba",
+        "encoded": "%3Cspan%20className=%22user-role-badge%22%3E%7Brole%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "e17eab",
+        "hash": "14e2ba9d",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "e17eab",
+        "hash": "33f7963c",
+        "encoded": "%3COfflineToggle%20offline=%7Boffline%7D%20onToggle=%7BsetOffline%7D%20/%3E",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "e17eab",
+        "hash": "6273b8b3",
+        "encoded": "%3Cbutton%20className=%22refresh-btn%22%20onClick=%7Brefresh%7D%20disabled=%7Bloading%7D%20aria-label=%22Refresh%20data%22%3E",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "e17eab",
+        "hash": "c8378bc9",
+        "encoded": "%3Cspan%20className=%7Bloading%20?%20'spin'%20:%20''%7D%3E%E2%86%BA%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "e17eab",
+        "hash": "e0c0fff9",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "e17eab",
+        "hash": "a6eea5c0",
+        "encoded": "%3Cbutton%20className=%22logout-btn%22%20onClick=%7Blogout%7D%20aria-label=%22Sign%20out%22%3E",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "e17eab",
+        "hash": "9b1cb6bf",
+        "encoded": "Sign%20Out",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "e17eab",
+        "hash": "9bcf4cb4",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "e17eab",
+        "hash": "e9e5ba05",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "e17eab",
+        "hash": "58c920ac",
+        "encoded": "%3C/header%3E",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "e17eab",
+        "hash": "6dc1f253",
+        "encoded": "%7B/*%20%E2%94%80%E2%94%80%20Search%20bar%20%E2%94%80%E2%94%80%20*/%7D",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "e17eab",
+        "hash": "8434db99",
+        "encoded": "%3Csection%20className=%22search-section%22%3E",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "e17eab",
+        "hash": "abed2a8c",
+        "encoded": "%3CRouteSearch%20initialCity=%7Bcity%7D%20initialRoute=%7BrouteId%7D%20onSearch=%7BhandleSearch%7D%20/%3E",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "e17eab",
+        "hash": "f8ada976",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "e17eab",
+        "hash": "eadeefb3",
+        "encoded": "%7B/*%20%E2%94%80%E2%94%80%20Stale%20data%20warning%20%E2%94%80%E2%94%80%20*/%7D",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "e17eab",
+        "hash": "eb5a7bdf",
+        "encoded": "%7BisStale%20&&%20(",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "e17eab",
+        "hash": "b157c2fb",
+        "encoded": "%3Cdiv%20className=%22stale-banner%22%3E",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "e17eab",
+        "hash": "5f151960",
+        "encoded": "%3Cspan%3E%E2%9A%A0%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "e17eab",
+        "hash": "2fc676a7",
+        "encoded": "%3Cspan%3E",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "e17eab",
+        "hash": "a77a20e9",
+        "encoded": "%7Boffline",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "e17eab",
+        "hash": "2b460426",
+        "encoded": "?%20'Offline%20mode%20active%20%E2%80%93%20showing%20sample%20data'",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "e17eab",
+        "hash": "1d1e3d0f",
+        "encoded": ":%20%60Live%20API%20unavailable%20%E2%80%93%20showing%20$%7BdataSource%20===%20'STALE_CACHE'%20?%20%60cached%20data%20($%7Bmetadata?.cacheAgeSeconds%7Ds%20old)%60%20:%20'sample%20data'%7D%60%7D",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "e17eab",
+        "hash": "a5a81c92",
+        "encoded": "%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "e17eab",
+        "hash": "128298c2",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "e17eab",
+        "hash": "7d80bb98",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "e17eab",
+        "hash": "e7a2f44e",
+        "encoded": "%7B/*%20%E2%94%80%E2%94%80%20Conditional%20alert%20banners%20%E2%94%80%E2%94%80%20*/%7D",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "e17eab",
+        "hash": "41634e74",
+        "encoded": "%7BtransportData?.conditionalAlerts?.length%20%3E%200%20&&%20(",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "e17eab",
+        "hash": "40b9cc14",
+        "encoded": "%3CAlertBanner%20alerts=%7BtransportData.conditionalAlerts%7D%20/%3E",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "e17eab",
+        "hash": "47acac24",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "e17eab",
+        "hash": "4e4353a2",
+        "encoded": "%7B/*%20%E2%94%80%E2%94%80%20Error%20state%20%E2%94%80%E2%94%80%20*/%7D",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "e17eab",
+        "hash": "cd0f85af",
+        "encoded": "%7Berror%20&&%20(",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "e17eab",
+        "hash": "7b687750",
+        "encoded": "%3Cdiv%20className=%22error-banner%22%3E",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "e17eab",
+        "hash": "2655c02c",
+        "encoded": "%3Cspan%3E%E2%9C%95%3C/span%3E%20%7Berror%7D",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "e17eab",
+        "hash": "27a53cb4",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "e17eab",
+        "hash": "c9884410",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "e17eab",
+        "hash": "b112eda3",
+        "encoded": "%7B/*%20%E2%94%80%E2%94%80%20Tab%20navigation%20%E2%94%80%E2%94%80%20*/%7D",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "e17eab",
+        "hash": "7724b003",
+        "encoded": "%3Cnav%20className=%22tab-nav%22%20role=%22tablist%22%3E",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "e17eab",
+        "hash": "36ee5752",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "e17eab",
+        "hash": "3acc738f",
+        "encoded": "role=%22tab%22",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "e17eab",
+        "hash": "84079913",
+        "encoded": "aria-selected=%7BactiveTab%20===%20'live'%7D",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "e17eab",
+        "hash": "c8db0586",
+        "encoded": "className=%7B%60tab%20$%7BactiveTab%20===%20'live'%20?%20'active'%20:%20''%7D%60%7D",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "e17eab",
+        "hash": "8a58d2e2",
+        "encoded": "onClick=%7B()%20=%3E%20setActiveTab('live')%7D",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "e17eab",
+        "hash": "e731cece",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "e17eab",
+        "hash": "f83a8cdf",
+        "encoded": "Live%20View",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "e17eab",
+        "hash": "85c56259",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "e17eab",
+        "hash": "2a842ab1",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "e17eab",
+        "hash": "13b8ecd7",
+        "encoded": "role=%22tab%22",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "e17eab",
+        "hash": "d2dbdd5a",
+        "encoded": "aria-selected=%7BactiveTab%20===%20'plan'%7D",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "e17eab",
+        "hash": "4121f25d",
+        "encoded": "className=%7B%60tab%20$%7BactiveTab%20===%20'plan'%20?%20'active'%20:%20''%7D%60%7D",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "e17eab",
+        "hash": "2374995a",
+        "encoded": "onClick=%7B()%20=%3E%20setActiveTab('plan')%7D",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "e17eab",
+        "hash": "9d783f92",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "e17eab",
+        "hash": "ea645b4f",
+        "encoded": "Plan%20Journey",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "e17eab",
+        "hash": "f31ca30c",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "e17eab",
+        "hash": "53af982a",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "e17eab",
+        "hash": "0ef731ce",
+        "encoded": "role=%22tab%22",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "e17eab",
+        "hash": "5392580a",
+        "encoded": "aria-selected=%7BactiveTab%20===%20'status'%7D",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "e17eab",
+        "hash": "0b967c4c",
+        "encoded": "className=%7B%60tab%20$%7BactiveTab%20===%20'status'%20?%20'active'%20:%20''%7D%60%7D",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "e17eab",
+        "hash": "d6b5a7df",
+        "encoded": "onClick=%7B()%20=%3E%20setActiveTab('status')%7D",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "e17eab",
+        "hash": "86ce749d",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "e17eab",
+        "hash": "d41ddf7e",
+        "encoded": "Service%20Status",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "e17eab",
+        "hash": "303f0e64",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "e17eab",
+        "hash": "d901cbeb",
+        "encoded": "%7B/*%20Admin%20tab%20-%20only%20visible%20to%20OPERATOR%20and%20ADMIN%20*/%7D",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "e17eab",
+        "hash": "d5fd3426",
+        "encoded": "%7BhasRole('OPERATOR')%20&&%20(",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "e17eab",
+        "hash": "44ac1c0d",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "e17eab",
+        "hash": "2f3acaab",
+        "encoded": "role=%22tab%22",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "e17eab",
+        "hash": "f9747345",
+        "encoded": "aria-selected=%7BactiveTab%20===%20'admin'%7D",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "e17eab",
+        "hash": "f70b8165",
+        "encoded": "className=%7B%60tab%20$%7BactiveTab%20===%20'admin'%20?%20'active'%20:%20''%7D%60%7D",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "e17eab",
+        "hash": "f9765a7b",
+        "encoded": "onClick=%7B()%20=%3E%20setActiveTab('admin')%7D",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "e17eab",
+        "hash": "c13a99c9",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "e17eab",
+        "hash": "4c96c5dc",
+        "encoded": "Admin%20Panel",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "e17eab",
+        "hash": "438eaf5f",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "e17eab",
+        "hash": "bfd54b7e",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "e17eab",
+        "hash": "e54f98e4",
+        "encoded": "%3C/nav%3E",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "e17eab",
+        "hash": "33e2a747",
+        "encoded": "%7B/*%20%E2%94%80%E2%94%80%20Tab%20panels%20%E2%94%80%E2%94%80%20*/%7D",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "e17eab",
+        "hash": "1b528bfb",
+        "encoded": "%3Cmain%20className=%22app-main%22%3E",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "e17eab",
+        "hash": "50e05175",
+        "encoded": "%7BactiveTab%20===%20'live'%20&&%20(",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "e17eab",
+        "hash": "1fd92e9d",
+        "encoded": "%3Cdiv%20className=%22live-grid%22%3E",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "e17eab",
+        "hash": "c82e4843",
+        "encoded": "%3Csection%20className=%22panel%20vehicles-panel%22%20aria-label=%22Vehicle%20Positions%22%3E",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "e17eab",
+        "hash": "3b773e95",
+        "encoded": "%3Ch2%20className=%22panel-title%22%3EVehicle%20Positions%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "e17eab",
+        "hash": "daf004f8",
+        "encoded": "%3CVehicleMap",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "e17eab",
+        "hash": "82358a28",
+        "encoded": "vehicles=%7BtransportData?.vehicles%20%7C%7C%20%5B%5D%7D",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "e17eab",
+        "hash": "2e3a66ab",
+        "encoded": "loading=%7Bloading%7D",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "e17eab",
+        "hash": "596f144e",
+        "encoded": "routeId=%7BrouteId%7D",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "e17eab",
+        "hash": "522e6026",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "e17eab",
+        "hash": "11f4a072",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "e17eab",
+        "hash": "63b8c2d5",
+        "encoded": "%3Csection%20className=%22panel%20arrivals-panel%22%20aria-label=%22Upcoming%20Arrivals%22%3E",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "e17eab",
+        "hash": "02d3d3b7",
+        "encoded": "%3Ch2%20className=%22panel-title%22%3EUpcoming%20Arrivals%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "e17eab",
+        "hash": "e6d8c222",
+        "encoded": "%3CArrivalBoard",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "e17eab",
+        "hash": "536b85c5",
+        "encoded": "arrivals=%7BtransportData?.arrivals%20%7C%7C%20%5B%5D%7D",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "e17eab",
+        "hash": "af90db3e",
+        "encoded": "loading=%7Bloading%7D",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "e17eab",
+        "hash": "2aeaef14",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "e17eab",
+        "hash": "dd9ea770",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "e17eab",
+        "hash": "87311964",
+        "encoded": "%3Csection%20className=%22panel%20crowding-panel%22%20aria-label=%22Crowding%20Levels%22%3E",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "e17eab",
+        "hash": "7ab77d13",
+        "encoded": "%3Ch2%20className=%22panel-title%22%3ECrowding%20Levels%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "e17eab",
+        "hash": "e2e517d9",
+        "encoded": "%3CCrowdingIndicator",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "e17eab",
+        "hash": "2bfaff86",
+        "encoded": "crowding=%7BtransportData?.crowding%20%7C%7C%20%5B%5D%7D",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "e17eab",
+        "hash": "52160ea9",
+        "encoded": "loading=%7Bloading%7D",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "e17eab",
+        "hash": "5355586e",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "e17eab",
+        "hash": "2d341304",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "e17eab",
+        "hash": "118c6dd2",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "e17eab",
+        "hash": "5f564016",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "e17eab",
+        "hash": "0c74bd57",
+        "encoded": "%7BactiveTab%20===%20'plan'%20&&%20(",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "e17eab",
+        "hash": "190cf83e",
+        "encoded": "%3Csection%20className=%22panel%20full-panel%22%20aria-label=%22Route%20Planner%22%3E",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "e17eab",
+        "hash": "f1483a97",
+        "encoded": "%3Ch2%20className=%22panel-title%22%3EPlan%20Your%20Journey%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "e17eab",
+        "hash": "adf37c27",
+        "encoded": "%3CRoutePlanner%20city=%7Bcity%7D%20offline=%7Boffline%7D%20/%3E",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "e17eab",
+        "hash": "6fa2574b",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "e17eab",
+        "hash": "3e3ebf23",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "e17eab",
+        "hash": "f00e3247",
+        "encoded": "%7BactiveTab%20===%20'status'%20&&%20(",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "e17eab",
+        "hash": "9a84f9d0",
+        "encoded": "%3Csection%20className=%22panel%20full-panel%22%20aria-label=%22Service%20Status%22%3E",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "e17eab",
+        "hash": "b754a95b",
+        "encoded": "%3Ch2%20className=%22panel-title%22%3EService%20Alerts%3C/h2%3E",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "e17eab",
+        "hash": "c1ebecd4",
+        "encoded": "%7BtransportData?.alerts?.length%20?%20(",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "e17eab",
+        "hash": "396ae68d",
+        "encoded": "%3Cul%20className=%22alert-list%22%3E",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "e17eab",
+        "hash": "d3aa9757",
+        "encoded": "%7BtransportData.alerts.map((alert)%20=%3E%20(",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "e17eab",
+        "hash": "758ebe80",
+        "encoded": "%3Cli%20key=%7Balert.alertId%7D%20className=%7B%60alert-item%20severity-$%7Balert.severity?.toLowerCase()%7D%60%7D%3E",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "e17eab",
+        "hash": "cbdffab3",
+        "encoded": "%3Cdiv%20className=%22alert-header%22%3E",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "e17eab",
+        "hash": "05133c06",
+        "encoded": "%3Cspan%20className=%22alert-type-badge%22%3E%7Balert.type%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "e17eab",
+        "hash": "98146d30",
+        "encoded": "%3Cspan%20className=%22alert-severity%22%3E%7Balert.severity%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "e17eab",
+        "hash": "5b5fef8b",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "e17eab",
+        "hash": "398212e5",
+        "encoded": "%3Cp%20className=%22alert-headline%22%3E%7Balert.headerText%7D%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "e17eab",
+        "hash": "0d93b2b5",
+        "encoded": "%3Cp%20className=%22alert-desc%22%3E%7Balert.descriptionText%7D%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "e17eab",
+        "hash": "72b7a9b7",
+        "encoded": "%7Balert.affectedRoutes?.length%20%3E%200%20&&%20(",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "e17eab",
+        "hash": "35396ce4",
+        "encoded": "%3Cdiv%20className=%22affected-routes%22%3E",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "e17eab",
+        "hash": "fca03240",
+        "encoded": "%7Balert.affectedRoutes.map((r)%20=%3E%20(",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "e17eab",
+        "hash": "fb161a2a",
+        "encoded": "%3Cspan%20key=%7Br%7D%20className=%22route-pill%22%3E%7Br%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "e17eab",
+        "hash": "1fc52b14",
+        "encoded": "))%7D",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "e17eab",
+        "hash": "f42543f6",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "e17eab",
+        "hash": "87fdd0e8",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "e17eab",
+        "hash": "ac81c640",
+        "encoded": "%3C/li%3E",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "e17eab",
+        "hash": "6a2de40a",
+        "encoded": "))%7D",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "e17eab",
+        "hash": "8538b381",
+        "encoded": "%3C/ul%3E",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "e17eab",
+        "hash": "991d94fc",
+        "encoded": ")%20:%20(",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "e17eab",
+        "hash": "686181d7",
+        "encoded": "%3Cp%20className=%22empty-state%22%3E",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "e17eab",
+        "hash": "dbdb4ae1",
+        "encoded": "%7Bloading%20?%20'%E2%8F%B3%20Loading%20service%20status%E2%80%A6'%20:%20'%E2%9C%93%20No%20active%20service%20alerts'%7D",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "e17eab",
+        "hash": "4b9bb17f",
+        "encoded": "%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "e17eab",
+        "hash": "4d6b2011",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "e17eab",
+        "hash": "d4073c68",
+        "encoded": "%3C/section%3E",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "e17eab",
+        "hash": "51dc5994",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "e17eab",
+        "hash": "f4afcbc9",
+        "encoded": "%7B/*%20Admin%20Panel%20-%20only%20visible%20to%20OPERATOR%20and%20ADMIN%20*/%7D",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "e17eab",
+        "hash": "240bd9ea",
+        "encoded": "%7BactiveTab%20===%20'admin'%20&&%20hasRole('OPERATOR')%20&&%20(",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "e17eab",
+        "hash": "409addff",
+        "encoded": "%3CAdminPanel%20/%3E",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "e17eab",
+        "hash": "8585d536",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "e17eab",
+        "hash": "8a501589",
+        "encoded": "%3C/main%3E",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "e17eab",
+        "hash": "792b09a5",
+        "encoded": "%7B/*%20%E2%94%80%E2%94%80%20Footer%20metadata%20%E2%94%80%E2%94%80%20*/%7D",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "e17eab",
+        "hash": "02893758",
+        "encoded": "%7Bmetadata%20&&%20(",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "e17eab",
+        "hash": "48f51f61",
+        "encoded": "%3Cfooter%20className=%22app-footer%22%3E",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "e17eab",
+        "hash": "7efd8776",
+        "encoded": "%3Cspan%3ELast%20updated:%20%7Bnew%20Date(metadata.timestamp).toLocaleTimeString()%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "e17eab",
+        "hash": "090cb767",
+        "encoded": "%7Bmetadata.cacheAgeSeconds%20%3E%200%20&&%20(",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "e17eab",
+        "hash": "24d65a8b",
+        "encoded": "%3Cspan%3ECache%20age:%20%7Bmetadata.cacheAgeSeconds%7Ds%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "e17eab",
+        "hash": "b4bb43a8",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "e17eab",
+        "hash": "7c70cc37",
+        "encoded": "%3Cspan%3ECity:%20%7Bmetadata.city%20%7C%7C%20'%E2%80%94'%7D%20%C2%B7%20Route:%20%7Bmetadata.routeId%20%7C%7C%20'%E2%80%94'%7D%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "e17eab",
+        "hash": "0fed3d48",
+        "encoded": "%3C/footer%3E",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "e17eab",
+        "hash": "b5a96e81",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "e17eab",
+        "hash": "63890680",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "e17eab",
+        "hash": "b1664416",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "e17eab",
+        "hash": "4bec1b99",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "236": {
         "chunkId": "fb7b92",
-        "hash": "3d4341bc",
+        "hash": "1d2cfb61",
+        "encoded": "export%20default%20function%20App()%20%7B",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "fb7b92",
+        "hash": "29d7e27d",
+        "encoded": "const%20%5Bcity,%20setCity%5D%20=%20useState('london');",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "fb7b92",
+        "hash": "2c0f34d3",
+        "encoded": "const%20%5BrouteId,%20setRouteId%5D%20=%20useState('central');",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "fb7b92",
+        "hash": "93effe1f",
+        "encoded": "const%20%5Boffline,%20setOffline%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "fb7b92",
+        "hash": "ae226db1",
         "encoded": "const%20%5BactiveTab,%20setActiveTab%5D%20=%20useState('live');%20//%20live%20%7C%20plan%20%7C%20status",
         "prevChunkIds": []
       }

@@ -1,0 +1,78 @@
+{
+  "backend\\src\\main\\resources\\application.properties": {
+    "filename": "application.properties",
+    "path": "backend\\src\\main\\resources\\application.properties",
+    "version": "1.2",
+    "contextFile": "f64367f2-context.json",
+    "chunks": {
+      "b077cc": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212882,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "01984396",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:04:42 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "48": {
+        "chunkId": "b077cc",
+        "hash": "ef5efbb7",
+        "encoded": "#%20%E2%94%80%E2%94%80%20JWT%20Configuration%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "b077cc",
+        "hash": "c4310933",
+        "encoded": "jwt.secret=$%7BJWT_SECRET:MySecretKeyForJWTAuthenticationThatIsAtLeast256BitsLong!%7D",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "b077cc",
+        "hash": "667dff94",
+        "encoded": "jwt.expiration-ms=$%7BJWT_EXPIRATION_MS:3600000%7D",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "b077cc",
+        "hash": "a23dde00",
+        "encoded": "#%20%E2%94%80%E2%94%80%20Logging%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "b077cc",
+        "hash": "f5ebbc93",
+        "encoded": "logging.level.com.transport.tracker=INFO",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "b077cc",
+        "hash": "25cefcaa",
+        "encoded": "logging.level.org.springframework=WARN",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "b077cc",
+        "hash": "64154873",
+        "encoded": "logging.level.org.springframework.security=WARN",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "b077cc",
+        "hash": "9bf32bf1",
+        "encoded": "logging.pattern.console=%25d%7Byyyy-MM-dd%20HH:mm:ss%7D%20%5B%25thread%5D%20%25-5level%20%25logger%7B36%7D%20-%20%25msg%25n",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

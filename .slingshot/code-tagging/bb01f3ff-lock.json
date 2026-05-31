@@ -1,0 +1,126 @@
+{
+  "backend\\src\\main\\java\\com\\transport\\tracker\\controller\\TransportController.java": {
+    "filename": "TransportController.java",
+    "path": "backend\\src\\main\\java\\com\\transport\\tracker\\controller\\TransportController.java",
+    "version": "1.2",
+    "contextFile": "bb01f3ff-context.json",
+    "chunks": {
+      "b12bf9": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212845,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "2c18da73",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:04:05 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "e1fb2b": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780212845,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "0af4e532",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:04:05 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "11": {
+        "chunkId": "e1fb2b",
+        "hash": "e5fbb902",
+        "encoded": "import%20jakarta.validation.constraints.NotBlank;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "e1fb2b",
+        "hash": "d390ef82",
+        "encoded": "import%20lombok.RequiredArgsConstructor;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "e1fb2b",
+        "hash": "0384c9e8",
+        "encoded": "import%20org.springframework.http.ResponseEntity;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "e1fb2b",
+        "hash": "35e74ed2",
+        "encoded": "import%20org.springframework.security.access.prepost.PreAuthorize;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "e1fb2b",
+        "hash": "1026b213",
+        "encoded": "import%20org.springframework.validation.annotation.Validated;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "e1fb2b",
+        "hash": "f7e7fb41",
+        "encoded": "import%20org.springframework.web.bind.annotation.*;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "b12bf9",
+        "hash": "e894f082",
+        "encoded": "@RestController",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "b12bf9",
+        "hash": "1d3e7369",
+        "encoded": "@RequestMapping(%22/api/v1/transport%22)",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "b12bf9",
+        "hash": "7c9e44fb",
+        "encoded": "@RequiredArgsConstructor",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "b12bf9",
+        "hash": "e6177464",
+        "encoded": "@Validated",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "b12bf9",
+        "hash": "a90f3746",
+        "encoded": "@PreAuthorize(%22hasAnyRole('VIEWER','OPERATOR','ADMIN')%22)",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "b12bf9",
+        "hash": "3b09ccb9",
+        "encoded": "@Tag(name%20=%20%22Transport%22,%20description%20=%20%22Real-time%20public%20transport%20data%20endpoints%22)",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "b12bf9",
+        "hash": "2fb8cf8e",
+        "encoded": "public%20class%20TransportController%20%7B",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

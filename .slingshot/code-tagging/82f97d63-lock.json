@@ -1,0 +1,1482 @@
+{
+  "docs\\JWT_AUTH_INTEGRATION_GUIDE.md": {
+    "filename": "JWT_AUTH_INTEGRATION_GUIDE.md",
+    "path": "docs\\JWT_AUTH_INTEGRATION_GUIDE.md",
+    "version": "1.2",
+    "contextFile": "82f97d63-context.json",
+    "chunks": {
+      "c587b5": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780213240,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "4783a32d",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:10:40 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c587b5",
+        "hash": "c5b64136",
+        "encoded": "#%20JWT%20Authentication%20&%20RBAC%20Integration%20Guide",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "c587b5",
+        "hash": "5ac33061",
+        "encoded": "##%20Overview",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "c587b5",
+        "hash": "10be3844",
+        "encoded": "This%20guide%20documents%20the%20complete%20JWT%20Authentication%20+%20Role-Based%20Access%20Control%20(RBAC)%20implementation%20for%20the%20Public%20Transport%20Tracker%20application.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "c587b5",
+        "hash": "b130fb01",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "c587b5",
+        "hash": "316d512f",
+        "encoded": "##%20Architecture",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "c587b5",
+        "hash": "f48747ae",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c587b5",
+        "hash": "3f2b8179",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "c587b5",
+        "hash": "9da9f05c",
+        "encoded": "%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20React%20Frontend%20(Port%203000)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "c587b5",
+        "hash": "f9a1a756",
+        "encoded": "%E2%94%82%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "c587b5",
+        "hash": "d2caa0b2",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20Login.jsx%20%20%E2%94%82%20%20%E2%94%82%20AuthContext%20%E2%94%82%20%20%E2%94%82%20apiService.js%20%E2%94%82%20%20%E2%94%82%20AdminPanel.jsx%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "c587b5",
+        "hash": "834b04cb",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20+%20useAuth%20%20%20%E2%94%82%20%20%E2%94%82%20(Bearer%20JWT)%20%20%E2%94%82%20%20%E2%94%82%20(Role-based%20UI)%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "c587b5",
+        "hash": "2f0f5667",
+        "encoded": "%E2%94%82%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%AC%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "c587b5",
+        "hash": "468f5cf7",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%BC%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "c587b5",
+        "hash": "73f5f4f7",
+        "encoded": "%E2%94%82%20HTTP%20+%20Bearer%20JWT",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "c587b5",
+        "hash": "e18c8470",
+        "encoded": "%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%BC%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "c587b5",
+        "hash": "3d6d1f1e",
+        "encoded": "%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Spring%20Boot%20Backend%20(Port%208080)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "c587b5",
+        "hash": "16e52406",
+        "encoded": "%E2%94%82%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "c587b5",
+        "hash": "ec2df541",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20JwtAuthFilter%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "c587b5",
+        "hash": "44b41535",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20(OncePerRequest)%20%20%20%20%E2%94%82%20%20%E2%94%82%20%20SecurityConfig%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "c587b5",
+        "hash": "4db47aef",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20%20%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20%20-%20BCrypt%20password%20encoding%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "c587b5",
+        "hash": "e44a096a",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%20Extract%20JWT%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20%20-%20In-memory%20users%20(admin,%20operator,%20viewer)%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "c587b5",
+        "hash": "f74a2871",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%20Validate%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20%20-%20Stateless%20sessions%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "c587b5",
+        "hash": "87a4d032",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%20Set%20Auth%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20%20-%20CORS%20for%20React%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "c587b5",
+        "hash": "c216db79",
+        "encoded": "%E2%94%82%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "c587b5",
+        "hash": "980a8aa7",
+        "encoded": "%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "c587b5",
+        "hash": "cdcc9d34",
+        "encoded": "%E2%94%82%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "c587b5",
+        "hash": "f209659f",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20AuthController%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20TransportController%20%E2%94%82%20%20%E2%94%82%20CacheController%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "c587b5",
+        "hash": "967ed73e",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20POST%20/auth/login%20%20%20%20%E2%94%82%20%20%E2%94%82%20@PreAuthorize%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20@PreAuthorize%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "c587b5",
+        "hash": "f86ef809",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20VIEWER+OPERATOR+%20%20%20%20%E2%94%82%20%20%E2%94%82%20Stats:%20OPERATOR+ADMIN%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "c587b5",
+        "hash": "70c7855c",
+        "encoded": "%E2%94%82%20%20%E2%94%82%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20ADMIN%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82%20Clear:%20ADMIN%20only%20%20%20%20%20%20%E2%94%82%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "c587b5",
+        "hash": "1b23ea3f",
+        "encoded": "%E2%94%82%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%20%E2%94%82",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "c587b5",
+        "hash": "62352637",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "c587b5",
+        "hash": "465274ea",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "c587b5",
+        "hash": "f7e71f0a",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "c587b5",
+        "hash": "f4ccc1f9",
+        "encoded": "##%20Project%20Structure%20Changes",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "c587b5",
+        "hash": "d512c862",
+        "encoded": "###%20Backend%20(New%20Files)",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "c587b5",
+        "hash": "5daefab5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "c587b5",
+        "hash": "1ea97f6e",
+        "encoded": "backend/src/main/java/com/transport/tracker/",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "c587b5",
+        "hash": "10e17148",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20dto/",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "c587b5",
+        "hash": "36b7e8be",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20LoginRequest.java%20%20%20%20%20%20%20%20%20%20#%20Login%20request%20DTO%20(username,%20password)",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "c587b5",
+        "hash": "ee66d7bb",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20LoginResponse.java%20%20%20%20%20%20%20%20%20#%20Login%20response%20DTO%20(token,%20username,%20role)",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "c587b5",
+        "hash": "61661233",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20security/",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "c587b5",
+        "hash": "8bbf026c",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20JwtService.java%20%20%20%20%20%20%20%20%20%20%20%20#%20JWT%20token%20generation%20and%20validation",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "c587b5",
+        "hash": "2113bc6b",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20JwtAuthenticationFilter.java%20%20#%20OncePerRequestFilter%20for%20JWT%20auth",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "c587b5",
+        "hash": "b91fdb39",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "c587b5",
+        "hash": "2b6df878",
+        "encoded": "###%20Backend%20(Modified%20Files)",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "c587b5",
+        "hash": "6006e83e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "c587b5",
+        "hash": "ebf5feba",
+        "encoded": "backend/",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "c587b5",
+        "hash": "d62373b6",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20build.gradle%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Added%20jjwt%20dependencies",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "c587b5",
+        "hash": "4ce59766",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20src/main/resources/",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "c587b5",
+        "hash": "b50b0e85",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20application.properties%20%20%20%20%20%20%20%20%20#%20Added%20JWT%20config%20properties",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "c587b5",
+        "hash": "44bf96a7",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20src/main/java/com/transport/tracker/",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "c587b5",
+        "hash": "430f6a68",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20config/",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "c587b5",
+        "hash": "a1547413",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20SecurityConfig.java%20%20%20%20%20%20%20%20#%20Rewrote:%20JWT%20filter,%20in-memory%20users,%20BCrypt,%20CORS",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "c587b5",
+        "hash": "0b3ac823",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20controller/",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "c587b5",
+        "hash": "4cda4f09",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20AuthController.java%20%20%20%20%20%20%20%20#%20NEW:%20POST%20/api/v1/auth/login",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "c587b5",
+        "hash": "ee3fe630",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20CacheController.java%20%20%20%20%20%20%20#%20Added%20@PreAuthorize,%20POST%20/cache/clear",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "c587b5",
+        "hash": "6b62d52a",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20TransportController.java%20%20%20#%20Added%20@PreAuthorize%20at%20class%20level",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "c587b5",
+        "hash": "19eee76e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "c587b5",
+        "hash": "08bd969f",
+        "encoded": "###%20Frontend%20(New%20Files)",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "c587b5",
+        "hash": "d2a4f350",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "c587b5",
+        "hash": "bd0151f5",
+        "encoded": "frontend/src/",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "c587b5",
+        "hash": "1d44e048",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20context/",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "c587b5",
+        "hash": "0ff32b20",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20AuthContext.js%20%20%20%20%20%20%20%20%20%20%20%20%20#%20React%20context%20for%20auth%20state%20management",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "c587b5",
+        "hash": "dc3c94ff",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20hooks/",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "c587b5",
+        "hash": "1183b534",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20useAuth.js%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Custom%20hook%20for%20auth%20context%20access",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "c587b5",
+        "hash": "853bad89",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20components/",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "c587b5",
+        "hash": "f3b8b66d",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20Login/",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "c587b5",
+        "hash": "6eb8d348",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20Login.jsx%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Login%20page%20component",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "c587b5",
+        "hash": "f6f6654d",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20Login.css%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Login%20page%20styles",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "c587b5",
+        "hash": "60c23235",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20AdminPanel/",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "c587b5",
+        "hash": "45e81e84",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20AdminPanel.jsx%20%20%20%20%20%20%20%20%20#%20Cache%20stats%20&%20clear%20panel",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "c587b5",
+        "hash": "c2ee5d22",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20AdminPanel.css%20%20%20%20%20%20%20%20%20#%20Admin%20panel%20styles",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "c587b5",
+        "hash": "42c44123",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "c587b5",
+        "hash": "6d37a7df",
+        "encoded": "###%20Frontend%20(Modified%20Files)",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "c587b5",
+        "hash": "772559c5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "c587b5",
+        "hash": "3256e496",
+        "encoded": "frontend/src/",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "c587b5",
+        "hash": "fedee128",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20index.js%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Wrapped%20App%20with%20AuthProvider",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "c587b5",
+        "hash": "f4f3291e",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20App.jsx%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Added%20auth%20gate,%20user%20info,%20role-based%20tabs",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "c587b5",
+        "hash": "ad495fd5",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20App.css%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Added%20user%20info%20&%20logout%20button%20styles",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "c587b5",
+        "hash": "2a6137ce",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20services/",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "c587b5",
+        "hash": "aa8330ab",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20apiService.js%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Added%20JWT%20Bearer%20header,%20loginUser(),%20401/403%20handling",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "c587b5",
+        "hash": "a80e65bb",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "c587b5",
+        "hash": "eb5cd618",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "c587b5",
+        "hash": "298230a3",
+        "encoded": "##%20Step-by-Step%20Integration%20Guide",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "c587b5",
+        "hash": "96810034",
+        "encoded": "###%20Step%201:%20Backend%20Dependencies",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "c587b5",
+        "hash": "43a4d483",
+        "encoded": "The%20following%20dependencies%20were%20added%20to%20%60build.gradle%60:",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "c587b5",
+        "hash": "f71090d4",
+        "encoded": "%60%60%60groovy",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "c587b5",
+        "hash": "9c76776a",
+        "encoded": "//%20JWT%20(JSON%20Web%20Token)",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "c587b5",
+        "hash": "f822b37a",
+        "encoded": "implementation%20'io.jsonwebtoken:jjwt-api:0.12.5'",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "c587b5",
+        "hash": "038334e8",
+        "encoded": "runtimeOnly%20'io.jsonwebtoken:jjwt-impl:0.12.5'",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "c587b5",
+        "hash": "b189655b",
+        "encoded": "runtimeOnly%20'io.jsonwebtoken:jjwt-jackson:0.12.5'",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "c587b5",
+        "hash": "2c0ea294",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "c587b5",
+        "hash": "487f77c6",
+        "encoded": "###%20Step%202:%20JWT%20Configuration",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "c587b5",
+        "hash": "c67cbd12",
+        "encoded": "Added%20to%20%60application.properties%60:",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "c587b5",
+        "hash": "0c2d8375",
+        "encoded": "%60%60%60properties",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "c587b5",
+        "hash": "3cbdf435",
+        "encoded": "jwt.secret=$%7BJWT_SECRET:MySecretKeyForJWTAuthenticationThatIsAtLeast256BitsLong!%7D",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "c587b5",
+        "hash": "ea412528",
+        "encoded": "jwt.expiration-ms=$%7BJWT_EXPIRATION_MS:3600000%7D",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "c587b5",
+        "hash": "15266480",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "c587b5",
+        "hash": "65fbdeba",
+        "encoded": "%3E%20**Important:**%20In%20production,%20set%20%60JWT_SECRET%60%20as%20an%20environment%20variable%20with%20a%20strong%20random%20key.",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "c587b5",
+        "hash": "ae65f6ae",
+        "encoded": "###%20Step%203:%20Security%20Configuration",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "c587b5",
+        "hash": "dc679d24",
+        "encoded": "%60SecurityConfig.java%60%20was%20rewritten%20to:",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "c587b5",
+        "hash": "f544a8a4",
+        "encoded": "-%20Enable%20%60@EnableMethodSecurity%60%20for%20%60@PreAuthorize%60%20support",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "c587b5",
+        "hash": "cf776c04",
+        "encoded": "-%20Register%20%60JwtAuthenticationFilter%60%20before%20%60UsernamePasswordAuthenticationFilter%60",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "c587b5",
+        "hash": "0ee52ea1",
+        "encoded": "-%20Configure%20in-memory%20users%20with%20BCrypt-encoded%20passwords",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "c587b5",
+        "hash": "596d8e4e",
+        "encoded": "-%20Set%20up%20CORS%20for%20React%20frontend",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "c587b5",
+        "hash": "bc906bb0",
+        "encoded": "-%20Configure%20custom%20401/403%20error%20responses",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "c587b5",
+        "hash": "90536a6e",
+        "encoded": "-%20Keep%20stateless%20session%20management",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "c587b5",
+        "hash": "b4aeb987",
+        "encoded": "###%20Step%204:%20JWT%20Service",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "c587b5",
+        "hash": "351575c0",
+        "encoded": "%60JwtService.java%60%20handles:",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "c587b5",
+        "hash": "0c703342",
+        "encoded": "-%20Token%20generation%20with%20username%20(sub)%20and%20role%20claims",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "c587b5",
+        "hash": "aab64aba",
+        "encoded": "-%20Token%20validation%20(signature%20+%20expiration)",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "c587b5",
+        "hash": "82faf867",
+        "encoded": "-%20Username%20and%20role%20extraction%20from%20tokens",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "c587b5",
+        "hash": "732e6b22",
+        "encoded": "-%20HMAC-SHA256%20signing",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "c587b5",
+        "hash": "7e8a4be7",
+        "encoded": "###%20Step%205:%20JWT%20Authentication%20Filter",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "c587b5",
+        "hash": "8b01f8e2",
+        "encoded": "%60JwtAuthenticationFilter.java%60:",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "c587b5",
+        "hash": "d0aba1dc",
+        "encoded": "-%20Extends%20%60OncePerRequestFilter%60",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "c587b5",
+        "hash": "7504221c",
+        "encoded": "-%20Extracts%20Bearer%20token%20from%20Authorization%20header",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "c587b5",
+        "hash": "d4f8c32f",
+        "encoded": "-%20Validates%20token%20and%20sets%20Spring%20Security%20authentication%20context",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "c587b5",
+        "hash": "23349742",
+        "encoded": "-%20Adds%20%60ROLE_%60%20prefix%20for%20Spring%20Security's%20%60hasRole()%60%20checks",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "c587b5",
+        "hash": "7f024128",
+        "encoded": "###%20Step%206:%20Auth%20Controller",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "c587b5",
+        "hash": "cdcd94b1",
+        "encoded": "%60AuthController.java%60:",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "c587b5",
+        "hash": "21eb6c8e",
+        "encoded": "-%20%60POST%20/api/v1/auth/login%60%20%E2%80%94%20public%20endpoint",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "c587b5",
+        "hash": "d9fe84fd",
+        "encoded": "-%20Validates%20credentials%20via%20%60AuthenticationManager%60",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "c587b5",
+        "hash": "cf11abba",
+        "encoded": "-%20Returns%20JWT%20token,%20username,%20and%20role",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "c587b5",
+        "hash": "e6fbae5e",
+        "encoded": "-%20Returns%20401%20for%20invalid%20credentials",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "c587b5",
+        "hash": "cd324f23",
+        "encoded": "###%20Step%207:%20Secure%20Existing%20Controllers",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "c587b5",
+        "hash": "8a46a896",
+        "encoded": "%60TransportController.java%60:",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "c587b5",
+        "hash": "6a2c19a5",
+        "encoded": "-%20Added%20%60@PreAuthorize(%22hasAnyRole('VIEWER','OPERATOR','ADMIN')%22)%60%20at%20class%20level",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "c587b5",
+        "hash": "fbba2c5e",
+        "encoded": "%60CacheController.java%60:",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "c587b5",
+        "hash": "cce62745",
+        "encoded": "-%20%60GET%20/stats%60%20%E2%80%94%20%60@PreAuthorize(%22hasAnyRole('OPERATOR','ADMIN')%22)%60",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "c587b5",
+        "hash": "b047ef82",
+        "encoded": "-%20%60POST%20/clear%60%20%E2%80%94%20%60@PreAuthorize(%22hasRole('ADMIN')%22)%60",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "c587b5",
+        "hash": "b8d46e63",
+        "encoded": "-%20%60DELETE%20/%60%20%E2%80%94%20%60@PreAuthorize(%22hasRole('ADMIN')%22)%60",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "c587b5",
+        "hash": "9a5aed7c",
+        "encoded": "###%20Step%208:%20Frontend%20Auth%20Context",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "c587b5",
+        "hash": "e10e348b",
+        "encoded": "%60AuthContext.js%60%20+%20%60useAuth.js%60:",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "c587b5",
+        "hash": "db675105",
+        "encoded": "-%20Manages%20token,%20username,%20role%20in%20React%20context",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "c587b5",
+        "hash": "8c859684",
+        "encoded": "-%20Persists%20to%20localStorage",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "c587b5",
+        "hash": "8727f807",
+        "encoded": "-%20Provides%20%60login()%60,%20%60logout()%60,%20%60hasRole()%60,%20%60hasAnyRole()%60",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "c587b5",
+        "hash": "c6b2a187",
+        "encoded": "-%20Multi-tab%20sync%20via%20storage%20events",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "c587b5",
+        "hash": "521c07ed",
+        "encoded": "###%20Step%209:%20Frontend%20Login%20Page",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "c587b5",
+        "hash": "ee432b8d",
+        "encoded": "%60Login.jsx%60:",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "c587b5",
+        "hash": "4fdf3ca4",
+        "encoded": "-%20Username/password%20form",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "c587b5",
+        "hash": "c0c0111a",
+        "encoded": "-%20Calls%20%60loginUser()%60%20API",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "c587b5",
+        "hash": "461ae992",
+        "encoded": "-%20Stores%20auth%20data%20via%20%60AuthContext.login()%60",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "c587b5",
+        "hash": "be1cf233",
+        "encoded": "-%20Shows%20demo%20credentials",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "c587b5",
+        "hash": "6cf8f542",
+        "encoded": "-%20Handles%20error%20states",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "c587b5",
+        "hash": "9822a632",
+        "encoded": "###%20Step%2010:%20API%20Service%20Updates",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "c587b5",
+        "hash": "d9cf8440",
+        "encoded": "%60apiService.js%60:",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "c587b5",
+        "hash": "f92dc0fa",
+        "encoded": "-%20%60getAuthHeaders()%60%20%E2%80%94%20builds%20%60Authorization:%20Bearer%20%3Ctoken%3E%60%20header",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "c587b5",
+        "hash": "4ff5ace2",
+        "encoded": "-%20All%20%60apiFetch()%60%20calls%20automatically%20include%20Bearer%20token",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "c587b5",
+        "hash": "fe25bb6b",
+        "encoded": "-%20%60loginUser()%60%20%E2%80%94%20new%20function%20for%20authentication%20(no%20Bearer%20token)",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "c587b5",
+        "hash": "22e897f0",
+        "encoded": "-%20401%20responses%20clear%20localStorage%20auth%20data",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "c587b5",
+        "hash": "6fd22008",
+        "encoded": "-%20403%20responses%20show%20%22Access%20denied%22%20message",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "c587b5",
+        "hash": "ad516f85",
+        "encoded": "-%20%60clearCache()%60%20updated%20to%20use%20%60POST%20/api/v1/cache/clear%60",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "c587b5",
+        "hash": "86ed8822",
+        "encoded": "###%20Step%2011:%20App%20Integration",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "c587b5",
+        "hash": "42b9eb0d",
+        "encoded": "%60App.jsx%60:",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "c587b5",
+        "hash": "b4e7933d",
+        "encoded": "-%20Shows%20%60Login%60%20component%20when%20not%20authenticated",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "c587b5",
+        "hash": "01cbdcd7",
+        "encoded": "-%20Displays%20username%20and%20role%20badge%20in%20header",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "c587b5",
+        "hash": "3a1e16d4",
+        "encoded": "-%20Sign%20Out%20button%20in%20header",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "c587b5",
+        "hash": "ecf90976",
+        "encoded": "-%20Admin%20Panel%20tab%20visible%20only%20to%20OPERATOR%20and%20ADMIN%20roles",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "c587b5",
+        "hash": "78271612",
+        "encoded": "%60index.js%60:",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "c587b5",
+        "hash": "4c381d7d",
+        "encoded": "-%20Wraps%20%60%3CApp%20/%3E%60%20with%20%60%3CAuthProvider%3E%60",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "c587b5",
+        "hash": "e675c4b7",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "c587b5",
+        "hash": "556a49e6",
+        "encoded": "##%20Roles%20&%20Permissions%20Matrix",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "c587b5",
+        "hash": "fb8422e7",
+        "encoded": "%7C%20Feature%20%7C%20VIEWER%20%7C%20OPERATOR%20%7C%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "c587b5",
+        "hash": "2a37a132",
+        "encoded": "%7C---%7C---%7C---%7C---%7C",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "c587b5",
+        "hash": "21bda759",
+        "encoded": "%7C%20Transport%20Search%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "c587b5",
+        "hash": "38915b73",
+        "encoded": "%7C%20Arrival%20Board%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "c587b5",
+        "hash": "11449081",
+        "encoded": "%7C%20Vehicle%20Map%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "c587b5",
+        "hash": "08120e96",
+        "encoded": "%7C%20Crowding%20Info%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "c587b5",
+        "hash": "a77577e1",
+        "encoded": "%7C%20Route%20Planner%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "c587b5",
+        "hash": "2ccde0bb",
+        "encoded": "%7C%20Service%20Alerts%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "c587b5",
+        "hash": "499ff37c",
+        "encoded": "%7C%20Cache%20Statistics%20%7C%20%E2%9C%97%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "c587b5",
+        "hash": "2324008f",
+        "encoded": "%7C%20Clear%20Cache%20%7C%20%E2%9C%97%20%7C%20%E2%9C%97%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "c587b5",
+        "hash": "c7f88f67",
+        "encoded": "%7C%20Admin%20Panel%20Tab%20%7C%20%E2%9C%97%20%7C%20%E2%9C%93%20%7C%20%E2%9C%93%20%7C",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "c587b5",
+        "hash": "dba4fa4a",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "c587b5",
+        "hash": "30c9299f",
+        "encoded": "##%20API%20Endpoints%20Summary",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "c587b5",
+        "hash": "7c5063d7",
+        "encoded": "%7C%20Method%20%7C%20Endpoint%20%7C%20Auth%20%7C%20Roles%20%7C",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "c587b5",
+        "hash": "42c1738b",
+        "encoded": "%7C---%7C---%7C---%7C---%7C",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "c587b5",
+        "hash": "5d96a764",
+        "encoded": "%7C%20POST%20%7C%20%60/api/v1/auth/login%60%20%7C%20Public%20%7C%20None%20%7C",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "c587b5",
+        "hash": "fa2004c9",
+        "encoded": "%7C%20GET%20%7C%20%60/api/v1/transport%60%20%7C%20Bearer%20JWT%20%7C%20VIEWER,%20OPERATOR,%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "c587b5",
+        "hash": "7135ca64",
+        "encoded": "%7C%20GET%20%7C%20%60/api/v1/transport/vehicles%60%20%7C%20Bearer%20JWT%20%7C%20VIEWER,%20OPERATOR,%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "c587b5",
+        "hash": "1631ffc3",
+        "encoded": "%7C%20GET%20%7C%20%60/api/v1/transport/arrivals%60%20%7C%20Bearer%20JWT%20%7C%20VIEWER,%20OPERATOR,%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "c587b5",
+        "hash": "37d60aec",
+        "encoded": "%7C%20GET%20%7C%20%60/api/v1/transport/alerts%60%20%7C%20Bearer%20JWT%20%7C%20VIEWER,%20OPERATOR,%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "c587b5",
+        "hash": "11b26973",
+        "encoded": "%7C%20GET%20%7C%20%60/api/v1/transport/plan%60%20%7C%20Bearer%20JWT%20%7C%20VIEWER,%20OPERATOR,%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "c587b5",
+        "hash": "ca199ea9",
+        "encoded": "%7C%20GET%20%7C%20%60/api/v1/transport/crowding%60%20%7C%20Bearer%20JWT%20%7C%20VIEWER,%20OPERATOR,%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "c587b5",
+        "hash": "ee0499da",
+        "encoded": "%7C%20GET%20%7C%20%60/api/v1/cache/stats%60%20%7C%20Bearer%20JWT%20%7C%20OPERATOR,%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "c587b5",
+        "hash": "029c1fe7",
+        "encoded": "%7C%20POST%20%7C%20%60/api/v1/cache/clear%60%20%7C%20Bearer%20JWT%20%7C%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "c587b5",
+        "hash": "65825e41",
+        "encoded": "%7C%20DELETE%20%7C%20%60/api/v1/cache%60%20%7C%20Bearer%20JWT%20%7C%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "c587b5",
+        "hash": "b8e06353",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "c587b5",
+        "hash": "8ec0bc4e",
+        "encoded": "##%20Security%20Checklist",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "c587b5",
+        "hash": "03d5da49",
+        "encoded": "-%20%5Bx%5D%20Stateless%20authentication%20(no%20server-side%20sessions)",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "c587b5",
+        "hash": "951b6cd9",
+        "encoded": "-%20%5Bx%5D%20JWT%20expiration:%201%20hour%20(configurable)",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "c587b5",
+        "hash": "c2249d85",
+        "encoded": "-%20%5Bx%5D%20BCrypt%20password%20encoding",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "c587b5",
+        "hash": "83e76725",
+        "encoded": "-%20%5Bx%5D%20CORS%20configured%20for%20React%20frontend",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "c587b5",
+        "hash": "0ac38240",
+        "encoded": "-%20%5Bx%5D%20No%20passwords%20in%20logs%20(LoginRequest.toString()%20sanitized)",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "c587b5",
+        "hash": "88685106",
+        "encoded": "-%20%5Bx%5D%20No%20JWT%20tokens%20in%20logs%20(LoginResponse.toString()%20sanitized)",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "c587b5",
+        "hash": "5d157599",
+        "encoded": "-%20%5Bx%5D%20Custom%20401%20Unauthorized%20response",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "c587b5",
+        "hash": "9a5dcfc4",
+        "encoded": "-%20%5Bx%5D%20Custom%20403%20Forbidden%20response",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "c587b5",
+        "hash": "46220a13",
+        "encoded": "-%20%5Bx%5D%20HMAC-SHA256%20token%20signing",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "c587b5",
+        "hash": "4647d5d8",
+        "encoded": "-%20%5Bx%5D%20Secret%20key%20externalized%20via%20environment%20variable",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "c587b5",
+        "hash": "40aaa82d",
+        "encoded": "-%20%5Bx%5D%20CSRF%20disabled%20(stateless%20API)",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "c587b5",
+        "hash": "16b830f9",
+        "encoded": "-%20%5Bx%5D%20Security%20headers%20(X-Content-Type-Options,%20X-Frame-Options)",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "c587b5",
+        "hash": "b33dad0a",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "c587b5",
+        "hash": "3706e2f2",
+        "encoded": "##%20Postman%20Testing%20Flow",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "c587b5",
+        "hash": "5457faf9",
+        "encoded": "Import%20%60docs/POSTMAN_COLLECTION.json%60%20into%20Postman.",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "c587b5",
+        "hash": "c5111842",
+        "encoded": "###%20Quick%20Test%20Sequence:",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "c587b5",
+        "hash": "118a4090",
+        "encoded": "1.%20**Login%20as%20VIEWER**%20%E2%86%92%20%60POST%20/api/v1/auth/login%60%20with%20%60viewer/viewer123%60",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "c587b5",
+        "hash": "3e0a55ba",
+        "encoded": "2.%20**Copy%20JWT**%20from%20response%20%60token%60%20field",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "c587b5",
+        "hash": "0f3e6109",
+        "encoded": "3.%20**Call%20transport%20API**%20%E2%86%92%20%60GET%20/api/v1/transport?city=london%60%20with%20Bearer%20token%20%E2%86%92%20**200%20OK**",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "c587b5",
+        "hash": "0d1c256d",
+        "encoded": "4.%20**Call%20cache%20stats**%20%E2%86%92%20%60GET%20/api/v1/cache/stats%60%20with%20Bearer%20token%20%E2%86%92%20**403%20Forbidden**",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "c587b5",
+        "hash": "6a9063a1",
+        "encoded": "5.%20**Login%20as%20OPERATOR**%20%E2%86%92%20%60POST%20/api/v1/auth/login%60%20with%20%60operator/operator123%60",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "c587b5",
+        "hash": "e264babf",
+        "encoded": "6.%20**Call%20cache%20stats**%20%E2%86%92%20%60GET%20/api/v1/cache/stats%60%20with%20Bearer%20token%20%E2%86%92%20**200%20OK**",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "c587b5",
+        "hash": "062a70ab",
+        "encoded": "7.%20**Call%20cache%20clear**%20%E2%86%92%20%60POST%20/api/v1/cache/clear%60%20with%20Bearer%20token%20%E2%86%92%20**403%20Forbidden**",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "c587b5",
+        "hash": "86126094",
+        "encoded": "8.%20**Login%20as%20ADMIN**%20%E2%86%92%20%60POST%20/api/v1/auth/login%60%20with%20%60admin/admin123%60",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "c587b5",
+        "hash": "7d1415cd",
+        "encoded": "9.%20**Call%20cache%20clear**%20%E2%86%92%20%60POST%20/api/v1/cache/clear%60%20with%20Bearer%20token%20%E2%86%92%20**200%20OK**",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "c587b5",
+        "hash": "3f212036",
+        "encoded": "###%20cURL%20Examples:",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "c587b5",
+        "hash": "288fb020",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "c587b5",
+        "hash": "f6b87a76",
+        "encoded": "#%20Login%20as%20admin",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "c587b5",
+        "hash": "3750d7eb",
+        "encoded": "curl%20-X%20POST%20http://localhost:8080/api/v1/auth/login%20%5C",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "c587b5",
+        "hash": "ec421aa7",
+        "encoded": "-H%20%22Content-Type:%20application/json%22%20%5C",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "c587b5",
+        "hash": "d8295016",
+        "encoded": "-d%20'%7B%22username%22:%22admin%22,%22password%22:%22admin123%22%7D'",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "c587b5",
+        "hash": "c7ba4cae",
+        "encoded": "#%20Use%20the%20returned%20token",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "c587b5",
+        "hash": "9446415f",
+        "encoded": "curl%20http://localhost:8080/api/v1/transport?city=london%20%5C",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "c587b5",
+        "hash": "a7b2b41e",
+        "encoded": "-H%20%22Authorization:%20Bearer%20%3Cpaste-token-here%3E%22",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "c587b5",
+        "hash": "3024cda0",
+        "encoded": "#%20Cache%20stats%20(OPERATOR%20or%20ADMIN)",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "c587b5",
+        "hash": "3ae057e2",
+        "encoded": "curl%20http://localhost:8080/api/v1/cache/stats%20%5C",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "c587b5",
+        "hash": "7a831a1c",
+        "encoded": "-H%20%22Authorization:%20Bearer%20%3Cpaste-token-here%3E%22",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "c587b5",
+        "hash": "421e0898",
+        "encoded": "#%20Clear%20cache%20(ADMIN%20only)",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "c587b5",
+        "hash": "51cbba60",
+        "encoded": "curl%20-X%20POST%20http://localhost:8080/api/v1/cache/clear%20%5C",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "c587b5",
+        "hash": "fa05b80a",
+        "encoded": "-H%20%22Authorization:%20Bearer%20%3Cpaste-token-here%3E%22",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "c587b5",
+        "hash": "65524479",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "c587b5",
+        "hash": "04aa0ef6",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "c587b5",
+        "hash": "7c3c2b7b",
+        "encoded": "##%20Troubleshooting",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "c587b5",
+        "hash": "e9d1fde6",
+        "encoded": "%7C%20Issue%20%7C%20Solution%20%7C",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "c587b5",
+        "hash": "af08a42e",
+        "encoded": "%7C---%7C---%7C",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "c587b5",
+        "hash": "83dded7c",
+        "encoded": "%7C%20401%20on%20all%20requests%20%7C%20Check%20that%20Bearer%20token%20is%20included%20in%20Authorization%20header%20%7C",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "c587b5",
+        "hash": "ef1535e8",
+        "encoded": "%7C%20403%20on%20cache%20stats%20%7C%20Ensure%20you're%20logged%20in%20as%20OPERATOR%20or%20ADMIN%20%7C",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "c587b5",
+        "hash": "a5712e9a",
+        "encoded": "%7C%20CORS%20errors%20%7C%20Verify%20frontend%20runs%20on%20localhost:3000%20%7C",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "c587b5",
+        "hash": "3a53c56f",
+        "encoded": "%7C%20Token%20expired%20%7C%20Re-login%20to%20get%20a%20new%20token%20(1%20hour%20expiry)%20%7C",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "c587b5",
+        "hash": "a32cfee5",
+        "encoded": "%7C%20Build%20fails%20%7C%20Run%20%60./gradlew%20clean%20build%60%20to%20refresh%20dependencies%20%7C",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "c587b5",
+        "hash": "b925d5b6",
+        "encoded": "%7C%20Frontend%20auth%20loop%20%7C%20Clear%20localStorage%20and%20refresh%20the%20page%20%7C",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

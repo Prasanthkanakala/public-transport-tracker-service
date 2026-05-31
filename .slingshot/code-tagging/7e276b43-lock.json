@@ -1,0 +1,108 @@
+{
+  "frontend\\src\\index.js": {
+    "filename": "index.js",
+    "path": "frontend\\src\\index.js",
+    "version": "1.2",
+    "contextFile": "7e276b43-context.json",
+    "chunks": {
+      "a9811d": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780213082,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "3e00facf"
+        },
+        "hash": "0a2c226e",
+        "messageId": "system_31565bb0-5cc2-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 1:08:02 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "a9811d",
+        "hash": "98ac06df",
+        "encoded": "import%20React%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "a9811d",
+        "hash": "74207d9b",
+        "encoded": "import%20ReactDOM%20from%20'react-dom/client';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "a9811d",
+        "hash": "b00a9eb4",
+        "encoded": "import%20'./index.css';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "a9811d",
+        "hash": "253c05be",
+        "encoded": "import%20App%20from%20'./App';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "a9811d",
+        "hash": "306666ed",
+        "encoded": "import%20%7B%20AuthProvider%20%7D%20from%20'./context/AuthContext';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "a9811d",
+        "hash": "339e924c",
+        "encoded": "const%20root%20=%20ReactDOM.createRoot(document.getElementById('root'));",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "a9811d",
+        "hash": "06ef0853",
+        "encoded": "root.render(",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "a9811d",
+        "hash": "2fe7c3d4",
+        "encoded": "%3CReact.StrictMode%3E",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "a9811d",
+        "hash": "d2bb0f76",
+        "encoded": "%3CAuthProvider%3E",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "a9811d",
+        "hash": "6f1ab356",
+        "encoded": "%3CApp%20/%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "a9811d",
+        "hash": "33294cd8",
+        "encoded": "%3C/AuthProvider%3E",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "a9811d",
+        "hash": "04b5d2a7",
+        "encoded": "%3C/React.StrictMode%3E",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "a9811d",
+        "hash": "15d9ead7",
+        "encoded": ");",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
