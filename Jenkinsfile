@@ -101,7 +101,7 @@ pipeline {
                 dir('backend') {
                     sh '''
                         chmod +x gradlew 2>/dev/null || true
-                        ./gradlew clean test bootJar --no-daemon --info
+                        gradle clean test bootJar --no-daemon --info
                     '''
                 }
             }
