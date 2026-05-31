@@ -70,7 +70,11 @@ pipeline {
         // timestamps()    – Requires 'Timestamper' plugin (not installed)
         // ansiColor('xterm') – Requires 'AnsiColor' plugin (not installed)
     }
-
+    
+    tools {
+        gradle 'Gradle-8.14'
+    }
+    
     stages {
 
         // ════════════════════════════════════════════════════════════════

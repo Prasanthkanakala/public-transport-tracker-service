@@ -528,129 +528,105 @@
           "7392a9"
         ]
       },
-      "73": {
-        "chunkId": "7392a9",
-        "hash": "93927063",
-        "encoded": "stages%20%7B",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "75": {
-        "chunkId": "7392a9",
-        "hash": "eea32c07",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "76": {
-        "chunkId": "7392a9",
-        "hash": "8e1f9546",
-        "encoded": "//%20%20Stage%201:%20Checkout",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
       "77": {
         "chunkId": "7392a9",
-        "hash": "a67431fc",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "78": {
-        "chunkId": "7392a9",
-        "hash": "fe4e8272",
-        "encoded": "stage('Checkout')%20%7B",
+        "hash": "c24787b3",
+        "encoded": "stages%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "79": {
         "chunkId": "7392a9",
-        "hash": "767c9c7f",
-        "encoded": "steps%20%7B",
+        "hash": "3adeedd0",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "80": {
         "chunkId": "7392a9",
-        "hash": "55ef5606",
-        "encoded": "checkout%20scm",
+        "hash": "51ec372d",
+        "encoded": "//%20%20Stage%201:%20Checkout",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "81": {
         "chunkId": "7392a9",
-        "hash": "68462892",
-        "encoded": "script%20%7B",
+        "hash": "4f57c7fe",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "82": {
         "chunkId": "7392a9",
-        "hash": "3a8a3a7a",
-        "encoded": "env.GIT_COMMIT_SHORT%20=%20sh(script:%20'git%20rev-parse%20--short%20HEAD',%20returnStdout:%20true).trim()",
+        "hash": "cee7711f",
+        "encoded": "stage('Checkout')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "83": {
         "chunkId": "7392a9",
-        "hash": "ddc9fb52",
-        "encoded": "env.BUILD_TAG_CUSTOM%20=%20%22$%7Benv.BRANCH_NAME%7D-$%7Benv.GIT_COMMIT_SHORT%7D-$%7Benv.BUILD_NUMBER%7D%22",
+        "hash": "8e045651",
+        "encoded": "steps%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "84": {
         "chunkId": "7392a9",
-        "hash": "0151a89c",
-        "encoded": "//%20Determine%20target%20environment",
+        "hash": "4747f0f0",
+        "encoded": "checkout%20scm",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "85": {
         "chunkId": "7392a9",
-        "hash": "49d6ca92",
-        "encoded": "env.DEPLOY_ENV%20=%20(env.BRANCH_NAME%20==%20'main')%20?%20'prod'%20:%20'dev'",
+        "hash": "7a320363",
+        "encoded": "script%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "86": {
         "chunkId": "7392a9",
-        "hash": "9c0e6ebc",
-        "encoded": "%7D",
+        "hash": "e6166e2e",
+        "encoded": "env.GIT_COMMIT_SHORT%20=%20sh(script:%20'git%20rev-parse%20--short%20HEAD',%20returnStdout:%20true).trim()",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "87": {
         "chunkId": "7392a9",
-        "hash": "8c05311f",
-        "encoded": "echo%20%22%5Cu001B%5B32m%E2%9C%94%20Building%20commit:%20$%7Benv.BUILD_TAG_CUSTOM%7D%20%E2%86%92%20Environment:%20$%7Benv.DEPLOY_ENV%7D%5Cu001B%5B0m%22",
+        "hash": "6f34bb83",
+        "encoded": "env.BUILD_TAG_CUSTOM%20=%20%22$%7Benv.BRANCH_NAME%7D-$%7Benv.GIT_COMMIT_SHORT%7D-$%7Benv.BUILD_NUMBER%7D%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "88": {
         "chunkId": "7392a9",
-        "hash": "726efa75",
-        "encoded": "%7D",
+        "hash": "b0599bbd",
+        "encoded": "//%20Determine%20target%20environment",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "89": {
         "chunkId": "7392a9",
-        "hash": "9b477039",
+        "hash": "507b6875",
+        "encoded": "env.DEPLOY_ENV%20=%20(env.BRANCH_NAME%20==%20'main')%20?%20'prod'%20:%20'dev'",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "90": {
+        "chunkId": "7392a9",
+        "hash": "1a9d363f",
         "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
@@ -658,157 +634,149 @@
       },
       "91": {
         "chunkId": "7392a9",
-        "hash": "0e9fa9c2",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
+        "hash": "47ca606c",
+        "encoded": "echo%20%22%5Cu001B%5B32m%E2%9C%94%20Building%20commit:%20$%7Benv.BUILD_TAG_CUSTOM%7D%20%E2%86%92%20Environment:%20$%7Benv.DEPLOY_ENV%7D%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "92": {
         "chunkId": "7392a9",
-        "hash": "746298ed",
-        "encoded": "//%20%20Stage%202:%20Backend%20%E2%80%93%20Test%20&%20Build",
+        "hash": "06a855c2",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "93": {
         "chunkId": "7392a9",
-        "hash": "11184dad",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "94": {
-        "chunkId": "7392a9",
-        "hash": "6cad3c53",
-        "encoded": "stage('Backend%20%E2%80%93%20Test%20&%20Build')%20%7B",
+        "hash": "94b19f35",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "95": {
-        "chunkId": "a5a9f6",
-        "hash": "4e67fda5",
-        "encoded": "steps%20%7B",
+        "chunkId": "7392a9",
+        "hash": "65762735",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "96": {
-        "chunkId": "a5a9f6",
-        "hash": "d943cf47",
-        "encoded": "dir('backend')%20%7B",
+        "chunkId": "7392a9",
+        "hash": "1a5034ab",
+        "encoded": "//%20%20Stage%202:%20Backend%20%E2%80%93%20Test%20&%20Build",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "97": {
-        "chunkId": "a5a9f6",
-        "hash": "2917d2ea",
-        "encoded": "sh%20'''",
+        "chunkId": "7392a9",
+        "hash": "ae27b6fe",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "98": {
+        "chunkId": "7392a9",
+        "hash": "d6f0bc5d",
+        "encoded": "stage('Backend%20%E2%80%93%20Test%20&%20Build')%20%7B",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "99": {
         "chunkId": "a5a9f6",
-        "hash": "2c11378e",
-        "encoded": "chmod%20+x%20gradlew%202%3E/dev/null%20%7C%7C%20true",
+        "hash": "6e00d0ab",
+        "encoded": "steps%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "100": {
         "chunkId": "a5a9f6",
-        "hash": "83862ce9",
-        "encoded": "'''",
+        "hash": "8e24a53e",
+        "encoded": "dir('backend')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "101": {
         "chunkId": "a5a9f6",
-        "hash": "6bf91891",
-        "encoded": "%7D",
+        "hash": "c2331cc9",
+        "encoded": "sh%20'''",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "102": {
         "chunkId": "a5a9f6",
-        "hash": "79409de0",
-        "encoded": "%7D",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "103": {
-        "chunkId": "a5a9f6",
-        "hash": "0f3d8a40",
-        "encoded": "post%20%7B",
+        "hash": "3cfd9227",
+        "encoded": "chmod%20+x%20gradlew%202%3E/dev/null%20%7C%7C%20true",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "104": {
         "chunkId": "a5a9f6",
-        "hash": "74839783",
-        "encoded": "always%20%7B",
+        "hash": "f0f3dd0f",
+        "encoded": "'''",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "105": {
         "chunkId": "a5a9f6",
-        "hash": "e6f53471",
-        "encoded": "//%20junit%20requires%20the%20'JUnit'%20plugin%20(not%20installed)",
-        "prevChunkIds": []
+        "hash": "c251d1dd",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
       },
       "106": {
         "chunkId": "a5a9f6",
-        "hash": "63ec6ff1",
-        "encoded": "//%20Using%20archiveArtifacts%20as%20a%20fallback%20to%20preserve%20test%20results",
-        "prevChunkIds": []
+        "hash": "5a59cee7",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
       },
       "107": {
         "chunkId": "a5a9f6",
-        "hash": "d7598590",
-        "encoded": "archiveArtifacts%20artifacts:%20'backend/build/test-results/**/*.xml',%20allowEmptyArchive:%20true",
-        "prevChunkIds": []
+        "hash": "699cfa8f",
+        "encoded": "post%20%7B",
+        "prevChunkIds": [
+          "7392a9"
+        ]
       },
       "108": {
         "chunkId": "a5a9f6",
-        "hash": "c146bd79",
-        "encoded": "%7D",
+        "hash": "769b8f98",
+        "encoded": "always%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "109": {
         "chunkId": "a5a9f6",
-        "hash": "fc4be412",
-        "encoded": "success%20%7B",
-        "prevChunkIds": [
-          "7392a9"
-        ]
+        "hash": "60ce901b",
+        "encoded": "//%20junit%20requires%20the%20'JUnit'%20plugin%20(not%20installed)",
+        "prevChunkIds": []
       },
       "110": {
         "chunkId": "a5a9f6",
-        "hash": "cd1b0988",
-        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Backend%20tests%20passed%20and%20JAR%20built%20successfully%5Cu001B%5B0m'",
-        "prevChunkIds": [
-          "7392a9"
-        ]
+        "hash": "5e8ad057",
+        "encoded": "//%20Using%20archiveArtifacts%20as%20a%20fallback%20to%20preserve%20test%20results",
+        "prevChunkIds": []
       },
       "111": {
         "chunkId": "a5a9f6",
-        "hash": "367981c3",
-        "encoded": "%7D",
-        "prevChunkIds": [
-          "7392a9"
-        ]
+        "hash": "8144f38a",
+        "encoded": "archiveArtifacts%20artifacts:%20'backend/build/test-results/**/*.xml',%20allowEmptyArchive:%20true",
+        "prevChunkIds": []
       },
       "112": {
         "chunkId": "a5a9f6",
@@ -819,185 +787,185 @@
         ]
       },
       "113": {
-        "chunkId": "7392a9",
-        "hash": "fd8e1155",
-        "encoded": "%7D",
+        "chunkId": "a5a9f6",
+        "hash": "53bcabdc",
+        "encoded": "success%20%7B",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "114": {
+        "chunkId": "a5a9f6",
+        "hash": "3c179683",
+        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Backend%20tests%20passed%20and%20JAR%20built%20successfully%5Cu001B%5B0m'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "115": {
-        "chunkId": "7392a9",
-        "hash": "6c7643a7",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
+        "chunkId": "a5a9f6",
+        "hash": "a9314f3f",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "116": {
-        "chunkId": "7392a9",
-        "hash": "9f88011b",
-        "encoded": "//%20%20Stage%203:%20Frontend%20%E2%80%93%20Test%20&%20Build",
+        "chunkId": "a5a9f6",
+        "hash": "2de22ffd",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "117": {
         "chunkId": "7392a9",
-        "hash": "7ea97577",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "118": {
-        "chunkId": "7392a9",
-        "hash": "fa07ad26",
-        "encoded": "stage('Frontend%20%E2%80%93%20Test%20&%20Build')%20%7B",
+        "hash": "056477bc",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "119": {
         "chunkId": "7392a9",
-        "hash": "6685e953",
-        "encoded": "agent%20%7B",
+        "hash": "27668ba6",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "120": {
         "chunkId": "7392a9",
-        "hash": "f803133c",
-        "encoded": "docker%20%7B",
+        "hash": "8aa1d008",
+        "encoded": "//%20%20Stage%203:%20Frontend%20%E2%80%93%20Test%20&%20Build",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "121": {
         "chunkId": "7392a9",
-        "hash": "de708ec8",
-        "encoded": "image%20'node:20-alpine'",
+        "hash": "4465336a",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "122": {
         "chunkId": "7392a9",
-        "hash": "9d1ad239",
-        "encoded": "reuseNode%20true",
+        "hash": "30197404",
+        "encoded": "stage('Frontend%20%E2%80%93%20Test%20&%20Build')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "123": {
         "chunkId": "7392a9",
-        "hash": "2bf02615",
-        "encoded": "%7D",
+        "hash": "5e914de5",
+        "encoded": "agent%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "124": {
         "chunkId": "7392a9",
-        "hash": "331ddc52",
-        "encoded": "%7D",
+        "hash": "391f1ff1",
+        "encoded": "docker%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "125": {
         "chunkId": "7392a9",
-        "hash": "3388c936",
-        "encoded": "steps%20%7B",
+        "hash": "54fe4522",
+        "encoded": "image%20'node:20-alpine'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "126": {
         "chunkId": "7392a9",
-        "hash": "c1fe7266",
-        "encoded": "dir('frontend')%20%7B",
+        "hash": "dd4bc2ff",
+        "encoded": "reuseNode%20true",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "127": {
         "chunkId": "7392a9",
-        "hash": "94cb6374",
-        "encoded": "sh%20'''",
+        "hash": "b945986d",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "128": {
         "chunkId": "7392a9",
-        "hash": "cd3c79f8",
-        "encoded": "npm%20ci%20--silent",
+        "hash": "74f7c40c",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "129": {
         "chunkId": "7392a9",
-        "hash": "192d0d2a",
-        "encoded": "npm%20test%20--%20--watchAll=false%20--coverage%20--passWithNoTests",
+        "hash": "59a7b0f9",
+        "encoded": "steps%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "130": {
         "chunkId": "7392a9",
-        "hash": "4082a465",
-        "encoded": "npm%20run%20build",
+        "hash": "87d93b95",
+        "encoded": "dir('frontend')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "131": {
         "chunkId": "7392a9",
-        "hash": "95375ed0",
-        "encoded": "'''",
+        "hash": "05be5d49",
+        "encoded": "sh%20'''",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "132": {
         "chunkId": "7392a9",
-        "hash": "59e86bfa",
-        "encoded": "%7D",
+        "hash": "3be93f44",
+        "encoded": "npm%20ci%20--silent",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "133": {
         "chunkId": "7392a9",
-        "hash": "7ebeb133",
-        "encoded": "%7D",
+        "hash": "a4af79e5",
+        "encoded": "npm%20test%20--%20--watchAll=false%20--coverage%20--passWithNoTests",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "134": {
         "chunkId": "7392a9",
-        "hash": "3268c61a",
-        "encoded": "post%20%7B",
+        "hash": "8378cf9a",
+        "encoded": "npm%20run%20build",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "135": {
         "chunkId": "7392a9",
-        "hash": "f1455f8f",
-        "encoded": "success%20%7B",
+        "hash": "fc5b46b7",
+        "encoded": "'''",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "136": {
         "chunkId": "7392a9",
-        "hash": "4aa33aca",
-        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Frontend%20tests%20passed%20and%20build%20completed%5Cu001B%5B0m'",
+        "hash": "dc65d51e",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
@@ -1012,151 +980,159 @@
       },
       "138": {
         "chunkId": "7392a9",
-        "hash": "a91910dd",
-        "encoded": "%7D",
+        "hash": "4b690798",
+        "encoded": "post%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "139": {
         "chunkId": "7392a9",
-        "hash": "8e724f24",
-        "encoded": "%7D",
+        "hash": "fdc09300",
+        "encoded": "success%20%7B",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "140": {
+        "chunkId": "7392a9",
+        "hash": "c3b8a3f7",
+        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Frontend%20tests%20passed%20and%20build%20completed%5Cu001B%5B0m'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "141": {
         "chunkId": "7392a9",
-        "hash": "7ecd8fd6",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
+        "hash": "4e2389e2",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "142": {
         "chunkId": "7392a9",
-        "hash": "fce83d3a",
-        "encoded": "//%20%20Stage%204:%20Authenticate%20with%20GCP%20&%20GAR",
+        "hash": "1b2fde43",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "143": {
         "chunkId": "7392a9",
-        "hash": "8bb37e45",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "144": {
-        "chunkId": "7392a9",
-        "hash": "79e71be1",
-        "encoded": "stage('GCP%20%E2%80%93%20Authenticate')%20%7B",
+        "hash": "52c5d6be",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "145": {
         "chunkId": "7392a9",
-        "hash": "f9784191",
-        "encoded": "steps%20%7B",
+        "hash": "e21e183c",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "146": {
         "chunkId": "7392a9",
-        "hash": "9df4bcb4",
-        "encoded": "script%20%7B",
+        "hash": "3e75ba78",
+        "encoded": "//%20%20Stage%204:%20Authenticate%20with%20GCP%20&%20GAR",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "147": {
         "chunkId": "7392a9",
-        "hash": "4b146692",
-        "encoded": "sh%20%22%22%22",
+        "hash": "36f45250",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "148": {
         "chunkId": "7392a9",
-        "hash": "ce66a521",
-        "encoded": "#%20Authenticate%20with%20GCP%20using%20service%20account%20key",
+        "hash": "57908434",
+        "encoded": "stage('GCP%20%E2%80%93%20Authenticate')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "149": {
         "chunkId": "7392a9",
-        "hash": "16d2a1f0",
-        "encoded": "gcloud%20auth%20activate-service-account%20--key-file=%5C$%7BGCP_SA_KEY%7D",
+        "hash": "06990a33",
+        "encoded": "steps%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "150": {
         "chunkId": "7392a9",
-        "hash": "b251b99d",
-        "encoded": "gcloud%20config%20set%20project%20$%7BGCP_PROJECT_ID%7D",
+        "hash": "e1f59f83",
+        "encoded": "script%20%7B",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "151": {
+        "chunkId": "7392a9",
+        "hash": "35505b8c",
+        "encoded": "sh%20%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "152": {
         "chunkId": "7392a9",
-        "hash": "8319a471",
-        "encoded": "#%20Configure%20Docker%20to%20authenticate%20with%20GAR",
+        "hash": "0586669b",
+        "encoded": "#%20Authenticate%20with%20GCP%20using%20service%20account%20key",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "153": {
         "chunkId": "7392a9",
-        "hash": "a636f0ef",
-        "encoded": "gcloud%20auth%20configure-docker%20$%7BGAR_REGION%7D-docker.pkg.dev%20--quiet",
+        "hash": "709d408c",
+        "encoded": "gcloud%20auth%20activate-service-account%20--key-file=%5C$%7BGCP_SA_KEY%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "154": {
         "chunkId": "7392a9",
-        "hash": "ac5dcc3d",
-        "encoded": "%22%22%22",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "155": {
-        "chunkId": "7392a9",
-        "hash": "0b3cc65a",
-        "encoded": "%7D",
+        "hash": "5a37a3c0",
+        "encoded": "gcloud%20config%20set%20project%20$%7BGCP_PROJECT_ID%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "156": {
         "chunkId": "7392a9",
-        "hash": "0f2a1734",
-        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Authenticated%20with%20GCP%20and%20configured%20Docker%20for%20GAR%5Cu001B%5B0m'",
+        "hash": "5f84cb36",
+        "encoded": "#%20Configure%20Docker%20to%20authenticate%20with%20GAR",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "157": {
         "chunkId": "7392a9",
-        "hash": "d8893271",
-        "encoded": "%7D",
+        "hash": "4dc5daa1",
+        "encoded": "gcloud%20auth%20configure-docker%20$%7BGAR_REGION%7D-docker.pkg.dev%20--quiet",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "158": {
         "chunkId": "7392a9",
-        "hash": "b7a756fe",
+        "hash": "cddb9fd4",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "159": {
+        "chunkId": "7392a9",
+        "hash": "53cff946",
         "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
@@ -1164,247 +1140,247 @@
       },
       "160": {
         "chunkId": "7392a9",
-        "hash": "bfa7a8fe",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
+        "hash": "290c4b8c",
+        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Authenticated%20with%20GCP%20and%20configured%20Docker%20for%20GAR%5Cu001B%5B0m'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "161": {
         "chunkId": "7392a9",
-        "hash": "9f35cf0c",
-        "encoded": "//%20%20Stage%205:%20Docker%20%E2%80%93%20Build%20Images",
+        "hash": "e9785117",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "162": {
         "chunkId": "7392a9",
-        "hash": "9bd6c95c",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "163": {
-        "chunkId": "7392a9",
-        "hash": "3f65cc3d",
-        "encoded": "stage('Docker%20%E2%80%93%20Build%20Images')%20%7B",
+        "hash": "9f3096f5",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "164": {
         "chunkId": "7392a9",
-        "hash": "d0b50156",
-        "encoded": "steps%20%7B",
+        "hash": "5020a13c",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "165": {
         "chunkId": "7392a9",
-        "hash": "08bc3935",
-        "encoded": "script%20%7B",
+        "hash": "8be25c25",
+        "encoded": "//%20%20Stage%205:%20Docker%20%E2%80%93%20Build%20Images",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "166": {
         "chunkId": "7392a9",
-        "hash": "ed6bc0ec",
-        "encoded": "echo%20%22Building%20Docker%20images%20with%20tag:%20$%7BBUILD_TAG_CUSTOM%7D%22",
+        "hash": "31da41e1",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "167": {
+        "chunkId": "7392a9",
+        "hash": "5d8a2605",
+        "encoded": "stage('Docker%20%E2%80%93%20Build%20Images')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "168": {
         "chunkId": "7392a9",
-        "hash": "105bda04",
-        "encoded": "//%20Build%20backend%20image",
+        "hash": "f1ae261a",
+        "encoded": "steps%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "169": {
         "chunkId": "7392a9",
-        "hash": "a87ed93e",
-        "encoded": "sh%20%22%22%22",
+        "hash": "196cfe78",
+        "encoded": "script%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "170": {
         "chunkId": "7392a9",
-        "hash": "b2289c35",
-        "encoded": "docker%20build%20%5C%5C",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "171": {
-        "chunkId": "7392a9",
-        "hash": "2fd4efb4",
-        "encoded": "--label%20%22git.commit=$%7BGIT_COMMIT_SHORT%7D%22%20%5C%5C",
+        "hash": "1c3e3234",
+        "encoded": "echo%20%22Building%20Docker%20images%20with%20tag:%20$%7BBUILD_TAG_CUSTOM%7D%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "172": {
         "chunkId": "7392a9",
-        "hash": "9f037701",
-        "encoded": "--label%20%22build.number=$%7BBUILD_NUMBER%7D%22%20%5C%5C",
+        "hash": "c585d42e",
+        "encoded": "//%20Build%20backend%20image",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "173": {
         "chunkId": "7392a9",
-        "hash": "afab822d",
-        "encoded": "--label%20%22build.branch=$%7BBRANCH_NAME%7D%22%20%5C%5C",
+        "hash": "7e0930e3",
+        "encoded": "sh%20%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "174": {
         "chunkId": "7392a9",
-        "hash": "2aa086b8",
-        "encoded": "-t%20$%7BBACKEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D%20%5C%5C",
+        "hash": "1d2d3f8a",
+        "encoded": "docker%20build%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "175": {
         "chunkId": "7392a9",
-        "hash": "89029eba",
-        "encoded": "-t%20$%7BBACKEND_IMAGE%7D:$%7BDEPLOY_ENV%7D-latest%20%5C%5C",
+        "hash": "551220ef",
+        "encoded": "--label%20%22git.commit=$%7BGIT_COMMIT_SHORT%7D%22%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "176": {
         "chunkId": "7392a9",
-        "hash": "b16ce4c1",
-        "encoded": "./backend",
+        "hash": "290227e4",
+        "encoded": "--label%20%22build.number=$%7BBUILD_NUMBER%7D%22%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "177": {
         "chunkId": "7392a9",
-        "hash": "0230a930",
-        "encoded": "%22%22%22",
+        "hash": "34350239",
+        "encoded": "--label%20%22build.branch=$%7BBRANCH_NAME%7D%22%20%5C%5C",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "178": {
+        "chunkId": "7392a9",
+        "hash": "8638f1b1",
+        "encoded": "-t%20$%7BBACKEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "179": {
         "chunkId": "7392a9",
-        "hash": "c00b2e5b",
-        "encoded": "//%20Build%20frontend%20image",
+        "hash": "ed4e1481",
+        "encoded": "-t%20$%7BBACKEND_IMAGE%7D:$%7BDEPLOY_ENV%7D-latest%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "180": {
         "chunkId": "7392a9",
-        "hash": "2847cdb2",
-        "encoded": "sh%20%22%22%22",
+        "hash": "d4c45b7a",
+        "encoded": "./backend",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "181": {
         "chunkId": "7392a9",
-        "hash": "613a1de5",
-        "encoded": "docker%20build%20%5C%5C",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "182": {
-        "chunkId": "7392a9",
-        "hash": "89e27507",
-        "encoded": "--label%20%22git.commit=$%7BGIT_COMMIT_SHORT%7D%22%20%5C%5C",
+        "hash": "fb6d955f",
+        "encoded": "%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "183": {
         "chunkId": "7392a9",
-        "hash": "96dade5d",
-        "encoded": "--label%20%22build.number=$%7BBUILD_NUMBER%7D%22%20%5C%5C",
+        "hash": "7923e8fa",
+        "encoded": "//%20Build%20frontend%20image",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "184": {
         "chunkId": "7392a9",
-        "hash": "60afbc42",
-        "encoded": "--label%20%22build.branch=$%7BBRANCH_NAME%7D%22%20%5C%5C",
+        "hash": "8bf4e7e4",
+        "encoded": "sh%20%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "185": {
         "chunkId": "7392a9",
-        "hash": "449a1702",
-        "encoded": "-t%20$%7BFRONTEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D%20%5C%5C",
+        "hash": "ee8030c1",
+        "encoded": "docker%20build%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "186": {
         "chunkId": "7392a9",
-        "hash": "ed7aea07",
-        "encoded": "-t%20$%7BFRONTEND_IMAGE%7D:$%7BDEPLOY_ENV%7D-latest%20%5C%5C",
+        "hash": "6f3dffbc",
+        "encoded": "--label%20%22git.commit=$%7BGIT_COMMIT_SHORT%7D%22%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "187": {
         "chunkId": "7392a9",
-        "hash": "11057c07",
-        "encoded": "./frontend",
+        "hash": "9c3aa86e",
+        "encoded": "--label%20%22build.number=$%7BBUILD_NUMBER%7D%22%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "188": {
         "chunkId": "7392a9",
-        "hash": "99e540c2",
-        "encoded": "%22%22%22",
+        "hash": "a310a318",
+        "encoded": "--label%20%22build.branch=$%7BBRANCH_NAME%7D%22%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "189": {
         "chunkId": "7392a9",
-        "hash": "00c06a24",
-        "encoded": "%7D",
+        "hash": "8c95c9ab",
+        "encoded": "-t%20$%7BFRONTEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "190": {
         "chunkId": "7392a9",
-        "hash": "792f1006",
-        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Docker%20images%20built%20successfully%5Cu001B%5B0m'",
+        "hash": "d11b856e",
+        "encoded": "-t%20$%7BFRONTEND_IMAGE%7D:$%7BDEPLOY_ENV%7D-latest%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "191": {
         "chunkId": "7392a9",
-        "hash": "0e2a48cb",
-        "encoded": "%7D",
+        "hash": "eb56c05a",
+        "encoded": "./frontend",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "192": {
         "chunkId": "7392a9",
-        "hash": "bd24004b",
+        "hash": "53efdc4b",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "193": {
+        "chunkId": "7392a9",
+        "hash": "675a30df",
         "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
@@ -1412,215 +1388,215 @@
       },
       "194": {
         "chunkId": "7392a9",
-        "hash": "f08106fa",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
+        "hash": "485cab0b",
+        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Docker%20images%20built%20successfully%5Cu001B%5B0m'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "195": {
         "chunkId": "7392a9",
-        "hash": "71dfcec3",
-        "encoded": "//%20%20Stage%206:%20Docker%20%E2%80%93%20Push%20to%20Google%20Artifact%20Registry%20(GAR)",
+        "hash": "ca78192d",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "196": {
         "chunkId": "7392a9",
-        "hash": "b4e0ee5d",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "197": {
-        "chunkId": "7392a9",
-        "hash": "95303dd4",
-        "encoded": "stage('Docker%20%E2%80%93%20Push%20to%20GAR')%20%7B",
+        "hash": "990329ab",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "198": {
         "chunkId": "7392a9",
-        "hash": "79507cac",
-        "encoded": "when%20%7B",
+        "hash": "a908082e",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "199": {
         "chunkId": "7392a9",
-        "hash": "d781ce18",
-        "encoded": "anyOf%20%7B",
+        "hash": "7164e6e6",
+        "encoded": "//%20%20Stage%206:%20Docker%20%E2%80%93%20Push%20to%20Google%20Artifact%20Registry%20(GAR)",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "200": {
         "chunkId": "7392a9",
-        "hash": "0d5c16b7",
-        "encoded": "branch%20'main'",
+        "hash": "2c440473",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "201": {
         "chunkId": "7392a9",
-        "hash": "4ce8419b",
-        "encoded": "branch%20'develop'",
+        "hash": "2142af46",
+        "encoded": "stage('Docker%20%E2%80%93%20Push%20to%20GAR')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "202": {
         "chunkId": "7392a9",
-        "hash": "67e0f58a",
-        "encoded": "%7D",
+        "hash": "3fbe6521",
+        "encoded": "when%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "203": {
         "chunkId": "7392a9",
-        "hash": "6f7f74d0",
-        "encoded": "%7D",
+        "hash": "dfd6452e",
+        "encoded": "anyOf%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "204": {
         "chunkId": "7392a9",
-        "hash": "579fbc44",
-        "encoded": "steps%20%7B",
+        "hash": "764f6629",
+        "encoded": "branch%20'main'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "205": {
         "chunkId": "7392a9",
-        "hash": "5d0cb848",
-        "encoded": "script%20%7B",
+        "hash": "7ea686f4",
+        "encoded": "branch%20'develop'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "206": {
         "chunkId": "7392a9",
-        "hash": "468cc10e",
-        "encoded": "echo%20%22Pushing%20images%20to%20GAR:%20$%7BGAR_REGISTRY%7D%22",
+        "hash": "b70b04fa",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "207": {
+        "chunkId": "7392a9",
+        "hash": "d5064ca8",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "208": {
         "chunkId": "7392a9",
-        "hash": "07eec0cb",
-        "encoded": "//%20Push%20backend%20images",
+        "hash": "51d9955d",
+        "encoded": "steps%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "209": {
         "chunkId": "7392a9",
-        "hash": "880723f7",
-        "encoded": "sh%20%22%22%22",
+        "hash": "8e07f8ec",
+        "encoded": "script%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "210": {
         "chunkId": "7392a9",
-        "hash": "d789af12",
-        "encoded": "docker%20push%20$%7BBACKEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "211": {
-        "chunkId": "7392a9",
-        "hash": "ce561511",
-        "encoded": "docker%20push%20$%7BBACKEND_IMAGE%7D:$%7BDEPLOY_ENV%7D-latest",
+        "hash": "a4c8e0cf",
+        "encoded": "echo%20%22Pushing%20images%20to%20GAR:%20$%7BGAR_REGISTRY%7D%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "212": {
         "chunkId": "7392a9",
-        "hash": "ea509a6f",
-        "encoded": "%22%22%22",
+        "hash": "703b9005",
+        "encoded": "//%20Push%20backend%20images",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "213": {
+        "chunkId": "7392a9",
+        "hash": "3eb44e37",
+        "encoded": "sh%20%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "214": {
         "chunkId": "7392a9",
-        "hash": "71842940",
-        "encoded": "//%20Push%20frontend%20images",
+        "hash": "c2653fac",
+        "encoded": "docker%20push%20$%7BBACKEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "215": {
         "chunkId": "7392a9",
-        "hash": "f23bcf60",
-        "encoded": "sh%20%22%22%22",
+        "hash": "90acabf8",
+        "encoded": "docker%20push%20$%7BBACKEND_IMAGE%7D:$%7BDEPLOY_ENV%7D-latest",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "216": {
         "chunkId": "7392a9",
-        "hash": "b5e9e3a9",
-        "encoded": "docker%20push%20$%7BFRONTEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "217": {
-        "chunkId": "7392a9",
-        "hash": "f62738cf",
-        "encoded": "docker%20push%20$%7BFRONTEND_IMAGE%7D:$%7BDEPLOY_ENV%7D-latest",
+        "hash": "994e6999",
+        "encoded": "%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "218": {
         "chunkId": "7392a9",
-        "hash": "533ad611",
-        "encoded": "%22%22%22",
+        "hash": "af22e6fe",
+        "encoded": "//%20Push%20frontend%20images",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "219": {
         "chunkId": "7392a9",
-        "hash": "7b57fe24",
-        "encoded": "%7D",
+        "hash": "fa0583f4",
+        "encoded": "sh%20%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "220": {
         "chunkId": "7392a9",
-        "hash": "83a274b5",
-        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Images%20pushed%20to%20Google%20Artifact%20Registry%5Cu001B%5B0m'",
+        "hash": "00560d95",
+        "encoded": "docker%20push%20$%7BFRONTEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "221": {
         "chunkId": "7392a9",
-        "hash": "e44f08de",
-        "encoded": "%7D",
+        "hash": "bed298c0",
+        "encoded": "docker%20push%20$%7BFRONTEND_IMAGE%7D:$%7BDEPLOY_ENV%7D-latest",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "222": {
         "chunkId": "7392a9",
-        "hash": "0a685fe7",
+        "hash": "186129b1",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "223": {
+        "chunkId": "7392a9",
+        "hash": "75bbcadd",
         "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
@@ -1628,320 +1604,320 @@
       },
       "224": {
         "chunkId": "7392a9",
-        "hash": "5682bdd6",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
+        "hash": "7bb7aec7",
+        "encoded": "echo%20'%5Cu001B%5B32m%E2%9C%94%20Images%20pushed%20to%20Google%20Artifact%20Registry%5Cu001B%5B0m'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "225": {
         "chunkId": "7392a9",
-        "hash": "5330bd89",
-        "encoded": "//%20%20Stage%207:%20Deploy%20to%20GKE",
+        "hash": "ed507790",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "226": {
         "chunkId": "7392a9",
-        "hash": "2f20654e",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "227": {
-        "chunkId": "7392a9",
-        "hash": "4a59bed0",
-        "encoded": "stage('Deploy%20to%20GKE')%20%7B",
+        "hash": "e196358d",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "228": {
         "chunkId": "7392a9",
-        "hash": "0633dfb9",
-        "encoded": "when%20%7B",
+        "hash": "0c580adc",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "229": {
         "chunkId": "7392a9",
-        "hash": "708f1bd5",
-        "encoded": "anyOf%20%7B",
+        "hash": "60259ecf",
+        "encoded": "//%20%20Stage%207:%20Deploy%20to%20GKE",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "230": {
         "chunkId": "7392a9",
-        "hash": "040ce290",
-        "encoded": "branch%20'main'",
+        "hash": "1b377b44",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "231": {
         "chunkId": "7392a9",
-        "hash": "037c6be3",
-        "encoded": "branch%20'develop'",
+        "hash": "6ce21ccf",
+        "encoded": "stage('Deploy%20to%20GKE')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "232": {
         "chunkId": "7392a9",
-        "hash": "156d2c96",
-        "encoded": "%7D",
+        "hash": "a69a203f",
+        "encoded": "when%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "233": {
         "chunkId": "7392a9",
-        "hash": "c9592549",
-        "encoded": "%7D",
+        "hash": "b8329497",
+        "encoded": "anyOf%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "234": {
         "chunkId": "7392a9",
-        "hash": "4f737be6",
-        "encoded": "steps%20%7B",
+        "hash": "f1ee4926",
+        "encoded": "branch%20'main'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "235": {
         "chunkId": "7392a9",
-        "hash": "efdcf2a0",
-        "encoded": "script%20%7B",
+        "hash": "16c2350f",
+        "encoded": "branch%20'develop'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "236": {
         "chunkId": "7392a9",
-        "hash": "6d406c36",
-        "encoded": "echo%20%22Deploying%20to%20GKE%20($%7BDEPLOY_ENV%7D)%20%E2%80%93%20Cluster:%20$%7BGKE_CLUSTER%7D%22",
+        "hash": "0c95109b",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "237": {
+        "chunkId": "7392a9",
+        "hash": "58b80ca9",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "238": {
         "chunkId": "7392a9",
-        "hash": "73fc9bda",
-        "encoded": "//%20Get%20GKE%20credentials",
+        "hash": "a5a7a610",
+        "encoded": "steps%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "239": {
         "chunkId": "7392a9",
-        "hash": "7f967baf",
-        "encoded": "sh%20%22%22%22",
+        "hash": "ebea11c8",
+        "encoded": "script%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "240": {
         "chunkId": "7392a9",
-        "hash": "73718243",
-        "encoded": "gcloud%20container%20clusters%20get-credentials%20$%7BGKE_CLUSTER%7D%20%5C%5C",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "241": {
-        "chunkId": "7392a9",
-        "hash": "fa6cbe34",
-        "encoded": "--zone%20$%7BGKE_ZONE%7D%20%5C%5C",
+        "hash": "3cd47b09",
+        "encoded": "echo%20%22Deploying%20to%20GKE%20($%7BDEPLOY_ENV%7D)%20%E2%80%93%20Cluster:%20$%7BGKE_CLUSTER%7D%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "242": {
         "chunkId": "7392a9",
-        "hash": "7a818dd1",
-        "encoded": "--project%20$%7BGCP_PROJECT_ID%7D",
+        "hash": "be438ff3",
+        "encoded": "//%20Get%20GKE%20credentials",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "243": {
         "chunkId": "7392a9",
-        "hash": "99f61e1d",
-        "encoded": "%22%22%22",
+        "hash": "6a87b36c",
+        "encoded": "sh%20%22%22%22",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "244": {
+        "chunkId": "7392a9",
+        "hash": "eb73add0",
+        "encoded": "gcloud%20container%20clusters%20get-credentials%20$%7BGKE_CLUSTER%7D%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "245": {
         "chunkId": "7392a9",
-        "hash": "43821491",
-        "encoded": "//%20Deploy%20using%20Kustomize%20with%20image%20override",
+        "hash": "011cdb90",
+        "encoded": "--zone%20$%7BGKE_ZONE%7D%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "246": {
         "chunkId": "7392a9",
-        "hash": "025141ff",
-        "encoded": "sh%20%22%22%22",
+        "hash": "e5c556ef",
+        "encoded": "--project%20$%7BGCP_PROJECT_ID%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "247": {
         "chunkId": "7392a9",
-        "hash": "244a5817",
-        "encoded": "#%20Set%20the%20correct%20image%20tags%20using%20kustomize",
+        "hash": "592a6ec6",
+        "encoded": "%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
-      "248": {
+      "249": {
         "chunkId": "7392a9",
-        "hash": "3ef97e8d",
-        "encoded": "cd%20k8s/overlays/$%7BDEPLOY_ENV%7D",
+        "hash": "4eba22de",
+        "encoded": "//%20Deploy%20using%20Kustomize%20with%20image%20override",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "250": {
         "chunkId": "7392a9",
-        "hash": "acc02efa",
-        "encoded": "#%20Override%20images%20with%20the%20current%20build%20tag",
+        "hash": "0d9de7e0",
+        "encoded": "sh%20%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "251": {
         "chunkId": "7392a9",
-        "hash": "d18bab5b",
-        "encoded": "kustomize%20edit%20set%20image%20%5C%5C",
+        "hash": "0aadc87f",
+        "encoded": "#%20Set%20the%20correct%20image%20tags%20using%20kustomize",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "252": {
         "chunkId": "7392a9",
-        "hash": "cea771f7",
-        "encoded": "IMAGE_PLACEHOLDER=$%7BBACKEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D",
+        "hash": "61ed6a8e",
+        "encoded": "cd%20k8s/overlays/$%7BDEPLOY_ENV%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "254": {
         "chunkId": "7392a9",
-        "hash": "7ab24218",
-        "encoded": "#%20Apply%20the%20manifests",
+        "hash": "fac6bada",
+        "encoded": "#%20Override%20images%20with%20the%20current%20build%20tag",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "255": {
         "chunkId": "7392a9",
-        "hash": "75e3e0c5",
-        "encoded": "kustomize%20build%20.%20%7C%20kubectl%20apply%20-f%20-",
+        "hash": "93241453",
+        "encoded": "kustomize%20edit%20set%20image%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
-      "257": {
+      "256": {
         "chunkId": "7392a9",
-        "hash": "6178006b",
-        "encoded": "#%20Also%20update%20the%20frontend%20image%20in%20the%20deployment%20directly",
+        "hash": "23973e58",
+        "encoded": "IMAGE_PLACEHOLDER=$%7BBACKEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "258": {
         "chunkId": "7392a9",
-        "hash": "bc59ab04",
-        "encoded": "kubectl%20set%20image%20deployment/transport-frontend%20%5C%5C",
+        "hash": "6a154f17",
+        "encoded": "#%20Apply%20the%20manifests",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "259": {
         "chunkId": "7392a9",
-        "hash": "89c0ff9b",
-        "encoded": "frontend=$%7BFRONTEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D%20%5C%5C",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "260": {
-        "chunkId": "7392a9",
-        "hash": "c84d6323",
-        "encoded": "-n%20transport-tracker%20%7C%7C%20true",
+        "hash": "01c47e9d",
+        "encoded": "kustomize%20build%20.%20%7C%20kubectl%20apply%20-f%20-",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "261": {
         "chunkId": "7392a9",
-        "hash": "64e7ba94",
-        "encoded": "%22%22%22",
+        "hash": "f2b1a107",
+        "encoded": "#%20Also%20update%20the%20frontend%20image%20in%20the%20deployment%20directly",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "262": {
+        "chunkId": "7392a9",
+        "hash": "5f871c2e",
+        "encoded": "kubectl%20set%20image%20deployment/transport-frontend%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "263": {
         "chunkId": "7392a9",
-        "hash": "624084db",
-        "encoded": "//%20Wait%20for%20rollout%20to%20complete",
+        "hash": "f57f7420",
+        "encoded": "frontend=$%7BFRONTEND_IMAGE%7D:$%7BBUILD_TAG_CUSTOM%7D%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "264": {
         "chunkId": "7392a9",
-        "hash": "7e91f767",
-        "encoded": "sh%20%22%22%22",
+        "hash": "bc3d4419",
+        "encoded": "-n%20transport-tracker%20%7C%7C%20true",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "265": {
         "chunkId": "7392a9",
-        "hash": "87df8971",
-        "encoded": "echo%20%22Waiting%20for%20backend%20rollout...%22",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "266": {
-        "chunkId": "7392a9",
-        "hash": "3f312c3b",
-        "encoded": "kubectl%20rollout%20status%20deployment/transport-backend%20%5C%5C",
+        "hash": "798dd4f5",
+        "encoded": "%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "267": {
         "chunkId": "7392a9",
-        "hash": "7bc9e19b",
-        "encoded": "-n%20transport-tracker%20--timeout=300s",
+        "hash": "a227930f",
+        "encoded": "//%20Wait%20for%20rollout%20to%20complete",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "268": {
+        "chunkId": "7392a9",
+        "hash": "bc7ab767",
+        "encoded": "sh%20%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "269": {
         "chunkId": "7392a9",
-        "hash": "352b3167",
-        "encoded": "echo%20%22Waiting%20for%20frontend%20rollout...%22",
+        "hash": "0a81dc57",
+        "encoded": "echo%20%22Waiting%20for%20backend%20rollout...%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "270": {
         "chunkId": "7392a9",
-        "hash": "4cf4ade1",
-        "encoded": "kubectl%20rollout%20status%20deployment/transport-frontend%20%5C%5C",
+        "hash": "27c82d8e",
+        "encoded": "kubectl%20rollout%20status%20deployment/transport-backend%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
@@ -1954,41 +1930,41 @@
           "7392a9"
         ]
       },
-      "272": {
-        "chunkId": "7392a9",
-        "hash": "d5977316",
-        "encoded": "%22%22%22",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
       "273": {
         "chunkId": "7392a9",
-        "hash": "3222a662",
-        "encoded": "%7D",
+        "hash": "87c804c2",
+        "encoded": "echo%20%22Waiting%20for%20frontend%20rollout...%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "274": {
         "chunkId": "7392a9",
-        "hash": "218adf52",
-        "encoded": "echo%20%22%5Cu001B%5B32m%E2%9C%94%20Successfully%20deployed%20$%7BBUILD_TAG_CUSTOM%7D%20to%20GKE%20($%7BDEPLOY_ENV%7D)%5Cu001B%5B0m%22",
+        "hash": "695c9a45",
+        "encoded": "kubectl%20rollout%20status%20deployment/transport-frontend%20%5C%5C",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "275": {
         "chunkId": "7392a9",
-        "hash": "28746c88",
-        "encoded": "%7D",
+        "hash": "f3b99223",
+        "encoded": "-n%20transport-tracker%20--timeout=300s",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "276": {
         "chunkId": "7392a9",
-        "hash": "a225615e",
+        "hash": "a5c59d24",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "277": {
+        "chunkId": "7392a9",
+        "hash": "c663f07c",
         "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
@@ -1996,144 +1972,144 @@
       },
       "278": {
         "chunkId": "7392a9",
-        "hash": "8b3a447f",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
+        "hash": "3caee4dc",
+        "encoded": "echo%20%22%5Cu001B%5B32m%E2%9C%94%20Successfully%20deployed%20$%7BBUILD_TAG_CUSTOM%7D%20to%20GKE%20($%7BDEPLOY_ENV%7D)%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "279": {
         "chunkId": "7392a9",
-        "hash": "bc5daaf5",
-        "encoded": "//%20%20Stage%208:%20Verify%20Deployment",
+        "hash": "957e3bcc",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "280": {
         "chunkId": "7392a9",
-        "hash": "2f7976cb",
-        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "281": {
-        "chunkId": "7392a9",
-        "hash": "9bab25be",
-        "encoded": "stage('Verify%20Deployment')%20%7B",
+        "hash": "bdab287c",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "282": {
         "chunkId": "7392a9",
-        "hash": "0e2a66e6",
-        "encoded": "when%20%7B",
+        "hash": "5499aafd",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "283": {
         "chunkId": "7392a9",
-        "hash": "6491d205",
-        "encoded": "anyOf%20%7B",
+        "hash": "365e502b",
+        "encoded": "//%20%20Stage%208:%20Verify%20Deployment",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "284": {
         "chunkId": "7392a9",
-        "hash": "7b410671",
-        "encoded": "branch%20'main'",
+        "hash": "0f6f250b",
+        "encoded": "//%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "285": {
         "chunkId": "7392a9",
-        "hash": "5fb11a1d",
-        "encoded": "branch%20'develop'",
+        "hash": "1c43401f",
+        "encoded": "stage('Verify%20Deployment')%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "286": {
         "chunkId": "7392a9",
-        "hash": "40b784f3",
-        "encoded": "%7D",
+        "hash": "588c1828",
+        "encoded": "when%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "287": {
         "chunkId": "7392a9",
-        "hash": "c89f6ffc",
-        "encoded": "%7D",
+        "hash": "39720eb0",
+        "encoded": "anyOf%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "288": {
         "chunkId": "7392a9",
-        "hash": "b8d56eba",
-        "encoded": "steps%20%7B",
+        "hash": "23afa04f",
+        "encoded": "branch%20'main'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "289": {
         "chunkId": "7392a9",
-        "hash": "64676de7",
-        "encoded": "script%20%7B",
+        "hash": "867c8802",
+        "encoded": "branch%20'develop'",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "290": {
         "chunkId": "7392a9",
-        "hash": "fe2e1cfe",
-        "encoded": "sh%20%22%22%22",
+        "hash": "fbb398b5",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "291": {
         "chunkId": "7392a9",
-        "hash": "f99e1ac6",
-        "encoded": "echo%20%22===%20Deployment%20Status%20===%22",
+        "hash": "3ecc5ee5",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "292": {
         "chunkId": "7392a9",
-        "hash": "e473feb5",
-        "encoded": "kubectl%20get%20deployments%20-n%20transport-tracker%20-o%20wide",
+        "hash": "4bd96a77",
+        "encoded": "steps%20%7B",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "293": {
+        "chunkId": "7392a9",
+        "hash": "23615eaf",
+        "encoded": "script%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "294": {
         "chunkId": "7392a9",
-        "hash": "e58ff2fc",
-        "encoded": "echo%20%22%22",
+        "hash": "c52d7ab2",
+        "encoded": "sh%20%22%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "295": {
         "chunkId": "7392a9",
-        "hash": "ba634943",
-        "encoded": "echo%20%22===%20Pod%20Status%20===%22",
+        "hash": "41ff5882",
+        "encoded": "echo%20%22===%20Deployment%20Status%20===%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "296": {
         "chunkId": "7392a9",
-        "hash": "0272b36f",
-        "encoded": "kubectl%20get%20pods%20-n%20transport-tracker%20-o%20wide",
+        "hash": "04be6005",
+        "encoded": "kubectl%20get%20deployments%20-n%20transport-tracker%20-o%20wide",
         "prevChunkIds": [
           "7392a9"
         ]
@@ -2148,16 +2124,16 @@
       },
       "299": {
         "chunkId": "7392a9",
-        "hash": "27befa8a",
-        "encoded": "echo%20%22===%20Services%20===%22",
+        "hash": "0021ab8a",
+        "encoded": "echo%20%22===%20Pod%20Status%20===%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "300": {
         "chunkId": "7392a9",
-        "hash": "6425d92e",
-        "encoded": "kubectl%20get%20svc%20-n%20transport-tracker",
+        "hash": "520b6bde",
+        "encoded": "kubectl%20get%20pods%20-n%20transport-tracker%20-o%20wide",
         "prevChunkIds": [
           "7392a9"
         ]
@@ -2172,16 +2148,16 @@
       },
       "303": {
         "chunkId": "7392a9",
-        "hash": "4b77f2dd",
-        "encoded": "echo%20%22===%20Ingress%20===%22",
+        "hash": "8029cee9",
+        "encoded": "echo%20%22===%20Services%20===%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "304": {
         "chunkId": "7392a9",
-        "hash": "9abad550",
-        "encoded": "kubectl%20get%20ingress%20-n%20transport-tracker",
+        "hash": "dd534655",
+        "encoded": "kubectl%20get%20svc%20-n%20transport-tracker",
         "prevChunkIds": [
           "7392a9"
         ]
@@ -2196,55 +2172,55 @@
       },
       "307": {
         "chunkId": "7392a9",
-        "hash": "3d13b380",
-        "encoded": "echo%20%22===%20HPA%20Status%20===%22",
+        "hash": "0351a9f2",
+        "encoded": "echo%20%22===%20Ingress%20===%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "308": {
         "chunkId": "7392a9",
-        "hash": "16c6c433",
-        "encoded": "kubectl%20get%20hpa%20-n%20transport-tracker",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "309": {
-        "chunkId": "7392a9",
-        "hash": "3637cee1",
-        "encoded": "%22%22%22",
+        "hash": "620cd561",
+        "encoded": "kubectl%20get%20ingress%20-n%20transport-tracker",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "310": {
         "chunkId": "7392a9",
-        "hash": "b19573d5",
-        "encoded": "%7D",
+        "hash": "c3ec8184",
+        "encoded": "echo%20%22%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "311": {
         "chunkId": "7392a9",
-        "hash": "972a0b71",
-        "encoded": "%7D",
+        "hash": "86bd299f",
+        "encoded": "echo%20%22===%20HPA%20Status%20===%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "312": {
         "chunkId": "7392a9",
-        "hash": "290ef136",
-        "encoded": "%7D",
+        "hash": "00d79dee",
+        "encoded": "kubectl%20get%20hpa%20-n%20transport-tracker",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "313": {
         "chunkId": "7392a9",
-        "hash": "7385c1c6",
+        "hash": "3986873e",
+        "encoded": "%22%22%22",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "314": {
+        "chunkId": "7392a9",
+        "hash": "b31bc060",
         "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
@@ -2252,267 +2228,291 @@
       },
       "315": {
         "chunkId": "7392a9",
-        "hash": "bc031c70",
+        "hash": "3811d658",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "316": {
+        "chunkId": "7392a9",
+        "hash": "a8bd9b49",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "317": {
+        "chunkId": "7392a9",
+        "hash": "7daf7dab",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "319": {
+        "chunkId": "7392a9",
+        "hash": "0a4317d9",
         "encoded": "post%20%7B",
         "prevChunkIds": [
           "ab3156",
           "7392a9"
         ]
       },
-      "316": {
+      "320": {
         "chunkId": "7392a9",
-        "hash": "e38b97aa",
+        "hash": "b102d105",
         "encoded": "always%20%7B",
         "prevChunkIds": [
           "ab3156",
           "7392a9"
         ]
       },
-      "317": {
+      "321": {
         "chunkId": "ab3156",
-        "hash": "4af128f2",
+        "hash": "07333b67",
         "encoded": "//%20Wrap%20in%20node%20block%20to%20ensure%20workspace%20context%20is%20available",
         "prevChunkIds": [
           "ab3156"
         ]
       },
-      "318": {
+      "322": {
         "chunkId": "ab3156",
-        "hash": "d6e7b435",
+        "hash": "537789fa",
         "encoded": "//%20even%20when%20the%20pipeline%20fails%20before%20reaching%20a%20stage%20with%20an%20agent",
         "prevChunkIds": [
           "ab3156"
         ]
       },
-      "319": {
+      "323": {
         "chunkId": "ab3156",
-        "hash": "13595b6f",
+        "hash": "f9c0984f",
         "encoded": "node('')%20%7B",
         "prevChunkIds": [
           "ab3156"
         ]
       },
-      "320": {
+      "324": {
         "chunkId": "ab3156",
-        "hash": "702eddc1",
+        "hash": "07b8e376",
         "encoded": "//%20Clean%20up%20Docker%20images%20to%20save%20disk%20space",
         "prevChunkIds": [
           "ab3156"
         ]
       },
-      "321": {
+      "325": {
         "chunkId": "7392a9",
-        "hash": "ee6c8a81",
+        "hash": "5eb662e2",
         "encoded": "sh%20'''",
         "prevChunkIds": [
           "ab3156",
           "7392a9"
         ]
       },
-      "322": {
-        "chunkId": "ab3156",
-        "hash": "d43335b4",
-        "encoded": "docker%20image%20prune%20-f%202%3E/dev/null%20%7C%7C%20true",
-        "prevChunkIds": [
-          "ab3156"
-        ]
-      },
-      "323": {
-        "chunkId": "7392a9",
-        "hash": "dba198ed",
-        "encoded": "'''",
-        "prevChunkIds": [
-          "ab3156",
-          "7392a9"
-        ]
-      },
-      "324": {
-        "chunkId": "ab3156",
-        "hash": "081c6536",
-        "encoded": "//%20cleanWs()%20requires%20the%20'Workspace%20Cleanup'%20plugin%20(not%20installed)",
-        "prevChunkIds": [
-          "ab3156"
-        ]
-      },
-      "325": {
-        "chunkId": "ab3156",
-        "hash": "ad2ae09d",
-        "encoded": "//%20Using%20deleteDir()%20as%20a%20built-in%20alternative%20to%20clean%20the%20workspace",
-        "prevChunkIds": [
-          "ab3156"
-        ]
-      },
       "326": {
         "chunkId": "ab3156",
-        "hash": "325eb368",
-        "encoded": "deleteDir()",
+        "hash": "69b9b5ef",
+        "encoded": "docker%20image%20prune%20-f%202%3E/dev/null%20%7C%7C%20true",
         "prevChunkIds": [
           "ab3156"
         ]
       },
       "327": {
         "chunkId": "7392a9",
-        "hash": "c35ae2aa",
-        "encoded": "%7D",
+        "hash": "8175f8eb",
+        "encoded": "'''",
         "prevChunkIds": [
           "ab3156",
           "7392a9"
         ]
       },
       "328": {
+        "chunkId": "ab3156",
+        "hash": "e814d0f1",
+        "encoded": "//%20cleanWs()%20requires%20the%20'Workspace%20Cleanup'%20plugin%20(not%20installed)",
+        "prevChunkIds": [
+          "ab3156"
+        ]
+      },
+      "329": {
+        "chunkId": "ab3156",
+        "hash": "7edb4508",
+        "encoded": "//%20Using%20deleteDir()%20as%20a%20built-in%20alternative%20to%20clean%20the%20workspace",
+        "prevChunkIds": [
+          "ab3156"
+        ]
+      },
+      "330": {
+        "chunkId": "ab3156",
+        "hash": "27ced2f2",
+        "encoded": "deleteDir()",
+        "prevChunkIds": [
+          "ab3156"
+        ]
+      },
+      "331": {
         "chunkId": "7392a9",
-        "hash": "869f71d8",
+        "hash": "000fa73a",
         "encoded": "%7D",
         "prevChunkIds": [
           "ab3156",
           "7392a9"
         ]
       },
-      "329": {
-        "chunkId": "7392a9",
-        "hash": "d6b19079",
-        "encoded": "success%20%7B",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "330": {
-        "chunkId": "7392a9",
-        "hash": "1a512c61",
-        "encoded": "echo%20%22%5Cu001B%5B32m%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%5Cu001B%5B0m%22",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
-      "331": {
-        "chunkId": "7392a9",
-        "hash": "76086dac",
-        "encoded": "echo%20%22%5Cu001B%5B32m%20%20%E2%9C%94%20Pipeline%20SUCCEEDED%20for%20$%7Benv.BUILD_TAG_CUSTOM%7D%5Cu001B%5B0m%22",
-        "prevChunkIds": [
-          "7392a9"
-        ]
-      },
       "332": {
         "chunkId": "7392a9",
-        "hash": "725c6190",
-        "encoded": "echo%20%22%5Cu001B%5B32m%20%20Environment:%20$%7Benv.DEPLOY_ENV%7D%5Cu001B%5B0m%22",
+        "hash": "64de5ec8",
+        "encoded": "%7D",
         "prevChunkIds": [
+          "ab3156",
           "7392a9"
         ]
       },
       "333": {
         "chunkId": "7392a9",
-        "hash": "a9bd5997",
-        "encoded": "echo%20%22%5Cu001B%5B32m%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%5Cu001B%5B0m%22",
+        "hash": "869e1cb9",
+        "encoded": "success%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "334": {
         "chunkId": "7392a9",
-        "hash": "65226cb2",
-        "encoded": "%7D",
+        "hash": "4ad78966",
+        "encoded": "echo%20%22%5Cu001B%5B32m%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "335": {
         "chunkId": "7392a9",
-        "hash": "1578a46a",
-        "encoded": "failure%20%7B",
+        "hash": "7db4fb14",
+        "encoded": "echo%20%22%5Cu001B%5B32m%20%20%E2%9C%94%20Pipeline%20SUCCEEDED%20for%20$%7Benv.BUILD_TAG_CUSTOM%7D%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "336": {
         "chunkId": "7392a9",
-        "hash": "4ddd06fc",
-        "encoded": "echo%20%22%5Cu001B%5B31m%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%5Cu001B%5B0m%22",
+        "hash": "9fe5b925",
+        "encoded": "echo%20%22%5Cu001B%5B32m%20%20Environment:%20$%7Benv.DEPLOY_ENV%7D%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "337": {
         "chunkId": "7392a9",
-        "hash": "231c6c58",
-        "encoded": "echo%20%22%5Cu001B%5B31m%20%20%E2%9C%98%20Pipeline%20FAILED%20for%20$%7Benv.BUILD_TAG_CUSTOM%7D%5Cu001B%5B0m%22",
+        "hash": "887fb3c4",
+        "encoded": "echo%20%22%5Cu001B%5B32m%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "338": {
         "chunkId": "7392a9",
-        "hash": "95c8f20f",
-        "encoded": "echo%20%22%5Cu001B%5B31m%20%20Environment:%20$%7Benv.DEPLOY_ENV%7D%5Cu001B%5B0m%22",
+        "hash": "c1fcfe49",
+        "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "339": {
         "chunkId": "7392a9",
-        "hash": "c7f850dd",
-        "encoded": "echo%20%22%5Cu001B%5B31m%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%5Cu001B%5B0m%22",
+        "hash": "4089124c",
+        "encoded": "failure%20%7B",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "340": {
         "chunkId": "7392a9",
-        "hash": "bf60b492",
-        "encoded": "//%20Uncomment%20to%20enable%20Slack%20notifications",
+        "hash": "70c2c0ad",
+        "encoded": "echo%20%22%5Cu001B%5B31m%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "341": {
         "chunkId": "7392a9",
-        "hash": "496fd8a0",
-        "encoded": "//%20slackSend%20channel:%20'#deployments',",
+        "hash": "ccf9ed55",
+        "encoded": "echo%20%22%5Cu001B%5B31m%20%20%E2%9C%98%20Pipeline%20FAILED%20for%20$%7Benv.BUILD_TAG_CUSTOM%7D%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "342": {
         "chunkId": "7392a9",
-        "hash": "3fb394af",
-        "encoded": "//%20%20%20%20%20color:%20'danger',",
+        "hash": "603e5865",
+        "encoded": "echo%20%22%5Cu001B%5B31m%20%20Environment:%20$%7Benv.DEPLOY_ENV%7D%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "343": {
         "chunkId": "7392a9",
-        "hash": "3cd512be",
-        "encoded": "//%20%20%20%20%20message:%20%22FAILED:%20$%7Benv.JOB_NAME%7D%20#$%7Benv.BUILD_NUMBER%7D%20($%7Benv.BUILD_TAG_CUSTOM%7D)%22",
+        "hash": "293d8326",
+        "encoded": "echo%20%22%5Cu001B%5B31m%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%5Cu001B%5B0m%22",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "344": {
         "chunkId": "7392a9",
-        "hash": "d75ea64d",
-        "encoded": "%7D",
+        "hash": "861e9ca6",
+        "encoded": "//%20Uncomment%20to%20enable%20Slack%20notifications",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "345": {
         "chunkId": "7392a9",
-        "hash": "992696b4",
-        "encoded": "%7D",
+        "hash": "9acb0fb2",
+        "encoded": "//%20slackSend%20channel:%20'#deployments',",
         "prevChunkIds": [
           "7392a9"
         ]
       },
       "346": {
+        "chunkId": "7392a9",
+        "hash": "e0c36c69",
+        "encoded": "//%20%20%20%20%20color:%20'danger',",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "347": {
+        "chunkId": "7392a9",
+        "hash": "efe469d2",
+        "encoded": "//%20%20%20%20%20message:%20%22FAILED:%20$%7Benv.JOB_NAME%7D%20#$%7Benv.BUILD_NUMBER%7D%20($%7Benv.BUILD_TAG_CUSTOM%7D)%22",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "348": {
+        "chunkId": "7392a9",
+        "hash": "20cd5d84",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "349": {
+        "chunkId": "7392a9",
+        "hash": "e9514133",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7392a9"
+        ]
+      },
+      "350": {
         "chunkId": "ab3156",
-        "hash": "b0d56384",
+        "hash": "db488d09",
         "encoded": "%7D",
         "prevChunkIds": [
           "7392a9"
         ]
       }
     },
-    "_prevLineCount": 347
+    "_prevLineCount": 351
   }
 }
