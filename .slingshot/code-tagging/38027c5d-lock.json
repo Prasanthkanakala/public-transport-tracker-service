@@ -1,0 +1,487 @@
+{
+  "k8s\\base\\frontend-deployment.yaml": {
+    "filename": "frontend-deployment.yaml",
+    "path": "k8s\\base\\frontend-deployment.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "aff877": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227682,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "c666eea4",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:22 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "aff877",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "aff877",
+        "hash": "00e23966",
+        "encoded": "#%20Frontend%20Deployment%20%E2%80%93%20React%20App%20served%20via%20Nginx",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "aff877",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "aff877",
+        "hash": "bedaa746",
+        "encoded": "apiVersion:%20apps/v1",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "aff877",
+        "hash": "1e8df0e9",
+        "encoded": "kind:%20Deployment",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "aff877",
+        "hash": "26b5510f",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "aff877",
+        "hash": "25001ade",
+        "encoded": "name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "aff877",
+        "hash": "89136832",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "aff877",
+        "hash": "5139acb9",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "aff877",
+        "hash": "c57bd458",
+        "encoded": "app.kubernetes.io/name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "aff877",
+        "hash": "593e02d4",
+        "encoded": "app.kubernetes.io/component:%20frontend",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "aff877",
+        "hash": "73865187",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "aff877",
+        "hash": "d2f63593",
+        "encoded": "app.kubernetes.io/version:%20%221.0.0%22",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "aff877",
+        "hash": "96e01cf2",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "aff877",
+        "hash": "61b62369",
+        "encoded": "replicas:%202",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "aff877",
+        "hash": "42f18365",
+        "encoded": "revisionHistoryLimit:%205",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "aff877",
+        "hash": "b7b61265",
+        "encoded": "strategy:",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "aff877",
+        "hash": "154ab75b",
+        "encoded": "type:%20RollingUpdate",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "aff877",
+        "hash": "a8859dc3",
+        "encoded": "rollingUpdate:",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "aff877",
+        "hash": "18a6fe71",
+        "encoded": "maxSurge:%201",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "aff877",
+        "hash": "49c0c55d",
+        "encoded": "maxUnavailable:%200",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "aff877",
+        "hash": "bb96b83b",
+        "encoded": "selector:",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "aff877",
+        "hash": "31587e21",
+        "encoded": "matchLabels:",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "aff877",
+        "hash": "9b143ed2",
+        "encoded": "app.kubernetes.io/name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "aff877",
+        "hash": "ef93564c",
+        "encoded": "template:",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "aff877",
+        "hash": "80127618",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "aff877",
+        "hash": "cfd5303e",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "aff877",
+        "hash": "271415dd",
+        "encoded": "app.kubernetes.io/name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "aff877",
+        "hash": "605aedbe",
+        "encoded": "app.kubernetes.io/component:%20frontend",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "aff877",
+        "hash": "b4bf1902",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "aff877",
+        "hash": "1f82399b",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "aff877",
+        "hash": "6bc194dd",
+        "encoded": "serviceAccountName:%20transport-tracker-sa",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "aff877",
+        "hash": "6450be54",
+        "encoded": "securityContext:",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "aff877",
+        "hash": "3e14a328",
+        "encoded": "runAsNonRoot:%20false",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "aff877",
+        "hash": "cb1cdc90",
+        "encoded": "terminationGracePeriodSeconds:%2015",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "aff877",
+        "hash": "e0c78879",
+        "encoded": "containers:",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "aff877",
+        "hash": "a746edc9",
+        "encoded": "-%20name:%20frontend",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "aff877",
+        "hash": "309d4464",
+        "encoded": "#%20Image%20will%20be%20overridden%20by%20Kustomize%20overlay%20per%20environment",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "aff877",
+        "hash": "a4f4844c",
+        "encoded": "image:%20IMAGE_PLACEHOLDER",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "aff877",
+        "hash": "fee2bf8f",
+        "encoded": "imagePullPolicy:%20Always",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "aff877",
+        "hash": "2bbd4e72",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "aff877",
+        "hash": "0494eaf6",
+        "encoded": "-%20name:%20http",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "aff877",
+        "hash": "4c8d5b6a",
+        "encoded": "containerPort:%2080",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "aff877",
+        "hash": "ed663c18",
+        "encoded": "protocol:%20TCP",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "aff877",
+        "hash": "9a55e3a9",
+        "encoded": "resources:",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "aff877",
+        "hash": "de9efd75",
+        "encoded": "requests:",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "aff877",
+        "hash": "19d55814",
+        "encoded": "cpu:%20100m",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "aff877",
+        "hash": "48a2e141",
+        "encoded": "memory:%20128Mi",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "aff877",
+        "hash": "7ab1d66c",
+        "encoded": "limits:",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "aff877",
+        "hash": "26f5403d",
+        "encoded": "cpu:%20500m",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "aff877",
+        "hash": "c89f18cd",
+        "encoded": "memory:%20256Mi",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "aff877",
+        "hash": "06f9a4da",
+        "encoded": "livenessProbe:",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "aff877",
+        "hash": "66d0b9f4",
+        "encoded": "httpGet:",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "aff877",
+        "hash": "e4546116",
+        "encoded": "path:%20/index.html",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "aff877",
+        "hash": "47c112ab",
+        "encoded": "port:%20http",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "aff877",
+        "hash": "6e229aa5",
+        "encoded": "initialDelaySeconds:%2010",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "aff877",
+        "hash": "e8118fcf",
+        "encoded": "periodSeconds:%2015",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "aff877",
+        "hash": "c2da37e7",
+        "encoded": "timeoutSeconds:%203",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "aff877",
+        "hash": "fdda2c02",
+        "encoded": "failureThreshold:%203",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "aff877",
+        "hash": "cadd7fcf",
+        "encoded": "readinessProbe:",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "aff877",
+        "hash": "cdec3d54",
+        "encoded": "httpGet:",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "aff877",
+        "hash": "716dbc0b",
+        "encoded": "path:%20/index.html",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "aff877",
+        "hash": "005e2673",
+        "encoded": "port:%20http",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "aff877",
+        "hash": "bc570596",
+        "encoded": "initialDelaySeconds:%205",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "aff877",
+        "hash": "6a3d8644",
+        "encoded": "periodSeconds:%2010",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "aff877",
+        "hash": "77578726",
+        "encoded": "timeoutSeconds:%203",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "aff877",
+        "hash": "9bcc4799",
+        "encoded": "failureThreshold:%203",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "aff877",
+        "hash": "4bda3ac0",
+        "encoded": "volumeMounts:",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "aff877",
+        "hash": "44eef50d",
+        "encoded": "-%20name:%20nginx-config",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "aff877",
+        "hash": "8b88fd95",
+        "encoded": "mountPath:%20/etc/nginx/conf.d/default.conf",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "aff877",
+        "hash": "217a7d00",
+        "encoded": "subPath:%20default.conf",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "aff877",
+        "hash": "06b0da48",
+        "encoded": "readOnly:%20true",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "aff877",
+        "hash": "a04c18fe",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "aff877",
+        "hash": "da200c1a",
+        "encoded": "-%20name:%20nginx-config",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "aff877",
+        "hash": "934c5087",
+        "encoded": "configMap:",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "aff877",
+        "hash": "d917df9a",
+        "encoded": "name:%20frontend-nginx-config",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

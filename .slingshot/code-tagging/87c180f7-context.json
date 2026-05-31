@@ -32,6 +32,21 @@
           ]
         }
       ]
+    },
+    "76b8573a": {
+      "value": [
+        {
+          "programming_language": "",
+          "fileName": "Jenkinsfile",
+          "relativeFilePath": "Jenkinsfile",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            333
+          ]
+        }
+      ]
     }
   },
   "promptMessage": {
@@ -40,6 +55,9 @@
     },
     "4baf7543": {
       "value": "You are a Senior Java Architect refactoring an existing Spring Boot in-memory cache implementation.\n\nCurrent cache architecture:\n\n* ConcurrentHashMap<K, CacheEntry<V>> as primary storage\n* DelayQueue-based TTL eviction already implemented\n* Fresh TTL and stale TTL support\n* Cache metrics (hits, misses, staleHits, evictions)\n* Max cache size enforcement\n* Current LRU eviction scans entire cache:\n\n```java\nstore.entrySet().stream()\n    .min(...)\n```\n\nThis is O(n) and becomes expensive as cache size"
+    },
+    "16a83048": {
+      "value": "C:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service>ervice - Cache \nstats: size=3, hits=39, mi\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service>\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service>\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service>\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service>cd backend\n\nC:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service\\backend>gradle clean bootRun\nStarting a Gradle Daemo"
     }
   },
   "localPrompts": {},

@@ -1,0 +1,133 @@
+{
+  "k8s\\base\\backend-pdb.yaml": {
+    "filename": "backend-pdb.yaml",
+    "path": "k8s\\base\\backend-pdb.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "f63895": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227682,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "ba27df8e",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:22 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "f63895",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "f63895",
+        "hash": "aa997f29",
+        "encoded": "#%20PodDisruptionBudget%20for%20Backend%20%E2%80%93%20Ensures%20high%20availability",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "f63895",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "f63895",
+        "hash": "55afd695",
+        "encoded": "apiVersion:%20policy/v1",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "f63895",
+        "hash": "ad2b1e7d",
+        "encoded": "kind:%20PodDisruptionBudget",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "f63895",
+        "hash": "26b5510f",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "f63895",
+        "hash": "a0021955",
+        "encoded": "name:%20transport-backend-pdb",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "f63895",
+        "hash": "89136832",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "f63895",
+        "hash": "5139acb9",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "f63895",
+        "hash": "e32cb0cd",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "f63895",
+        "hash": "202be0cf",
+        "encoded": "app.kubernetes.io/component:%20backend",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "f63895",
+        "hash": "73865187",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "f63895",
+        "hash": "3e43ece2",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "f63895",
+        "hash": "43731fa0",
+        "encoded": "minAvailable:%201",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "f63895",
+        "hash": "e43235b4",
+        "encoded": "selector:",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "f63895",
+        "hash": "8006b65d",
+        "encoded": "matchLabels:",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "f63895",
+        "hash": "9db5fd01",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

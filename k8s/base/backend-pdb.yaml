@@ -1,0 +1,17 @@
+# ─────────────────────────────────────────────────────────────────
+# PodDisruptionBudget for Backend – Ensures high availability
+# ─────────────────────────────────────────────────────────────────
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: transport-backend-pdb
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/part-of: transport-tracker
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: transport-backend

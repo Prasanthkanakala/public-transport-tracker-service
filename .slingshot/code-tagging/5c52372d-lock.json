@@ -1,0 +1,181 @@
+{
+  "k8s\\base\\backend-secret.yaml": {
+    "filename": "backend-secret.yaml",
+    "path": "k8s\\base\\backend-secret.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "d95b55": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227681,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "fa58cc43",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:21 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "d95b55",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "d95b55",
+        "hash": "fd0759df",
+        "encoded": "#%20Secret%20for%20Backend%20%E2%80%93%20Sensitive%20API%20keys%20and%20credentials",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "d95b55",
+        "hash": "530319de",
+        "encoded": "#%20NOTE:%20Replace%20base64-encoded%20values%20before%20applying.",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "d95b55",
+        "hash": "6d1602f5",
+        "encoded": "#%20%20%20%20%20%20%20echo%20-n%20'your-value'%20%7C%20base64",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "d95b55",
+        "hash": "d01db3dc",
+        "encoded": "#%20%20%20%20%20%20%20In%20production,%20use%20External%20Secrets%20Operator%20or%20Sealed%20Secrets.",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "d95b55",
+        "hash": "84350523",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "d95b55",
+        "hash": "197348d8",
+        "encoded": "apiVersion:%20v1",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "d95b55",
+        "hash": "fb4ac382",
+        "encoded": "kind:%20Secret",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "d95b55",
+        "hash": "3e3ea44f",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "d95b55",
+        "hash": "135d100b",
+        "encoded": "name:%20backend-secrets",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "d95b55",
+        "hash": "0bbf4ac0",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "d95b55",
+        "hash": "7a03c5d3",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "d95b55",
+        "hash": "1daaac03",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "d95b55",
+        "hash": "0587ca5e",
+        "encoded": "app.kubernetes.io/component:%20backend",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "d95b55",
+        "hash": "484db413",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "d95b55",
+        "hash": "2ccb3d9e",
+        "encoded": "type:%20Opaque",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "d95b55",
+        "hash": "1ad9121c",
+        "encoded": "data:",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "d95b55",
+        "hash": "7c9efbb7",
+        "encoded": "#%20echo%20-n%20'your-mta-api-key'%20%7C%20base64",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "d95b55",
+        "hash": "6f5a2808",
+        "encoded": "MTA_API_KEY:%20%22eW91ci1tdGEtYXBpLWtleQ==%22",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "d95b55",
+        "hash": "afa48898",
+        "encoded": "#%20echo%20-n%20'your-transitland-api-key'%20%7C%20base64",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "d95b55",
+        "hash": "2b6744d8",
+        "encoded": "TRANSITLAND_API_KEY:%20%22eW91ci10cmFuc2l0bGFuZC1hcGkta2V5%22",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "d95b55",
+        "hash": "f716a42d",
+        "encoded": "#%20echo%20-n%20'your-tfl-api-key'%20%7C%20base64",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "d95b55",
+        "hash": "58085335",
+        "encoded": "TFL_API_KEY:%20%22eW91ci10ZmwtYXBpLWtleQ==%22",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "d95b55",
+        "hash": "48c5ecba",
+        "encoded": "#%20echo%20-n%20'MySecretKeyForJWTAuthenticationThatIsAtLeast256BitsLong!'%20%7C%20base64",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "d95b55",
+        "hash": "847d3aaf",
+        "encoded": "JWT_SECRET:%20%22TXlTZWNyZXRLZXlGb3JKV1RBdXRoZW50aWNhdGlvblRoYXRJc0F0TGVhc3QyNTZCaXRzTG9uZyE=%22",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

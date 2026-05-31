@@ -3,7 +3,6 @@ package com.transport.tracker.cache;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 import java.util.Map;
@@ -24,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 *
 *   1. get(key)       → Returns fresh data if within TTL
 *   2. getStale(key)  → Returns expired (but not too old) data when live API fails.
-*                       This is the "serve stale on upstream failure" mechanism.
+*                       This is the core resilience mechanism.
 *   3. Background eviction removes entries that exceed the stale TTL window,
 *      preventing unbounded memory growth.
 *
@@ -83,11 +82,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 * No third-party cache library (Ehcache, Caffeine, Redis) is used.
 * Pure Java: ConcurrentHashMap + DelayQueue + daemon thread.
 *
+* NOTE: This class is NOT a Spring-managed bean. It is manually instantiated
+* by {@link CacheService} which provides the required configuration values
+* (ttlSeconds, staleTtlSeconds, maxSize) from Spring's externalized config.
+*
 * @param <K> Cache key type
 * @param <V> Cache value type
 */
 @Slf4j
-@Component
 public class InMemoryCache<K, V> {
 
     // Primary storage: source of truth for cache entries

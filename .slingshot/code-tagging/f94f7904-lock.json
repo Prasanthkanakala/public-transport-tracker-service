@@ -1,0 +1,229 @@
+{
+  "k8s\\base\\frontend-hpa.yaml": {
+    "filename": "frontend-hpa.yaml",
+    "path": "k8s\\base\\frontend-hpa.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "2529de": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227684,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "212fd113",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:24 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "2529de",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "2529de",
+        "hash": "9a520aa2",
+        "encoded": "#%20Horizontal%20Pod%20Autoscaler%20for%20Frontend",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "2529de",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "2529de",
+        "hash": "b92de0fe",
+        "encoded": "apiVersion:%20autoscaling/v2",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "2529de",
+        "hash": "c9258b83",
+        "encoded": "kind:%20HorizontalPodAutoscaler",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "2529de",
+        "hash": "26b5510f",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "2529de",
+        "hash": "20939397",
+        "encoded": "name:%20transport-frontend-hpa",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "2529de",
+        "hash": "89136832",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "2529de",
+        "hash": "5139acb9",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "2529de",
+        "hash": "c57bd458",
+        "encoded": "app.kubernetes.io/name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "2529de",
+        "hash": "593e02d4",
+        "encoded": "app.kubernetes.io/component:%20frontend",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "2529de",
+        "hash": "73865187",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "2529de",
+        "hash": "3e43ece2",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "2529de",
+        "hash": "fff8b559",
+        "encoded": "scaleTargetRef:",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "2529de",
+        "hash": "54f2bd2d",
+        "encoded": "apiVersion:%20apps/v1",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "2529de",
+        "hash": "2cf689e2",
+        "encoded": "kind:%20Deployment",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "2529de",
+        "hash": "2f13e42c",
+        "encoded": "name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "2529de",
+        "hash": "9acac0d6",
+        "encoded": "minReplicas:%202",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "2529de",
+        "hash": "774ca8da",
+        "encoded": "maxReplicas:%204",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "2529de",
+        "hash": "9330497f",
+        "encoded": "metrics:",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "2529de",
+        "hash": "8298d85e",
+        "encoded": "-%20type:%20Resource",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "2529de",
+        "hash": "f27e5903",
+        "encoded": "resource:",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "2529de",
+        "hash": "49aa65d1",
+        "encoded": "name:%20cpu",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "2529de",
+        "hash": "8579f036",
+        "encoded": "target:",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "2529de",
+        "hash": "e86ff45b",
+        "encoded": "type:%20Utilization",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "2529de",
+        "hash": "7c4d9d08",
+        "encoded": "averageUtilization:%2070",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "2529de",
+        "hash": "0b64a95a",
+        "encoded": "behavior:",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "2529de",
+        "hash": "862b6751",
+        "encoded": "scaleDown:",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "2529de",
+        "hash": "d9e9f861",
+        "encoded": "stabilizationWindowSeconds:%20300",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "2529de",
+        "hash": "cf108808",
+        "encoded": "policies:",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "2529de",
+        "hash": "c1327d70",
+        "encoded": "-%20type:%20Pods",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "2529de",
+        "hash": "27deaca3",
+        "encoded": "value:%201",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "2529de",
+        "hash": "a98337a8",
+        "encoded": "periodSeconds:%2060",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

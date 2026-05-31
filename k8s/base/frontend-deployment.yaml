@@ -1,0 +1,76 @@
+# ─────────────────────────────────────────────────────────────────
+# Frontend Deployment – React App served via Nginx
+# ─────────────────────────────────────────────────────────────────
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transport-frontend
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/name: transport-frontend
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/part-of: transport-tracker
+    app.kubernetes.io/version: "1.0.0"
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: transport-frontend
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: transport-frontend
+        app.kubernetes.io/component: frontend
+        app.kubernetes.io/part-of: transport-tracker
+    spec:
+      serviceAccountName: transport-tracker-sa
+      securityContext:
+        runAsNonRoot: false
+      terminationGracePeriodSeconds: 15
+      containers:
+        - name: frontend
+          # Image will be overridden by Kustomize overlay per environment
+          image: IMAGE_PLACEHOLDER
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          livenessProbe:
+            httpGet:
+              path: /index.html
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 15
+            timeoutSeconds: 3
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /index.html
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /etc/nginx/conf.d/default.conf
+              subPath: default.conf
+              readOnly: true
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: frontend-nginx-config

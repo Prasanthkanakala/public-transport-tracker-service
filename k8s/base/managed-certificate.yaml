@@ -1,0 +1,14 @@
+# ─────────────────────────────────────────────────────────────────
+# Google-Managed SSL Certificate for GKE
+# Uncomment the annotation in ingress.yaml to use this
+# ─────────────────────────────────────────────────────────────────
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: transport-tracker-cert
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/part-of: transport-tracker
+spec:
+  domains:
+    - transport-tracker.example.com

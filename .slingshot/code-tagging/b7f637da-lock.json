@@ -1,0 +1,181 @@
+{
+  "k8s\\base\\kustomization.yaml": {
+    "filename": "kustomization.yaml",
+    "path": "k8s\\base\\kustomization.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "fc2910": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227688,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "4dd61957",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:28 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "fc2910",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "fc2910",
+        "hash": "ceab095a",
+        "encoded": "#%20Kustomize%20Base%20%E2%80%93%20All%20resources%20for%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "fc2910",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "fc2910",
+        "hash": "5ea88388",
+        "encoded": "apiVersion:%20kustomize.config.k8s.io/v1beta1",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "fc2910",
+        "hash": "10a0b670",
+        "encoded": "kind:%20Kustomization",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "fc2910",
+        "hash": "031e4a98",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "fc2910",
+        "hash": "bbac563d",
+        "encoded": "commonLabels:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "fc2910",
+        "hash": "9c16d108",
+        "encoded": "app.kubernetes.io/managed-by:%20kustomize",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "fc2910",
+        "hash": "095d55fb",
+        "encoded": "resources:",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "fc2910",
+        "hash": "b2f7fe32",
+        "encoded": "-%20namespace.yaml",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "fc2910",
+        "hash": "dd0b8844",
+        "encoded": "-%20service-account.yaml",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "fc2910",
+        "hash": "aee605c4",
+        "encoded": "-%20backend-configmap.yaml",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "fc2910",
+        "hash": "9122b847",
+        "encoded": "-%20backend-secret.yaml",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "fc2910",
+        "hash": "0057c5e0",
+        "encoded": "-%20backend-deployment.yaml",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "fc2910",
+        "hash": "5c2f63ea",
+        "encoded": "-%20backend-service.yaml",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "fc2910",
+        "hash": "37bf5217",
+        "encoded": "-%20backend-hpa.yaml",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "fc2910",
+        "hash": "b3fca81d",
+        "encoded": "-%20backend-pdb.yaml",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "fc2910",
+        "hash": "97cf33f5",
+        "encoded": "-%20frontend-nginx-configmap.yaml",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "fc2910",
+        "hash": "f6bbe94e",
+        "encoded": "-%20frontend-deployment.yaml",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "fc2910",
+        "hash": "72390c4c",
+        "encoded": "-%20frontend-service.yaml",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "fc2910",
+        "hash": "ce9ee0fb",
+        "encoded": "-%20frontend-hpa.yaml",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "fc2910",
+        "hash": "e52967e4",
+        "encoded": "-%20frontend-pdb.yaml",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "fc2910",
+        "hash": "61b03b7e",
+        "encoded": "-%20ingress.yaml",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "fc2910",
+        "hash": "8904ec9c",
+        "encoded": "-%20managed-certificate.yaml",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "fc2910",
+        "hash": "bd6248e7",
+        "encoded": "-%20network-policy.yaml",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

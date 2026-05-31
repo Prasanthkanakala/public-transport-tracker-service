@@ -1,0 +1,28 @@
+# ─────────────────────────────────────────────────────────────────
+# Kustomize Base – All resources for transport-tracker
+# ─────────────────────────────────────────────────────────────────
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: transport-tracker
+
+commonLabels:
+  app.kubernetes.io/managed-by: kustomize
+
+resources:
+  - namespace.yaml
+  - service-account.yaml
+  - backend-configmap.yaml
+  - backend-secret.yaml
+  - backend-deployment.yaml
+  - backend-service.yaml
+  - backend-hpa.yaml
+  - backend-pdb.yaml
+  - frontend-nginx-configmap.yaml
+  - frontend-deployment.yaml
+  - frontend-service.yaml
+  - frontend-hpa.yaml
+  - frontend-pdb.yaml
+  - ingress.yaml
+  - managed-certificate.yaml
+  - network-policy.yaml

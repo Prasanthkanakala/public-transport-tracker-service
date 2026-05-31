@@ -1,0 +1,145 @@
+{
+  "k8s\\base\\backend-configmap.yaml": {
+    "filename": "backend-configmap.yaml",
+    "path": "k8s\\base\\backend-configmap.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "6e87b2": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227679,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "f58bfb4e",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:19 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "6e87b2",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "6e87b2",
+        "hash": "c34fd58c",
+        "encoded": "#%20ConfigMap%20for%20Backend%20(Spring%20Boot)%20%E2%80%93%20Non-sensitive%20configuration",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "6e87b2",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "6e87b2",
+        "hash": "fbdf2626",
+        "encoded": "apiVersion:%20v1",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "6e87b2",
+        "hash": "c023fe84",
+        "encoded": "kind:%20ConfigMap",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "6e87b2",
+        "hash": "26b5510f",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "6e87b2",
+        "hash": "baddaa96",
+        "encoded": "name:%20backend-config",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "6e87b2",
+        "hash": "89136832",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "6e87b2",
+        "hash": "5139acb9",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "6e87b2",
+        "hash": "e32cb0cd",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "6e87b2",
+        "hash": "202be0cf",
+        "encoded": "app.kubernetes.io/component:%20backend",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "6e87b2",
+        "hash": "73865187",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "6e87b2",
+        "hash": "1d9623e2",
+        "encoded": "data:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "6e87b2",
+        "hash": "a2333b4a",
+        "encoded": "SPRING_PROFILE:%20%22prod%22",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "6e87b2",
+        "hash": "7b1e56b3",
+        "encoded": "CACHE_TTL_SECONDS:%20%22300%22",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "6e87b2",
+        "hash": "d7495c1e",
+        "encoded": "CACHE_STALE_TTL_SECONDS:%20%223600%22",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "6e87b2",
+        "hash": "354ff8b4",
+        "encoded": "CACHE_MAX_SIZE:%20%221000%22",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "6e87b2",
+        "hash": "d45f93a2",
+        "encoded": "OFFLINE_MODE:%20%22false%22",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "6e87b2",
+        "hash": "9b676c41",
+        "encoded": "ALLOWED_ORIGINS:%20%22https://transport-tracker.example.com%22",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

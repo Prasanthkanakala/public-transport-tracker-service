@@ -1,0 +1,49 @@
+{
+  "frontend\\nginx.conf": {
+    "filename": "nginx.conf",
+    "path": "frontend\\nginx.conf",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8367cf": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780228534,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "a323843f",
+          "files": "76b8573a"
+        },
+        "hash": "d720b13a",
+        "messageId": "system_5c87f210-5ce7-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:25:34 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "13": {
+        "chunkId": "8367cf",
+        "hash": "d9615fd4",
+        "encoded": "#%20Proxy%20/api%20calls%20to%20the%20backend%20service",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8367cf",
+        "hash": "155a8e38",
+        "encoded": "location%20/api/%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8367cf",
+        "hash": "1debd645",
+        "encoded": "proxy_pass%20%20%20%20%20%20%20%20%20http://backend:8081;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

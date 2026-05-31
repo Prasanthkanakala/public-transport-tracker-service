@@ -1,0 +1,68 @@
+{
+  "backend\\Dockerfile": {
+    "filename": "Dockerfile",
+    "path": "backend\\Dockerfile",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ed54d4": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780228572,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "a323843f",
+          "files": "76b8573a"
+        },
+        "hash": "831441ce",
+        "messageId": "system_5c87f210-5ce7-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:26:12 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "14e495": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780228572,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "a323843f",
+          "files": "76b8573a"
+        },
+        "hash": "b762a3d4",
+        "messageId": "system_5c87f210-5ce7-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:26:12 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "39": {
+        "chunkId": "14e495",
+        "hash": "3ec6944d",
+        "encoded": "EXPOSE%208081",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "ed54d4",
+        "hash": "219564cc",
+        "encoded": "HEALTHCHECK%20--interval=30s%20--timeout=5s%20--start-period=30s%20--retries=3%20%5C",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "ed54d4",
+        "hash": "3d6c160e",
+        "encoded": "CMD%20wget%20-qO-%20http://localhost:8081/actuator/health%20%7C%7C%20exit%201",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

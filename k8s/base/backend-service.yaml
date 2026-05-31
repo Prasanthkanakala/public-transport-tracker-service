@@ -1,0 +1,21 @@
+# ─────────────────────────────────────────────────────────────────
+# Backend Service – ClusterIP for internal communication
+# ─────────────────────────────────────────────────────────────────
+apiVersion: v1
+kind: Service
+metadata:
+  name: transport-backend
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/part-of: transport-tracker
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: transport-backend
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+      protocol: TCP

@@ -1,0 +1,17 @@
+# ─────────────────────────────────────────────────────────────────
+# PodDisruptionBudget for Frontend – Ensures high availability
+# ─────────────────────────────────────────────────────────────────
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: transport-frontend-pdb
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/name: transport-frontend
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/part-of: transport-tracker
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: transport-frontend

@@ -1,0 +1,31 @@
+{
+  "filename": "setup-demo-dns.sh",
+  "path": "k8s\\setup-demo-dns.sh",
+  "version": "1.1",
+  "files": {
+    "6aa9c5e3": {
+      "value": [
+        {
+          "programming_language": "Markdown",
+          "fileName": "README.md",
+          "relativeFilePath": "k8s/README.md",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            146
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "f2ed47ae": {
+      "value": "I need a dns I think just to shoecase to my leads"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

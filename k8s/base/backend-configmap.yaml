@@ -1,0 +1,19 @@
+# ─────────────────────────────────────────────────────────────────
+# ConfigMap for Backend (Spring Boot) – Non-sensitive configuration
+# ─────────────────────────────────────────────────────────────────
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/part-of: transport-tracker
+data:
+  SPRING_PROFILE: "prod"
+  CACHE_TTL_SECONDS: "300"
+  CACHE_STALE_TTL_SECONDS: "3600"
+  CACHE_MAX_SIZE: "1000"
+  OFFLINE_MODE: "false"
+  ALLOWED_ORIGINS: "https://transport-tracker.example.com"

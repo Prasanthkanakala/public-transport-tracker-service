@@ -1,0 +1,10 @@
+# ─────────────────────────────────────────────────────────────────
+# Kubernetes Namespace for Public Transport Tracker
+# ─────────────────────────────────────────────────────────────────
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: transport-tracker
+  labels:
+    app.kubernetes.io/part-of: transport-tracker
+    app.kubernetes.io/managed-by: kubectl

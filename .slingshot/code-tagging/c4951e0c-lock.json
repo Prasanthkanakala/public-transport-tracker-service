@@ -1,0 +1,157 @@
+{
+  "k8s\\base\\backend-service.yaml": {
+    "filename": "backend-service.yaml",
+    "path": "k8s\\base\\backend-service.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8bb2ec": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227681,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "f72b05ab",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:21 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8bb2ec",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "8bb2ec",
+        "hash": "cbe95780",
+        "encoded": "#%20Backend%20Service%20%E2%80%93%20ClusterIP%20for%20internal%20communication",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8bb2ec",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "8bb2ec",
+        "hash": "fbdf2626",
+        "encoded": "apiVersion:%20v1",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8bb2ec",
+        "hash": "51a996c1",
+        "encoded": "kind:%20Service",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8bb2ec",
+        "hash": "26b5510f",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8bb2ec",
+        "hash": "04e3597f",
+        "encoded": "name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "8bb2ec",
+        "hash": "89136832",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8bb2ec",
+        "hash": "5139acb9",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8bb2ec",
+        "hash": "e32cb0cd",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "8bb2ec",
+        "hash": "202be0cf",
+        "encoded": "app.kubernetes.io/component:%20backend",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "8bb2ec",
+        "hash": "73865187",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8bb2ec",
+        "hash": "3e43ece2",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8bb2ec",
+        "hash": "4fab30ac",
+        "encoded": "type:%20ClusterIP",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8bb2ec",
+        "hash": "e43235b4",
+        "encoded": "selector:",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8bb2ec",
+        "hash": "f45520ca",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8bb2ec",
+        "hash": "a5b1d96e",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "8bb2ec",
+        "hash": "b768da45",
+        "encoded": "-%20name:%20http",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "8bb2ec",
+        "hash": "343a0b2c",
+        "encoded": "port:%208080",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "8bb2ec",
+        "hash": "c60798bc",
+        "encoded": "targetPort:%20http",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8bb2ec",
+        "hash": "25066a6c",
+        "encoded": "protocol:%20TCP",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

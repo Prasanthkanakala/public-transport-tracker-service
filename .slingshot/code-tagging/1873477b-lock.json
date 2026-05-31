@@ -1,0 +1,301 @@
+{
+  "k8s\\base\\backend-hpa.yaml": {
+    "filename": "backend-hpa.yaml",
+    "path": "k8s\\base\\backend-hpa.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "e50323": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227682,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "79fc8ca1",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:22 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "e50323",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "e50323",
+        "hash": "7b34c7e5",
+        "encoded": "#%20Horizontal%20Pod%20Autoscaler%20for%20Backend",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "e50323",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "e50323",
+        "hash": "b92de0fe",
+        "encoded": "apiVersion:%20autoscaling/v2",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "e50323",
+        "hash": "c9258b83",
+        "encoded": "kind:%20HorizontalPodAutoscaler",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "e50323",
+        "hash": "26b5510f",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "e50323",
+        "hash": "89818a5b",
+        "encoded": "name:%20transport-backend-hpa",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "e50323",
+        "hash": "89136832",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "e50323",
+        "hash": "5139acb9",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "e50323",
+        "hash": "e32cb0cd",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "e50323",
+        "hash": "202be0cf",
+        "encoded": "app.kubernetes.io/component:%20backend",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "e50323",
+        "hash": "73865187",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "e50323",
+        "hash": "3e43ece2",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "e50323",
+        "hash": "fff8b559",
+        "encoded": "scaleTargetRef:",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "e50323",
+        "hash": "54f2bd2d",
+        "encoded": "apiVersion:%20apps/v1",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "e50323",
+        "hash": "2cf689e2",
+        "encoded": "kind:%20Deployment",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "e50323",
+        "hash": "3437dcc1",
+        "encoded": "name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "e50323",
+        "hash": "9acac0d6",
+        "encoded": "minReplicas:%202",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "e50323",
+        "hash": "2de0be26",
+        "encoded": "maxReplicas:%206",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "e50323",
+        "hash": "9330497f",
+        "encoded": "metrics:",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "e50323",
+        "hash": "8298d85e",
+        "encoded": "-%20type:%20Resource",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "e50323",
+        "hash": "f27e5903",
+        "encoded": "resource:",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "e50323",
+        "hash": "49aa65d1",
+        "encoded": "name:%20cpu",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "e50323",
+        "hash": "8579f036",
+        "encoded": "target:",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "e50323",
+        "hash": "e86ff45b",
+        "encoded": "type:%20Utilization",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "e50323",
+        "hash": "7c4d9d08",
+        "encoded": "averageUtilization:%2070",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "e50323",
+        "hash": "0cc70afd",
+        "encoded": "-%20type:%20Resource",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "e50323",
+        "hash": "3adafa4a",
+        "encoded": "resource:",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "e50323",
+        "hash": "c1fc022f",
+        "encoded": "name:%20memory",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "e50323",
+        "hash": "d6cb3122",
+        "encoded": "target:",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "e50323",
+        "hash": "652941b7",
+        "encoded": "type:%20Utilization",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "e50323",
+        "hash": "daa3c6c7",
+        "encoded": "averageUtilization:%2080",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "e50323",
+        "hash": "90256be0",
+        "encoded": "behavior:",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "e50323",
+        "hash": "b07fdc7b",
+        "encoded": "scaleDown:",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "e50323",
+        "hash": "edddee5b",
+        "encoded": "stabilizationWindowSeconds:%20300",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "e50323",
+        "hash": "1a032f8c",
+        "encoded": "policies:",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "e50323",
+        "hash": "2673b01a",
+        "encoded": "-%20type:%20Pods",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "e50323",
+        "hash": "701ddd1e",
+        "encoded": "value:%201",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "e50323",
+        "hash": "f9202d43",
+        "encoded": "periodSeconds:%2060",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "e50323",
+        "hash": "a44d1f95",
+        "encoded": "scaleUp:",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "e50323",
+        "hash": "e75ffbda",
+        "encoded": "stabilizationWindowSeconds:%2060",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "e50323",
+        "hash": "7730ce4b",
+        "encoded": "policies:",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "e50323",
+        "hash": "e9b04724",
+        "encoded": "-%20type:%20Pods",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "e50323",
+        "hash": "3085b102",
+        "encoded": "value:%202",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "e50323",
+        "hash": "d35d8b45",
+        "encoded": "periodSeconds:%2060",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

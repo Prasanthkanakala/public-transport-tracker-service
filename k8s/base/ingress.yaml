@@ -1,0 +1,60 @@
+# ─────────────────────────────────────────────────────────────────
+# GKE Ingress – Routes external traffic to frontend
+# Uses GCE Ingress Controller (default on GKE)
+# For HTTPS, configure a Google-managed certificate
+# ─────────────────────────────────────────────────────────────────
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: transport-tracker-ingress
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/name: transport-tracker-ingress
+    app.kubernetes.io/part-of: transport-tracker
+  annotations:
+    # GKE-specific annotations
+    kubernetes.io/ingress.class: "gce"
+    # Static IP for stable DNS (create with: gcloud compute addresses create transport-tracker-ip --global)
+    kubernetes.io/ingress.global-static-ip-name: "transport-tracker-ip"
+    # Uncomment below for Google-managed SSL certificate (requires a real domain)
+    # networking.gke.io/managed-certificates: "transport-tracker-cert"
+    # Redirect HTTP to HTTPS (uncomment when SSL is ready)
+    # kubernetes.io/ingress.allow-http: "false"
+spec:
+  defaultBackend:
+    service:
+      name: transport-frontend
+      port:
+        number: 80
+  rules:
+    # ──────────────────────────────────────────────────────────────
+    # DEMO DNS: Uses nip.io (free wildcard DNS) — no domain purchase needed!
+    # Replace EXTERNAL_IP with your static IP after running:
+    #   gcloud compute addresses describe transport-tracker-ip --global --format='value(address)'
+    # Example: If IP is 34.120.55.10, host becomes: transport-tracker.34.120.55.10.nip.io
+    # ──────────────────────────────────────────────────────────────
+    - host: transport-tracker.EXTERNAL_IP.nip.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: transport-frontend
+                port:
+                  number: 80
+          # Direct API access (bypassing frontend nginx proxy)
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: transport-backend
+                port:
+                  number: 8080
+          - path: /actuator
+            pathType: Prefix
+            backend:
+              service:
+                name: transport-backend
+                port:
+                  number: 8080

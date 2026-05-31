@@ -1,0 +1,661 @@
+{
+  "k8s\\setup-demo-dns.sh": {
+    "filename": "setup-demo-dns.sh",
+    "path": "k8s\\setup-demo-dns.sh",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "4f41b5": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780229843,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "f2ed47ae",
+          "files": "6aa9c5e3"
+        },
+        "hash": "f8cca5f0",
+        "messageId": "system_136736b0-5cea-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:47:23 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "4f41b5",
+        "hash": "acb0f876",
+        "encoded": "#!/bin/bash",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "4f41b5",
+        "hash": "592aa578",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "4f41b5",
+        "hash": "f3d69f15",
+        "encoded": "#%20%F0%9F%9A%80%20Demo%20DNS%20Setup%20Script%20for%20Public%20Transport%20Tracker",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "4f41b5",
+        "hash": "d9d40ad2",
+        "encoded": "#%20Creates%20a%20shareable%20URL%20using%20nip.io%20(FREE,%20no%20domain%20needed)",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "4f41b5",
+        "hash": "56480092",
+        "encoded": "#%20Works%20with%20private%20GKE%20clusters!",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "4f41b5",
+        "hash": "84350523",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "4f41b5",
+        "hash": "f2bda7f1",
+        "encoded": "set%20-euo%20pipefail",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "4f41b5",
+        "hash": "ad6914b6",
+        "encoded": "#%20Colors%20for%20output",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "4f41b5",
+        "hash": "e1ff2c11",
+        "encoded": "RED='%5C033%5B0;31m'",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "4f41b5",
+        "hash": "d5fee5a9",
+        "encoded": "GREEN='%5C033%5B0;32m'",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "4f41b5",
+        "hash": "e09aa856",
+        "encoded": "YELLOW='%5C033%5B1;33m'",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "4f41b5",
+        "hash": "1da22033",
+        "encoded": "CYAN='%5C033%5B0;36m'",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "4f41b5",
+        "hash": "83b6f263",
+        "encoded": "NC='%5C033%5B0m'%20#%20No%20Color",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "4f41b5",
+        "hash": "c06cba10",
+        "encoded": "echo%20-e%20%22$%7BCYAN%7D%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "4f41b5",
+        "hash": "cdc66be3",
+        "encoded": "echo%20-e%20%22$%7BCYAN%7D%20%20%F0%9F%9A%8C%20Public%20Transport%20Tracker%20%E2%80%93%20Demo%20DNS%20Setup$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "4f41b5",
+        "hash": "642d411f",
+        "encoded": "echo%20-e%20%22$%7BCYAN%7D%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "4f41b5",
+        "hash": "edcd714b",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "4f41b5",
+        "hash": "b2e94092",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "4f41b5",
+        "hash": "4f617859",
+        "encoded": "#%20Step%201:%20Reserve%20a%20Global%20Static%20IP",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "4f41b5",
+        "hash": "8271e923",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "4f41b5",
+        "hash": "0f62a770",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7DStep%201:%20Reserving%20a%20global%20static%20IP%20address...$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "4f41b5",
+        "hash": "55cf8868",
+        "encoded": "if%20gcloud%20compute%20addresses%20describe%20transport-tracker-ip%20--global%20&%3E/dev/null;%20then",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "4f41b5",
+        "hash": "d55b059f",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%E2%9C%85%20Static%20IP%20'transport-tracker-ip'%20already%20exists.$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "4f41b5",
+        "hash": "10b6fa8f",
+        "encoded": "else",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "4f41b5",
+        "hash": "bade6ddb",
+        "encoded": "gcloud%20compute%20addresses%20create%20transport-tracker-ip%20--global",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "4f41b5",
+        "hash": "c436ace0",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%E2%9C%85%20Static%20IP%20'transport-tracker-ip'%20created.$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "4f41b5",
+        "hash": "fd852374",
+        "encoded": "fi",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "4f41b5",
+        "hash": "4bbbbdc4",
+        "encoded": "#%20Get%20the%20IP%20address",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "4f41b5",
+        "hash": "a89441b0",
+        "encoded": "EXTERNAL_IP=$(gcloud%20compute%20addresses%20describe%20transport-tracker-ip%20--global%20--format='value(address)')",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "4f41b5",
+        "hash": "28990c7b",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%20%20%20External%20IP:%20$%7BEXTERNAL_IP%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "4f41b5",
+        "hash": "d811c9cc",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "4f41b5",
+        "hash": "4f3e509f",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "4f41b5",
+        "hash": "ebcd8d67",
+        "encoded": "#%20Step%202:%20Generate%20the%20nip.io%20demo%20URL",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "4f41b5",
+        "hash": "4d9deece",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "4f41b5",
+        "hash": "eb3cbfa6",
+        "encoded": "DEMO_HOST=%22transport-tracker.$%7BEXTERNAL_IP%7D.nip.io%22",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "4f41b5",
+        "hash": "156c7e26",
+        "encoded": "DEMO_URL=%22http://$%7BDEMO_HOST%7D%22",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "4f41b5",
+        "hash": "c23be89d",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7DStep%202:%20Your%20demo%20DNS%20hostname:$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "4f41b5",
+        "hash": "0d65a307",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%20%20%20%F0%9F%8C%90%20$%7BDEMO_HOST%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "4f41b5",
+        "hash": "17333ce1",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "4f41b5",
+        "hash": "2aa2460e",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "4f41b5",
+        "hash": "ba7ce2f9",
+        "encoded": "#%20Step%203:%20Update%20the%20Ingress%20manifest%20with%20the%20actual%20IP",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "4f41b5",
+        "hash": "4776f351",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "4f41b5",
+        "hash": "54ffd29e",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7DStep%203:%20Updating%20ingress.yaml%20with%20the%20demo%20hostname...$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "4f41b5",
+        "hash": "c894eb2b",
+        "encoded": "SCRIPT_DIR=%22$(cd%20%22$(dirname%20%22$%7BBASH_SOURCE%5B0%5D%7D%22)%22%20&&%20pwd)%22",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "4f41b5",
+        "hash": "54f42a64",
+        "encoded": "INGRESS_FILE=%22$%7BSCRIPT_DIR%7D/base/ingress.yaml%22",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "4f41b5",
+        "hash": "a1dc3152",
+        "encoded": "if%20%5B%20-f%20%22$%7BINGRESS_FILE%7D%22%20%5D;%20then",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "4f41b5",
+        "hash": "18647808",
+        "encoded": "#%20Replace%20the%20placeholder%20with%20actual%20nip.io%20hostname",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "4f41b5",
+        "hash": "b85c61bd",
+        "encoded": "sed%20-i.bak%20%22s/transport-tracker%5C.EXTERNAL_IP%5C.nip%5C.io/$%7BDEMO_HOST%7D/g%22%20%22$%7BINGRESS_FILE%7D%22",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "4f41b5",
+        "hash": "6f536915",
+        "encoded": "rm%20-f%20%22$%7BINGRESS_FILE%7D.bak%22",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "4f41b5",
+        "hash": "124240e9",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%E2%9C%85%20ingress.yaml%20updated%20with%20hostname:%20$%7BDEMO_HOST%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "4f41b5",
+        "hash": "00c6b7d1",
+        "encoded": "else",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "4f41b5",
+        "hash": "6c99ccaf",
+        "encoded": "echo%20-e%20%22$%7BRED%7D%E2%9D%8C%20ingress.yaml%20not%20found%20at%20$%7BINGRESS_FILE%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "4f41b5",
+        "hash": "4cd9912f",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7D%20%20%20Please%20manually%20update%20the%20host%20in%20your%20ingress.yaml%20to:%20$%7BDEMO_HOST%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "4f41b5",
+        "hash": "422bdde5",
+        "encoded": "fi",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "4f41b5",
+        "hash": "b7cd13f2",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "4f41b5",
+        "hash": "556775a7",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "4f41b5",
+        "hash": "46d85ac3",
+        "encoded": "#%20Step%204:%20Apply%20the%20Ingress",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "4f41b5",
+        "hash": "43493b68",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "4f41b5",
+        "hash": "a5e0360c",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7DStep%204:%20Applying%20Kubernetes%20manifests...$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "4f41b5",
+        "hash": "fab964dc",
+        "encoded": "if%20kubectl%20get%20namespace%20transport-tracker%20&%3E/dev/null;%20then",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "4f41b5",
+        "hash": "ba67578a",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%20%20%20Namespace%20'transport-tracker'%20exists.$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "4f41b5",
+        "hash": "3e6b32dd",
+        "encoded": "else",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "4f41b5",
+        "hash": "b01800f9",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7D%20%20%20Creating%20namespace%20'transport-tracker'...$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "4f41b5",
+        "hash": "9d5d442a",
+        "encoded": "kubectl%20apply%20-f%20%22$%7BSCRIPT_DIR%7D/base/namespace.yaml%22",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "4f41b5",
+        "hash": "d9f578fb",
+        "encoded": "fi",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "4f41b5",
+        "hash": "9e7d1b32",
+        "encoded": "#%20Apply%20using%20kustomize%20(dev%20overlay%20for%20demo)",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "4f41b5",
+        "hash": "6af4eb7b",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7D%20%20%20Deploying%20with%20kustomize%20(dev%20overlay)...$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "4f41b5",
+        "hash": "c4877b96",
+        "encoded": "kustomize%20build%20%22$%7BSCRIPT_DIR%7D/overlays/dev%22%20%7C%20kubectl%20apply%20-f%20-",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "4f41b5",
+        "hash": "e664f9b0",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%E2%9C%85%20Manifests%20applied%20successfully.$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "4f41b5",
+        "hash": "a33fd2c9",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "4f41b5",
+        "hash": "26e2925a",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "4f41b5",
+        "hash": "20d60498",
+        "encoded": "#%20Step%205:%20Wait%20for%20Ingress%20to%20get%20the%20external%20IP",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "4f41b5",
+        "hash": "70670825",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "4f41b5",
+        "hash": "7ce05902",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7DStep%205:%20Waiting%20for%20Ingress%20to%20be%20provisioned%20(this%20may%20take%203-5%20minutes)...$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "4f41b5",
+        "hash": "64804b57",
+        "encoded": "for%20i%20in%20$(seq%201%2030);%20do",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "4f41b5",
+        "hash": "f05f94cb",
+        "encoded": "INGRESS_IP=$(kubectl%20get%20ingress%20transport-tracker-ingress%20-n%20transport-tracker%20-o%20jsonpath='%7B.status.loadBalancer.ingress%5B0%5D.ip%7D'%202%3E/dev/null%20%7C%7C%20true)",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "4f41b5",
+        "hash": "248fa7d8",
+        "encoded": "if%20%5B%20-n%20%22$%7BINGRESS_IP%7D%22%20%5D;%20then",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "4f41b5",
+        "hash": "7d8703c3",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%E2%9C%85%20Ingress%20is%20ready!%20IP:%20$%7BINGRESS_IP%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "4f41b5",
+        "hash": "c5a95106",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "4f41b5",
+        "hash": "597bf4b7",
+        "encoded": "fi",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "4f41b5",
+        "hash": "a49989e7",
+        "encoded": "echo%20-e%20%22%20%20%20%E2%8F%B3%20Waiting...%20($%7Bi%7D/30)%22",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "4f41b5",
+        "hash": "62755c41",
+        "encoded": "sleep%2010",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "4f41b5",
+        "hash": "6e669ba8",
+        "encoded": "done",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "4f41b5",
+        "hash": "92911d7e",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "4f41b5",
+        "hash": "ce1df646",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "4f41b5",
+        "hash": "6d09742d",
+        "encoded": "#%20Step%206:%20Print%20the%20shareable%20demo%20URL",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "4f41b5",
+        "hash": "05269056",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "4f41b5",
+        "hash": "1b3fa29d",
+        "encoded": "echo%20-e%20%22$%7BCYAN%7D%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "4f41b5",
+        "hash": "705caf91",
+        "encoded": "echo%20-e%20%22$%7BCYAN%7D%20%20%F0%9F%8E%89%20DEMO%20READY!%20Share%20this%20URL%20with%20your%20leads:$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "4f41b5",
+        "hash": "77de7877",
+        "encoded": "echo%20-e%20%22$%7BCYAN%7D%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "4f41b5",
+        "hash": "44f0a5af",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "4f41b5",
+        "hash": "11700094",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%20%20%F0%9F%8C%90%20Frontend:%20%20$%7BDEMO_URL%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "4f41b5",
+        "hash": "63a1960c",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%20%20%F0%9F%94%8C%20API:%20%20%20%20%20%20%20$%7BDEMO_URL%7D/api$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "4f41b5",
+        "hash": "0cd59a48",
+        "encoded": "echo%20-e%20%22$%7BGREEN%7D%20%20%F0%9F%93%8A%20Health:%20%20%20%20$%7BDEMO_URL%7D/actuator/health$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "4f41b5",
+        "hash": "2ed4106e",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "4f41b5",
+        "hash": "e47375ac",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7D%20%20%F0%9F%93%9D%20How%20nip.io%20works:$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "4f41b5",
+        "hash": "cb9d1c9a",
+        "encoded": "echo%20-e%20%22%20%20%20%20%20nip.io%20is%20a%20free%20wildcard%20DNS%20service.$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "4f41b5",
+        "hash": "59f65039",
+        "encoded": "echo%20-e%20%22%20%20%20%20%20It%20resolves%20'anything.$%7BEXTERNAL_IP%7D.nip.io'%20%E2%86%92%20$%7BEXTERNAL_IP%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "4f41b5",
+        "hash": "be37da76",
+        "encoded": "echo%20-e%20%22%20%20%20%20%20No%20domain%20purchase%20or%20DNS%20configuration%20needed!$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "4f41b5",
+        "hash": "0da44909",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "4f41b5",
+        "hash": "abe40bdb",
+        "encoded": "echo%20-e%20%22$%7BYELLOW%7D%20%20%E2%9A%A1%20Quick%20verification:$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "4f41b5",
+        "hash": "9cde11a2",
+        "encoded": "echo%20-e%20%22%20%20%20%20%20curl%20$%7BDEMO_URL%7D$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "4f41b5",
+        "hash": "386fa24a",
+        "encoded": "echo%20-e%20%22%20%20%20%20%20curl%20$%7BDEMO_URL%7D/api/actuator/health$%7BNC%7D%22",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "4f41b5",
+        "hash": "d5950d62",
+        "encoded": "echo%20%22%22",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "4f41b5",
+        "hash": "0221b43a",
+        "encoded": "echo%20-e%20%22$%7BCYAN%7D%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90$%7BNC%7D%22",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

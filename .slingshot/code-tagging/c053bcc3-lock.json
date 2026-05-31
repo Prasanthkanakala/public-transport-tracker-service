@@ -1,0 +1,1052 @@
+{
+  "k8s\\README.md": {
+    "filename": "README.md",
+    "path": "k8s\\README.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8707f8": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227807,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "2ab57f5c",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:13:27 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "c5f046": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780229870,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "f2ed47ae",
+          "files": "6aa9c5e3"
+        },
+        "hash": "43b4ddba",
+        "messageId": "system_136736b0-5cea-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:47:50 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8707f8",
+        "hash": "0eeb4509",
+        "encoded": "#%20Kubernetes%20Manifests%20%E2%80%93%20Public%20Transport%20Tracker",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8707f8",
+        "hash": "d2db4042",
+        "encoded": "Production-ready%20Kubernetes%20manifests%20for%20deploying%20the%20Public%20Transport%20Tracker%20to%20**Google%20Kubernetes%20Engine%20(GKE)**%20with%20images%20published%20to%20**Google%20Artifact%20Registry%20(GAR)**.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8707f8",
+        "hash": "152f8da9",
+        "encoded": "##%20%F0%9F%93%81%20Directory%20Structure",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8707f8",
+        "hash": "ba1b7ee2",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "8707f8",
+        "hash": "f2f64b54",
+        "encoded": "k8s/",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8707f8",
+        "hash": "7cec582a",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20base/%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Base%20manifests%20(shared%20across%20all%20environments)",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8707f8",
+        "hash": "45d891f0",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20kustomization.yaml%20%20%20%20%20%20%20%20%20%20#%20Kustomize%20base%20configuration",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "8707f8",
+        "hash": "d29e0c11",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20namespace.yaml%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20transport-tracker%20namespace",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "8707f8",
+        "hash": "dd75ac6c",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20service-account.yaml%20%20%20%20%20%20%20%20#%20K8s%20ServiceAccount%20with%20Workload%20Identity",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8707f8",
+        "hash": "f0eab5ed",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20backend-configmap.yaml%20%20%20%20%20%20#%20Non-sensitive%20backend%20config",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8707f8",
+        "hash": "0e572024",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20backend-secret.yaml%20%20%20%20%20%20%20%20%20#%20Sensitive%20API%20keys%20(base64%20encoded)",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8707f8",
+        "hash": "50aa8fe0",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20backend-deployment.yaml%20%20%20%20%20#%20Spring%20Boot%20backend%20deployment",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8707f8",
+        "hash": "256deb3a",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20backend-service.yaml%20%20%20%20%20%20%20%20#%20Backend%20ClusterIP%20service",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8707f8",
+        "hash": "ec0f235d",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20backend-hpa.yaml%20%20%20%20%20%20%20%20%20%20%20%20#%20Backend%20Horizontal%20Pod%20Autoscaler",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "8707f8",
+        "hash": "97e8015d",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20backend-pdb.yaml%20%20%20%20%20%20%20%20%20%20%20%20#%20Backend%20PodDisruptionBudget",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "8707f8",
+        "hash": "06303d16",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20frontend-nginx-configmap.yaml%20#%20Nginx%20config%20(proxies%20/api%20%E2%86%92%20backend)",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "8707f8",
+        "hash": "3a4c3450",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20frontend-deployment.yaml%20%20%20%20#%20React/Nginx%20frontend%20deployment",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8707f8",
+        "hash": "5b31b3a4",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20frontend-service.yaml%20%20%20%20%20%20%20#%20Frontend%20ClusterIP%20service",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "8707f8",
+        "hash": "68106c1c",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20frontend-hpa.yaml%20%20%20%20%20%20%20%20%20%20%20#%20Frontend%20Horizontal%20Pod%20Autoscaler",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "8707f8",
+        "hash": "491f8e24",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20frontend-pdb.yaml%20%20%20%20%20%20%20%20%20%20%20#%20Frontend%20PodDisruptionBudget",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "8707f8",
+        "hash": "6310df7b",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20ingress.yaml%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20GKE%20Ingress%20(GCE%20controller)",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "8707f8",
+        "hash": "84995e9e",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20managed-certificate.yaml%20%20%20%20#%20Google-managed%20SSL%20certificate",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "8707f8",
+        "hash": "e33964c3",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20network-policy.yaml%20%20%20%20%20%20%20%20%20#%20Network%20policies%20for%20pod%20isolation",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "8707f8",
+        "hash": "d9274ed0",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20overlays/",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "8707f8",
+        "hash": "c02f8c6f",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20dev/%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Development%20environment%20overlay",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "8707f8",
+        "hash": "022b5ec1",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20kustomization.yaml%20%20%20%20%20%20#%20Reduced%20replicas,%20lower%20resources",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "8707f8",
+        "hash": "8f9ba04e",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20prod/%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Production%20environment%20overlay",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "8707f8",
+        "hash": "fa84ed10",
+        "encoded": "%E2%94%82%20%20%20%20%20%20%20%E2%94%94%E2%94%80%E2%94%80%20kustomization.yaml%20%20%20%20%20%20#%20Full%20replicas,%20production%20images",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "8707f8",
+        "hash": "bdfe99b5",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20README.md%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20This%20file",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "8707f8",
+        "hash": "41512291",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "8707f8",
+        "hash": "830bf3cf",
+        "encoded": "##%20%F0%9F%9A%80%20Quick%20Start",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "8707f8",
+        "hash": "559c1f38",
+        "encoded": "###%20Prerequisites",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "8707f8",
+        "hash": "fd15dcf0",
+        "encoded": "1.%20**GCP%20Project**%20with%20billing%20enabled",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "8707f8",
+        "hash": "27677817",
+        "encoded": "2.%20**GKE%20Cluster**%20created",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "8707f8",
+        "hash": "068dff75",
+        "encoded": "3.%20**GAR%20Repository**%20created:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "8707f8",
+        "hash": "bf35539b",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "8707f8",
+        "hash": "173e1910",
+        "encoded": "gcloud%20artifacts%20repositories%20create%20transport-tracker%20%5C",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "8707f8",
+        "hash": "b07cddf1",
+        "encoded": "--repository-format=docker%20%5C",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "8707f8",
+        "hash": "6153c07b",
+        "encoded": "--location=us-central1%20%5C",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "8707f8",
+        "hash": "46b14b7f",
+        "encoded": "--description=%22Transport%20Tracker%20Docker%20images%22",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "8707f8",
+        "hash": "80090741",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "8707f8",
+        "hash": "472d890e",
+        "encoded": "4.%20**Tools%20installed**:%20%60gcloud%60,%20%60kubectl%60,%20%60kustomize%60,%20%60docker%60",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "8707f8",
+        "hash": "24f71a42",
+        "encoded": "###%20Step%201:%20Configure%20GCP%20Authentication",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "8707f8",
+        "hash": "78f50183",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "8707f8",
+        "hash": "aaef0b1d",
+        "encoded": "#%20Authenticate%20with%20GCP",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "8707f8",
+        "hash": "fdc7cd54",
+        "encoded": "gcloud%20auth%20login",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "8707f8",
+        "hash": "89b3ca08",
+        "encoded": "gcloud%20config%20set%20project%20YOUR_GCP_PROJECT_ID",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "8707f8",
+        "hash": "b949feaa",
+        "encoded": "#%20Get%20GKE%20credentials",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "8707f8",
+        "hash": "b8e55676",
+        "encoded": "gcloud%20container%20clusters%20get-credentials%20transport-tracker-cluster%20%5C",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "8707f8",
+        "hash": "0ce67559",
+        "encoded": "--zone%20us-central1-a%20%5C",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "8707f8",
+        "hash": "77449114",
+        "encoded": "--project%20YOUR_GCP_PROJECT_ID",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "8707f8",
+        "hash": "909ff039",
+        "encoded": "#%20Configure%20Docker%20for%20GAR",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "8707f8",
+        "hash": "e32af0c6",
+        "encoded": "gcloud%20auth%20configure-docker%20us-central1-docker.pkg.dev",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "8707f8",
+        "hash": "666504fe",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "8707f8",
+        "hash": "b88dadfa",
+        "encoded": "###%20Step%202:%20Build%20&%20Push%20Docker%20Images",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "8707f8",
+        "hash": "931cfa67",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "8707f8",
+        "hash": "8a2a3652",
+        "encoded": "#%20Set%20variables",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "8707f8",
+        "hash": "784427f8",
+        "encoded": "export%20PROJECT_ID=YOUR_GCP_PROJECT_ID",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "8707f8",
+        "hash": "4982c703",
+        "encoded": "export%20REGION=us-central1",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "8707f8",
+        "hash": "336f32d1",
+        "encoded": "export%20REPO=transport-tracker",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "8707f8",
+        "hash": "a178e457",
+        "encoded": "export%20TAG=v1.0.0",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "8707f8",
+        "hash": "649f2029",
+        "encoded": "#%20Build%20and%20push%20backend",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "8707f8",
+        "hash": "2153d6a2",
+        "encoded": "docker%20build%20-t%20$%7BREGION%7D-docker.pkg.dev/$%7BPROJECT_ID%7D/$%7BREPO%7D/transport-backend:$%7BTAG%7D%20./backend",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "8707f8",
+        "hash": "6376d545",
+        "encoded": "docker%20push%20$%7BREGION%7D-docker.pkg.dev/$%7BPROJECT_ID%7D/$%7BREPO%7D/transport-backend:$%7BTAG%7D",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "8707f8",
+        "hash": "2f705280",
+        "encoded": "#%20Build%20and%20push%20frontend",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "8707f8",
+        "hash": "1825a805",
+        "encoded": "docker%20build%20-t%20$%7BREGION%7D-docker.pkg.dev/$%7BPROJECT_ID%7D/$%7BREPO%7D/transport-frontend:$%7BTAG%7D%20./frontend",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "8707f8",
+        "hash": "b0ccabdb",
+        "encoded": "docker%20push%20$%7BREGION%7D-docker.pkg.dev/$%7BPROJECT_ID%7D/$%7BREPO%7D/transport-frontend:$%7BTAG%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "8707f8",
+        "hash": "94e37d99",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "8707f8",
+        "hash": "078f0476",
+        "encoded": "###%20Step%203:%20Update%20Configuration",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "8707f8",
+        "hash": "c5000676",
+        "encoded": "1.%20**Replace%20placeholders**%20in%20%60k8s/base/service-account.yaml%60:",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "8707f8",
+        "hash": "450097e3",
+        "encoded": "-%20%60YOUR_GCP_PROJECT_ID%60%20%E2%86%92%20your%20actual%20GCP%20project%20ID",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "8707f8",
+        "hash": "df08efa1",
+        "encoded": "2.%20**Update%20secrets**%20in%20%60k8s/base/backend-secret.yaml%60:",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "8707f8",
+        "hash": "fd614f45",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "8707f8",
+        "hash": "81243336",
+        "encoded": "echo%20-n%20'your-actual-api-key'%20%7C%20base64",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "8707f8",
+        "hash": "88209abd",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "8707f8",
+        "hash": "c0e79128",
+        "encoded": "3.%20**Update%20image%20references**%20in%20overlay%20kustomization%20files:",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "8707f8",
+        "hash": "adbc9e49",
+        "encoded": "-%20%60k8s/overlays/dev/kustomization.yaml%60",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "8707f8",
+        "hash": "22ac47d9",
+        "encoded": "-%20%60k8s/overlays/prod/kustomization.yaml%60",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "8707f8",
+        "hash": "fdd181f5",
+        "encoded": "###%20Step%204:%20Deploy",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "8707f8",
+        "hash": "fd04271e",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "8707f8",
+        "hash": "f85ef4a1",
+        "encoded": "#%20Deploy%20to%20dev",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "8707f8",
+        "hash": "c3ae3143",
+        "encoded": "kustomize%20build%20k8s/overlays/dev%20%7C%20kubectl%20apply%20-f%20-",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "8707f8",
+        "hash": "8f6d7342",
+        "encoded": "#%20Deploy%20to%20prod",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "8707f8",
+        "hash": "4a52fe6b",
+        "encoded": "kustomize%20build%20k8s/overlays/prod%20%7C%20kubectl%20apply%20-f%20-",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "8707f8",
+        "hash": "5d561670",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "8707f8",
+        "hash": "5a56e19b",
+        "encoded": "###%20Step%205:%20Verify",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "8707f8",
+        "hash": "24de3a9d",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "8707f8",
+        "hash": "22bc086b",
+        "encoded": "kubectl%20get%20all%20-n%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "8707f8",
+        "hash": "08a98810",
+        "encoded": "kubectl%20get%20ingress%20-n%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "8707f8",
+        "hash": "2c0ea294",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "8707f8",
+        "hash": "7e750dda",
+        "encoded": "##%20%F0%9F%94%90%20Security%20Features",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "8707f8",
+        "hash": "72534d66",
+        "encoded": "%7C%20Feature%20%7C%20Description%20%7C",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "8707f8",
+        "hash": "4669f982",
+        "encoded": "%7C---------%7C-------------%7C",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "8707f8",
+        "hash": "a08d5b6e",
+        "encoded": "%7C%20**Workload%20Identity**%20%7C%20K8s%20SA%20bound%20to%20GCP%20SA%20for%20secure%20GAR%20access%20%7C",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "8707f8",
+        "hash": "1cc33826",
+        "encoded": "%7C%20**Non-root%20containers**%20%7C%20Backend%20runs%20as%20non-root%20user%20%7C",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "8707f8",
+        "hash": "2c7f89ee",
+        "encoded": "%7C%20**Network%20Policies**%20%7C%20Pod-to-pod%20traffic%20restricted%20%7C",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "8707f8",
+        "hash": "fdf34cce",
+        "encoded": "%7C%20**Security%20Contexts**%20%7C%20%60readOnlyRootFilesystem%60,%20%60drop%20ALL%60%20capabilities%20%7C",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "8707f8",
+        "hash": "9a96ad18",
+        "encoded": "%7C%20**Secrets%20Management**%20%7C%20Sensitive%20data%20in%20K8s%20Secrets%20(use%20External%20Secrets%20in%20prod)%20%7C",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "8707f8",
+        "hash": "8d0730ff",
+        "encoded": "%7C%20**Managed%20SSL**%20%7C%20Google-managed%20TLS%20certificate%20%7C",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "8707f8",
+        "hash": "c08ae1fb",
+        "encoded": "##%20%F0%9F%93%8A%20Observability",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "8707f8",
+        "hash": "8c9f5c2d",
+        "encoded": "-%20**Health%20checks**:%20Liveness,%20readiness,%20and%20startup%20probes%20configured",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "8707f8",
+        "hash": "9e50182a",
+        "encoded": "-%20**Prometheus**:%20Backend%20exposes%20%60/actuator/prometheus%60%20metrics",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "8707f8",
+        "hash": "d7ca3cfe",
+        "encoded": "-%20**HPA**:%20Auto-scaling%20based%20on%20CPU/memory%20utilization",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "8707f8",
+        "hash": "82a41985",
+        "encoded": "-%20**PDB**:%20Pod%20disruption%20budgets%20ensure%20availability%20during%20upgrades",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "c5f046",
+        "hash": "d524a0ad",
+        "encoded": "##%20%F0%9F%8C%90%20Demo%20DNS%20Setup%20(Share%20URL%20with%20Leads)",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "c5f046",
+        "hash": "efebd5fa",
+        "encoded": "Need%20a%20quick%20shareable%20URL%20for%20demos?%20Use%20**nip.io**%20%E2%80%94%20a%20free%20wildcard%20DNS%20service%20that%20requires%20**no%20domain%20purchase**%20and%20works%20with%20**private%20GKE%20clusters**.",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "c5f046",
+        "hash": "cfbb79b3",
+        "encoded": "###%20Option%20A:%20Automated%20Setup%20(Recommended)",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "c5f046",
+        "hash": "c206c599",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "c5f046",
+        "hash": "eba09f50",
+        "encoded": "#%20Run%20the%20setup%20script%20%E2%80%94%20it%20does%20everything%20for%20you!",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "c5f046",
+        "hash": "b51b0e8e",
+        "encoded": "chmod%20+x%20k8s/setup-demo-dns.sh",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "c5f046",
+        "hash": "347d468f",
+        "encoded": "./k8s/setup-demo-dns.sh",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "c5f046",
+        "hash": "0920e05d",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "c5f046",
+        "hash": "c05e82e3",
+        "encoded": "The%20script%20will:",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "c5f046",
+        "hash": "969ec4ae",
+        "encoded": "1.%20Reserve%20a%20global%20static%20IP%20(%60transport-tracker-ip%60)",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "c5f046",
+        "hash": "8b15eedf",
+        "encoded": "2.%20Generate%20a%20nip.io%20hostname%20(e.g.,%20%60transport-tracker.34.120.55.10.nip.io%60)",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "c5f046",
+        "hash": "20b701c4",
+        "encoded": "3.%20Update%20%60ingress.yaml%60%20with%20the%20hostname",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "c5f046",
+        "hash": "95dfedcc",
+        "encoded": "4.%20Deploy%20to%20GKE%20using%20the%20dev%20overlay",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "c5f046",
+        "hash": "268a060c",
+        "encoded": "5.%20Print%20the%20shareable%20demo%20URL",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "c5f046",
+        "hash": "4182d2a6",
+        "encoded": "###%20Option%20B:%20Manual%20Setup",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "c5f046",
+        "hash": "6ab54b6c",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "c5f046",
+        "hash": "1aaaae7b",
+        "encoded": "#%201.%20Reserve%20a%20global%20static%20IP",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "c5f046",
+        "hash": "05a6bb8f",
+        "encoded": "gcloud%20compute%20addresses%20create%20transport-tracker-ip%20--global",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "c5f046",
+        "hash": "8b8a6dc6",
+        "encoded": "#%202.%20Get%20the%20IP%20address",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "c5f046",
+        "hash": "ba171c26",
+        "encoded": "EXTERNAL_IP=$(gcloud%20compute%20addresses%20describe%20transport-tracker-ip%20--global%20--format='value(address)')",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "c5f046",
+        "hash": "ba4bed1f",
+        "encoded": "echo%20%22Your%20IP:%20$EXTERNAL_IP%22",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "c5f046",
+        "hash": "d017d2ba",
+        "encoded": "#%203.%20Update%20ingress.yaml%20%E2%80%94%20replace%20EXTERNAL_IP%20placeholder",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "c5f046",
+        "hash": "c034bcdf",
+        "encoded": "#%20%20%20%20host:%20transport-tracker.EXTERNAL_IP.nip.io",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "c5f046",
+        "hash": "d731580a",
+        "encoded": "#%20%20%20%20becomes:%20transport-tracker.34.120.55.10.nip.io%20(example)",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "c5f046",
+        "hash": "c7a52aca",
+        "encoded": "sed%20-i%20%22s/EXTERNAL_IP/$EXTERNAL_IP/g%22%20k8s/base/ingress.yaml",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "c5f046",
+        "hash": "b6814d10",
+        "encoded": "#%204.%20Deploy",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "c5f046",
+        "hash": "0ed43c6c",
+        "encoded": "kustomize%20build%20k8s/overlays/dev%20%7C%20kubectl%20apply%20-f%20-",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "c5f046",
+        "hash": "cb4bf916",
+        "encoded": "#%205.%20Wait%20~3-5%20minutes%20for%20the%20Ingress%20to%20provision,%20then%20access:",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "c5f046",
+        "hash": "40d24dcc",
+        "encoded": "#%20%20%20%20http://transport-tracker.%3CYOUR_IP%3E.nip.io",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "c5f046",
+        "hash": "cea911cf",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "c5f046",
+        "hash": "6419bfc3",
+        "encoded": "###%20How%20nip.io%20Works",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "c5f046",
+        "hash": "f6d6e514",
+        "encoded": "%7C%20What%20you%20type%20%7C%20Resolves%20to%20%7C",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "c5f046",
+        "hash": "08119357",
+        "encoded": "%7C---%7C---%7C",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "c5f046",
+        "hash": "25821418",
+        "encoded": "%7C%20%60transport-tracker.34.120.55.10.nip.io%60%20%7C%20%6034.120.55.10%60%20%7C",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "c5f046",
+        "hash": "2fb7fdac",
+        "encoded": "%7C%20%60anything.1.2.3.4.nip.io%60%20%7C%20%601.2.3.4%60%20%7C",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "c5f046",
+        "hash": "378be938",
+        "encoded": "%3E%20**Why%20this%20works%20with%20private%20nodes:**%20The%20GKE%20Ingress%20controller%20creates%20a%20GCP-managed%20external%20HTTP(S)%20Load%20Balancer.%20This%20load%20balancer%20has%20a%20public%20IP%20and%20routes%20traffic%20to%20your%20private%20nodes%20via%20their%20internal%20IPs.%20Your%20nodes%20never%20need%20external%20IPs!",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "c5f046",
+        "hash": "fda23d2d",
+        "encoded": "###%20Shareable%20URLs",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "c5f046",
+        "hash": "0de0abdc",
+        "encoded": "Once%20deployed,%20share%20these%20with%20your%20leads:",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "c5f046",
+        "hash": "f064ee05",
+        "encoded": "-%20**%F0%9F%8C%90%20App:**%20%60http://transport-tracker.%3CIP%3E.nip.io%60",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "c5f046",
+        "hash": "ca8398ed",
+        "encoded": "-%20**%F0%9F%94%8C%20API:**%20%60http://transport-tracker.%3CIP%3E.nip.io/api%60",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "c5f046",
+        "hash": "7d2787a8",
+        "encoded": "-%20**%F0%9F%93%8A%20Health:**%20%60http://transport-tracker.%3CIP%3E.nip.io/actuator/health%60",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "c5f046",
+        "hash": "392feed2",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "c5f046",
+        "hash": "c0e787a8",
+        "encoded": "##%20%F0%9F%94%84%20CI/CD%20with%20Jenkins",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "c5f046",
+        "hash": "9c50db8e",
+        "encoded": "The%20%60Jenkinsfile%60%20at%20the%20project%20root%20automates:",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "c5f046",
+        "hash": "ae7b7e64",
+        "encoded": "1.%20Code%20checkout%20from%20GitHub",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "c5f046",
+        "hash": "0aa7b1a5",
+        "encoded": "2.%20Backend%20tests%20(Gradle)%20and%20frontend%20tests%20(npm)",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "c5f046",
+        "hash": "2b774f00",
+        "encoded": "3.%20Docker%20image%20builds%20with%20commit-based%20tags",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "c5f046",
+        "hash": "7ea56e5f",
+        "encoded": "4.%20Push%20to%20Google%20Artifact%20Registry",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "c5f046",
+        "hash": "cd5f62d4",
+        "encoded": "5.%20Deploy%20to%20GKE%20using%20Kustomize%20overlays",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "c5f046",
+        "hash": "66f02d8f",
+        "encoded": "6.%20Rollout%20verification",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "c5f046",
+        "hash": "62c150d4",
+        "encoded": "**Branch%20mapping:**",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "c5f046",
+        "hash": "203e5e57",
+        "encoded": "-%20%60develop%60%20%E2%86%92%20deploys%20to%20**dev**%20environment",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "c5f046",
+        "hash": "09a53c3c",
+        "encoded": "-%20%60main%60%20%E2%86%92%20deploys%20to%20**prod**%20environment",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "8707f8",
+        "hash": "185b5353",
+        "encoded": "The%20%60Jenkinsfile%60%20at%20the%20project%20root%20automates:",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "8707f8",
+        "hash": "3957a0d7",
+        "encoded": "1.%20Code%20checkout%20from%20GitHub",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "8707f8",
+        "hash": "63dc072f",
+        "encoded": "2.%20Backend%20tests%20(Gradle)%20and%20frontend%20tests%20(npm)",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "8707f8",
+        "hash": "bc92ba39",
+        "encoded": "3.%20Docker%20image%20builds%20with%20commit-based%20tags",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "8707f8",
+        "hash": "21aceb57",
+        "encoded": "4.%20Push%20to%20Google%20Artifact%20Registry",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "8707f8",
+        "hash": "9ce0eb26",
+        "encoded": "5.%20Deploy%20to%20GKE%20using%20Kustomize%20overlays",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "8707f8",
+        "hash": "8cc2ccb7",
+        "encoded": "6.%20Rollout%20verification",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "8707f8",
+        "hash": "9a18b7ac",
+        "encoded": "**Branch%20mapping:**",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "8707f8",
+        "hash": "b2612adf",
+        "encoded": "-%20%60develop%60%20%E2%86%92%20deploys%20to%20**dev**%20environment",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "8707f8",
+        "hash": "010856fb",
+        "encoded": "-%20%60main%60%20%E2%86%92%20deploys%20to%20**prod**%20environment",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

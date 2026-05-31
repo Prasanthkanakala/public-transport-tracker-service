@@ -1,0 +1,62 @@
+# ─────────────────────────────────────────────────────────────────
+# ConfigMap for Frontend Nginx – Overrides default nginx.conf
+# Proxies /api/ and /actuator/ to the backend K8s Service
+# ─────────────────────────────────────────────────────────────────
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-nginx-config
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/name: transport-frontend
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/part-of: transport-tracker
+data:
+  default.conf: |
+    server {
+        listen       80;
+        server_name  _;
+
+        root   /usr/share/nginx/html;
+        index  index.html;
+
+        # Security headers
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header X-Frame-Options "DENY" always;
+        add_header X-XSS-Protection "1; mode=block" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:;" always;
+
+        # Proxy /api calls to the backend Kubernetes Service
+        location /api/ {
+            proxy_pass         http://transport-backend.transport-tracker.svc.cluster.local:8080;
+            proxy_http_version 1.1;
+            proxy_set_header   Host              $host;
+            proxy_set_header   X-Real-IP         $remote_addr;
+            proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
+            proxy_set_header   X-Forwarded-Proto $scheme;
+            proxy_read_timeout 10s;
+            proxy_connect_timeout 5s;
+        }
+
+        # Proxy /actuator to backend
+        location /actuator/ {
+            proxy_pass         http://transport-backend.transport-tracker.svc.cluster.local:8080;
+            proxy_http_version 1.1;
+            proxy_set_header   Host $host;
+        }
+
+        # React Router – serve index.html for all non-file requests
+        location / {
+            try_files $uri $uri/ /index.html;
+            expires -1;
+        }
+
+        # Static assets – long cache
+        location ~* \.(js|css|png|jpg|ico|svg|woff2)$ {
+            expires 1y;
+            add_header Cache-Control "public, immutable";
+        }
+
+        error_page 404 /index.html;
+    }

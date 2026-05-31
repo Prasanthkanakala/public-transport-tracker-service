@@ -1,0 +1,722 @@
+{
+  "k8s\\base\\ingress.yaml": {
+    "filename": "ingress.yaml",
+    "path": "k8s\\base\\ingress.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "c849bb": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227686,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "5f541a00",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:26 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      },
+      "f350c4": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780229791,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "f2ed47ae",
+          "files": "6aa9c5e3"
+        },
+        "hash": "9fffb5df",
+        "messageId": "system_136736b0-5cea-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:46:31 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "f350c4",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "f350c4",
+        "hash": "075c2bbf",
+        "encoded": "#%20GKE%20Ingress%20%E2%80%93%20Routes%20external%20traffic%20to%20frontend",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "f350c4",
+        "hash": "d9014ffa",
+        "encoded": "#%20Uses%20GCE%20Ingress%20Controller%20(default%20on%20GKE)",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "f350c4",
+        "hash": "ae6c3fbe",
+        "encoded": "#%20For%20HTTPS,%20configure%20a%20Google-managed%20certificate",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "f350c4",
+        "hash": "0dcfdb9f",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "f350c4",
+        "hash": "53c1a10e",
+        "encoded": "apiVersion:%20networking.k8s.io/v1",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "f350c4",
+        "hash": "bffaedbe",
+        "encoded": "kind:%20Ingress",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "f350c4",
+        "hash": "ae94a674",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "f350c4",
+        "hash": "5b099639",
+        "encoded": "name:%20transport-tracker-ingress",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "f350c4",
+        "hash": "bf0e6317",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "f350c4",
+        "hash": "e83d7e5d",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "f350c4",
+        "hash": "2de00413",
+        "encoded": "app.kubernetes.io/name:%20transport-tracker-ingress",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "f350c4",
+        "hash": "802ec5f6",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "f350c4",
+        "hash": "7a624d56",
+        "encoded": "annotations:",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "f350c4",
+        "hash": "9401c8fa",
+        "encoded": "#%20GKE-specific%20annotations",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "f350c4",
+        "hash": "83c1bb09",
+        "encoded": "kubernetes.io/ingress.class:%20%22gce%22",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "f350c4",
+        "hash": "4491f3ae",
+        "encoded": "#%20Static%20IP%20for%20stable%20DNS%20(create%20with:%20gcloud%20compute%20addresses%20create%20transport-tracker-ip%20--global)",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "f350c4",
+        "hash": "98aa6b1c",
+        "encoded": "kubernetes.io/ingress.global-static-ip-name:%20%22transport-tracker-ip%22",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "f350c4",
+        "hash": "984a300b",
+        "encoded": "#%20Uncomment%20below%20for%20Google-managed%20SSL%20certificate%20(requires%20a%20real%20domain)",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "f350c4",
+        "hash": "29eb0d81",
+        "encoded": "#%20networking.gke.io/managed-certificates:%20%22transport-tracker-cert%22",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "f350c4",
+        "hash": "c5858f85",
+        "encoded": "#%20Redirect%20HTTP%20to%20HTTPS%20(uncomment%20when%20SSL%20is%20ready)",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "f350c4",
+        "hash": "cbd2120d",
+        "encoded": "#%20kubernetes.io/ingress.allow-http:%20%22false%22",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "f350c4",
+        "hash": "31ee46e4",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "f350c4",
+        "hash": "9627f8d3",
+        "encoded": "defaultBackend:",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "f350c4",
+        "hash": "af594910",
+        "encoded": "service:",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "f350c4",
+        "hash": "8e0d0f6a",
+        "encoded": "name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "f350c4",
+        "hash": "70a9d6b9",
+        "encoded": "port:",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "f350c4",
+        "hash": "501acf6f",
+        "encoded": "number:%2080",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "f350c4",
+        "hash": "4106120d",
+        "encoded": "rules:",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "f350c4",
+        "hash": "7afa5c99",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "f350c4",
+        "hash": "3dd4c8e5",
+        "encoded": "#%20DEMO%20DNS:%20Uses%20nip.io%20(free%20wildcard%20DNS)%20%E2%80%94%20no%20domain%20purchase%20needed!",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "f350c4",
+        "hash": "0f996cde",
+        "encoded": "#%20Replace%20EXTERNAL_IP%20with%20your%20static%20IP%20after%20running:",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "f350c4",
+        "hash": "2c74a278",
+        "encoded": "#%20%20%20gcloud%20compute%20addresses%20describe%20transport-tracker-ip%20--global%20--format='value(address)'",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "f350c4",
+        "hash": "699b46f9",
+        "encoded": "#%20Example:%20If%20IP%20is%2034.120.55.10,%20host%20becomes:%20transport-tracker.34.120.55.10.nip.io",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "f350c4",
+        "hash": "55ec1bc5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "f350c4",
+        "hash": "73b71731",
+        "encoded": "-%20host:%20transport-tracker.EXTERNAL_IP.nip.io",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "f350c4",
+        "hash": "505cf602",
+        "encoded": "http:",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "f350c4",
+        "hash": "99422e2d",
+        "encoded": "paths:",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "f350c4",
+        "hash": "b3a75254",
+        "encoded": "-%20path:%20/",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "f350c4",
+        "hash": "7c73593d",
+        "encoded": "pathType:%20Prefix",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "f350c4",
+        "hash": "5fa8e57d",
+        "encoded": "backend:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "f350c4",
+        "hash": "ab20ef7b",
+        "encoded": "service:",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "f350c4",
+        "hash": "2363c9a7",
+        "encoded": "name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "f350c4",
+        "hash": "6194f16f",
+        "encoded": "port:",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "f350c4",
+        "hash": "dc520cb9",
+        "encoded": "number:%2080",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "f350c4",
+        "hash": "c9eb101f",
+        "encoded": "#%20Direct%20API%20access%20(bypassing%20frontend%20nginx%20proxy)",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "f350c4",
+        "hash": "20fc7f7f",
+        "encoded": "-%20path:%20/api",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "f350c4",
+        "hash": "2b29efe5",
+        "encoded": "pathType:%20Prefix",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "f350c4",
+        "hash": "3fcced08",
+        "encoded": "backend:",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "f350c4",
+        "hash": "68d933cb",
+        "encoded": "service:",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "f350c4",
+        "hash": "cb815b9f",
+        "encoded": "name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "f350c4",
+        "hash": "95e085b5",
+        "encoded": "port:",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "f350c4",
+        "hash": "c8d6a1d8",
+        "encoded": "number:%208080",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "f350c4",
+        "hash": "5fb9267d",
+        "encoded": "-%20path:%20/actuator",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "f350c4",
+        "hash": "a0cb2f6b",
+        "encoded": "pathType:%20Prefix",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "f350c4",
+        "hash": "d3976a70",
+        "encoded": "backend:",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "f350c4",
+        "hash": "b979b5b1",
+        "encoded": "service:",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "f350c4",
+        "hash": "decb83eb",
+        "encoded": "name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "f350c4",
+        "hash": "b4f78770",
+        "encoded": "port:",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "f350c4",
+        "hash": "d17bad8c",
+        "encoded": "number:%208080",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "c849bb",
+        "hash": "c8f41bca",
+        "encoded": "#%20GKE%20Ingress%20%E2%80%93%20Routes%20external%20traffic%20to%20frontend",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "c849bb",
+        "hash": "7824d0f7",
+        "encoded": "#%20Uses%20GCE%20Ingress%20Controller%20(default%20on%20GKE)",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "c849bb",
+        "hash": "1705eb27",
+        "encoded": "#%20For%20HTTPS,%20configure%20a%20Google-managed%20certificate",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "c849bb",
+        "hash": "d2e5aeeb",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "c849bb",
+        "hash": "f8867776",
+        "encoded": "apiVersion:%20networking.k8s.io/v1",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "c849bb",
+        "hash": "ef497761",
+        "encoded": "kind:%20Ingress",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "c849bb",
+        "hash": "b9cd0ede",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "c849bb",
+        "hash": "671ff2f2",
+        "encoded": "name:%20transport-tracker-ingress",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "c849bb",
+        "hash": "c7c78bc6",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "c849bb",
+        "hash": "91d118a5",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "c849bb",
+        "hash": "3b973f78",
+        "encoded": "app.kubernetes.io/name:%20transport-tracker-ingress",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "c849bb",
+        "hash": "39e10f7b",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "c849bb",
+        "hash": "d66df971",
+        "encoded": "annotations:",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "c849bb",
+        "hash": "1d360641",
+        "encoded": "#%20GKE-specific%20annotations",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "c849bb",
+        "hash": "4b06ecca",
+        "encoded": "kubernetes.io/ingress.class:%20%22gce%22",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "c849bb",
+        "hash": "84c88a2f",
+        "encoded": "#%20Uncomment%20below%20for%20Google-managed%20SSL%20certificate",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "c849bb",
+        "hash": "cf656726",
+        "encoded": "#%20networking.gke.io/managed-certificates:%20%22transport-tracker-cert%22",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "c849bb",
+        "hash": "e8dbfcf5",
+        "encoded": "#%20kubernetes.io/ingress.global-static-ip-name:%20%22transport-tracker-ip%22",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "c849bb",
+        "hash": "ed1a4784",
+        "encoded": "#%20Redirect%20HTTP%20to%20HTTPS",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "c849bb",
+        "hash": "0419d52b",
+        "encoded": "#%20kubernetes.io/ingress.allow-http:%20%22false%22",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "c849bb",
+        "hash": "99e5d9df",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "c849bb",
+        "hash": "f53bd5c7",
+        "encoded": "defaultBackend:",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "c849bb",
+        "hash": "9b37090e",
+        "encoded": "service:",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "c849bb",
+        "hash": "6c3e1443",
+        "encoded": "name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "c849bb",
+        "hash": "df5bee4c",
+        "encoded": "port:",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "c849bb",
+        "hash": "544e3173",
+        "encoded": "number:%2080",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "c849bb",
+        "hash": "7b27a2b7",
+        "encoded": "rules:",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "c849bb",
+        "hash": "09b12c7f",
+        "encoded": "-%20host:%20transport-tracker.example.com",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "c849bb",
+        "hash": "0f6abf06",
+        "encoded": "http:",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "c849bb",
+        "hash": "9b00b1bb",
+        "encoded": "paths:",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "c849bb",
+        "hash": "526bbf0c",
+        "encoded": "-%20path:%20/",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "c849bb",
+        "hash": "93ecc7e4",
+        "encoded": "pathType:%20Prefix",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "c849bb",
+        "hash": "66079023",
+        "encoded": "backend:",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "c849bb",
+        "hash": "82bbabb4",
+        "encoded": "service:",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "c849bb",
+        "hash": "177e6af2",
+        "encoded": "name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "c849bb",
+        "hash": "dcd75614",
+        "encoded": "port:",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "c849bb",
+        "hash": "31fd0281",
+        "encoded": "number:%2080",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "c849bb",
+        "hash": "a1302afa",
+        "encoded": "#%20Direct%20API%20access%20(bypassing%20frontend%20nginx%20proxy)",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "c849bb",
+        "hash": "01a12d79",
+        "encoded": "-%20path:%20/api",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "c849bb",
+        "hash": "91267c89",
+        "encoded": "pathType:%20Prefix",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "c849bb",
+        "hash": "ca8499c0",
+        "encoded": "backend:",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "c849bb",
+        "hash": "31a2a401",
+        "encoded": "service:",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "c849bb",
+        "hash": "5d648dfb",
+        "encoded": "name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "c849bb",
+        "hash": "8a3699e9",
+        "encoded": "port:",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "c849bb",
+        "hash": "e3252784",
+        "encoded": "number:%208080",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "c849bb",
+        "hash": "bfae6f9d",
+        "encoded": "-%20path:%20/actuator",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "c849bb",
+        "hash": "1de0ab5c",
+        "encoded": "pathType:%20Prefix",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "c849bb",
+        "hash": "c85c10f0",
+        "encoded": "backend:",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "c849bb",
+        "hash": "8927953d",
+        "encoded": "service:",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "c849bb",
+        "hash": "bd88cfe3",
+        "encoded": "name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "c849bb",
+        "hash": "8fe516fb",
+        "encoded": "port:",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "c849bb",
+        "hash": "6c9d42a3",
+        "encoded": "number:%208080",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

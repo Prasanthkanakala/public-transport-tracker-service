@@ -1,0 +1,505 @@
+{
+  "k8s\\base\\network-policy.yaml": {
+    "filename": "network-policy.yaml",
+    "path": "k8s\\base\\network-policy.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "a53f12": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227688,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "dabd138f",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:28 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "a53f12",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "a53f12",
+        "hash": "f924bd83",
+        "encoded": "#%20NetworkPolicy%20%E2%80%93%20Restrict%20traffic%20between%20pods",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "a53f12",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "a53f12",
+        "hash": "c48bf612",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "a53f12",
+        "hash": "d63e9f23",
+        "encoded": "#%20Backend:%20Only%20allow%20traffic%20from%20frontend%20pods%20and%20ingress",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "a53f12",
+        "hash": "53c1a10e",
+        "encoded": "apiVersion:%20networking.k8s.io/v1",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "a53f12",
+        "hash": "432260fc",
+        "encoded": "kind:%20NetworkPolicy",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "a53f12",
+        "hash": "ae94a674",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "a53f12",
+        "hash": "47f672b2",
+        "encoded": "name:%20backend-network-policy",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "a53f12",
+        "hash": "bf0e6317",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "a53f12",
+        "hash": "e83d7e5d",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "a53f12",
+        "hash": "73865187",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "a53f12",
+        "hash": "3e43ece2",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "a53f12",
+        "hash": "83568513",
+        "encoded": "podSelector:",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "a53f12",
+        "hash": "7c2a36ab",
+        "encoded": "matchLabels:",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "a53f12",
+        "hash": "f45520ca",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "a53f12",
+        "hash": "b7cf4760",
+        "encoded": "policyTypes:",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "a53f12",
+        "hash": "9f06754f",
+        "encoded": "-%20Ingress",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "a53f12",
+        "hash": "1657ecc1",
+        "encoded": "-%20Egress",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "a53f12",
+        "hash": "8460a251",
+        "encoded": "ingress:",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "a53f12",
+        "hash": "b774cd10",
+        "encoded": "-%20from:",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "a53f12",
+        "hash": "652686dc",
+        "encoded": "-%20podSelector:",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "a53f12",
+        "hash": "31587e21",
+        "encoded": "matchLabels:",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "a53f12",
+        "hash": "9b143ed2",
+        "encoded": "app.kubernetes.io/name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "a53f12",
+        "hash": "8646c399",
+        "encoded": "-%20namespaceSelector:",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "a53f12",
+        "hash": "f9d51fdd",
+        "encoded": "matchLabels:",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "a53f12",
+        "hash": "ef15986b",
+        "encoded": "kubernetes.io/metadata.name:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "a53f12",
+        "hash": "2c37354a",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "a53f12",
+        "hash": "857adac1",
+        "encoded": "-%20protocol:%20TCP",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "a53f12",
+        "hash": "7d4e1fdd",
+        "encoded": "port:%208080",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "a53f12",
+        "hash": "74a5ca69",
+        "encoded": "egress:",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "a53f12",
+        "hash": "df4fcd88",
+        "encoded": "#%20Allow%20DNS%20resolution",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "a53f12",
+        "hash": "5c78b055",
+        "encoded": "-%20to:%20%5B%5D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "a53f12",
+        "hash": "0a725ce8",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "a53f12",
+        "hash": "00120e13",
+        "encoded": "-%20protocol:%20UDP",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "a53f12",
+        "hash": "5272b4a0",
+        "encoded": "port:%2053",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "a53f12",
+        "hash": "e01d9d07",
+        "encoded": "-%20protocol:%20TCP",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "a53f12",
+        "hash": "b0be07c8",
+        "encoded": "port:%2053",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "a53f12",
+        "hash": "c773ffec",
+        "encoded": "#%20Allow%20outbound%20HTTPS%20to%20external%20transit%20APIs",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "a53f12",
+        "hash": "31946822",
+        "encoded": "-%20to:%20%5B%5D",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "a53f12",
+        "hash": "2bbd4e72",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "a53f12",
+        "hash": "b739cff0",
+        "encoded": "-%20protocol:%20TCP",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "a53f12",
+        "hash": "4ef7f1d6",
+        "encoded": "port:%20443",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "a53f12",
+        "hash": "d3e00cdb",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "a53f12",
+        "hash": "283c9661",
+        "encoded": "#%20Frontend:%20Allow%20traffic%20from%20ingress,%20allow%20traffic%20to%20backend",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "a53f12",
+        "hash": "c4d26bda",
+        "encoded": "apiVersion:%20networking.k8s.io/v1",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "a53f12",
+        "hash": "5c4998ea",
+        "encoded": "kind:%20NetworkPolicy",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "a53f12",
+        "hash": "35959337",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "a53f12",
+        "hash": "6f42f8dd",
+        "encoded": "name:%20frontend-network-policy",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "a53f12",
+        "hash": "17c93ff7",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "a53f12",
+        "hash": "474a95d1",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "a53f12",
+        "hash": "d011d522",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "a53f12",
+        "hash": "927c3dd4",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "a53f12",
+        "hash": "59dfb3f7",
+        "encoded": "podSelector:",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "a53f12",
+        "hash": "815f368e",
+        "encoded": "matchLabels:",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "a53f12",
+        "hash": "60bc8c9c",
+        "encoded": "app.kubernetes.io/name:%20transport-frontend",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "a53f12",
+        "hash": "f755f8a4",
+        "encoded": "policyTypes:",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "a53f12",
+        "hash": "ab74bf1b",
+        "encoded": "-%20Ingress",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "a53f12",
+        "hash": "caabbe40",
+        "encoded": "-%20Egress",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "a53f12",
+        "hash": "512ead2f",
+        "encoded": "ingress:",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "a53f12",
+        "hash": "5f9555fd",
+        "encoded": "-%20ports:",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "a53f12",
+        "hash": "44f4dc52",
+        "encoded": "-%20protocol:%20TCP",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "a53f12",
+        "hash": "5bdf8660",
+        "encoded": "port:%2080",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "a53f12",
+        "hash": "0412edd6",
+        "encoded": "egress:",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "a53f12",
+        "hash": "fcd3ece3",
+        "encoded": "#%20Allow%20DNS%20resolution",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "a53f12",
+        "hash": "2dd8f065",
+        "encoded": "-%20to:%20%5B%5D",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "a53f12",
+        "hash": "aed2aaf5",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "a53f12",
+        "hash": "ed65467d",
+        "encoded": "-%20protocol:%20UDP",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "a53f12",
+        "hash": "e128440b",
+        "encoded": "port:%2053",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "a53f12",
+        "hash": "6feaf233",
+        "encoded": "-%20protocol:%20TCP",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "a53f12",
+        "hash": "3104470a",
+        "encoded": "port:%2053",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "a53f12",
+        "hash": "d530ac77",
+        "encoded": "#%20Allow%20traffic%20to%20backend%20service",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "a53f12",
+        "hash": "d68a1ec3",
+        "encoded": "-%20to:",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "a53f12",
+        "hash": "0bdccebd",
+        "encoded": "-%20podSelector:",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "a53f12",
+        "hash": "b729be9e",
+        "encoded": "matchLabels:",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "a53f12",
+        "hash": "4737e105",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "a53f12",
+        "hash": "221d858d",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "a53f12",
+        "hash": "4df01bf4",
+        "encoded": "-%20protocol:%20TCP",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "a53f12",
+        "hash": "e8c2b9e9",
+        "encoded": "port:%208080",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

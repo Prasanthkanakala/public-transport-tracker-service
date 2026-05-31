@@ -1,0 +1,33 @@
+# ─────────────────────────────────────────────────────────────────
+# Kustomize Overlay – Production Environment
+# ─────────────────────────────────────────────────────────────────
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: transport-tracker
+
+resources:
+  - ../../base
+
+patches:
+  # Production replicas
+  - target:
+      kind: Deployment
+      name: transport-backend
+    patch: |
+      - op: replace
+        path: /spec/replicas
+        value: 3
+
+  - target:
+      kind: Deployment
+      name: transport-frontend
+    patch: |
+      - op: replace
+        path: /spec/replicas
+        value: 2
+
+images:
+  - name: IMAGE_PLACEHOLDER
+    newName: us-central1-docker.pkg.dev/YOUR_GCP_PROJECT_ID/transport-tracker/transport-backend
+    newTag: prod-latest

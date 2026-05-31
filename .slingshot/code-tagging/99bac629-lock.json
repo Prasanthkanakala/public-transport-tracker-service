@@ -1,0 +1,115 @@
+{
+  "k8s\\base\\managed-certificate.yaml": {
+    "filename": "managed-certificate.yaml",
+    "path": "k8s\\base\\managed-certificate.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5b6e6c": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227686,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "ba17b423",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:26 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5b6e6c",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "5b6e6c",
+        "hash": "e507b70c",
+        "encoded": "#%20Google-Managed%20SSL%20Certificate%20for%20GKE",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5b6e6c",
+        "hash": "9dfcf504",
+        "encoded": "#%20Uncomment%20the%20annotation%20in%20ingress.yaml%20to%20use%20this",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "5b6e6c",
+        "hash": "862d00bc",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "5b6e6c",
+        "hash": "3956e4b6",
+        "encoded": "apiVersion:%20networking.gke.io/v1",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5b6e6c",
+        "hash": "a4858315",
+        "encoded": "kind:%20ManagedCertificate",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5b6e6c",
+        "hash": "c52c251b",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "5b6e6c",
+        "hash": "6b5aed05",
+        "encoded": "name:%20transport-tracker-cert",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "5b6e6c",
+        "hash": "60bbfc41",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "5b6e6c",
+        "hash": "1ee24bb3",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "5b6e6c",
+        "hash": "0d06866c",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "5b6e6c",
+        "hash": "a3bbb5d2",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "5b6e6c",
+        "hash": "96e152cb",
+        "encoded": "domains:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "5b6e6c",
+        "hash": "f82f8a85",
+        "encoded": "-%20transport-tracker.example.com",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 /**
  * Transit Tracker API Service
  * Uses native fetch (no third-party HTTP library).
- * All requests go through the Spring Boot backend on port 8080.
+ * All requests go through the Spring Boot backend on port 8081.
  * Proxy is configured in package.json for development.
  *
  * JWT Authentication:

@@ -1,0 +1,595 @@
+{
+  "k8s\\base\\backend-deployment.yaml": {
+    "filename": "backend-deployment.yaml",
+    "path": "k8s\\base\\backend-deployment.yaml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5e97ee": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-sonnet-4-5@20250929",
+        "timestamp": 1780227681,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "5bd73571",
+          "files": "2a532944"
+        },
+        "hash": "3a0784d3",
+        "messageId": "system_03c47970-5ce5-11f1-bc3e-a16e4ab969c4",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:11:21 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5e97ee",
+        "hash": "7997e6e5",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "5e97ee",
+        "hash": "538dfa90",
+        "encoded": "#%20Backend%20Deployment%20%E2%80%93%20Spring%20Boot%20Application",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5e97ee",
+        "hash": "1cc50b81",
+        "encoded": "#%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "5e97ee",
+        "hash": "bedaa746",
+        "encoded": "apiVersion:%20apps/v1",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "5e97ee",
+        "hash": "1e8df0e9",
+        "encoded": "kind:%20Deployment",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5e97ee",
+        "hash": "26b5510f",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5e97ee",
+        "hash": "04e3597f",
+        "encoded": "name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "5e97ee",
+        "hash": "89136832",
+        "encoded": "namespace:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "5e97ee",
+        "hash": "5139acb9",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "5e97ee",
+        "hash": "e32cb0cd",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "5e97ee",
+        "hash": "202be0cf",
+        "encoded": "app.kubernetes.io/component:%20backend",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "5e97ee",
+        "hash": "73865187",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "5e97ee",
+        "hash": "d2f63593",
+        "encoded": "app.kubernetes.io/version:%20%221.0.0%22",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "5e97ee",
+        "hash": "96e01cf2",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "5e97ee",
+        "hash": "61b62369",
+        "encoded": "replicas:%202",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "5e97ee",
+        "hash": "42f18365",
+        "encoded": "revisionHistoryLimit:%205",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "5e97ee",
+        "hash": "b7b61265",
+        "encoded": "strategy:",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "5e97ee",
+        "hash": "154ab75b",
+        "encoded": "type:%20RollingUpdate",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "5e97ee",
+        "hash": "a8859dc3",
+        "encoded": "rollingUpdate:",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "5e97ee",
+        "hash": "18a6fe71",
+        "encoded": "maxSurge:%201",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "5e97ee",
+        "hash": "49c0c55d",
+        "encoded": "maxUnavailable:%200",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "5e97ee",
+        "hash": "bb96b83b",
+        "encoded": "selector:",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "5e97ee",
+        "hash": "31587e21",
+        "encoded": "matchLabels:",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "5e97ee",
+        "hash": "21bb8eb0",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "5e97ee",
+        "hash": "ef93564c",
+        "encoded": "template:",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "5e97ee",
+        "hash": "80127618",
+        "encoded": "metadata:",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "5e97ee",
+        "hash": "cfd5303e",
+        "encoded": "labels:",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "5e97ee",
+        "hash": "739040ef",
+        "encoded": "app.kubernetes.io/name:%20transport-backend",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "5e97ee",
+        "hash": "3b6d4f74",
+        "encoded": "app.kubernetes.io/component:%20backend",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "5e97ee",
+        "hash": "b4bf1902",
+        "encoded": "app.kubernetes.io/part-of:%20transport-tracker",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "5e97ee",
+        "hash": "e2ac79c6",
+        "encoded": "annotations:",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "5e97ee",
+        "hash": "f2d4ff7f",
+        "encoded": "prometheus.io/scrape:%20%22true%22",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "5e97ee",
+        "hash": "6c5038b2",
+        "encoded": "prometheus.io/port:%20%228080%22",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "5e97ee",
+        "hash": "9433fd3f",
+        "encoded": "prometheus.io/path:%20%22/actuator/prometheus%22",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "5e97ee",
+        "hash": "4f1f9dbe",
+        "encoded": "spec:",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "5e97ee",
+        "hash": "e58c9178",
+        "encoded": "serviceAccountName:%20transport-tracker-sa",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "5e97ee",
+        "hash": "6dd51381",
+        "encoded": "securityContext:",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "5e97ee",
+        "hash": "42cb130a",
+        "encoded": "runAsNonRoot:%20true",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "5e97ee",
+        "hash": "71ef6188",
+        "encoded": "fsGroup:%201000",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "5e97ee",
+        "hash": "79143db2",
+        "encoded": "terminationGracePeriodSeconds:%2030",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "5e97ee",
+        "hash": "f842bd49",
+        "encoded": "containers:",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "5e97ee",
+        "hash": "80e24988",
+        "encoded": "-%20name:%20backend",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "5e97ee",
+        "hash": "e6f56b23",
+        "encoded": "#%20Image%20will%20be%20overridden%20by%20Kustomize%20overlay%20per%20environment",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "5e97ee",
+        "hash": "638d931d",
+        "encoded": "image:%20IMAGE_PLACEHOLDER",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "5e97ee",
+        "hash": "098b36fd",
+        "encoded": "imagePullPolicy:%20Always",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "5e97ee",
+        "hash": "20cf7cd6",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "5e97ee",
+        "hash": "73d0815c",
+        "encoded": "-%20name:%20http",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "5e97ee",
+        "hash": "1420e347",
+        "encoded": "containerPort:%208080",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "5e97ee",
+        "hash": "15cad554",
+        "encoded": "protocol:%20TCP",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "5e97ee",
+        "hash": "0486e43d",
+        "encoded": "envFrom:",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "5e97ee",
+        "hash": "d0c564af",
+        "encoded": "-%20configMapRef:",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "5e97ee",
+        "hash": "3dd48c5f",
+        "encoded": "name:%20backend-config",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "5e97ee",
+        "hash": "f791915d",
+        "encoded": "-%20secretRef:",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "5e97ee",
+        "hash": "301c84da",
+        "encoded": "name:%20backend-secrets",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "5e97ee",
+        "hash": "10819fa6",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "5e97ee",
+        "hash": "394776f2",
+        "encoded": "-%20name:%20JAVA_OPTS",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "5e97ee",
+        "hash": "9a6701c1",
+        "encoded": "value:%20%22-XX:+UseContainerSupport%20-XX:MaxRAMPercentage=75.0%20-XX:+ExitOnOutOfMemoryError%22",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "5e97ee",
+        "hash": "99efd18d",
+        "encoded": "resources:",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "5e97ee",
+        "hash": "28e12f77",
+        "encoded": "requests:",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "5e97ee",
+        "hash": "9a43dc40",
+        "encoded": "cpu:%20250m",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "5e97ee",
+        "hash": "86d2d85f",
+        "encoded": "memory:%20512Mi",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "5e97ee",
+        "hash": "3f036a24",
+        "encoded": "limits:",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "5e97ee",
+        "hash": "623b3900",
+        "encoded": "cpu:%20%221%22",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "5e97ee",
+        "hash": "611a356b",
+        "encoded": "memory:%201Gi",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "5e97ee",
+        "hash": "3ebb0449",
+        "encoded": "livenessProbe:",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "5e97ee",
+        "hash": "70aef810",
+        "encoded": "httpGet:",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "5e97ee",
+        "hash": "00709770",
+        "encoded": "path:%20/actuator/health/liveness",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "5e97ee",
+        "hash": "d5d91442",
+        "encoded": "port:%20http",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "5e97ee",
+        "hash": "e45b20ef",
+        "encoded": "initialDelaySeconds:%2045",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "5e97ee",
+        "hash": "967ffd68",
+        "encoded": "periodSeconds:%2015",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "5e97ee",
+        "hash": "68b9f015",
+        "encoded": "timeoutSeconds:%205",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "5e97ee",
+        "hash": "efc8d6d2",
+        "encoded": "failureThreshold:%203",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "5e97ee",
+        "hash": "16791afc",
+        "encoded": "readinessProbe:",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "5e97ee",
+        "hash": "545f9c20",
+        "encoded": "httpGet:",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "5e97ee",
+        "hash": "90deab31",
+        "encoded": "path:%20/actuator/health/readiness",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "5e97ee",
+        "hash": "72d753e0",
+        "encoded": "port:%20http",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "5e97ee",
+        "hash": "eee14cfd",
+        "encoded": "initialDelaySeconds:%2030",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "5e97ee",
+        "hash": "c0bf15c4",
+        "encoded": "periodSeconds:%2010",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "5e97ee",
+        "hash": "05cc24c8",
+        "encoded": "timeoutSeconds:%205",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "5e97ee",
+        "hash": "b7413316",
+        "encoded": "failureThreshold:%203",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "5e97ee",
+        "hash": "3e23f9e1",
+        "encoded": "startupProbe:",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "5e97ee",
+        "hash": "7cb48b0a",
+        "encoded": "httpGet:",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "5e97ee",
+        "hash": "2bc99076",
+        "encoded": "path:%20/actuator/health",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "5e97ee",
+        "hash": "02d74c83",
+        "encoded": "port:%20http",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "5e97ee",
+        "hash": "77d6e9d0",
+        "encoded": "initialDelaySeconds:%2010",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "5e97ee",
+        "hash": "fe0e90fe",
+        "encoded": "periodSeconds:%205",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "5e97ee",
+        "hash": "e518a602",
+        "encoded": "failureThreshold:%2012",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "5e97ee",
+        "hash": "94bf4a18",
+        "encoded": "securityContext:",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "5e97ee",
+        "hash": "501a2b34",
+        "encoded": "runAsNonRoot:%20true",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "5e97ee",
+        "hash": "c36487de",
+        "encoded": "readOnlyRootFilesystem:%20false",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "5e97ee",
+        "hash": "69b122c9",
+        "encoded": "allowPrivilegeEscalation:%20false",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "5e97ee",
+        "hash": "c80bfc4d",
+        "encoded": "capabilities:",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "5e97ee",
+        "hash": "b2d2f532",
+        "encoded": "drop:",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "5e97ee",
+        "hash": "3dfdd8be",
+        "encoded": "-%20ALL",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

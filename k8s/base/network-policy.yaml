@@ -1,0 +1,79 @@
+# ─────────────────────────────────────────────────────────────────
+# NetworkPolicy – Restrict traffic between pods
+# ─────────────────────────────────────────────────────────────────
+---
+# Backend: Only allow traffic from frontend pods and ingress
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: backend-network-policy
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/part-of: transport-tracker
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: transport-backend
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: transport-frontend
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: transport-tracker
+      ports:
+        - protocol: TCP
+          port: 8080
+  egress:
+    # Allow DNS resolution
+    - to: []
+      ports:
+        - protocol: UDP
+          port: 53
+        - protocol: TCP
+          port: 53
+    # Allow outbound HTTPS to external transit APIs
+    - to: []
+      ports:
+        - protocol: TCP
+          port: 443
+---
+# Frontend: Allow traffic from ingress, allow traffic to backend
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: frontend-network-policy
+  namespace: transport-tracker
+  labels:
+    app.kubernetes.io/part-of: transport-tracker
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: transport-frontend
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - ports:
+        - protocol: TCP
+          port: 80
+  egress:
+    # Allow DNS resolution
+    - to: []
+      ports:
+        - protocol: UDP
+          port: 53
+        - protocol: TCP
+          port: 53
+    # Allow traffic to backend service
+    - to:
+        - podSelector:
+            matchLabels:
+              app.kubernetes.io/name: transport-backend
+      ports:
+        - protocol: TCP
+          port: 8080

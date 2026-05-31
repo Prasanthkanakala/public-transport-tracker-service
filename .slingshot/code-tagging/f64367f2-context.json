@@ -2,10 +2,29 @@
   "filename": "application.properties",
   "path": "backend\\src\\main\\resources\\application.properties",
   "version": "1.1",
-  "files": {},
+  "files": {
+    "76b8573a": {
+      "value": [
+        {
+          "programming_language": "",
+          "fileName": "Jenkinsfile",
+          "relativeFilePath": "Jenkinsfile",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            333
+          ]
+        }
+      ]
+    }
+  },
   "promptMessage": {
     "3e00facf": {
       "value": "You are a Senior Spring Boot + React Security Architect.\n\nI have an existing Real-Time Public Transport Tracking application with:\n\nBackend:\n\n* Java 21\n* Spring Boot\n* Existing REST APIs\n* Existing cache system\n* Existing transport APIs\n* No authentication currently\n\nFrontend:\n\n* React\n* JavaScript\n* Existing transport search screens\n* Existing custom hooks (useTransport)\n* Existing API service layer\n* No login screen currently\n\nGoal:\n\nImplement JWT Authentication + Role-Based Access Control (RB"
+    },
+    "89d1eeb0": {
+      "value": "C:\\Users\\kanprasa1\\IdeaProjects\\public transport tracker service\\backend>gradle clean bootRun\n\n> Task :bootRun\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::                (v3.2.3)\n\n2026-05-31 17:19:12 [main] INFO  c.t.t.TransportTrackerApplication - Starting TransportTrackerA"
     }
   },
   "localPrompts": {},

@@ -1,0 +1,31 @@
+{
+  "filename": "backend-deployment.yaml",
+  "path": "k8s\\base\\backend-deployment.yaml",
+  "version": "1.1",
+  "files": {
+    "2a532944": {
+      "value": [
+        {
+          "programming_language": "YAML",
+          "fileName": "docker-compose.yml",
+          "relativeFilePath": "docker-compose.yml",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            64
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "5bd73571": {
+      "value": "analysze the codebase entire and give me kubernetes manifest files to deploy in gke by publishing images in gar. my codebase will be pushed to this github repo\n\ngive me jenkinsfile as well\n\nhttps://github.com/Prasanthkanakala/public-transport-tracker-service/tree/develop"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}
