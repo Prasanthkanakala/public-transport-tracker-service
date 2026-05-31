@@ -37,7 +37,7 @@ pipeline {
         PATH                = "${JAVA_HOME}/bin:${env.PATH}"
 
         // ── GCP / GAR Configuration ────────────────────────────────────
-        GCP_PROJECT_ID      = 'YOUR_GCP_PROJECT_ID'                    // TODO: Replace with your GCP project ID
+        GCP_PROJECT_ID      = 'burner-kanprasa1-01'                    // TODO: Replace with your GCP project ID
         GAR_REGION          = 'us-central1'                             // TODO: Replace with your GAR region
         GAR_REPOSITORY      = 'transport-tracker'                       // GAR Docker repository name
         GAR_REGISTRY        = "${GAR_REGION}-docker.pkg.dev/${GCP_PROJECT_ID}/${GAR_REPOSITORY}"
@@ -61,8 +61,8 @@ pipeline {
         timeout(time: 45, unit: 'MINUTES')
         disableConcurrentBuilds()
         buildDiscarder(logRotator(numToKeepStr: '15'))
-        timestamps()
-        ansiColor('xterm')
+        // timestamps()    – Requires 'Timestamper' plugin (not installed)
+        // ansiColor('xterm') – Requires 'AnsiColor' plugin (not installed)
     }
 
     stages {
