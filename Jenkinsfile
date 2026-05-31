@@ -33,8 +33,14 @@ pipeline {
 
     environment {
         // ── Java ────────────────────────────────────────────────────────
-        JAVA_HOME           = tool 'JDK-17'
-        PATH                = "${JAVA_HOME}/bin:${env.PATH}"
+        // NOTE: JAVA_HOME is set inside stages that need it, using the
+        //       'tools' directive, to avoid pipeline failure when the
+        //       JDK tool installation is not yet configured in Jenkins.
+        //       Configure a JDK installation named 'JDK-17' in
+        //       Manage Jenkins → Tools → JDK installations, then
+        //       uncomment the tools block in the relevant stages.
+        // JAVA_HOME        = tool 'JDK-17'
+        // PATH             = "${JAVA_HOME}/bin:${env.PATH}"
 
         // ── GCP / GAR Configuration ────────────────────────────────────
         GCP_PROJECT_ID      = 'burner-kanprasa1-01'                    // TODO: Replace with your GCP project ID
@@ -97,7 +103,9 @@ pipeline {
             }
             post {
                 always {
-                    junit allowEmptyResults: true, testResults: 'backend/build/test-results/**/*.xml'
+                    // junit requires the 'JUnit' plugin (not installed)
+                    // Using archiveArtifacts as a fallback to preserve test results
+                    archiveArtifacts artifacts: 'backend/build/test-results/**/*.xml', allowEmptyArchive: true
                 }
                 success {
                     echo '\u001B[32m✔ Backend tests passed and JAR built successfully\u001B[0m'
@@ -307,11 +315,17 @@ pipeline {
 
     post {
         always {
-            // Clean up Docker images to save disk space
-            sh '''
-                docker image prune -f 2>/dev/null || true
-            '''
-            cleanWs()
+            // Wrap in node block to ensure workspace context is available
+            // even when the pipeline fails before reaching a stage with an agent
+            node('') {
+                // Clean up Docker images to save disk space
+                sh '''
+                    docker image prune -f 2>/dev/null || true
+                '''
+                // cleanWs() requires the 'Workspace Cleanup' plugin (not installed)
+                // Using deleteDir() as a built-in alternative to clean the workspace
+                deleteDir()
+            }
         }
         success {
             echo "\u001B[32m══════════════════════════════════════════════════\u001B[0m"
