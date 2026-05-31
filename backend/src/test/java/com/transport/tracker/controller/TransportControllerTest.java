@@ -3,7 +3,13 @@ package com.transport.tracker.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.transport.tracker.config.SecurityConfig;
 import com.transport.tracker.model.*;
+import com.transport.tracker.security.JwtAuthenticationFilter;
+import com.transport.tracker.security.JwtService;
 import com.transport.tracker.service.TransportService;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +17,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.Instant;
@@ -18,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -25,10 +33,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
 * Integration tests for TransportController.
 * Verifies HTTP contract: status codes, response structure, parameter handling.
+*
+* SecurityConfig is imported to test the real security filter chain.
+* JwtAuthenticationFilter and JwtService are mocked because @WebMvcTest
+* does not scan @Service/@Component beans outside the web layer.
+* @WithMockUser provides an authenticated security context with ROLE_VIEWER
+* to satisfy the @PreAuthorize("hasAnyRole('VIEWER','OPERATOR','ADMIN')") on the controller.
 */
 @WebMvcTest(TransportController.class)
 @Import(SecurityConfig.class)
 @DisplayName("TransportController")
+@WithMockUser(username = "viewer", roles = {"VIEWER"})
 class TransportControllerTest {
 
     @Autowired
@@ -39,6 +54,38 @@ class TransportControllerTest {
 
     @MockBean
     private TransportService transportService;
+
+    @MockBean
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
+
+    @MockBean
+    private JwtService jwtService;
+
+    /**
+     * Configure the mocked JwtAuthenticationFilter to pass requests through the filter chain.
+     * <p>
+     * Without this setup, the @MockBean mock's doFilter() is a no-op that never calls
+     * filterChain.doFilter(), causing all requests to be swallowed by the mock filter
+     * before reaching the DispatcherServlet (symptoms: Handler: Type = null, empty body).
+     * </p>
+     * <p>
+     * We stub the public doFilter(ServletRequest, ServletResponse, FilterChain) method
+     * (inherited from GenericFilterBean/Filter interface) rather than the protected
+     * doFilterInternal() method, because Mockito mocks the entire class hierarchy and
+     * the public doFilter() is the entry point called by the servlet container.
+     * </p>
+     */
+    @BeforeEach
+    void configureMockJwtFilter() throws Exception {
+        doAnswer(invocation -> {
+            ServletRequest request = invocation.getArgument(0);
+            ServletResponse response = invocation.getArgument(1);
+            FilterChain chain = invocation.getArgument(2);
+            chain.doFilter(request, response);
+            return null;
+        }).when(jwtAuthenticationFilter)
+          .doFilter(any(ServletRequest.class), any(ServletResponse.class), any(FilterChain.class));
+    }
 
     private TransportResponse<TransportData> buildMockResponse(String source) {
         TransportData data = TransportData.builder()

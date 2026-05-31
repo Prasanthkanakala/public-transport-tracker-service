@@ -64,7 +64,25 @@ dependencies {
 }
 
 test {
+    useJUnitPlatform {
+        // Exclude Karate BDD integration tests from the standard test task.
+        // These tests require a running server (localhost:8080) and should be
+        // run separately via the 'karateTest' task after the application is deployed.
+        excludeTags 'regression'
+    }
+    exclude '**/bdd/**'
+    testLogging {
+        events "passed", "skipped", "failed"
+        showExceptions true
+        showStandardStreams true
+    }
+}
+
+// Separate task for Karate BDD integration tests.
+// Run with: ./gradlew karateTest (requires a running server at localhost:8080)
+task karateTest(type: Test) {
     useJUnitPlatform()
+    include '**/bdd/**'
     testLogging {
         events "passed", "skipped", "failed"
         showExceptions true

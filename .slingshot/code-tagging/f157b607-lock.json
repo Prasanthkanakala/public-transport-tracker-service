@@ -1,0 +1,634 @@
+{
+  "backend\\src\\test\\java\\com\\transport\\tracker\\controller\\TransportControllerTest.java": {
+    "filename": "TransportControllerTest.java",
+    "path": "backend\\src\\test\\java\\com\\transport\\tracker\\controller\\TransportControllerTest.java",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "dd1401": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780236415,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "ca31b012",
+          "files": "4c676e18"
+        },
+        "hash": "ecbef67a",
+        "messageId": "system_8cd13910-5cf9-11f1-acfb-8f319e2f00ce",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-opus-4-6\n- **timestamp**: 5/31/2026, 7:36:55 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "882bb6": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780237000,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "35264188",
+          "files": "4c676e18"
+        },
+        "hash": "6616d097",
+        "messageId": "system_d8b49a10-5cfa-11f1-acfb-8f319e2f00ce",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-opus-4-6\n- **timestamp**: 5/31/2026, 7:46:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "9e1cae": {
+        "user": "Kanakala Prasanth",
+        "model": "claude-opus-4-6",
+        "timestamp": 1780237000,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.1",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "35264188",
+          "files": "4c676e18"
+        },
+        "hash": "660cf0a8",
+        "messageId": "system_d8b49a10-5cfa-11f1-acfb-8f319e2f00ce",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-opus-4-6\n- **timestamp**: 5/31/2026, 7:46:40 PM\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "dd1401",
+        "hash": "50d6b9c5",
+        "encoded": "package%20com.transport.tracker.controller;",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "9e1cae",
+        "hash": "88d9f65a",
+        "encoded": "import%20com.fasterxml.jackson.databind.ObjectMapper;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "9e1cae",
+        "hash": "211d332c",
+        "encoded": "import%20com.transport.tracker.config.SecurityConfig;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "9e1cae",
+        "hash": "db933646",
+        "encoded": "import%20com.transport.tracker.model.*;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "9e1cae",
+        "hash": "5d8f303c",
+        "encoded": "import%20com.transport.tracker.security.JwtAuthenticationFilter;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "9e1cae",
+        "hash": "ab683241",
+        "encoded": "import%20com.transport.tracker.security.JwtService;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "9e1cae",
+        "hash": "272ffb73",
+        "encoded": "import%20com.transport.tracker.service.TransportService;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "9e1cae",
+        "hash": "99d1a35c",
+        "encoded": "import%20jakarta.servlet.FilterChain;",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "9e1cae",
+        "hash": "eb57e2c4",
+        "encoded": "import%20jakarta.servlet.http.HttpServletRequest;",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "9e1cae",
+        "hash": "20d629a4",
+        "encoded": "import%20jakarta.servlet.http.HttpServletResponse;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "9e1cae",
+        "hash": "56dcc1f6",
+        "encoded": "import%20org.junit.jupiter.api.BeforeEach;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "9e1cae",
+        "hash": "b496e081",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "9e1cae",
+        "hash": "1459a3b0",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "9e1cae",
+        "hash": "a6c63a4e",
+        "encoded": "import%20org.springframework.beans.factory.annotation.Autowired;",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "9e1cae",
+        "hash": "554c719e",
+        "encoded": "import%20org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "9e1cae",
+        "hash": "b1bbf805",
+        "encoded": "import%20org.springframework.boot.test.mock.mockito.MockBean;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "9e1cae",
+        "hash": "25902c94",
+        "encoded": "import%20org.springframework.context.annotation.Import;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "9e1cae",
+        "hash": "4f51e845",
+        "encoded": "import%20org.springframework.http.MediaType;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "9e1cae",
+        "hash": "2e985943",
+        "encoded": "import%20org.springframework.security.test.context.support.WithMockUser;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "9e1cae",
+        "hash": "db5821a6",
+        "encoded": "import%20org.springframework.test.web.servlet.MockMvc;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "9e1cae",
+        "hash": "0d16ccb4",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "9e1cae",
+        "hash": "f4b0323f",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "9e1cae",
+        "hash": "521525da",
+        "encoded": "import%20java.util.Map;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "9e1cae",
+        "hash": "4e32e6ae",
+        "encoded": "import%20static%20org.mockito.ArgumentMatchers.*;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "9e1cae",
+        "hash": "d2bb6706",
+        "encoded": "import%20static%20org.mockito.Mockito.doAnswer;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "9e1cae",
+        "hash": "89182622",
+        "encoded": "import%20static%20org.mockito.Mockito.when;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "9e1cae",
+        "hash": "25062d03",
+        "encoded": "import%20static%20org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "9e1cae",
+        "hash": "c878707a",
+        "encoded": "import%20static%20org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "dd1401",
+        "hash": "8712b526",
+        "encoded": "import%20com.transport.tracker.config.SecurityConfig;",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "dd1401",
+        "hash": "19d94f94",
+        "encoded": "import%20com.transport.tracker.model.*;",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "dd1401",
+        "hash": "3cc10734",
+        "encoded": "import%20com.transport.tracker.security.JwtAuthenticationFilter;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "dd1401",
+        "hash": "b19c1e76",
+        "encoded": "import%20com.transport.tracker.security.JwtService;",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "dd1401",
+        "hash": "a4592860",
+        "encoded": "import%20com.transport.tracker.service.TransportService;",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "dd1401",
+        "hash": "67ac3eab",
+        "encoded": "import%20org.junit.jupiter.api.DisplayName;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "dd1401",
+        "hash": "ebe51191",
+        "encoded": "import%20org.junit.jupiter.api.Test;",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "dd1401",
+        "hash": "d9c21730",
+        "encoded": "import%20org.springframework.beans.factory.annotation.Autowired;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "dd1401",
+        "hash": "987b7160",
+        "encoded": "import%20org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "dd1401",
+        "hash": "decbf9fb",
+        "encoded": "import%20org.springframework.boot.test.mock.mockito.MockBean;",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "dd1401",
+        "hash": "7541d6ea",
+        "encoded": "import%20org.springframework.context.annotation.Import;",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "dd1401",
+        "hash": "da5d7d95",
+        "encoded": "import%20org.springframework.http.MediaType;",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "dd1401",
+        "hash": "e92e52c9",
+        "encoded": "import%20org.springframework.security.test.context.support.WithMockUser;",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "dd1401",
+        "hash": "b6db34eb",
+        "encoded": "import%20org.springframework.test.web.servlet.MockMvc;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "dd1401",
+        "hash": "9316d08a",
+        "encoded": "import%20java.time.Instant;",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "dd1401",
+        "hash": "d16c090a",
+        "encoded": "import%20java.util.List;",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "dd1401",
+        "hash": "320a59b6",
+        "encoded": "import%20java.util.Map;",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "dd1401",
+        "hash": "5e228acf",
+        "encoded": "import%20static%20org.mockito.ArgumentMatchers.*;",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "dd1401",
+        "hash": "ff4b300b",
+        "encoded": "import%20static%20org.mockito.Mockito.when;",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "dd1401",
+        "hash": "6a47a0ed",
+        "encoded": "import%20static%20org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "dd1401",
+        "hash": "ea4eeab0",
+        "encoded": "import%20static%20org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "dd1401",
+        "hash": "0941b36b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "dd1401",
+        "hash": "3b9e9d6a",
+        "encoded": "*%20Integration%20tests%20for%20TransportController.",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "dd1401",
+        "hash": "226ba50a",
+        "encoded": "*%20Verifies%20HTTP%20contract:%20status%20codes,%20response%20structure,%20parameter%20handling.",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "dd1401",
+        "hash": "b4277bf5",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "dd1401",
+        "hash": "5852a508",
+        "encoded": "*%20SecurityConfig%20is%20imported%20to%20test%20the%20real%20security%20filter%20chain.",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "dd1401",
+        "hash": "a6f512a7",
+        "encoded": "*%20JwtAuthenticationFilter%20and%20JwtService%20are%20mocked%20because%20@WebMvcTest",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "dd1401",
+        "hash": "dd9d65c6",
+        "encoded": "*%20does%20not%20scan%20@Service/@Component%20beans%20outside%20the%20web%20layer.",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "dd1401",
+        "hash": "60b1dfdf",
+        "encoded": "*%20@WithMockUser%20provides%20an%20authenticated%20security%20context%20with%20ROLE_VIEWER",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "dd1401",
+        "hash": "11b79622",
+        "encoded": "*%20to%20satisfy%20the%20@PreAuthorize(%22hasAnyRole('VIEWER','OPERATOR','ADMIN')%22)%20on%20the%20controller.",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "dd1401",
+        "hash": "63411be4",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "dd1401",
+        "hash": "70c40222",
+        "encoded": "@WebMvcTest(TransportController.class)",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "dd1401",
+        "hash": "ec2cef67",
+        "encoded": "@Import(SecurityConfig.class)",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "dd1401",
+        "hash": "d55ff822",
+        "encoded": "@DisplayName(%22TransportController%22)",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "dd1401",
+        "hash": "9f0cc7ef",
+        "encoded": "@WithMockUser(username%20=%20%22viewer%22,%20roles%20=%20%7B%22VIEWER%22%7D)",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "dd1401",
+        "hash": "9dbdfa50",
+        "encoded": "class%20TransportControllerTest%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "dd1401",
+        "hash": "7aacd92d",
+        "encoded": "@Autowired",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "dd1401",
+        "hash": "b7e5a0d1",
+        "encoded": "private%20MockMvc%20mockMvc;",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "dd1401",
+        "hash": "e7cb5775",
+        "encoded": "@Autowired",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "dd1401",
+        "hash": "27ec3098",
+        "encoded": "private%20ObjectMapper%20objectMapper;",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "dd1401",
+        "hash": "9410a069",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "dd1401",
+        "hash": "5ca215ce",
+        "encoded": "private%20TransportService%20transportService;",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "dd1401",
+        "hash": "b67bd9f0",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "dd1401",
+        "hash": "2b167f67",
+        "encoded": "private%20JwtAuthenticationFilter%20jwtAuthenticationFilter;",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "dd1401",
+        "hash": "4fb6a8eb",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "dd1401",
+        "hash": "1860ebe5",
+        "encoded": "private%20JwtService%20jwtService;",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "882bb6",
+        "hash": "ccd010ec",
+        "encoded": "@MockBean",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "882bb6",
+        "hash": "0a572891",
+        "encoded": "private%20JwtService%20jwtService;",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "882bb6",
+        "hash": "78465aaa",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "882bb6",
+        "hash": "534b3df0",
+        "encoded": "*%20Configure%20the%20mocked%20JwtAuthenticationFilter%20to%20pass%20requests%20through%20the%20filter%20chain.",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "882bb6",
+        "hash": "26342b7d",
+        "encoded": "*%20Without%20this,%20the%20mock's%20doFilterInternal()%20is%20a%20no-op%20that%20never%20calls",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "882bb6",
+        "hash": "68bc7382",
+        "encoded": "*%20filterChain.doFilter(),%20causing%20all%20requests%20to%20be%20swallowed%20before%20reaching",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "882bb6",
+        "hash": "c11d066e",
+        "encoded": "*%20the%20DispatcherServlet%20(Handler:%20Type%20=%20null,%20empty%20body).",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "882bb6",
+        "hash": "3e120fb1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "882bb6",
+        "hash": "0ac7c8e9",
+        "encoded": "@BeforeEach",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "882bb6",
+        "hash": "42f0521b",
+        "encoded": "void%20configureMockJwtFilter()%20throws%20Exception%20%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "882bb6",
+        "hash": "15261845",
+        "encoded": "doAnswer(invocation%20-%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "882bb6",
+        "hash": "6f9aff13",
+        "encoded": "HttpServletRequest%20request%20=%20invocation.getArgument(0);",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "882bb6",
+        "hash": "a584b376",
+        "encoded": "HttpServletResponse%20response%20=%20invocation.getArgument(1);",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "882bb6",
+        "hash": "3b14cb95",
+        "encoded": "FilterChain%20chain%20=%20invocation.getArgument(2);",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "882bb6",
+        "hash": "98ee3353",
+        "encoded": "chain.doFilter(request,%20response);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "882bb6",
+        "hash": "0bc2b1e9",
+        "encoded": "return%20null;",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "882bb6",
+        "hash": "2faac4b7",
+        "encoded": "%7D).when(jwtAuthenticationFilter)",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "882bb6",
+        "hash": "ef07656c",
+        "encoded": ".doFilterInternal(any(HttpServletRequest.class),%20any(HttpServletResponse.class),%20any(FilterChain.class));",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "882bb6",
+        "hash": "8c67c4cf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "882bb6",
+        "hash": "aba12381",
+        "encoded": "private%20TransportResponse%3CTransportData%3E%20buildMockResponse(String%20source)%20%7B",
+        "prevChunkIds": []
+      }
+    },
+    "_prevLineCount": 187
+  }
+}
