@@ -149,21 +149,21 @@ pipeline {
         // // ════════════════════════════════════════════════════════════════
         // //  Stage 4: Authenticate with GCP & GAR
         // // ════════════════════════════════════════════════════════════════
-        // stage('GCP – Authenticate') {
-        //     steps {
-        //         script {
-        //             sh """
-        //                 # Authenticate with GCP using service account key
-        //                 gcloud auth activate-service-account --key-file=\${GCP_SA_KEY}
-        //                 gcloud config set project ${GCP_PROJECT_ID}
+        stage('GCP – Authenticate') {
+            steps {
+                script {
+                    sh """
+                        # Authenticate with GCP using service account key
+                        gcloud auth activate-service-account --key-file=\${GCP_SA_KEY}
+                        gcloud config set project ${GCP_PROJECT_ID}
 
-        //                 # Configure Docker to authenticate with GAR
-        //                 gcloud auth configure-docker ${GAR_REGION}-docker.pkg.dev --quiet
-        //             """
-        //         }
-        //         echo '\u001B[32m✔ Authenticated with GCP and configured Docker for GAR\u001B[0m'
-        //     }
-        // }
+                        # Configure Docker to authenticate with GAR
+                        gcloud auth configure-docker ${GAR_REGION}-docker.pkg.dev --quiet
+                    """
+                }
+                echo '\u001B[32m✔ Authenticated with GCP and configured Docker for GAR\u001B[0m'
+            }
+        }
 
         // // ════════════════════════════════════════════════════════════════
         // //  Stage 5: Docker – Build Images
