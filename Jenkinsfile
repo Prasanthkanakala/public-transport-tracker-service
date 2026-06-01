@@ -123,7 +123,7 @@ pipeline {
         stage('Frontend – Test & Build') {
             agent {
                 docker {
-                    image 'node:20-alpine'
+                    image 'node:24'
                     reuseNode true
                 }
             }
