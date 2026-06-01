@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Copy only dependency resolution files first for layer caching
 COPY settings.gradle build.gradle ./
-COPY gradle/ gradle/ 2>/dev/null || true
+# COPY gradle/ gradle/ 2>/dev/null || true
 
 # Resolve and cache dependencies (without source)
 RUN apt-get update -qq && apt-get install -y --no-install-recommends wget unzip \
