@@ -41,7 +41,7 @@ spec:
       containers:
         - name: backend
           # Image will be overridden by Kustomize overlay per environment
-          image: IMAGE_PLACEHOLDER
+          image: IMAGE_PLACEHOLDER_BACKEND
           imagePullPolicy: Always
           ports:
             - name: http

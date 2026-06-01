@@ -284,12 +284,6 @@
         "encoded": "#%20Image%20will%20be%20overridden%20by%20Kustomize%20overlay%20per%20environment",
         "prevChunkIds": []
       },
-      "43": {
-        "chunkId": "5e97ee",
-        "hash": "638d931d",
-        "encoded": "image:%20IMAGE_PLACEHOLDER",
-        "prevChunkIds": []
-      },
       "44": {
         "chunkId": "5e97ee",
         "hash": "098b36fd",
@@ -590,6 +584,7 @@
         "encoded": "-%20ALL",
         "prevChunkIds": []
       }
-    }
+    },
+    "_prevLineCount": 95
   }
 }
