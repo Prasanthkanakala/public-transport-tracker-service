@@ -130,7 +130,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     sh '''
-                        npm ci --silent
+                        npm ci
                         npm test -- --watchAll=false --coverage --passWithNoTests
                         npm run build
                     '''
