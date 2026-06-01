@@ -130,9 +130,18 @@ pipeline {
             steps {
                 dir('frontend') {
                     sh '''
-                        npm install
-                        # npm test -- --watchAll=false --coverage --passWithNoTests
-                        npm run build
+                        node -v
+                npm -v
+
+                npm install
+
+                npm ls serialize-javascript || true
+                npm ls css-minimizer-webpack-plugin || true
+                npm ls react-scripts || true
+
+                cat node_modules/serialize-javascript/package.json | grep version || true
+
+                npm run build
                     '''
                 }
             }
