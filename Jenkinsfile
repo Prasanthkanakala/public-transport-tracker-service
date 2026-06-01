@@ -131,15 +131,13 @@ pipeline {
                 dir('frontend') {
                     sh '''
                         node -v
-                npm -v
+                node -v
 
-                npm install
+    node -e "console.log(require('crypto'))"
 
-                npm ls serialize-javascript || true
-                npm ls css-minimizer-webpack-plugin || true
-                npm ls react-scripts || true
+    node -e "console.log(typeof require('crypto').randomBytes)"
 
-                cat node_modules/serialize-javascript/package.json | grep version || true
+    node -e "console.log(require('crypto').randomBytes)"
 
                 npm run build
                     '''
