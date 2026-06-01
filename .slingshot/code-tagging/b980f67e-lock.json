@@ -175,25 +175,8 @@
         "hash": "8aca8840",
         "encoded": "images:",
         "prevChunkIds": []
-      },
-      "30": {
-        "chunkId": "6c20d0",
-        "hash": "3a1d7dab",
-        "encoded": "-%20name:%20IMAGE_PLACEHOLDER",
-        "prevChunkIds": []
-      },
-      "31": {
-        "chunkId": "6c20d0",
-        "hash": "1dcd56ef",
-        "encoded": "newName:%20us-central1-docker.pkg.dev/YOUR_GCP_PROJECT_ID/transport-tracker/transport-backend",
-        "prevChunkIds": []
-      },
-      "32": {
-        "chunkId": "6c20d0",
-        "hash": "6c480aac",
-        "encoded": "newTag:%20prod-latest",
-        "prevChunkIds": []
       }
-    }
+    },
+    "_prevLineCount": 37
   }
 }

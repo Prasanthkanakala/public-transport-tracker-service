@@ -28,6 +28,9 @@ patches:
         value: 2
 
 images:
-  - name: IMAGE_PLACEHOLDER
-    newName: us-central1-docker.pkg.dev/YOUR_GCP_PROJECT_ID/transport-tracker/transport-backend
-    newTag: prod-latest
+  - name: IMAGE_PLACEHOLDER_BACKEND
+    newName: us-central1-docker.pkg.dev/burner-kanprasa1-01/transport-tracker/transport-backend
+    newTag: dev-latest
+  - name: IMAGE_PLACEHOLDER_FRONTEND
+    newName: us-central1-docker.pkg.dev/burner-kanprasa1-01/transport-tracker/transport-frontend
+    newTag: dev-latest

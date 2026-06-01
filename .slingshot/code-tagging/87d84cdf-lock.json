@@ -386,24 +386,13 @@
         "encoded": "images:",
         "prevChunkIds": []
       },
-      "66": {
-        "chunkId": "bd49e8",
-        "hash": "ff5f2860",
-        "encoded": "-%20name:%20IMAGE_PLACEHOLDER",
-        "prevChunkIds": []
-      },
-      "67": {
-        "chunkId": "bd49e8",
-        "hash": "b34d2b60",
-        "encoded": "newName:%20us-central1-docker.pkg.dev/YOUR_GCP_PROJECT_ID/transport-tracker/transport-backend",
-        "prevChunkIds": []
-      },
       "68": {
         "chunkId": "bd49e8",
         "hash": "f019fe9a",
         "encoded": "newTag:%20dev-latest",
         "prevChunkIds": []
       }
-    }
+    },
+    "_prevLineCount": 72
   }
 }
