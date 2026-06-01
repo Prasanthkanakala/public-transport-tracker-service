@@ -133,11 +133,7 @@ pipeline {
                         node -v
                 node -v
 
-    node -e "console.log(require('crypto'))"
-
-    node -e "console.log(typeof require('crypto').randomBytes)"
-
-    node -e "console.log(require('crypto').randomBytes)"
+                npm ci
 
                 npm run build
                     '''
