@@ -131,7 +131,7 @@ pipeline {
                 dir('frontend') {
                     sh '''
                         npm install
-                        // npm test -- --watchAll=false --coverage --passWithNoTests
+                        # npm test -- --watchAll=false --coverage --passWithNoTests
                         npm run build
                     '''
                 }
