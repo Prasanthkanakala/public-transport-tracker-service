@@ -96,55 +96,55 @@ pipeline {
         // ════════════════════════════════════════════════════════════════
         //  Stage 2: Backend – Test & Build
         // ════════════════════════════════════════════════════════════════
-        // stage('Backend – Test & Build') {
-        //     steps {
-        //         dir('backend') {
-        //             sh '''
-        //                 chmod +x gradlew 2>/dev/null || true
-        //                 gradle clean test bootJar --no-daemon --info
-        //             '''
-        //         }
-        //     }
-        //     post {
-        //         always {
-        //             // junit requires the 'JUnit' plugin (not installed)
-        //             // Using archiveArtifacts as a fallback to preserve test results
-        //             archiveArtifacts artifacts: 'backend/build/test-results/**/*.xml', allowEmptyArchive: true
-        //         }
-        //         success {
-        //             echo '\u001B[32m✔ Backend tests passed and JAR built successfully\u001B[0m'
-        //         }
-        //     }
-        // }
+        stage('Backend – Test & Build') {
+            steps {
+                dir('backend') {
+                    sh '''
+                        chmod +x gradlew 2>/dev/null || true
+                        gradle clean test bootJar --no-daemon --info
+                    '''
+                }
+            }
+            post {
+                always {
+                    // junit requires the 'JUnit' plugin (not installed)
+                    // Using archiveArtifacts as a fallback to preserve test results
+                    archiveArtifacts artifacts: 'backend/build/test-results/**/*.xml', allowEmptyArchive: true
+                }
+                success {
+                    echo '\u001B[32m✔ Backend tests passed and JAR built successfully\u001B[0m'
+                }
+            }
+        }
 
-        // // ════════════════════════════════════════════════════════════════
-        // //  Stage 3: Frontend – Test & Build
-        // // ════════════════════════════════════════════════════════════════
-        // stage('Frontend – Test & Build') {
-        //     agent {
-        //         docker {
-        //             image 'node:24'
-        //             reuseNode true
-        //         }
-        //     }
-        //     steps {
-        //         dir('frontend') {
-        //             sh '''
-        //                 node -v
-        //         node -v
+        // ════════════════════════════════════════════════════════════════
+        //  Stage 3: Frontend – Test & Build
+        // ════════════════════════════════════════════════════════════════
+        stage('Frontend – Test & Build') {
+            agent {
+                docker {
+                    image 'node:24'
+                    reuseNode true
+                }
+            }
+            steps {
+                dir('frontend') {
+                    sh '''
+                        node -v
+                node -v
 
-        //         npm ci
+                npm ci
 
-        //         npm run build
-        //             '''
-        //         }
-        //     }
-        //     post {
-        //         success {
-        //             echo '\u001B[32m✔ Frontend tests passed and build completed\u001B[0m'
-        //         }
-        //     }
-        // }
+                npm run build
+                    '''
+                }
+            }
+            post {
+                success {
+                    echo '\u001B[32m✔ Frontend tests passed and build completed\u001B[0m'
+                }
+            }
+        }
 
         // // ════════════════════════════════════════════════════════════════
         // //  Stage 4: Authenticate with GCP & GAR
@@ -165,44 +165,74 @@ pipeline {
             }
         }
 
-        // // ════════════════════════════════════════════════════════════════
-        // //  Stage 5: Docker – Build Images
-        // // ════════════════════════════════════════════════════════════════
-        // stage('Docker – Build Images') {
-        //     steps {
-        //         script {
-        //             echo "Building Docker images with tag: ${BUILD_TAG_CUSTOM}"
+        // ════════════════════════════════════════════════════════════════
+        //  Stage 5: Docker – Build Images
+        // ════════════════════════════════════════════════════════════════
+        stage('Docker – Build Images') {
+            steps {
+                script {
+                    echo "Building Docker images with tag: ${BUILD_TAG_CUSTOM}"
 
-        //             // Build backend image
-        //             sh """
-        //                 docker build \\
-        //                     --label "git.commit=${GIT_COMMIT_SHORT}" \\
-        //                     --label "build.number=${BUILD_NUMBER}" \\
-        //                     --label "build.branch=${BRANCH_NAME}" \\
-        //                     -t ${BACKEND_IMAGE}:${BUILD_TAG_CUSTOM} \\
-        //                     -t ${BACKEND_IMAGE}:${DEPLOY_ENV}-latest \\
-        //                     ./backend
-        //             """
+                    // Build backend image
+                    sh """
+                        docker build \\
+                            --label "git.commit=${GIT_COMMIT_SHORT}" \\
+                            --label "build.number=${BUILD_NUMBER}" \\
+                            --label "build.branch=${BRANCH_NAME}" \\
+                            -t ${BACKEND_IMAGE}:${BUILD_TAG_CUSTOM} \\
+                            -t ${BACKEND_IMAGE}:${DEPLOY_ENV}-latest \\
+                            ./backend
+                    """
 
-        //             // Build frontend image
-        //             sh """
-        //                 docker build \\
-        //                     --label "git.commit=${GIT_COMMIT_SHORT}" \\
-        //                     --label "build.number=${BUILD_NUMBER}" \\
-        //                     --label "build.branch=${BRANCH_NAME}" \\
-        //                     -t ${FRONTEND_IMAGE}:${BUILD_TAG_CUSTOM} \\
-        //                     -t ${FRONTEND_IMAGE}:${DEPLOY_ENV}-latest \\
-        //                     ./frontend
-        //             """
-        //         }
-        //         echo '\u001B[32m✔ Docker images built successfully\u001B[0m'
-        //     }
-        // }
+                    // Build frontend image
+                    sh """
+                        docker build \\
+                            --label "git.commit=${GIT_COMMIT_SHORT}" \\
+                            --label "build.number=${BUILD_NUMBER}" \\
+                            --label "build.branch=${BRANCH_NAME}" \\
+                            -t ${FRONTEND_IMAGE}:${BUILD_TAG_CUSTOM} \\
+                            -t ${FRONTEND_IMAGE}:${DEPLOY_ENV}-latest \\
+                            ./frontend
+                    """
+                }
+                echo '\u001B[32m✔ Docker images built successfully\u001B[0m'
+            }
+        }
 
+        // ════════════════════════════════════════════════════════════════
+        //  Stage 6: Docker – Push to Google Artifact Registry (GAR)
+        // ════════════════════════════════════════════════════════════════
+        stage('Docker – Push to GAR') {
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'develop'
+                }
+            }
+            steps {
+                script {
+                    echo "Pushing images to GAR: ${GAR_REGISTRY}"
+
+                    // Push backend images
+                    sh """
+                        docker push ${BACKEND_IMAGE}:${BUILD_TAG_CUSTOM}
+                        docker push ${BACKEND_IMAGE}:${DEPLOY_ENV}-latest
+                    """
+
+                    // Push frontend images
+                    sh """
+                        docker push ${FRONTEND_IMAGE}:${BUILD_TAG_CUSTOM}
+                        docker push ${FRONTEND_IMAGE}:${DEPLOY_ENV}-latest
+                    """
+                }
+                echo '\u001B[32m✔ Images pushed to Google Artifact Registry\u001B[0m'
+            }
+        }
+
+        // ════════════════════════════════════════════════════════════════
+        // //  Stage 7: Deploy to GKE
         // // ════════════════════════════════════════════════════════════════
-        // //  Stage 6: Docker – Push to Google Artifact Registry (GAR)
-        // // ════════════════════════════════════════════════════════════════
-        // stage('Docker – Push to GAR') {
+        // stage('Deploy to GKE') {
         //     when {
         //         anyOf {
         //             branch 'main'
@@ -211,113 +241,83 @@ pipeline {
         //     }
         //     steps {
         //         script {
-        //             echo "Pushing images to GAR: ${GAR_REGISTRY}"
+        //             echo "Deploying to GKE (${DEPLOY_ENV}) – Cluster: ${GKE_CLUSTER}"
 
-        //             // Push backend images
+        //             // Get GKE credentials
         //             sh """
-        //                 docker push ${BACKEND_IMAGE}:${BUILD_TAG_CUSTOM}
-        //                 docker push ${BACKEND_IMAGE}:${DEPLOY_ENV}-latest
+        //                 gcloud container clusters get-credentials ${GKE_CLUSTER} \\
+        //                     --zone ${GKE_ZONE} \\
+        //                     --project ${GCP_PROJECT_ID}
         //             """
 
-        //             // Push frontend images
+        //             // Deploy using Kustomize with image override
         //             sh """
-        //                 docker push ${FRONTEND_IMAGE}:${BUILD_TAG_CUSTOM}
-        //                 docker push ${FRONTEND_IMAGE}:${DEPLOY_ENV}-latest
+        //                 # Set the correct image tags using kustomize
+        //                 cd k8s/overlays/${DEPLOY_ENV}
+
+        //                 # Override images with the current build tag
+        //                 kustomize edit set image \\
+        //                     IMAGE_PLACEHOLDER=${BACKEND_IMAGE}:${BUILD_TAG_CUSTOM}
+
+        //                 # Apply the manifests
+        //                 kustomize build . | kubectl apply -f -
+
+        //                 # Also update the frontend image in the deployment directly
+        //                 kubectl set image deployment/transport-frontend \\
+        //                     frontend=${FRONTEND_IMAGE}:${BUILD_TAG_CUSTOM} \\
+        //                     -n transport-tracker || true
+        //             """
+
+        //             // Wait for rollout to complete
+        //             sh """
+        //                 echo "Waiting for backend rollout..."
+        //                 kubectl rollout status deployment/transport-backend \\
+        //                     -n transport-tracker --timeout=300s
+
+        //                 echo "Waiting for frontend rollout..."
+        //                 kubectl rollout status deployment/transport-frontend \\
+        //                     -n transport-tracker --timeout=300s
         //             """
         //         }
-        //         echo '\u001B[32m✔ Images pushed to Google Artifact Registry\u001B[0m'
+        //         echo "\u001B[32m✔ Successfully deployed ${BUILD_TAG_CUSTOM} to GKE (${DEPLOY_ENV})\u001B[0m"
         //     }
         // }
 
-        // ════════════════════════════════════════════════════════════════
-        //  Stage 7: Deploy to GKE
-        // ════════════════════════════════════════════════════════════════
-        stage('Deploy to GKE') {
-            when {
-                anyOf {
-                    branch 'main'
-                    branch 'develop'
-                }
-            }
-            steps {
-                script {
-                    echo "Deploying to GKE (${DEPLOY_ENV}) – Cluster: ${GKE_CLUSTER}"
+        // // ════════════════════════════════════════════════════════════════
+        // //  Stage 8: Verify Deployment
+        // // ════════════════════════════════════════════════════════════════
+        // stage('Verify Deployment') {
+        //     when {
+        //         anyOf {
+        //             branch 'main'
+        //             branch 'develop'
+        //         }
+        //     }
+        //     steps {
+        //         script {
+        //             sh """
+        //                 echo "=== Deployment Status ==="
+        //                 kubectl get deployments -n transport-tracker -o wide
 
-                    // Get GKE credentials
-                    sh """
-                        gcloud container clusters get-credentials ${GKE_CLUSTER} \\
-                            --zone ${GKE_ZONE} \\
-                            --project ${GCP_PROJECT_ID}
-                    """
+        //                 echo ""
+        //                 echo "=== Pod Status ==="
+        //                 kubectl get pods -n transport-tracker -o wide
 
-                    // Deploy using Kustomize with image override
-                    sh """
-                        # Set the correct image tags using kustomize
-                        cd k8s/overlays/${DEPLOY_ENV}
+        //                 echo ""
+        //                 echo "=== Services ==="
+        //                 kubectl get svc -n transport-tracker
 
-                        # Override images with the current build tag
-                        kustomize edit set image \\
-                            IMAGE_PLACEHOLDER=${BACKEND_IMAGE}:${BUILD_TAG_CUSTOM}
+        //                 echo ""
+        //                 echo "=== Ingress ==="
+        //                 kubectl get ingress -n transport-tracker
 
-                        # Apply the manifests
-                        kustomize build . | kubectl apply -f -
-
-                        # Also update the frontend image in the deployment directly
-                        kubectl set image deployment/transport-frontend \\
-                            frontend=${FRONTEND_IMAGE}:${BUILD_TAG_CUSTOM} \\
-                            -n transport-tracker || true
-                    """
-
-                    // Wait for rollout to complete
-                    sh """
-                        echo "Waiting for backend rollout..."
-                        kubectl rollout status deployment/transport-backend \\
-                            -n transport-tracker --timeout=300s
-
-                        echo "Waiting for frontend rollout..."
-                        kubectl rollout status deployment/transport-frontend \\
-                            -n transport-tracker --timeout=300s
-                    """
-                }
-                echo "\u001B[32m✔ Successfully deployed ${BUILD_TAG_CUSTOM} to GKE (${DEPLOY_ENV})\u001B[0m"
-            }
-        }
-
-        // ════════════════════════════════════════════════════════════════
-        //  Stage 8: Verify Deployment
-        // ════════════════════════════════════════════════════════════════
-        stage('Verify Deployment') {
-            when {
-                anyOf {
-                    branch 'main'
-                    branch 'develop'
-                }
-            }
-            steps {
-                script {
-                    sh """
-                        echo "=== Deployment Status ==="
-                        kubectl get deployments -n transport-tracker -o wide
-
-                        echo ""
-                        echo "=== Pod Status ==="
-                        kubectl get pods -n transport-tracker -o wide
-
-                        echo ""
-                        echo "=== Services ==="
-                        kubectl get svc -n transport-tracker
-
-                        echo ""
-                        echo "=== Ingress ==="
-                        kubectl get ingress -n transport-tracker
-
-                        echo ""
-                        echo "=== HPA Status ==="
-                        kubectl get hpa -n transport-tracker
-                    """
-                }
-            }
-        }
+        //                 echo ""
+        //                 echo "=== HPA Status ==="
+        //                 kubectl get hpa -n transport-tracker
+        //             """
+        //         }
+        //     }
+        // }
     }
 
     post {

@@ -40,7 +40,7 @@
         "hash": "e328faaf",
         "messageId": "system_5c87f210-5ce7-11f1-bc3e-a16e4ab969c4",
         "codeBlockId": null,
-        "isActive": true,
+        "isActive": false,
         "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:26:11 PM\n- **source**: agent\n- **type**: agentEditTool\n"
       },
       "f9f76e": {
@@ -59,35 +59,18 @@
         "hash": "f9f28c09",
         "messageId": "system_5c87f210-5ce7-11f1-bc3e-a16e4ab969c4",
         "codeBlockId": null,
-        "isActive": true,
+        "isActive": false,
         "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Kanakala Prasanth\n- **model**: claude-sonnet-4-5@20250929\n- **timestamp**: 5/31/2026, 5:26:11 PM\n- **source**: agent\n- **type**: agentEditTool\n"
       }
     },
     "lines": {
-      "4": {
-        "chunkId": "f9f76e",
-        "hash": "13c48bd9",
-        "encoded": "#%20%20Services:%20backend%20(Spring%20Boot%20:8081)%20+%20frontend%20(React/nginx%20:80)",
-        "prevChunkIds": []
-      },
       "21": {
         "chunkId": "552953",
         "hash": "2e8d7f22",
         "encoded": "ports:",
         "prevChunkIds": []
-      },
-      "22": {
-        "chunkId": "552953",
-        "hash": "68ce7dbf",
-        "encoded": "-%20%228081:8081%22",
-        "prevChunkIds": []
-      },
-      "40": {
-        "chunkId": "62c61b",
-        "hash": "4713a540",
-        "encoded": "test:%20%5B%22CMD-SHELL%22,%20%22wget%20-qO-%20http://localhost:8081/actuator/health%20%7C%7C%20exit%201%22%5D",
-        "prevChunkIds": []
       }
-    }
+    },
+    "_prevLineCount": 64
   }
 }

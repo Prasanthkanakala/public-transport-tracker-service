@@ -1,0 +1,567 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/part-of: transport-tracker
+  name: transport-tracker
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    iam.gke.io/gcp-service-account: transport-tracker-sa@burner-kanprasa1-01.iam.gserviceaccount.com
+  labels:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-tracker-sa
+  namespace: transport-tracker
+---
+apiVersion: v1
+data:
+  ALLOWED_ORIGINS: https://transport-tracker.example.com
+  CACHE_MAX_SIZE: "1000"
+  CACHE_STALE_TTL_SECONDS: "3600"
+  CACHE_TTL_SECONDS: "300"
+  OFFLINE_MODE: "false"
+  SPRING_PROFILE: prod
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-backend-config
+  namespace: transport-tracker
+---
+apiVersion: v1
+data:
+  default.conf: |
+    server {
+        listen       80;
+        server_name  _;
+
+        root   /usr/share/nginx/html;
+        index  index.html;
+
+        # Security headers
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header X-Frame-Options "DENY" always;
+        add_header X-XSS-Protection "1; mode=block" always;
+        add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+        add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:;" always;
+
+        # Proxy /api calls to the backend Kubernetes Service
+        location /api/ {
+            proxy_pass         http://transport-backend.transport-tracker.svc.cluster.local:8080;
+            proxy_http_version 1.1;
+            proxy_set_header   Host              $host;
+            proxy_set_header   X-Real-IP         $remote_addr;
+            proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
+            proxy_set_header   X-Forwarded-Proto $scheme;
+            proxy_read_timeout 10s;
+            proxy_connect_timeout 5s;
+        }
+
+        # Proxy /actuator to backend
+        location /actuator/ {
+            proxy_pass         http://transport-backend.transport-tracker.svc.cluster.local:8080;
+            proxy_http_version 1.1;
+            proxy_set_header   Host $host;
+        }
+
+        # React Router – serve index.html for all non-file requests
+        location / {
+            try_files $uri $uri/ /index.html;
+            expires -1;
+        }
+
+        # Static assets – long cache
+        location ~* \.(js|css|png|jpg|ico|svg|woff2)$ {
+            expires 1y;
+            add_header Cache-Control "public, immutable";
+        }
+
+        error_page 404 /index.html;
+    }
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-frontend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-frontend-nginx-config
+  namespace: transport-tracker
+---
+apiVersion: v1
+data:
+  JWT_SECRET: TXlTZWNyZXRLZXlGb3JKV1RBdXRoZW50aWNhdGlvblRoYXRJc0F0TGVhc3QyNTZCaXRzTG9uZyE=
+  MTA_API_KEY: eW91ci1tdGEtYXBpLWtleQ==
+  TFL_API_KEY: eW91ci10ZmwtYXBpLWtleQ==
+  TRANSITLAND_API_KEY: eW91ci10cmFuc2l0bGFuZC1hcGkta2V5
+kind: Secret
+metadata:
+  labels:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-backend-secrets
+  namespace: transport-tracker
+type: Opaque
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-backend
+  namespace: transport-tracker
+spec:
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: http
+  selector:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-backend
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-frontend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-frontend
+  namespace: transport-tracker
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: http
+  selector:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-frontend
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/part-of: transport-tracker
+    app.kubernetes.io/version: 1.0.0
+  name: dev-transport-backend
+  namespace: transport-tracker
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/managed-by: kustomize
+      app.kubernetes.io/name: transport-backend
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "8080"
+        prometheus.io/scrape: "true"
+      labels:
+        app.kubernetes.io/component: backend
+        app.kubernetes.io/managed-by: kustomize
+        app.kubernetes.io/name: transport-backend
+        app.kubernetes.io/part-of: transport-tracker
+    spec:
+      containers:
+      - env:
+        - name: JAVA_OPTS
+          value: -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0 -XX:+ExitOnOutOfMemoryError
+        envFrom:
+        - configMapRef:
+            name: dev-backend-config
+        - secretRef:
+            name: dev-backend-secrets
+        image: us-central1-docker.pkg.dev/burner-kanprasa1-01/transport-tracker/transport-backend:dev-latest
+        imagePullPolicy: Always
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health/liveness
+            port: http
+          initialDelaySeconds: 45
+          periodSeconds: 15
+          timeoutSeconds: 5
+        name: backend
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /actuator/health/readiness
+            port: http
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: false
+          runAsNonRoot: true
+        startupProbe:
+          failureThreshold: 12
+          httpGet:
+            path: /actuator/health
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 5
+      securityContext:
+        fsGroup: 1000
+        runAsNonRoot: true
+      serviceAccountName: dev-transport-tracker-sa
+      terminationGracePeriodSeconds: 30
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-frontend
+    app.kubernetes.io/part-of: transport-tracker
+    app.kubernetes.io/version: 1.0.0
+  name: dev-transport-frontend
+  namespace: transport-tracker
+spec:
+  replicas: 1
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/managed-by: kustomize
+      app.kubernetes.io/name: transport-frontend
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: frontend
+        app.kubernetes.io/managed-by: kustomize
+        app.kubernetes.io/name: transport-frontend
+        app.kubernetes.io/part-of: transport-tracker
+    spec:
+      containers:
+      - image: us-central1-docker.pkg.dev/burner-kanprasa1-01/transport-tracker/transport-frontend:dev-latest
+        imagePullPolicy: Always
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /index.html
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 15
+          timeoutSeconds: 3
+        name: frontend
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /index.html
+            port: http
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          timeoutSeconds: 3
+        resources:
+          limits:
+            cpu: 250m
+            memory: 128Mi
+          requests:
+            cpu: 50m
+            memory: 64Mi
+        volumeMounts:
+        - mountPath: /etc/nginx/conf.d/default.conf
+          name: nginx-config
+          readOnly: true
+          subPath: default.conf
+      securityContext:
+        runAsNonRoot: false
+      serviceAccountName: dev-transport-tracker-sa
+      terminationGracePeriodSeconds: 15
+      volumes:
+      - configMap:
+          name: dev-frontend-nginx-config
+        name: nginx-config
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  labels:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-backend-pdb
+  namespace: transport-tracker
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/managed-by: kustomize
+      app.kubernetes.io/name: transport-backend
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  labels:
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-frontend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-frontend-pdb
+  namespace: transport-tracker
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/managed-by: kustomize
+      app.kubernetes.io/name: transport-frontend
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  labels:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-backend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-backend-hpa
+  namespace: transport-tracker
+spec:
+  behavior:
+    scaleDown:
+      policies:
+      - periodSeconds: 60
+        type: Pods
+        value: 1
+      stabilizationWindowSeconds: 300
+    scaleUp:
+      policies:
+      - periodSeconds: 60
+        type: Pods
+        value: 2
+      stabilizationWindowSeconds: 60
+  maxReplicas: 2
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 70
+        type: Utilization
+    type: Resource
+  - resource:
+      name: memory
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: dev-transport-backend
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  labels:
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-frontend
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-frontend-hpa
+  namespace: transport-tracker
+spec:
+  behavior:
+    scaleDown:
+      policies:
+      - periodSeconds: 60
+        type: Pods
+        value: 1
+      stabilizationWindowSeconds: 300
+  maxReplicas: 2
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 70
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: dev-transport-frontend
+---
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-tracker-cert
+  namespace: transport-tracker
+spec:
+  domains:
+  - transport-tracker.example.com
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: gce
+    kubernetes.io/ingress.global-static-ip-name: transport-tracker-ip
+  labels:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: transport-tracker-ingress
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-transport-tracker-ingress
+  namespace: transport-tracker
+spec:
+  defaultBackend:
+    service:
+      name: dev-transport-frontend
+      port:
+        number: 80
+  rules:
+  - host: transport-tracker.EXTERNAL_IP.nip.io
+    http:
+      paths:
+      - backend:
+          service:
+            name: dev-transport-frontend
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+      - backend:
+          service:
+            name: dev-transport-backend
+            port:
+              number: 8080
+        path: /api
+        pathType: Prefix
+      - backend:
+          service:
+            name: dev-transport-backend
+            port:
+              number: 8080
+        path: /actuator
+        pathType: Prefix
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-backend-network-policy
+  namespace: transport-tracker
+spec:
+  egress:
+  - ports:
+    - port: 53
+      protocol: UDP
+    - port: 53
+      protocol: TCP
+    to: []
+  - ports:
+    - port: 443
+      protocol: TCP
+    to: []
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/managed-by: kustomize
+          app.kubernetes.io/name: transport-frontend
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: transport-tracker
+    ports:
+    - port: 8080
+      protocol: TCP
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/managed-by: kustomize
+      app.kubernetes.io/name: transport-backend
+  policyTypes:
+  - Ingress
+  - Egress
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/part-of: transport-tracker
+  name: dev-frontend-network-policy
+  namespace: transport-tracker
+spec:
+  egress:
+  - ports:
+    - port: 53
+      protocol: UDP
+    - port: 53
+      protocol: TCP
+    to: []
+  - ports:
+    - port: 8080
+      protocol: TCP
+    to:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/managed-by: kustomize
+          app.kubernetes.io/name: transport-backend
+  ingress:
+  - ports:
+    - port: 80
+      protocol: TCP
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/managed-by: kustomize
+      app.kubernetes.io/name: transport-frontend
+  policyTypes:
+  - Ingress
+  - Egress

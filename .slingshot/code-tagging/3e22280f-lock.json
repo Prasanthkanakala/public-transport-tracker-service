@@ -37,12 +37,6 @@
         "hash": "155a8e38",
         "encoded": "location%20/api/%20%7B",
         "prevChunkIds": []
-      },
-      "15": {
-        "chunkId": "8367cf",
-        "hash": "1debd645",
-        "encoded": "proxy_pass%20%20%20%20%20%20%20%20%20http://backend:8081;",
-        "prevChunkIds": []
       }
     }
   }

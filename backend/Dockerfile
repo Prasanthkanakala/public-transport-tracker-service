@@ -16,7 +16,7 @@ RUN groupadd --system appgroup && \
 
 USER appuser
 
-EXPOSE 8081
+EXPOSE 8080
 
 ENV JAVA_OPTS="-XX:+UseContainerSupport \
 -XX:MaxRAMPercentage=75.0 \
